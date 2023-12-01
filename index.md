@@ -1,5 +1,5 @@
 ---
-title: "PicoRuby Documentation"
+title: Introduction
 keywords: picoruby homepage
 tags: [introduction]
 sidebar: picoruby_sidebar
