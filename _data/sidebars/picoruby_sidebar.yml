@@ -22,21 +22,60 @@ entries:
   - title: Overview
     output: web, pdf
     folderitems:
-
-    - title: Get started
+    - title: Introduction
       url: /index.html
       output: web, pdf
       type: homepage
-
-    - title: Introduction
-      url: /picoruby_introduction.html
-      output: web, pdf
-
     - title: About PicoRuby
       url: /picoruby_about.html
       output: web, pdf
-
-    - title: Support
-      url: /picoruby_support.html
+  - title: Builtin class
+    output: web, pdf
+    folderitems:
+    - title: Home
+      url: /home.html
       output: web, pdf
-
+      type: homepage
+    - title: Dummy
+      url: /dummy.html
+      output: web, pdf
+  - title: Optional class
+    output: web, pdf
+    folderitems:
+    - title: Home
+      url: /home.html
+      output: web, pdf
+      type: homepage
+    - title: Dummy
+      url: /dummy.html
+      output: web, pdf
+  - title: I/O peripheral class
+    output: web, pdf
+    folderitems:
+    - title: Home
+      url: /home.html
+      output: web, pdf
+      type: homepage
+    - title: Dummy
+      url: /dummy.html
+      output: web, pdf
+  - title: Hardware device class
+    output: web, pdf
+    folderitems:
+    - title: Home
+      url: /home.html
+      output: web, pdf
+      type: homepage
+    - title: Dummy
+      url: /dummy.html
+      output: web, pdf
+  - title: PRK Firmware class
+    output: web, pdf
+    folderitems:
+    - title: Home
+      url: /home.html
+      output: web, pdf
+      type: homepage
+    - title: Dummy
+      url: /dummy.html
+      output: web, pdf
