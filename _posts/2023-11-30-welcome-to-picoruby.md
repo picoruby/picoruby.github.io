@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to PicoRuby!"
 date:   2023-11-30 17:47:59 +0900
 categories: jekyll update
 ---

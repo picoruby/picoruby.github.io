@@ -12,12 +12,12 @@ entries:
       url: /news.html
       output: web
     - title: PicoRuby
-      url: /piroruby_introduction.html
+      url: /index.html
       output: web
     - title: R2P2
-      url: /p1_landing_page.html
+      url: /r2p2.html
       output: web
     - title: PRK Firmware
-      url: /p2_landing_page.html
+      url: /prk_firmware.html
       output: web
 
