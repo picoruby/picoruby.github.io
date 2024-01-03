@@ -22,18 +22,28 @@ module RBSDoc
     attr_reader :info
 
     def format_overload(overload)
-      # overload.method_type.block
-      # type.return_type
       Hash.new.tap do |member|
         %i[required_positionals optional_positionals rest_positionals trailing_positionals required_keywords optional_keywords rest_keywords].each do |key|
-          format_params(key, overload.method_type.type).then do |params|
+          format_params1(key, overload.method_type.type).then do |params|
             member[key] = params if params && !params.empty?
           end
         end
+        if overload.method_type.block
+          member[:block] = {}
+          %i[required_positionals optional_positionals rest_positionals trailing_positionals required_keywords optional_keywords rest_keywords].each do |key|
+            format_params1(key, overload.method_type.block.type).then do |params|
+              member[:block][key] = params if params && !params.empty?
+            end
+          end
+        end
+        member[:return_type] = {
+          class: overload.method_type.type.return_type.class,
+          source: overload.method_type.type.return_type.location.source
+        }
       end
     end
 
-    def format_params(key, type)
+    def format_params1(key, type)
       params = type.send(key)
       if params.respond_to?(:map)
         params.map do |param|
@@ -55,22 +65,13 @@ module RBSDoc
     def format_param2(param)
       Hash.new.tap do |h|
         h[:name] = param.name
-        h[:type] = case param.type
-        when RBS::Types::ClassInstance
-          param.type.name.to_s
+        h[:class] = case param.type
         when RBS::Types::Union
-          param.type.types&.map do |type|
-            type.to_s
-          end.join(" | ")
-        when RBS::Types::Bases::Bool
-          "bool"
-        when RBS::Types::Alias
-          param.type.name.to_s
-        when RBS::Types::Tuple, RBS::Types::Literal, RBS::Types::Bases::Any
-          param.type.location.source
+          param.type.types.map(&:class)
         else
-          param.type.location.source
+          param.type.class
         end
+        h[:source] = param.type.location.source
       end
     rescue => e
       binding.irb
