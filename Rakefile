@@ -1,20 +1,34 @@
 require "fileutils"
+require_relative "./vendor/gems/steep-1.6.0/lib/steep"
+load File.expand_path("../submodules/rbs_doc/tasks/rbs_doc.rake", __FILE__)
 
 task :default => :all
 
 desc "Run all tasks"
-task :all => [:submodule, :documentation, :jekyll]
+task :all => ["rbs_doc:generate", :jekyll]
 
-desc "Update submodule"
-task :submodule do
-  sh "git submodule update --init"
+desc "Setup"
+task :setup => [:vendor, :submodule]
+task :vendor do
+  sh "bundle install --path ./vendor/ steep"
 end
 
-desc "Generate documentation"
-task :documentation do
-  require_relative "lib/rbs_doc"
-  steepfile = ENV['STEEPFILE'] || File.expand_path("../submodules/picoruby/Steepfile", __FILE__)
-  RBSDoc::Generator.new(steepfile: steepfile).generate
+PICORUBY_DIR = "submodules/picoruby"
+MRUBYC_DIR = "submodules/picoruby/mrbgems/picoruby-mrubyc/repos/mrubyc"
+
+desc "Update submodule"
+task :submodule => [PICORUBY_DIR, MRUBYC_DIR]
+
+directory PICORUBY_DIR do
+  FileUtils.cd("submodules") do
+    sh "git clone https://github.com/picoruby/picoruby.git"
+  end
+end
+
+directory MRUBYC_DIR do
+  FileUtils.cd("submodules/picoruby/mrbgems/picoruby-mrubyc/repos") do
+    sh "git clone https://github.com/mrubyc/mrubyc.git"
+  end
 end
 
 desc "Run jekyll"
