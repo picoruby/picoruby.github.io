@@ -1,0 +1,37 @@
+---
+title: Machine
+sidebar: picoruby_sidebar
+permalink: Machine.html
+folder: rbs_doc
+---
+## Singleton methods
+### busy_wait_ms
+
+```ruby
+Machine.busy_wait_ms(Integer ms) -> Integer
+```
+### deep_sleep
+
+```ruby
+Machine.deep_sleep(Integer gpio_pin, bool edge, bool high) -> 0
+```
+### delay_ms
+
+```ruby
+Machine.delay_ms(Integer ms) -> Integer
+```
+### sleep
+
+```ruby
+Machine.sleep(Integer sec) -> Integer
+```
+### using_busy_wait
+
+```ruby
+Machine.using_busy_wait() { () -> void } -> void
+```
+### using_delay
+
+```ruby
+Machine.using_delay() { () -> void } -> void
+```

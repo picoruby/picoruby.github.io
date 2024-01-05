@@ -5,7 +5,7 @@ load File.expand_path("../submodules/rbs_doc/tasks/rbs_doc.rake", __FILE__)
 task :default => :all
 
 desc "Run all tasks"
-task :all => ["rbs_doc:generate", :jekyll]
+task :all => ["rbs_doc:generate"]
 
 desc "Setup"
 task :setup => [:vendor, :submodule]
@@ -32,6 +32,7 @@ directory MRUBYC_DIR do
 end
 
 desc "Run jekyll"
-task :jekyll do
-#  sh "bundle exec jekyll serve"
+task :s do
+  sh "bundle exec jekyll serve"
 end
+

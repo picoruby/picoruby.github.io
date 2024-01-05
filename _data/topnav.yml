@@ -14,8 +14,11 @@ topnav_dropdowns:
   folders:
     - title: Products
       folderitems:
+        - title: PicoRuby
+          url: /
         - title: R2P2
-          url: /r2p2_introduction.html
+          external_url: https://github.com/picoruby/R2P2
         - title: PRK Firmware
+          external_url: https://github.com/picoruby/prk_firmware
 
 # Copyright hasumikin

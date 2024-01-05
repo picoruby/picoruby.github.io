@@ -15,9 +15,9 @@ entries:
       url: /index.html
       output: web
     - title: R2P2
-      url: /r2p2.html
+      url: https://github.com/picoruby/R2P2
       output: web
     - title: PRK Firmware
-      url: /prk_firmware.html
+      url: https://github.com/picoruby/prk_firmware
       output: web
 
