@@ -8,9 +8,6 @@ entries:
   - title: Products
     output: web
     folderitems:
-    - title: News
-      url: /news.html
-      output: web
     - title: PicoRuby
       url: /index.html
       output: web

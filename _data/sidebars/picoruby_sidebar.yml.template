@@ -26,6 +26,7 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
-    - title: About PicoRuby
-      url: /picoruby_about.html
+    - title: Contributiion
+      url: /contribution.html
       output: web, pdf
+      type: homepage

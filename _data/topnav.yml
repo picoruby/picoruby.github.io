@@ -5,8 +5,6 @@ topnav:
   items:
     - title: GitHub
       external_url: https://github.com/picoruby/picoruby
-    - title: News
-      url: /news
 
 #Topnav dropdowns
 topnav_dropdowns:
@@ -16,9 +14,9 @@ topnav_dropdowns:
       folderitems:
         - title: PicoRuby
           url: /
-        - title: R2P2
-          external_url: https://github.com/picoruby/R2P2
         - title: PRK Firmware
           external_url: https://github.com/picoruby/prk_firmware
+        - title: R2P2
+          external_url: https://github.com/picoruby/R2P2
 
 # Copyright hasumikin

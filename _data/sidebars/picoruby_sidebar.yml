@@ -23,9 +23,10 @@ entries:
       url: "/index.html"
       output: web, pdf
       type: homepage
-    - title: About PicoRuby
-      url: "/picoruby_about.html"
+    - title: Contributiion
+      url: "/contribution.html"
       output: web, pdf
+      type: homepage
   - title: Builtin class
     output: web pdf
     folderitems:
