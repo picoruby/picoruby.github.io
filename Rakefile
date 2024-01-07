@@ -36,7 +36,7 @@ task :s do
 end
 
 
-require_relative File.expand_path("../lib/rbs_doc", __FILE__)
+require_relative "lib/rbs_doc"
 
 namespace :rbs_doc do
   task :default => :generate
