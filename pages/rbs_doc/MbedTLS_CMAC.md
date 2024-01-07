@@ -36,3 +36,8 @@ reset-> MbedTLS::CMAC
 ```ruby
 update(String) -> MbedTLS::CMAC
 ```
+## Attr accessors
+### _digest (accessor)
+```ruby
+String
+```

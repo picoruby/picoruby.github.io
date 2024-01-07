@@ -26,3 +26,24 @@ button_pressed?() -> bool
 ```ruby
 task() { (Mouse, Keyboard) -> void } -> Proc
 ```
+## Attr accessors
+### driver (reader)
+```ruby
+driver_t
+```
+### task_proc (accessor)
+```ruby
+^(Mouse, Keyboard) -> void
+```
+### cursor_speed (accessor)
+```ruby
+Integer
+```
+### wheel_speed (accessor)
+```ruby
+Integer
+```
+### buttons (accessor)
+```ruby
+Integer
+```

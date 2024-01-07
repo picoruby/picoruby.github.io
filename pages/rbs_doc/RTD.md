@@ -31,3 +31,8 @@ read(?unit: unit_t) -> Float
 ```ruby
 temperature_in_celsius(Float) -> Float
 ```
+## Attr accessors
+### sample_count (accessor)
+```ruby
+Integer
+```

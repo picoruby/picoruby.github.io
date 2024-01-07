@@ -130,3 +130,12 @@ via_get_layer_name(Integer) -> Symbol
 ```ruby
 via_keycode_into_keysymbol(Integer) -> Symbol
 ```
+## Attr accessors
+### kbd (accessor)
+```ruby
+Keyboard
+```
+### layer_count (accessor)
+```ruby
+Integer
+```

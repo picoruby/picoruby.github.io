@@ -130,11 +130,6 @@ each_with_index() { (Elem item, ::Integer index) -> void } -> self
 ```ruby
 empty?() -> bool
 ```
-### fetch
-
-```ruby
-fetch(int index) -> Elem
-```
 ### find_index
 
 ```ruby
@@ -156,11 +151,6 @@ flatten() -> ::Array[Elem]
 
 ```ruby
 include?(Elem object) -> bool
-```
-### insert
-
-```ruby
-insert(Integer index, *Elem) -> void
 ```
 ### inspect
 
@@ -229,4 +219,10 @@ unshift(*Elem obj) -> self
 
 ```ruby
 |[T] (::Array[T] other_ary) -> ::Array[Elem | T]
+```
+## Instance methods (picoruby-terminal)
+### insert
+
+```ruby
+insert(Integer index, *Elem) -> void
 ```

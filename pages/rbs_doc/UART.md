@@ -106,3 +106,8 @@ setmode(
 ```ruby
 write(String str) -> Integer
 ```
+## Attr accessors
+### baudrate (reader)
+```ruby
+Integer
+```

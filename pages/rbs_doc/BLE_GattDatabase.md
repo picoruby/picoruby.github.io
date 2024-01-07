@@ -75,3 +75,12 @@ uuid2str(uuid_t) -> String
 ```ruby
 write_permissions_and_key_size_flags_from_properties(Integer) -> Integer
 ```
+## Attr accessors
+### handle_table (reader)
+```ruby
+Hash[uuid_t|nil, untyped]
+```
+### profile_data (reader)
+```ruby
+String
+```

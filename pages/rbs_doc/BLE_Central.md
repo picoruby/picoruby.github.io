@@ -109,3 +109,12 @@ start_scan() -> 0
 ```ruby
 stop_scan() -> 0
 ```
+## Attr accessors
+### state (reader)
+```ruby
+Symbol
+```
+### services (reader)
+```ruby
+Array[service_t]
+```

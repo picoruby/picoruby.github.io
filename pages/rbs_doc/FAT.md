@@ -205,3 +205,12 @@ unmount-> nil
 ```ruby
 utime(Time atime, Time mtime, String path) -> Integer
 ```
+## Attr accessors
+### mountpoint (reader)
+```ruby
+String
+```
+### prefix (reader)
+```ruby
+String
+```

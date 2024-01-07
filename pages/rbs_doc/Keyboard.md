@@ -354,3 +354,44 @@ via=(bool) -> void
 ```ruby
 via_layer_count=(Integer) -> void
 ```
+## Attr accessors
+### split (accessor)
+```ruby
+bool
+```
+### uart_pin (accessor)
+```ruby
+Integer
+```
+### default_layer (accessor)
+```ruby
+Symbol
+```
+### sounder (accessor)
+```ruby
+Sounder
+```
+### modifier (accessor)
+```ruby
+Integer
+```
+### layer (reader)
+```ruby
+Symbol | nil
+```
+### split_style (reader)
+```ruby
+split_style_type
+```
+### cols_size (reader)
+```ruby
+Integer
+```
+### rows_size (reader)
+```ruby
+Integer
+```
+### keycodes (reader)
+```ruby
+Array[Integer]
+```

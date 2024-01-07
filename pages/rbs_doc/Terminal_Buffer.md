@@ -81,3 +81,20 @@ tail-> void
 ```ruby
 up-> void
 ```
+## Attr accessors
+### lines (accessor)
+```ruby
+Array[String]
+```
+### changed (accessor)
+```ruby
+bool
+```
+### cursor_x (reader)
+```ruby
+Integer
+```
+### cursor_y (reader)
+```ruby
+Integer
+```

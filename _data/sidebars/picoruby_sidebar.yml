@@ -195,7 +195,7 @@ entries:
       url: "/UART.html"
       output: web pdf
       type: homepage
-  - title: misc
+  - title: General class
     output: web pdf
     folderitems:
     - title: BLE
@@ -463,5 +463,12 @@ entries:
       type: homepage
     - title: VIA
       url: "/VIA.html"
+      output: web pdf
+      type: homepage
+  - title: Type alias
+    output: web pdf
+    folderitems:
+    - title: Type alias
+      url: "/type_alias.html"
       output: web pdf
       type: homepage

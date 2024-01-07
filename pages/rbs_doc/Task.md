@@ -41,3 +41,8 @@ suspend() -> self
 ```ruby
 terminate() -> self
 ```
+## Attr accessors
+### name (reader)
+```ruby
+String | nil
+```

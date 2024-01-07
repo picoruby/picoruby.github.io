@@ -31,3 +31,24 @@ inspect_reports(String) -> report_t
 ```ruby
 name_include?(String) -> (bool | nil)
 ```
+## Attr accessors
+### event_type (reader)
+```ruby
+Symbol|String
+```
+### address_type_code (reader)
+```ruby
+Integer
+```
+### address (reader)
+```ruby
+String
+```
+### rssi (reader)
+```ruby
+Integer | nil
+```
+### reports (reader)
+```ruby
+report_t
+```

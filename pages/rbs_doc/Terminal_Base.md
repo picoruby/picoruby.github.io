@@ -41,3 +41,16 @@ physical_line_count-> Integer
 ```ruby
 system(untyped command) -> Integer
 ```
+## Attr accessors
+### width (reader)
+```ruby
+Integer
+```
+### height (reader)
+```ruby
+Integer
+```
+### debug_tty (accessor)
+```ruby
+String?
+```

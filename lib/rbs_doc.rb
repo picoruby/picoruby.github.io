@@ -1,3 +1,4 @@
+require "steep"
 require "rbs"
 require "active_support"
 

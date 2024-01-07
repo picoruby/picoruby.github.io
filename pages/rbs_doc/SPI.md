@@ -99,3 +99,8 @@ transfer(*(Integer|String)|Array[Integer] outputs, ?additional_read_bytes: Integ
 ```ruby
 write(*(Integer|String)|Array[Integer] outputs) -> Integer
 ```
+## Attr accessors
+### unit (reader)
+```ruby
+String
+```

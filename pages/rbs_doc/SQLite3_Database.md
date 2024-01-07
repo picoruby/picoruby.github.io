@@ -50,3 +50,8 @@ execute(String sql, ?Array[var_t] bind_vars) { (untyped) -> untyped } -> nil
 prepare(String sql) { (SQLite3::Statement) -> untyped } -> nil
 prepare(String sql) -> SQLite3::Statement
 ```
+## Attr accessors
+### results_as_hash (accessor)
+```ruby
+bool
+```

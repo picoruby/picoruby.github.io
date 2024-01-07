@@ -8,12 +8,12 @@ folder: rbs_doc
 ### rgb_effect_t
 ```ruby
 :swirl
-                  | :rainbow_mood
-                  | :breath
-                  | :ruby
-                  | :nokogiri
-                  | :static
-                  | :circle
+                    | :rainbow_mood
+                    | :breath
+                    | :ruby
+                    | :nokogiri
+                    | :static
+                    | :circle
 ```
 ### action_type
 ```ruby
@@ -176,4 +176,25 @@ ws2812_set_pixel_at(Integer, Integer) -> void
 
 ```ruby
 ws2812_show() -> void
+```
+## Attr accessors
+### pixel_size (reader)
+```ruby
+Integer
+```
+### effect (reader)
+```ruby
+rgb_effect_t
+```
+### action (accessor)
+```ruby
+action_type
+```
+### anchor (accessor)
+```ruby
+bool
+```
+### split_sync (accessor)
+```ruby
+bool
 ```

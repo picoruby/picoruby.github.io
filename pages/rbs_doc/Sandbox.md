@@ -61,3 +61,8 @@ suspend() -> void
 ```ruby
 wait(?timeout: (Integer|nil), ?signal: bool) -> bool
 ```
+## Attr accessors
+### error (accessor)
+```ruby
+Exception?
+```

@@ -36,3 +36,8 @@ read-> String?
 ```ruby
 rewind-> self
 ```
+## Attr accessors
+### pat (accessor)
+```ruby
+String
+```

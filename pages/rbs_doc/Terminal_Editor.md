@@ -51,3 +51,12 @@ show_cursor-> untyped
 ```ruby
 start() { (self, Terminal::Buffer, Integer) -> void }  -> void
 ```
+## Attr accessors
+### footer_height (accessor)
+```ruby
+Integer
+```
+### quit_by_ctrl_c (accessor)
+```ruby
+bool
+```

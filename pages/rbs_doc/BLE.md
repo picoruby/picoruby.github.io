@@ -71,3 +71,12 @@ set_read_value(Integer, String) -> void
 ```ruby
 start(?(Integer | nil) timeout_ms, ?(Symbol | nil)) -> Integer
 ```
+## Attr accessors
+### debug (accessor)
+```ruby
+bool
+```
+### role (reader)
+```ruby
+:central | :peripheral | :observer | :broadcaster
+```
