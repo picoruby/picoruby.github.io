@@ -13,16 +13,22 @@ module RBSDoc
   class ClassFormatter
     def initialize(path)
       @info = []
+      @global_type_aliases = []
       sig = RBS::Parser.parse_signature(File.read(path))
       sig[2].each do |dec|
         case dec
         when RBS::AST::Declarations::Class
           format_class(dec)
+        when RBS::AST::Declarations::TypeAlias
+          @global_type_aliases << format_type_alias(dec)
         end
+      end
+      @global_type_aliases.sort_by! do |type_alias|
+        [type_alias[:name]]
       end
     end
 
-    attr_reader :info
+    attr_reader :info, :global_type_aliases
 
     def format_class(dec, upper_class = [])
       @info << Hash.new.tap do |klass|
@@ -30,10 +36,14 @@ module RBSDoc
         klass[:super_class] = dec.super_class.name.name if dec.super_class
         klass[:methods] = {instance: [], singleton: []}
         klass[:type_aliases] = []
+        klass[:attr_accessors] = []
         klass[:comment] = dec.comment.string if dec.comment
         dec.members.each do |member|
           case member
           when RBS::AST::Members::MethodDefinition
+            next if member.comment&.string&.include?("@ignore")
+            # Todo: private method
+            next if member.comment&.string&.include?("@private")
             formatter = RBSDoc::MethodFormatter.new(member)
             if member.kind == :singleton
               klass[:methods][:singleton] << formatter.info
@@ -54,6 +64,15 @@ module RBSDoc
             format_class(member, klass[:class])
           when RBS::AST::Declarations::TypeAlias
             klass[:type_aliases] << format_type_alias(member)
+          when RBS::AST::Members::AttrAccessor, RBS::AST::Members::AttrReader, RBS::AST::Members::AttrWriter
+            klass[:attr_accessors] << {
+              name: member.name,
+              accessor_type: member.class.to_s.split("::").last.gsub(/Attr/, "").downcase,
+              type: member.type.class,
+              source: member.type.location.source
+            }
+          else
+            #pp member.class.to_s
           end
         end
       end
@@ -161,12 +180,15 @@ module RBSDoc
           @formatter << ClassFormatter.new(path)
         end
       end
-      @sidebars = {}
+      @sidebars = {
+        "type_alias" => [{
+          title: "Type alias",
+          url: "/type_alias.html",
+        }],
+      }
       generate_pages
       @sidebars.keys.each do |key|
-        @sidebars[key].sort_by! do |item|
-          [item[:title]]
-        end
+        @sidebars[key].sort_by! { |item| [item[:title]] }
       end
       @sidebars = @sidebars.sort.to_h
       generate_sidebar(sidebar_path)
@@ -176,6 +198,8 @@ module RBSDoc
       yaml = YAML.load_file("#{path}.template")
       @sidebars.keys.each do |key|
         title = case key
+                when "type_alias"
+                  "Type alias"
                 when "builtin"
                   "Builtin class"
                 when "io_peripheral"
@@ -185,7 +209,7 @@ module RBSDoc
                 when "hardware_device"
                   "Hardware Device class"
                 else
-                  "misc"
+                  "General class"
                 end
         yaml["entries"][0]["folders"] << {
           "title" => title,
@@ -212,10 +236,29 @@ module RBSDoc
 
     def generate_pages
       @formatter.each do |formatter|
+        formatter.global_type_aliases.each do |type_alias|
+          filename = File.join(@output_dir, "type_alias.md")
+          unless File.exist?(filename)
+            File.open(filename, "w") do |f|
+              f.puts "---"
+              f.puts "title: Type aliases"
+              f.puts "sidebar: picoruby_sidebar"
+              f.puts "permalink: /type_alias.html"
+              f.puts "folder: rbs_doc"
+              f.puts "---\n\n"
+            end
+          end
+          File.open(filename, "a") do |f|
+            f.puts "## #{type_alias[:name]}\n"
+            f.puts "```rbs"
+            f.puts type_alias[:source]
+            f.puts "```\n\n"
+          end
+        end
         formatter.info.each do |klass|
           basename = klass[:class].join("_")
           filename = File.join(@output_dir, basename + ".md")
-          next if klass[:comment]&.include?("@private")
+          next if ["@private", "@ignore"].any?{ klass[:comment]&.include?(_1) }
           added_by = if data = klass[:comment]&.match(/@added_by\s+(.+)\s*$/)
                       " (#{data[1]})"
                      else
@@ -261,6 +304,13 @@ module RBSDoc
                 end
                 f.puts "```\n"
               end
+            end
+            f.puts "## Attr accessors\n" unless klass[:attr_accessors].empty?
+            klass[:attr_accessors].each do |attr_accessor|
+              f.puts "### #{attr_accessor[:name]} (#{attr_accessor[:accessor_type]})\n"
+              f.puts "```ruby"
+              f.puts attr_accessor[:source]
+              f.puts "```\n"
             end
           end
         end
