@@ -121,7 +121,81 @@ entries:
       url: "/ZeroDivisionError.html"
       output: web pdf
       type: homepage
-  - title: Picogem class
+  - title: Hardware Device class
+    output: web pdf
+    folderitems:
+    - title: AHT25
+      url: "/AHT25.html"
+      output: web pdf
+      type: homepage
+    - title: AQM0802A
+      url: "/AQM0802A.html"
+      output: web pdf
+      type: homepage
+    - title: CYW43
+      url: "/CYW43.html"
+      output: web pdf
+      type: homepage
+    - title: CYW43::GPIO
+      url: "/CYW43_GPIO.html"
+      output: web pdf
+      type: homepage
+    - title: DipSwitch
+      url: "/DipSwitch.html"
+      output: web pdf
+      type: homepage
+    - title: EC21
+      url: "/EC21.html"
+      output: web pdf
+      type: homepage
+    - title: EC21::SoracomBeamUDP
+      url: "/EC21_SoracomBeamUDP.html"
+      output: web pdf
+      type: homepage
+    - title: MCP3204
+      url: "/MCP3204.html"
+      output: web pdf
+      type: homepage
+    - title: MCP3208
+      url: "/MCP3208.html"
+      output: web pdf
+      type: homepage
+    - title: MCP3424
+      url: "/MCP3424.html"
+      output: web pdf
+      type: homepage
+    - title: PCF8523
+      url: "/PCF8523.html"
+      output: web pdf
+      type: homepage
+  - title: IO Peripheral class
+    output: web pdf
+    folderitems:
+    - title: ADC
+      url: "/ADC.html"
+      output: web pdf
+      type: homepage
+    - title: GPIO
+      url: "/GPIO.html"
+      output: web pdf
+      type: homepage
+    - title: I2C
+      url: "/I2C.html"
+      output: web pdf
+      type: homepage
+    - title: PWM
+      url: "/PWM.html"
+      output: web pdf
+      type: homepage
+    - title: SPI
+      url: "/SPI.html"
+      output: web pdf
+      type: homepage
+    - title: UART
+      url: "/UART.html"
+      output: web pdf
+      type: homepage
+  - title: misc
     output: web pdf
     folderitems:
     - title: BLE
@@ -340,81 +414,7 @@ entries:
       url: "/Watchdog.html"
       output: web pdf
       type: homepage
-  - title: IO Peripheral
-    output: web pdf
-    folderitems:
-    - title: ADC
-      url: "/ADC.html"
-      output: web pdf
-      type: homepage
-    - title: GPIO
-      url: "/GPIO.html"
-      output: web pdf
-      type: homepage
-    - title: I2C
-      url: "/I2C.html"
-      output: web pdf
-      type: homepage
-    - title: PWM
-      url: "/PWM.html"
-      output: web pdf
-      type: homepage
-    - title: SPI
-      url: "/SPI.html"
-      output: web pdf
-      type: homepage
-    - title: UART
-      url: "/UART.html"
-      output: web pdf
-      type: homepage
-  - title: Hardware Device
-    output: web pdf
-    folderitems:
-    - title: AHT25
-      url: "/AHT25.html"
-      output: web pdf
-      type: homepage
-    - title: AQM0802A
-      url: "/AQM0802A.html"
-      output: web pdf
-      type: homepage
-    - title: CYW43
-      url: "/CYW43.html"
-      output: web pdf
-      type: homepage
-    - title: CYW43::GPIO
-      url: "/CYW43_GPIO.html"
-      output: web pdf
-      type: homepage
-    - title: DipSwitch
-      url: "/DipSwitch.html"
-      output: web pdf
-      type: homepage
-    - title: EC21
-      url: "/EC21.html"
-      output: web pdf
-      type: homepage
-    - title: EC21::SoracomBeamUDP
-      url: "/EC21_SoracomBeamUDP.html"
-      output: web pdf
-      type: homepage
-    - title: MCP3204
-      url: "/MCP3204.html"
-      output: web pdf
-      type: homepage
-    - title: MCP3208
-      url: "/MCP3208.html"
-      output: web pdf
-      type: homepage
-    - title: MCP3424
-      url: "/MCP3424.html"
-      output: web pdf
-      type: homepage
-    - title: PCF8523
-      url: "/PCF8523.html"
-      output: web pdf
-      type: homepage
-  - title: PRK Firmware
+  - title: PRK Firmware class
     output: web pdf
     folderitems:
     - title: ConsumerKey

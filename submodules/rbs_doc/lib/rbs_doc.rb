@@ -149,14 +149,6 @@ module RBSDoc
   end
 
   class Generator
-    SIDEBARS = {
-      builtin: "Builtin class",
-      optional: "Picogem class",
-      io_peripheral: "IO Peripheral",
-      hardware_device: "Hardware Device",
-      prk_firmware: "PRK Firmware",
-    }.freeze
-
     def initialize(steepfile:, output_dir:, sidebar_path:)
       @output_dir = output_dir
       Dir.glob("#{@output_dir}/*.md") do |path|
@@ -169,26 +161,36 @@ module RBSDoc
           @formatter << ClassFormatter.new(path)
         end
       end
-      @sidebar = {}
-      SIDEBARS.each do |key, _v|
-        @sidebar[key] = []
-      end
+      @sidebars = {}
       generate_pages
-      SIDEBARS.each do |key, _v|
-        @sidebar[key].sort_by! do |item|
+      @sidebars.keys.each do |key|
+        @sidebars[key].sort_by! do |item|
           [item[:title]]
         end
       end
+      @sidebars = @sidebars.sort.to_h
       generate_sidebar(sidebar_path)
     end
 
     def generate_sidebar(path)
       yaml = YAML.load_file("#{path}.template")
-      SIDEBARS.each do |key, title|
+      @sidebars.keys.each do |key|
+        title = case key
+                when "builtin"
+                  "Builtin class"
+                when "io_peripheral"
+                  "IO Peripheral class"
+                when "prk_firmware"
+                  "PRK Firmware class"
+                when "hardware_device"
+                  "Hardware Device class"
+                else
+                  "misc"
+                end
         yaml["entries"][0]["folders"] << {
-          "title" => "#{title}",
+          "title" => title,
           "output" => "web pdf",
-          "folderitems" => @sidebar[key].map do |item|
+          "folderitems" => @sidebars[key].map do |item|
             {
               "title" => item[:title],
               "url" => item[:url],
@@ -202,8 +204,9 @@ module RBSDoc
     end
 
     def add_sidebar(key, title, url)
-      if @sidebar[key].none? {|item| item[:title] == title }
-        @sidebar[key] << {title: title, url: url}
+      @sidebars[key] ||= []
+      if @sidebars[key].none? {|item| item[:title] == title }
+        @sidebars[key] << {title: title, url: url}
       end
     end
 
@@ -219,16 +222,10 @@ module RBSDoc
                        ""
                      end
           classname = klass[:class].join("::")
-          sidebar_added = false
-          SIDEBARS.each do |key, _v|
-            if klass[:comment]&.include?("@#{key}")
-              add_sidebar(key, classname, "/#{basename}.html")
-              sidebar_added = true
-              break
-            end
-          end
-          unless sidebar_added
-            add_sidebar(:optional, classname, "/#{basename}.html")
+          if data = klass[:comment]&.match("@sidebar\s+(.+)\s*$")
+            add_sidebar(data[1], classname, "/#{basename}.html")
+          else
+            add_sidebar("optional", classname, "/#{basename}.html")
           end
           unless File.exist?(filename)
             File.open(filename, "w") do |f|
