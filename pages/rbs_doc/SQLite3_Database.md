@@ -5,16 +5,11 @@ permalink: SQLite3_Database.html
 folder: rbs_doc
 ---
 ## Type aliases
-### row_t
+### sqlite3_row_t
 ```ruby
 Hash[String, String] | Array[String]
 ```
 ## Singleton methods
-### _open
-
-```ruby
-SQLite3::Database._open(String filename) -> SQLite3::Database
-```
 ### new
 
 ```ruby
@@ -29,29 +24,29 @@ SQLite3::Database.open(String filename) ?{ (SQLite3::Database) -> void } -> SQLi
 ### close
 
 ```ruby
-close-> void
+instance.close() -> void
 ```
 ### closed?
 
 ```ruby
-closed?-> bool
+instance.closed?() -> bool
 ```
 ### execute
 
 ```ruby
-execute(String sql, ?Array[var_t] bind_vars) -> Array[Array[var_t] | Hash[String, var_t]]
-execute(String sql, ?Array[var_t] bind_vars) { (Array[var_t])        -> Array[var_t]        } -> nil
-execute(String sql, ?Array[var_t] bind_vars) { (Hash[String, var_t]) -> Hash[String, var_t] } -> nil
-execute(String sql, ?Array[var_t] bind_vars) { (untyped) -> untyped } -> nil
+instance.execute(String sql, ?Array[sqlite3_var_t] bind_vars) -> Array[Array[sqlite3_var_t] | Hash[String, sqlite3_var_t]]
+instance.execute(String sql, ?Array[sqlite3_var_t] bind_vars) { (Array[sqlite3_var_t])        -> Array[sqlite3_var_t]        } -> nil
+instance.execute(String sql, ?Array[sqlite3_var_t] bind_vars) { (Hash[String, sqlite3_var_t]) -> Hash[String, sqlite3_var_t] } -> nil
+instance.execute(String sql, ?Array[sqlite3_var_t] bind_vars) { (untyped) -> untyped } -> nil
 ```
 ### prepare
 
 ```ruby
-prepare(String sql) { (SQLite3::Statement) -> untyped } -> nil
-prepare(String sql) -> SQLite3::Statement
+instance.prepare(String sql) { (SQLite3::Statement) -> untyped } -> nil
+instance.prepare(String sql) -> SQLite3::Statement
 ```
 ## Attr accessors
 ### results_as_hash (accessor)
 ```ruby
-bool
+instance.results_as_hash -> bool
 ```

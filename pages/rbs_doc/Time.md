@@ -46,132 +46,132 @@ Time.time_methods() -> Time::TimeMethods
 ### +
 
 ```ruby
-+(Integer arg0) -> Time
+instance.+(Integer arg0) -> Time
 ```
 ### -
 
 ```ruby
--(Time arg0) -> Float
--(Integer arg0) -> Time
+instance.-(Time arg0) -> Float
+instance.-(Integer arg0) -> Time
 ```
 ### <
 
 ```ruby
-<(Time arg0) -> bool
+instance.<(Time arg0) -> bool
 ```
 ### <=
 
 ```ruby
-<=(Time arg0) -> bool
+instance.<=(Time arg0) -> bool
 ```
 ### <=>
 
 ```ruby
-<=>(Time other) -> Integer
-<=>(untyped other) -> Integer?
+instance.<=>(Time other) -> Integer
+instance.<=>(untyped other) -> Integer?
 ```
 ### >
 
 ```ruby
->(Time arg0) -> bool
+instance.>(Time arg0) -> bool
 ```
 ### >=
 
 ```ruby
->=(Time arg0) -> bool
+instance.>=(Time arg0) -> bool
 ```
 ### friday?
 
 ```ruby
-friday?() -> bool
+instance.friday?() -> bool
 ```
 ### hour
 
 ```ruby
-hour() -> Integer
+instance.hour() -> Integer
 ```
 ### inspect
 
 ```ruby
-inspect() -> String
+instance.inspect() -> String
 ```
 ### mday
 
 ```ruby
-mday() -> Integer
+instance.mday() -> Integer
 ```
 ### min
 
 ```ruby
-min() -> Integer
+instance.min() -> Integer
 ```
 ### mon
 
 ```ruby
-mon() -> Integer
+instance.mon() -> Integer
 ```
 ### monday?
 
 ```ruby
-monday?() -> bool
+instance.monday?() -> bool
 ```
 ### saturday?
 
 ```ruby
-saturday?() -> bool
+instance.saturday?() -> bool
 ```
 ### sec
 
 ```ruby
-sec() -> Integer
+instance.sec() -> Integer
 ```
 ### sunday?
 
 ```ruby
-sunday?() -> bool
+instance.sunday?() -> bool
 ```
 ### thursday?
 
 ```ruby
-thursday?() -> bool
+instance.thursday?() -> bool
 ```
 ### to_f
 
 ```ruby
-to_f() -> Float
+instance.to_f() -> Float
 ```
 ### to_i
 
 ```ruby
-to_i() -> Integer
+instance.to_i() -> Integer
 ```
 ### to_s
 
 ```ruby
-to_s() -> String
+instance.to_s() -> String
 ```
 ### tuesday?
 
 ```ruby
-tuesday?() -> bool
+instance.tuesday?() -> bool
 ```
 ### usec
 
 ```ruby
-usec() -> Integer
+instance.usec() -> Integer
 ```
 ### wday
 
 ```ruby
-wday() -> Integer
+instance.wday() -> Integer
 ```
 ### wednesday?
 
 ```ruby
-wednesday?() -> bool
+instance.wednesday?() -> bool
 ```
 ### year
 
 ```ruby
-year() -> Integer
+instance.year() -> Integer
 ```

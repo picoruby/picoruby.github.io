@@ -25,73 +25,73 @@ UART.new(
     ?rts_pin: Integer,
     ?cts_pin: Integer,
     ?rx_buffer_size: Integer?
-  ) -> void
+  ) -> instance
 ```
 ## Instance methods
 ### break
 
 ```ruby
-break(?Integer|Float time) -> self
+instance.break(?Integer|Float time) -> self
 ```
 ### bytes_available
 
 ```ruby
-bytes_available() -> Integer
+instance.bytes_available() -> Integer
 ```
 ### clear_rx_buffer
 
 ```ruby
-clear_rx_buffer() -> self
+instance.clear_rx_buffer() -> self
 ```
 ### clear_tx_buffer
 
 ```ruby
-clear_tx_buffer() -> self
+instance.clear_tx_buffer() -> self
 ```
 ### flush
 
 ```ruby
-flush() -> self
+instance.flush() -> self
 ```
 ### gets
 
 ```ruby
-gets() -> String
+instance.gets() -> String
 ```
 ### line_ending=
 
 ```ruby
-line_ending=(("\n"|"\r\n"|"\r") line_ending) -> void
+instance.line_ending=(("\n"|"\r\n"|"\r") line_ending) -> void
 ```
 ### puts
 
 ```ruby
-puts(String) -> nil
+instance.puts(String) -> nil
 ```
 ### read
 
 ```ruby
-read(?Integer len) -> (String | nil)
+instance.read(?Integer len) -> (String | nil)
 ```
 ### readpartial
 
 ```ruby
-readpartial(Integer maxlen) -> String
+instance.readpartial(Integer maxlen) -> String
 ```
 ### set_flow_control
 
 ```ruby
-set_flow_control(Integer flow_control, Integer rts_pin, Integer cts_pin) -> void
+instance.set_flow_control(Integer flow_control, Integer rts_pin, Integer cts_pin) -> void
 ```
 ### set_format
 
 ```ruby
-set_format(Integer data_bits, Integer stop_bits, Integer parity) -> void
+instance.set_format(Integer data_bits, Integer stop_bits, Integer parity) -> void
 ```
 ### setmode
 
 ```ruby
-setmode(
+instance.setmode(
     ?baudrate: Integer?,
     ?data_bits: Integer?,
     ?stop_bits: Integer?,
@@ -104,10 +104,10 @@ setmode(
 ### write
 
 ```ruby
-write(String str) -> Integer
+instance.write(String str) -> Integer
 ```
 ## Attr accessors
 ### baudrate (reader)
 ```ruby
-Integer
+instance.baudrate -> Integer
 ```

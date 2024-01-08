@@ -5,44 +5,39 @@ permalink: Task.html
 folder: rbs_doc
 ---
 ## Singleton methods
-### new
-
-```ruby
-Task.new(*untyped) { (*untyped) -> void } -> void
-```
 ### list
 
 ```ruby
 Task.list() -> Array[Task]
 ```
-## Instance methods
-### _start
+### new
 
 ```ruby
-_start() -> void
+Task.new(*untyped) { (*untyped) -> void } -> instance
 ```
+## Instance methods
 ### join
 
 ```ruby
-join(?Integer|nil) -> (self | nil)
+instance.join(?Integer|nil) -> (self | nil)
 ```
 ### name=
 
 ```ruby
-name=(String) -> String
+instance.name=(String) -> String
 ```
 ### suspend
 
 ```ruby
-suspend() -> self
+instance.suspend() -> self
 ```
 ### terminate
 
 ```ruby
-terminate() -> self
+instance.terminate() -> self
 ```
 ## Attr accessors
 ### name (reader)
 ```ruby
-String | nil
+instance.name -> String | nil
 ```

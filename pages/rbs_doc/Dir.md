@@ -37,11 +37,6 @@ Dir.getwd() -> String
 Dir.glob(path pattern, ?int flags, ?base: path?) -> Array[String]
 Dir.glob(path pattern, ?int flags, ?base: path?) { (String pathname) -> void } -> nil
 ```
-### new
-
-```ruby
-Dir.new(path dir) -> void
-```
 ### mkdir
 
 ```ruby
@@ -62,35 +57,35 @@ Dir.open[U] (path dirname) { (VFS::dir_t) -> U } -> VFS::dir_t
 ### close
 
 ```ruby
-close() -> nil
+instance.close() -> nil
 ```
 ### each
 
 ```ruby
-each() { (String) -> void } -> self
+instance.each() { (String) -> void } -> self
 ```
 ### findnext
 
 ```ruby
-findnext() -> String?
+instance.findnext() -> String?
 ```
 ### pat=
 
 ```ruby
-pat=(path) -> path
+instance.pat=(path) -> path
 ```
 ### path
 
 ```ruby
-path() -> String?
+instance.path() -> String?
 ```
 ### read
 
 ```ruby
-read() -> String?
+instance.read() -> String?
 ```
 ### rewind
 
 ```ruby
-rewind() -> self
+instance.rewind() -> self
 ```

@@ -48,5 +48,5 @@ Watchdog.update(Integer delay_ms) -> 0
 ## Attr accessors
 ### enabled (accessor)
 ```ruby
-bool
+instance.enabled -> bool
 ```

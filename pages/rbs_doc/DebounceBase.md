@@ -8,16 +8,16 @@ folder: rbs_doc
 ### new
 
 ```ruby
-DebounceBase.new() -> void
+DebounceBase.new() -> instance
 ```
 ## Instance methods
 ### set_time
 
 ```ruby
-set_time() -> void
+instance.set_time() -> void
 ```
 ### threshold=
 
 ```ruby
-threshold=(Integer) -> void
+instance.threshold=(Integer) -> void
 ```

@@ -14,42 +14,42 @@ Range.new(Elem from, Elem to, ?boolish exclude_end) -> void
 ### ==
 
 ```ruby
-==(untyped obj) -> bool
+instance.==(untyped obj) -> bool
 ```
 ### ===
 
 ```ruby
-===(untyped obj) -> bool
+instance.===(untyped obj) -> bool
 ```
 ### each
 
 ```ruby
-each[Elem] () { (Elem arg0) -> untyped } -> self
+instance.each[Elem] () { (Elem arg0) -> untyped } -> self
 ```
 ### exclude_end?
 
 ```ruby
-exclude_end?() -> bool
+instance.exclude_end?() -> bool
 ```
 ### first
 
 ```ruby
-first() -> Elem
-first(Integer n) -> ::Array[Elem]
+instance.first() -> Elem
+instance.first(Integer n) -> ::Array[Elem]
 ```
 ### inspect
 
 ```ruby
-inspect() -> String
+instance.inspect() -> String
 ```
 ### last
 
 ```ruby
-last() -> Elem
-last(Integer n) -> ::Array[Elem]
+instance.last() -> Elem
+instance.last(Integer n) -> ::Array[Elem]
 ```
 ### to_s
 
 ```ruby
-to_s() -> String
+instance.to_s() -> String
 ```

@@ -3,7 +3,7 @@ require "fileutils"
 task :default => :all
 
 desc "Run all tasks"
-task :all => ["rbs_doc:generate"]
+task :all => ["steep_check", "rbs_doc:generate"]
 
 desc "Setup"
 task :setup => [:install_steep, :install_picoruby]
@@ -35,12 +35,16 @@ task :s do
   sh "bundle exec jekyll serve"
 end
 
+desc "Run steep check"
+task :steep_check do
+  FileUtils.cd PICORUBY_DIR do
+    sh "rake steep"
+  end
+end
 
 require_relative "lib/rbs_doc"
 
 namespace :rbs_doc do
-  task :default => :generate
-
   desc "Generate documentation"
   task :generate do |t, args|
     FileUtils.cd File.expand_path("../picoruby", __FILE__) do

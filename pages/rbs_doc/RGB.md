@@ -24,177 +24,177 @@ folder: rbs_doc
 ### new
 
 ```ruby
-RGB.new(Integer pin, Integer underglow_size, Integer backlight_size, ?bool is_rgbw) -> void
+RGB.new(Integer pin, Integer underglow_size, Integer backlight_size, ?bool is_rgbw) -> instance
 ```
 ## Instance methods
 ### add_pixel
 
 ```ruby
-add_pixel(Integer, Integer) -> void
+instance.add_pixel(Integer, Integer) -> void
 ```
 ### effect=
 
 ```ruby
-effect=(rgb_effect_t) -> void
+instance.effect=(rgb_effect_t) -> void
 ```
 ### fifo_push
 
 ```ruby
-fifo_push(true data) -> void
+instance.fifo_push(true data) -> void
 ```
 ### hsv2rgb
 
 ```ruby
-hsv2rgb(Float | Integer h, Integer s, Float | Integer v) -> Integer
+instance.hsv2rgb(Float | Integer h, Integer s, Float | Integer v) -> Integer
 ```
 ### hue=
 
 ```ruby
-hue=(Integer) -> void
+instance.hue=(Integer) -> void
 ```
 ### init_values
 
 ```ruby
-init_values() -> void
+instance.init_values() -> void
 ```
 ### invoke_anchor
 
 ```ruby
-invoke_anchor(Symbol | nil) -> Integer
+instance.invoke_anchor(Symbol | nil) -> Integer
 ```
 ### invoke_partner
 
 ```ruby
-invoke_partner(Integer) -> void
+instance.invoke_partner(Integer) -> void
 ```
 ### ping?
 
 ```ruby
-ping?() -> bool
+instance.ping?() -> bool
 ```
 ### reset_pixel
 
 ```ruby
-reset_pixel() -> void
+instance.reset_pixel() -> void
 ```
 ### resume
 
 ```ruby
-resume() -> void
+instance.resume() -> void
 ```
 ### saturation=
 
 ```ruby
-saturation=(Integer) -> void
+instance.saturation=(Integer) -> void
 ```
 ### show
 
 ```ruby
-show-> void
+instance.show-> void
 ```
 ### speed=
 
 ```ruby
-speed=(Integer) -> void
+instance.speed=(Integer) -> void
 ```
 ### thunder
 
 ```ruby
-thunder-> void
+instance.thunder-> void
 ```
 ### toggle
 
 ```ruby
-toggle() -> void
+instance.toggle() -> void
 ```
 ### turn_off
 
 ```ruby
-turn_off() -> void
+instance.turn_off() -> void
 ```
 ### turn_on
 
 ```ruby
-turn_on() -> void
+instance.turn_on() -> void
 ```
 ### value=
 
 ```ruby
-value=(Integer) -> void
+instance.value=(Integer | Float) -> void
 ```
 ### ws2812_add_matrix_pixel_at
 
 ```ruby
-ws2812_add_matrix_pixel_at(Integer, Integer, Integer) -> void
+instance.ws2812_add_matrix_pixel_at(Integer, Integer, Integer) -> void
 ```
 ### ws2812_circle
 
 ```ruby
-ws2812_circle(Integer, Integer, Integer) -> void
+instance.ws2812_circle(Integer, Integer, Integer) -> void
 ```
 ### ws2812_circle_set_center
 
 ```ruby
-ws2812_circle_set_center(Integer, Integer) -> void
+instance.ws2812_circle_set_center(Integer, Integer) -> void
 ```
 ### ws2812_fill
 
 ```ruby
-ws2812_fill(Integer, Integer) -> void
+instance.ws2812_fill(Integer, Integer) -> void
 ```
 ### ws2812_init
 
 ```ruby
-ws2812_init(Integer, Integer, bool) -> void
+instance.ws2812_init(Integer, Integer, bool) -> void
 ```
 ### ws2812_init_pixel_distance
 
 ```ruby
-ws2812_init_pixel_distance(Integer) -> void
+instance.ws2812_init_pixel_distance(Integer) -> void
 ```
 ### ws2812_rand_show
 
 ```ruby
-ws2812_rand_show(Integer, Integer, Integer) -> void
+instance.ws2812_rand_show(Integer, Integer, Integer) -> void
 ```
 ### ws2812_reset_swirl_index
 
 ```ruby
-ws2812_reset_swirl_index() -> bool
+instance.ws2812_reset_swirl_index() -> bool
 ```
 ### ws2812_rotate_swirl
 
 ```ruby
-ws2812_rotate_swirl(Integer) -> bool
+instance.ws2812_rotate_swirl(Integer) -> bool
 ```
 ### ws2812_set_pixel_at
 
 ```ruby
-ws2812_set_pixel_at(Integer, Integer) -> void
+instance.ws2812_set_pixel_at(Integer, Integer) -> void
 ```
 ### ws2812_show
 
 ```ruby
-ws2812_show() -> void
+instance.ws2812_show() -> void
 ```
 ## Attr accessors
 ### pixel_size (reader)
 ```ruby
-Integer
+instance.pixel_size -> Integer
 ```
 ### effect (reader)
 ```ruby
-rgb_effect_t
+instance.effect -> rgb_effect_t
 ```
 ### action (accessor)
 ```ruby
-action_type
+instance.action -> action_type
 ```
 ### anchor (accessor)
 ```ruby
-bool
+instance.anchor -> bool
 ```
 ### split_sync (accessor)
 ```ruby
-bool
+instance.split_sync -> bool
 ```

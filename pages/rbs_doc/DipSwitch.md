@@ -8,11 +8,11 @@ folder: rbs_doc
 ### new
 
 ```ruby
-DipSwitch.new(GPIO|nil c_pin, Array[Integer] pin_nums) -> void
+DipSwitch.new(GPIO|nil c_pin, Array[Integer] pin_nums) -> instance
 ```
 ## Instance methods
 ### read
 
 ```ruby
-read() -> Integer
+instance.read() -> Integer
 ```

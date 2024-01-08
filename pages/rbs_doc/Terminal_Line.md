@@ -14,35 +14,35 @@ Terminal::Line.new-> void
 ### feed_at_bottom
 
 ```ruby
-feed_at_bottom-> Integer
+instance.feed_at_bottom-> Integer
 ```
 ### history_head
 
 ```ruby
-history_head-> Integer
+instance.history_head-> Integer
 ```
 ### load_history
 
 ```ruby
-load_history(:down | :up dir) -> void
+instance.load_history(:down | :up dir) -> void
 ```
 ### prompt=
 
 ```ruby
-prompt=(String word) -> Integer
+instance.prompt=(String word) -> Integer
 ```
 ### refresh
 
 ```ruby
-refresh-> void
+instance.refresh-> void
 ```
 ### save_history
 
 ```ruby
-save_history-> Integer
+instance.save_history-> Integer
 ```
 ### start
 
 ```ruby
-start() { (self, Terminal::Buffer, Integer) -> void }  -> void
+instance.start() { (self, Terminal::Buffer, Integer) -> void }  -> void
 ```

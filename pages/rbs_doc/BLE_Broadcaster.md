@@ -8,5 +8,5 @@ folder: rbs_doc
 ### advertise
 
 ```ruby
-advertise(String) -> 0
+instance.advertise(String) -> 0
 ```

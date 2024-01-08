@@ -1,53 +1,48 @@
 ---
-title: Stat
+title: File::Stat
 sidebar: picoruby_sidebar
-permalink: Stat.html
+permalink: File_Stat.html
 folder: rbs_doc
 ---
 ## Singleton methods
 ### new
 
 ```ruby
-Stat.new(String file) -> void
-```
-### new
-
-```ruby
-Stat.new(String file) -> instance
+File::Stat.new(String file) -> instance
 ```
 ## Instance methods
 ### birthtime
 
 ```ruby
-birthtime() -> Time
+instance.birthtime() -> Time
 ```
 ### directory?
 
 ```ruby
-directory?() -> bool
+instance.directory?() -> bool
 ```
 ### mode
 
 ```ruby
-mode() -> Integer
+instance.mode() -> Integer
 ```
 ### mode_str
 
 ```ruby
-mode_str() -> String
+instance.mode_str() -> String
 ```
 ### mtime
 
 ```ruby
-mtime() -> Time
+instance.mtime() -> Time
 ```
 ### size
 
 ```ruby
-size() -> Integer
+instance.size() -> Integer
 ```
 ### writable?
 
 ```ruby
-writable?() -> bool
+instance.writable?() -> bool
 ```

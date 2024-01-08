@@ -45,47 +45,47 @@ folder: rbs_doc
 ### advertising_report_callback
 
 ```ruby
-advertising_report_callback(BLE::AdvertisingReport) -> void
+instance.advertising_report_callback(BLE::AdvertisingReport) -> void
 ```
 ### connect
 
 ```ruby
-connect(BLE::AdvertisingReport) -> bool
+instance.connect(BLE::AdvertisingReport) -> bool
 ```
 ### discover_characteristic_descriptors
 
 ```ruby
-discover_characteristic_descriptors(Integer, Integer, Integer) -> Integer
+instance.discover_characteristic_descriptors(Integer, Integer, Integer) -> Integer
 ```
 ### discover_characteristics_for_service
 
 ```ruby
-discover_characteristics_for_service(Integer, Integer, Integer) -> Integer
+instance.discover_characteristics_for_service(Integer, Integer, Integer) -> Integer
 ```
 ### discover_primary_services
 
 ```ruby
-discover_primary_services(Integer) -> Integer
+instance.discover_primary_services(Integer) -> Integer
 ```
 ### get_packet
 
 ```ruby
-get_packet() -> String
+instance.get_packet() -> String
 ```
 ### read_value_of_characteristic_using_value_handle
 
 ```ruby
-read_value_of_characteristic_using_value_handle(Integer, Integer) -> Integer
+instance.read_value_of_characteristic_using_value_handle(Integer, Integer) -> Integer
 ```
 ### reset_state
 
 ```ruby
-reset_state() -> Symbol
+instance.reset_state() -> Symbol
 ```
 ### scan
 
 ```ruby
-scan(
+instance.scan(
       ?scan_type: scan_type_t,
       ?scan_interval: Integer,
       ?scan_window: Integer,
@@ -97,24 +97,24 @@ scan(
 ### set_scan_params
 
 ```ruby
-set_scan_params(scan_type_t scan_type, Integer scan_interval, Integer scan_window) -> 0
+instance.set_scan_params(scan_type_t scan_type, Integer scan_interval, Integer scan_window) -> 0
 ```
 ### start_scan
 
 ```ruby
-start_scan() -> 0
+instance.start_scan() -> 0
 ```
 ### stop_scan
 
 ```ruby
-stop_scan() -> 0
+instance.stop_scan() -> 0
 ```
 ## Attr accessors
 ### state (reader)
 ```ruby
-Symbol
+instance.state -> Symbol
 ```
 ### services (reader)
 ```ruby
-Array[service_t]
+instance.services -> Array[service_t]
 ```

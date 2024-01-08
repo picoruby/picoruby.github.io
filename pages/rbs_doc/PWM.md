@@ -8,31 +8,26 @@ folder: rbs_doc
 ### new
 
 ```ruby
-PWM.new(Integer pin, ?frequency: (Float|Integer), ?duty:  (Float|Integer)) -> void
+PWM.new(Integer pin, ?frequency: (Float|Integer), ?duty:  (Float|Integer)) -> instance
 ```
 ## Instance methods
-### _init
-
-```ruby
-_init(Integer pin) -> 0
-```
 ### duty
 
 ```ruby
-duty(Float|Integer) -> Float
+instance.duty(Float|Integer) -> Float
 ```
 ### frequency
 
 ```ruby
-frequency(Float|Integer) -> Float
+instance.frequency(Float|Integer) -> Float
 ```
 ### period_us
 
 ```ruby
-period_us(Integer) -> Float
+instance.period_us(Integer) -> Float
 ```
 ### pulse_width_us
 
 ```ruby
-pulse_width_us(Integer) -> Float
+instance.pulse_width_us(Integer) -> Float
 ```

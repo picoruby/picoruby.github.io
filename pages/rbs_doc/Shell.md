@@ -19,35 +19,35 @@ Shell.next_executable-> {code: String, name: String}
 ### run_irb
 
 ```ruby
-run_irb-> void
+instance.run_irb-> void
 ```
 ### run_shell
 
 ```ruby
-run_shell-> void
+instance.run_shell-> void
 ```
 ### setup_root_volume
 
 ```ruby
-setup_root_volume(Symbol drive, ?label: String) -> void
+instance.setup_root_volume(Symbol drive, ?label: String) -> void
 ```
 ### setup_system_files
 
 ```ruby
-setup_system_files(?force: bool) -> void
+instance.setup_system_files(?force: bool) -> void
 ```
 ### show_logo
 
 ```ruby
-show_logo-> nil
+instance.show_logo-> nil
 ```
 ### simple_question
 
 ```ruby
-simple_question(String question) { (String answer) -> boolish } -> void
+instance.simple_question(String question) { (String answer) -> boolish } -> void
 ```
 ### start
 
 ```ruby
-start(?:shell mode) -> nil
+instance.start(?:shell mode) -> nil
 ```

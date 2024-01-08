@@ -5,7 +5,7 @@ permalink: SQLite3.html
 folder: rbs_doc
 ---
 ## Type aliases
-### var_t
+### sqlite3_var_t
 ```ruby
 String | Integer | Float | nil | bool
 ```

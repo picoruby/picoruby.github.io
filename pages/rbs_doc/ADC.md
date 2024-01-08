@@ -14,34 +14,24 @@ Integer|String|Symbol
 Hash[untyped, untyped]
 ```
 ## Singleton methods
-### _init
-
-```ruby
-ADC._init(pin_t pin) -> 0
-```
 ### new
 
 ```ruby
-ADC.new(pin_t pin, ?additional_params_t additional_params) -> void
+ADC.new(pin_t pin, ?additional_params_t additional_params) -> instance
 ```
 ## Instance methods
-### init_additional_params
-
-```ruby
-init_additional_params() -> self
-```
 ### read
 
 ```ruby
-read() -> Float
+instance.read() -> Float
 ```
 ### read_raw
 
 ```ruby
-read_raw() -> Integer
+instance.read_raw() -> Integer
 ```
 ### read_voltage
 
 ```ruby
-read_voltage() -> Float
+instance.read_voltage() -> Float
 ```

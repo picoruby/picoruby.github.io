@@ -8,21 +8,21 @@ folder: rbs_doc
 ### new
 
 ```ruby
-SQLite3::ResultSet.new(SQLite3::Database, SQLite3::Statement) -> void
+SQLite3::ResultSet.new(SQLite3::Database, SQLite3::Statement) -> instance
 ```
 ## Instance methods
 ### each
 
 ```ruby
-each() { (Array[var_t] | Hash[String, var_t]) -> void } -> nil
+instance.each() { (Array[sqlite3_var_t] | Hash[String, sqlite3_var_t]) -> void } -> nil
 ```
 ### next
 
 ```ruby
-next() -> (Array[var_t] | Hash[String, var_t] | nil)
+instance.next() -> (Array[sqlite3_var_t] | Hash[String, sqlite3_var_t] | nil)
 ```
 ### to_a
 
 ```ruby
-to_a() -> Array[Array[var_t]]
+instance.to_a() -> Array[Array[sqlite3_var_t]]
 ```

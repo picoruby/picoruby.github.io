@@ -8,93 +8,93 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Terminal::Buffer.new-> void
+Terminal::Buffer.new() -> instance
 ```
 ## Instance methods
 ### bottom
 
 ```ruby
-bottom-> void
+instance.bottom-> void
 ```
 ### clear
 
 ```ruby
-clear-> void
+instance.clear-> void
 ```
 ### current_char
 
 ```ruby
-current_char-> String?
+instance.current_char-> String?
 ```
 ### current_line
 
 ```ruby
-current_line-> String
+instance.current_line-> String
 ```
 ### current_tail
 
 ```ruby
-current_tail(?Integer n) -> String
+instance.current_tail(?Integer n) -> String
 ```
 ### down
 
 ```ruby
-down-> void
+instance.down-> void
 ```
 ### dump
 
 ```ruby
-dump-> String
+instance.dump-> String
 ```
 ### head
 
 ```ruby
-head-> void
+instance.head-> void
 ```
 ### home
 
 ```ruby
-home-> void
+instance.home-> void
 ```
 ### left
 
 ```ruby
-left-> void
+instance.left-> void
 ```
 ### put
 
 ```ruby
-put(String | Symbol c) -> void
+instance.put(String | Symbol c) -> void
 ```
 ### right
 
 ```ruby
-right-> void
+instance.right-> void
 ```
 ### tail
 
 ```ruby
-tail-> void
+instance.tail-> void
 ```
 ### up
 
 ```ruby
-up-> void
+instance.up-> void
 ```
 ## Attr accessors
 ### lines (accessor)
 ```ruby
-Array[String]
+instance.lines -> Array[String]
 ```
 ### changed (accessor)
 ```ruby
-bool
+instance.changed -> bool
 ```
 ### cursor_x (reader)
 ```ruby
-Integer
+instance.cursor_x -> Integer
 ```
 ### cursor_y (reader)
 ```ruby
-Integer
+instance.cursor_y -> Integer
 ```

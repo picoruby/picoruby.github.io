@@ -8,101 +8,101 @@ folder: rbs_doc
 ### ceil_to_i
 
 ```ruby
-ceil_to_i() -> Integer
+instance.ceil_to_i() -> Integer
 ```
 ## Instance methods
 ### %
 
 ```ruby
-%(Integer | Float) -> Float
+instance.%(Integer | Float) -> Float
 ```
 ### *
 
 ```ruby
-*(Integer | Float) -> Float
+instance.*(Integer | Float) -> Float
 ```
 ### **
 
 ```ruby
-**(Integer | Float) -> Float
+instance.**(Integer | Float) -> Float
 ```
 ### +
 
 ```ruby
-+(Integer | Float) -> Float
+instance.+(Integer | Float) -> Float
 ```
 ### +@
 
 ```ruby
-+@() -> Float
+instance.+@() -> Float
 ```
 ### -
 
 ```ruby
--(Integer | Float) -> Float
+instance.-(Integer | Float) -> Float
 ```
 ### -@
 
 ```ruby
--@() -> Float
+instance.-@() -> Float
 ```
 ### /
 
 ```ruby
-/(Integer | Float) -> Float
+instance./(Integer | Float) -> Float
 ```
 ### <
 
 ```ruby
-<(Integer | Float) -> bool
+instance.<(Integer | Float) -> bool
 ```
 ### <=
 
 ```ruby
-<=(Integer | Float) -> bool
+instance.<=(Integer | Float) -> bool
 ```
 ### <=>
 
 ```ruby
-<=>(Integer | Float) -> Integer?
+instance.<=>(Integer | Float) -> Integer?
 ```
 ### ==
 
 ```ruby
-==(untyped) -> bool
+instance.==(untyped) -> bool
 ```
 ### ===
 
 ```ruby
-===(untyped) -> bool
+instance.===(untyped) -> bool
 ```
 ### >
 
 ```ruby
->(Integer | Float) -> bool
+instance.>(Integer | Float) -> bool
 ```
 ### >=
 
 ```ruby
->=(Integer | Float) -> bool
+instance.>=(Integer | Float) -> bool
 ```
 ### abs
 
 ```ruby
-abs() -> Float
+instance.abs() -> Float
 ```
 ### to_f
 
 ```ruby
-to_f() -> Float
+instance.to_f() -> Float
 ```
 ### to_i
 
 ```ruby
-to_i() -> Integer
+instance.to_i() -> Integer
 ```
 ### to_s
 
 ```ruby
-to_s() -> String
+instance.to_s() -> String
 ```

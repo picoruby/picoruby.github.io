@@ -19,10 +19,10 @@ Exception.new(?string | _ToS message) -> self
 ### ==
 
 ```ruby
-==(untyped obj) -> bool
+instance.==(untyped obj) -> bool
 ```
 ### message
 
 ```ruby
-message() -> String
+instance.message() -> String
 ```

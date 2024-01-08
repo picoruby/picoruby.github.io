@@ -8,58 +8,58 @@ folder: rbs_doc
 ### !
 
 ```ruby
-!() -> true
+instance.!() -> true
 ```
 ### &
 
 ```ruby
-&(untyped obj) -> false
+instance.&(untyped obj) -> false
 ```
 ### ===
 
 ```ruby
-===(nil) -> true
-===(untyped obj) -> bool
+instance.===(nil) -> true
+instance.===(untyped obj) -> bool
 ```
 ### ^
 
 ```ruby
-^(false | nil) -> false
-^(untyped obj) -> bool
+instance.^(false | nil) -> false
+instance.^(untyped obj) -> bool
 ```
 ### inspect
 
 ```ruby
-inspect() -> "nil"
+instance.inspect() -> "nil"
 ```
 ### nil?
 
 ```ruby
-nil?() -> true
+instance.nil?() -> true
 ```
 ### to_f
 
 ```ruby
-to_f() -> Float
+instance.to_f() -> Float
 ```
 ### to_h
 
 ```ruby
-to_h() -> {}
+instance.to_h() -> {}
 ```
 ### to_i
 
 ```ruby
-to_i() -> 0
+instance.to_i() -> 0
 ```
 ### to_s
 
 ```ruby
-to_s() -> ""
+instance.to_s() -> ""
 ```
 ### |
 
 ```ruby
-|(nil | false) -> false
-|(untyped obj) -> bool
+instance.|(nil | false) -> false
+instance.|(untyped obj) -> bool
 ```

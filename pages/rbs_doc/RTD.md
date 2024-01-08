@@ -5,7 +5,7 @@ permalink: RTD.html
 folder: rbs_doc
 ---
 ## Type aliases
-### unit_t
+### rtd_unit_t
 ```ruby
 :celsius | :fahrenheit | :kelvin
 ```
@@ -18,21 +18,21 @@ RTD.new(
     current_gpio: GPIO,
     r_ref: (Float | Integer),
     ?channels: Hash[Symbol, (Integer | ADC)]
-  ) -> void
+  ) -> instance
 ```
 ## Instance methods
 ### read
 
 ```ruby
-read(?unit: unit_t) -> Float
+instance.read(?unit: rtd_unit_t) -> Float
 ```
 ### temperature_in_celsius
 
 ```ruby
-temperature_in_celsius(Float) -> Float
+instance.temperature_in_celsius(Float) -> Float
 ```
 ## Attr accessors
 ### sample_count (accessor)
 ```ruby
-Integer
+instance.sample_count -> Integer
 ```

@@ -33,13 +33,13 @@ File.file?(string) -> bool
 ### new
 
 ```ruby
-File.new(string, ?string mode) -> void
+File.new(string, ?string mode) -> VFS::file_t
 ```
 ### open
 
 ```ruby
-File.open(string, ?string | int mode) -> VFS::file_t
-File.open[T] (string, ?string | int mode) { (VFS::file_t) -> T } -> VFS::file_t
+File.open(string, ?string) -> VFS::file_t
+File.open[T] (string, ?string) { (VFS::file_t) -> T } -> nil
 ```
 ### rename
 
@@ -60,80 +60,80 @@ File.utime(Time atime, Time mtime, *string) -> Integer
 ### close
 
 ```ruby
-close() -> nil
+instance.close() -> nil
 ```
 ### each_line
 
 ```ruby
-each_line() { (String) -> void } -> nil
+instance.each_line() { (String) -> void } -> nil
 ```
 ### eof?
 
 ```ruby
-eof?() -> bool
+instance.eof?() -> bool
 ```
 ### expand
 
 ```ruby
-expand(Integer size) -> Integer
+instance.expand(Integer size) -> Integer
 ```
 ### fsync
 
 ```ruby
-fsync() -> Integer
+instance.fsync() -> Integer
 ```
 ### gets
 
 ```ruby
-gets(*(Integer|String) args, ?chomp: bool) -> String?
+instance.gets(*(Integer|String) args, ?chomp: bool) -> String?
 ```
 ### path
 
 ```ruby
-path() -> String
+instance.path() -> String
 ```
 ### printf
 
 ```ruby
-printf(String format, *String string) -> nil
+instance.printf(String format, *String string) -> nil
 ```
 ### putc
 
 ```ruby
-putc(String | Integer ch) -> (String | Integer)
+instance.putc(String | Integer ch) -> (String | Integer)
 ```
 ### puts
 
 ```ruby
-puts(*String string) -> nil
+instance.puts(*String string) -> nil
 ```
 ### read
 
 ```ruby
-read(?Integer length, ?String outbuf) -> String?
+instance.read(?Integer length, ?String outbuf) -> String?
 ```
 ### rewind
 
 ```ruby
-rewind() -> Integer
+instance.rewind() -> Integer
 ```
 ### seek
 
 ```ruby
-seek(Integer offset, ?Integer whence) -> Integer
+instance.seek(Integer offset, ?Integer whence) -> Integer
 ```
 ### size
 
 ```ruby
-size() -> Integer
+instance.size() -> Integer
 ```
 ### tell
 
 ```ruby
-tell() -> Integer
+instance.tell() -> Integer
 ```
 ### write
 
 ```ruby
-write(*String string) -> Integer
+instance.write(*String string) -> Integer
 ```

@@ -8,61 +8,51 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Sounder.new(Integer) -> void
+Sounder.new(Integer) -> instance
 ```
 ## Instance methods
 ### add_note
 
 ```ruby
-add_note(Float frequency, Integer duration) -> bool
+instance.add_note(Float frequency, Integer duration) -> bool
 ```
 ### add_song
 
 ```ruby
-add_song(Symbol name, *String measures) -> void
+instance.add_song(Symbol name, *String measures) -> void
 ```
 ### clear_song
 
 ```ruby
-clear_song() -> void
+instance.clear_song() -> void
 ```
 ### compile
 
 ```ruby
-compile(*String | Symbol) -> void
+instance.compile(*String | Symbol) -> void
 ```
 ### lock
 
 ```ruby
-lock() -> void
+instance.lock() -> void
 ```
 ### play
 
 ```ruby
-play(*String | Symbol) -> void
+instance.play(*String | Symbol) -> void
 ```
 ### replay
 
 ```ruby
-replay() -> void
+instance.replay() -> void
 ```
 ### replay_if_key_pressed
 
 ```ruby
-replay_if_key_pressed() -> void
-```
-### sounder_init
-
-```ruby
-sounder_init(Integer) -> void
-```
-### sounder_replay
-
-```ruby
-sounder_replay() -> void
+instance.replay_if_key_pressed() -> void
 ```
 ### unlock
 
 ```ruby
-unlock() -> void
+instance.unlock() -> void
 ```

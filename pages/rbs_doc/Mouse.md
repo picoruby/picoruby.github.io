@@ -13,37 +13,37 @@ I2C | SPI | Array[ADC]
 ### new
 
 ```ruby
-Mouse.new(driver: driver_t) -> void
+Mouse.new(driver: driver_t) -> instance
 ```
 ## Instance methods
 ### button_pressed?
 
 ```ruby
-button_pressed?() -> bool
+instance.button_pressed?() -> bool
 ```
 ### task
 
 ```ruby
-task() { (Mouse, Keyboard) -> void } -> Proc
+instance.task() { (Mouse, Keyboard) -> void } -> Proc
 ```
 ## Attr accessors
 ### driver (reader)
 ```ruby
-driver_t
+instance.driver -> driver_t
 ```
 ### task_proc (accessor)
 ```ruby
-^(Mouse, Keyboard) -> void
+instance.task_proc -> ^(Mouse, Keyboard) -> void
 ```
 ### cursor_speed (accessor)
 ```ruby
-Integer
+instance.cursor_speed -> Integer
 ```
 ### wheel_speed (accessor)
 ```ruby
-Integer
+instance.wheel_speed -> Integer
 ```
 ### buttons (accessor)
 ```ruby
-Integer
+instance.buttons -> Integer
 ```

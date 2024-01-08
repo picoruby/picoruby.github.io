@@ -17,70 +17,70 @@ Integer
 ### new
 
 ```ruby
-BLE::GattDatabase.new() { (GattDatabase) -> void } -> void
+BLE::GattDatabase.new() ?{ (GattDatabase) -> void } -> instance
 ```
 ## Instance methods
 ### add_characteristic
 
 ```ruby
-add_characteristic(properties_t, uuid_t, properties_t, String) ?{ (GattDatabase) -> void } -> void
+instance.add_characteristic(properties_t, uuid_t, properties_t, String) ?{ (GattDatabase) -> void } -> void
 ```
 ### add_descriptor
 
 ```ruby
-add_descriptor(properties_t, uuid_t, ?(String)) -> void
+instance.add_descriptor(properties_t, uuid_t, ?(String)) -> void
 ```
 ### add_line
 
 ```ruby
-add_line(String) -> void
+instance.add_line(String) -> void
 ```
 ### add_service
 
 ```ruby
-add_service(uuid_t, uuid_t) ?{ (GattDatabase) -> void } -> void
+instance.add_service(uuid_t, uuid_t) ?{ (GattDatabase) -> void } -> void
 ```
 ### att_flags
 
 ```ruby
-att_flags(Integer) -> Integer
+instance.att_flags(Integer) -> Integer
 ```
 ### flag_by_uuid
 
 ```ruby
-flag_by_uuid(uuid_t, Integer) -> String
+instance.flag_by_uuid(uuid_t, Integer) -> String
 ```
 ### insert_database_hash
 
 ```ruby
-insert_database_hash() -> void
+instance.insert_database_hash() -> void
 ```
 ### push_handle
 
 ```ruby
-push_handle() -> String
+instance.push_handle() -> String
 ```
 ### seek_handle
 
 ```ruby
-seek_handle() -> String
+instance.seek_handle() -> String
 ```
 ### uuid2str
 
 ```ruby
-uuid2str(uuid_t) -> String
+instance.uuid2str(uuid_t) -> String
 ```
 ### write_permissions_and_key_size_flags_from_properties
 
 ```ruby
-write_permissions_and_key_size_flags_from_properties(Integer) -> Integer
+instance.write_permissions_and_key_size_flags_from_properties(Integer) -> Integer
 ```
 ## Attr accessors
 ### handle_table (reader)
 ```ruby
-Hash[uuid_t|nil, untyped]
+instance.handle_table -> Hash[uuid_t|nil, untyped]
 ```
 ### profile_data (reader)
 ```ruby
-String
+instance.profile_data -> String
 ```

@@ -8,26 +8,16 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Shell::Command.new-> void
+Shell::Command.new() -> instance
 ```
 ## Instance methods
-### _echo
-
-```ruby
-_echo-> nil
-```
-### _type
-
-```ruby
-_type-> nil
-```
 ### exec
 
 ```ruby
-exec(*untyped params) -> void
+instance.exec(*untyped params) -> void
 ```
 ### find_executable
 
 ```ruby
-find_executable(String name) -> String?
+instance.find_executable(String name) -> String?
 ```

@@ -14,5 +14,5 @@ VFS::Dir.open(String) -> dir_t
 ### pat=
 
 ```ruby
-pat=(array[path] | path) -> Array[String]
+instance.pat=(array[path] | path) -> Array[String]
 ```

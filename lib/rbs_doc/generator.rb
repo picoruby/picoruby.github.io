@@ -40,6 +40,8 @@ module RBSDoc
                   "PRK Firmware class"
                 when "hardware_device"
                   "Hardware Device class"
+                when "error"
+                  "Error class"
                 else
                   "General class"
                 end
@@ -130,7 +132,7 @@ module RBSDoc
                 f.puts
                 f.puts "```ruby"
                 method[:overloads].each do |overload|
-                  f.print classname + "." if kind == :singleton
+                  f.print(kind == :singleton ? classname + "." : "instance.")
                   f.print name
                   f.puts overload[:source]
                 end
@@ -141,7 +143,7 @@ module RBSDoc
             klass[:attr_accessors].each do |attr_accessor|
               f.puts "### #{attr_accessor[:name]} (#{attr_accessor[:accessor_type]})\n"
               f.puts "```ruby"
-              f.puts attr_accessor[:source]
+              f.puts "instance.#{attr_accessor[:name]} -> #{attr_accessor[:source]}"
               f.puts "```\n"
             end
           end

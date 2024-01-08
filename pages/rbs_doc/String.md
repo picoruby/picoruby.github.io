@@ -14,245 +14,245 @@ String.new(?string str) -> void
 ### !
 
 ```ruby
-!() -> bool
+instance.!() -> bool
 ```
 ### *
 
 ```ruby
-*(int n) -> String
+instance.*(int n) -> String
 ```
 ### +
 
 ```ruby
-+(string other_str) -> String
+instance.+(string other_str) -> String
 ```
 ### <<
 
 ```ruby
-<<(string | Integer str_or_codepoint) -> String
+instance.<<(string | Integer str_or_codepoint) -> String
 ```
 ### <=>
 
 ```ruby
-<=>(string other) -> Integer
-<=>(untyped other) -> Integer?
+instance.<=>(string other) -> Integer
+instance.<=>(untyped other) -> Integer?
 ```
 ### ==
 
 ```ruby
-==(untyped obj) -> bool
+instance.==(untyped obj) -> bool
 ```
 ### ===
 
 ```ruby
-===(untyped obj) -> bool
+instance.===(untyped obj) -> bool
 ```
 ### []
 
 ```ruby
-[](int index) -> String?
-[](int start, int length) -> String?
-[](Range[Integer] | Range[Integer?] range) -> String?
-[](String match_str) -> String?
+instance.[](int index) -> String?
+instance.[](int start, int length) -> String?
+instance.[](Range[Integer] | Range[Integer?] range) -> String?
+instance.[](String match_str) -> String?
 ```
 ### []=
 
 ```ruby
-[]=(int pos, String new_str) -> String
-[]=(int begin_pos, int end_pos, String new_str) -> String
-[]=(Range[Integer] | Range[Integer?] range, String new_str) -> String
-[]=(String other_str, String new_str) -> String
+instance.[]=(int pos, String new_str) -> String
+instance.[]=(int begin_pos, int end_pos, String new_str) -> String
+instance.[]=(Range[Integer] | Range[Integer?] range, String new_str) -> String
+instance.[]=(String other_str, String new_str) -> String
 ```
 ### __ljust_rjust_argcheck
 
 ```ruby
-__ljust_rjust_argcheck(Integer width, String padding) -> void
+instance.__ljust_rjust_argcheck(Integer width, String padding) -> void
 ```
 ### bytes
 
 ```ruby
-bytes() -> Array[Integer]
-bytes() { (Integer byte) -> void } -> String
+instance.bytes() -> Array[Integer]
+instance.bytes() { (Integer byte) -> void } -> String
 ```
 ### chomp
 
 ```ruby
-chomp(?string separator) -> String
+instance.chomp(?string separator) -> String
 ```
 ### chomp!
 
 ```ruby
-chomp!(?string separator) -> String?
+instance.chomp!(?string separator) -> String?
 ```
 ### clear
 
 ```ruby
-clear() -> String
+instance.clear() -> String
 ```
 ### downcase
 
 ```ruby
-downcase() -> String
-downcase(:ascii | :fold | :lithuanian | :turkic) -> String
-downcase(:lithuanian, :turkic) -> String
-downcase(:turkic, :lithuanian) -> String
+instance.downcase() -> String
+instance.downcase(:ascii | :fold | :lithuanian | :turkic) -> String
+instance.downcase(:lithuanian, :turkic) -> String
+instance.downcase(:turkic, :lithuanian) -> String
 ```
 ### downcase!
 
 ```ruby
-downcase!() -> String?
-downcase!(:ascii | :fold | :lithuanian | :turkic) -> String?
-downcase!(:lithuanian, :turkic) -> String?
-downcase!(:turkic, :lithuanian) -> String?
+instance.downcase!() -> String?
+instance.downcase!(:ascii | :fold | :lithuanian | :turkic) -> String?
+instance.downcase!(:lithuanian, :turkic) -> String?
+instance.downcase!(:turkic, :lithuanian) -> String?
 ```
 ### each_byte
 
 ```ruby
-each_byte() { (Integer byte) -> void } -> self
+instance.each_byte() { (Integer byte) -> void } -> self
 ```
 ### each_char
 
 ```ruby
-each_char() { (String char) -> void } -> self
+instance.each_char() { (String char) -> void } -> self
 ```
 ### empty?
 
 ```ruby
-empty?() -> bool
+instance.empty?() -> bool
 ```
 ### end_with?
 
 ```ruby
-end_with?(*string suffixes) -> bool
+instance.end_with?(*string suffixes) -> bool
 ```
 ### getbyte
 
 ```ruby
-getbyte(int index) -> Integer?
+instance.getbyte(int index) -> Integer?
 ```
 ### include?
 
 ```ruby
-include?(string other_str) -> bool
+instance.include?(string other_str) -> bool
 ```
 ### index
 
 ```ruby
-index(string substr_or_regexp, ?int offset) -> Integer?
+instance.index(string substr_or_regexp, ?int offset) -> Integer?
 ```
 ### inspect
 
 ```ruby
-inspect() -> String
+instance.inspect() -> String
 ```
 ### intern
 
 ```ruby
-intern() -> Symbol
+instance.intern() -> Symbol
 ```
 ### length
 
 ```ruby
-length() -> Integer
+instance.length() -> Integer
 ```
 ### ljust
 
 ```ruby
-ljust(Integer width, ?string padstr) -> String
+instance.ljust(Integer width, ?string padstr) -> String
 ```
 ### lstrip
 
 ```ruby
-lstrip() -> String
+instance.lstrip() -> String
 ```
 ### lstrip!
 
 ```ruby
-lstrip!() -> self?
+instance.lstrip!() -> self?
 ```
 ### ord
 
 ```ruby
-ord() -> Integer
+instance.ord() -> Integer
 ```
 ### rjust
 
 ```ruby
-rjust(Integer width, ?string padstr) -> String
+instance.rjust(Integer width, ?string padstr) -> String
 ```
 ### rstrip
 
 ```ruby
-rstrip() -> String
+instance.rstrip() -> String
 ```
 ### rstrip!
 
 ```ruby
-rstrip!() -> self?
+instance.rstrip!() -> self?
 ```
 ### split
 
 ```ruby
-split(?string pattern, ?int limit) -> Array[String]
+instance.split(?string pattern, ?int limit) -> Array[String]
 ```
 ### start_with?
 
 ```ruby
-start_with?(*string prefixes) -> bool
+instance.start_with?(*string prefixes) -> bool
 ```
 ### strip
 
 ```ruby
-strip() -> String
+instance.strip() -> String
 ```
 ### strip!
 
 ```ruby
-strip!() -> self?
+instance.strip!() -> self?
 ```
 ### to_f
 
 ```ruby
-to_f() -> Float
+instance.to_f() -> Float
 ```
 ### to_i
 
 ```ruby
-to_i(?int base) -> Integer
+instance.to_i(?int base) -> Integer
 ```
 ### to_s
 
 ```ruby
-to_s() -> String
+instance.to_s() -> String
 ```
 ### to_sym
 
 ```ruby
-to_sym() -> Symbol
+instance.to_sym() -> Symbol
 ```
 ### tr
 
 ```ruby
-tr(string from_str, string to_str) -> String
+instance.tr(string from_str, string to_str) -> String
 ```
 ### tr!
 
 ```ruby
-tr!(string from_str, string to_str) -> String?
+instance.tr!(string from_str, string to_str) -> String?
 ```
 ### upcase
 
 ```ruby
-upcase() -> String
-upcase(:ascii | :lithuanian | :turkic) -> String
-upcase(:lithuanian, :turkic) -> String
-upcase(:turkic, :lithuanian) -> String
+instance.upcase() -> String
+instance.upcase(:ascii | :lithuanian | :turkic) -> String
+instance.upcase(:lithuanian, :turkic) -> String
+instance.upcase(:turkic, :lithuanian) -> String
 ```
 ### upcase!
 
 ```ruby
-upcase!() -> self?
-upcase!(:ascii | :lithuanian | :turkic) -> self?
-upcase!(:lithuanian, :turkic) -> self?
-upcase!(:turkic, :lithuanian) -> self?
+instance.upcase!() -> self?
+instance.upcase!(:ascii | :lithuanian | :turkic) -> self?
+instance.upcase!(:lithuanian, :turkic) -> self?
+instance.upcase!(:turkic, :lithuanian) -> self?
 ```

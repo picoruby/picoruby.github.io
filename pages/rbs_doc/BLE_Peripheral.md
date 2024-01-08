@@ -8,15 +8,15 @@ folder: rbs_doc
 ### advertise
 
 ```ruby
-advertise(String) -> void
+instance.advertise(String) -> void
 ```
 ### notify
 
 ```ruby
-notify(Integer) -> void
+instance.notify(Integer) -> void
 ```
 ### request_can_send_now_event
 
 ```ruby
-request_can_send_now_event() -> void
+instance.request_can_send_now_event() -> void
 ```

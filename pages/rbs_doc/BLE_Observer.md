@@ -8,5 +8,5 @@ folder: rbs_doc
 ### new
 
 ```ruby
-BLE::Observer.new() -> void
+BLE::Observer.new() -> instance
 ```

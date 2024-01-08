@@ -18,49 +18,20 @@ I2C.new(
     ?frequency: Integer,
     ?sda_pin: Integer,
     ?scl_pin: Integer
-  ) -> void
+  ) -> instance
 ```
 ## Instance methods
-### _init
-
-```ruby
-_init(
-    String unit,
-    Integer frequency,
-    Integer sda_pin,
-    Integer scl_pin
-  ) -> Integer
-```
-### _read
-
-```ruby
-_read(
-    Integer unit_num,
-    Integer i2c_adrs_7,
-    Integer len
-  ) -> (String | Integer)
-```
-### _write
-
-```ruby
-_write(
-    Integer unit_num,
-    Integer i2c_adrs_7,
-    Array[Integer] output_array,
-    bool nostop
-  ) -> Integer
-```
 ### outputs_array
 
 ```ruby
-outputs_array(
+instance.outputs_array(
     Array[outputs_t] outputs
   ) -> Array[Integer]
 ```
 ### read
 
 ```ruby
-read(
+instance.read(
     Integer i2c_adrs_7,
     Integer len,
     *outputs_t outputs
@@ -69,12 +40,12 @@ read(
 ### scan
 
 ```ruby
-scan() -> nil
+instance.scan() -> nil
 ```
 ### write
 
 ```ruby
-write(
+instance.write(
     Integer i2c_adrs_7,
     *outputs_t outputs
   ) -> Integer

@@ -8,11 +8,11 @@ folder: rbs_doc
 ### new
 
 ```ruby
-IIRFilter.new() -> void
+IIRFilter.new() -> instance
 ```
 ## Instance methods
 ### filter
 
 ```ruby
-filter(Integer raw_value) -> Integer
+instance.filter(Integer raw_value) -> Integer
 ```

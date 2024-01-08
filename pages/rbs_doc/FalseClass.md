@@ -8,33 +8,33 @@ folder: rbs_doc
 ### !
 
 ```ruby
-!() -> true
+instance.!() -> true
 ```
 ### &
 
 ```ruby
-&(untyped obj) -> false
+instance.&(untyped obj) -> false
 ```
 ### ===
 
 ```ruby
-===(false) -> true
-===(untyped obj) -> bool
+instance.===(false) -> true
+instance.===(untyped obj) -> bool
 ```
 ### ^
 
 ```ruby
-^(false | nil) -> false
-^(untyped obj) -> bool
+instance.^(false | nil) -> false
+instance.^(untyped obj) -> bool
 ```
 ### to_s
 
 ```ruby
-to_s() -> "false"
+instance.to_s() -> "false"
 ```
 ### |
 
 ```ruby
-|(nil | false) -> false
-|(untyped obj) -> bool
+instance.|(nil | false) -> false
+instance.|(untyped obj) -> bool
 ```

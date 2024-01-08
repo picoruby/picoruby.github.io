@@ -8,31 +8,31 @@ folder: rbs_doc
 ### <=>
 
 ```ruby
-<=>(Symbol other) -> Integer
-<=>(untyped other) -> Integer?
+instance.<=>(Symbol other) -> Integer
+instance.<=>(untyped other) -> Integer?
 ```
 ### ==
 
 ```ruby
-==(untyped obj) -> bool
+instance.==(untyped obj) -> bool
 ```
 ### ===
 
 ```ruby
-===(untyped obj) -> bool
+instance.===(untyped obj) -> bool
 ```
 ### id2name
 
 ```ruby
-id2name() -> String
+instance.id2name() -> String
 ```
 ### inspect
 
 ```ruby
-inspect() -> String
+instance.inspect() -> String
 ```
 ### to_sym
 
 ```ruby
-to_sym() -> Symbol
+instance.to_sym() -> Symbol
 ```

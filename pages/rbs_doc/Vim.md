@@ -8,26 +8,21 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Vim.new(String filepath) -> void
+Vim.new(String filepath) -> instance
 ```
 ## Instance methods
-### _start
-
-```ruby
-_start-> void
-```
 ### exec_command
 
 ```ruby
-exec_command(Terminal::Buffer buffer) -> (:quit | String | nil)
+instance.exec_command(Terminal::Buffer buffer) -> (:quit | String | nil)
 ```
 ### save_file
 
 ```ruby
-save_file-> String
+instance.save_file-> String
 ```
 ### start
 
 ```ruby
-start-> void
+instance.start-> void
 ```

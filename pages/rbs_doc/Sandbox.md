@@ -8,61 +8,61 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Sandbox.new(?bool suppress_error) -> void
+Sandbox.new(?bool suppress_error) -> instance
 ```
 ## Instance methods
 ### compile
 
 ```ruby
-compile(String) -> bool
+instance.compile(String) -> bool
 ```
 ### exec_mrb
 
 ```ruby
-exec_mrb(String) -> bool
+instance.exec_mrb(String) -> bool
 ```
 ### execute
 
 ```ruby
-execute() -> bool
+instance.execute() -> bool
 ```
 ### free_parser
 
 ```ruby
-free_parser() -> void
+instance.free_parser() -> void
 ```
 ### interrupt
 
 ```ruby
-interrupt() -> void
+instance.interrupt() -> void
 ```
 ### load_file
 
 ```ruby
-load_file(String, ?signal: bool) -> void
+instance.load_file(String, ?signal: bool) -> void
 ```
 ### result
 
 ```ruby
-result() -> untyped
+instance.result() -> untyped
 ```
 ### state
 
 ```ruby
-state() -> Integer
+instance.state() -> Integer
 ```
 ### suspend
 
 ```ruby
-suspend() -> void
+instance.suspend() -> void
 ```
 ### wait
 
 ```ruby
-wait(?timeout: (Integer|nil), ?signal: bool) -> bool
+instance.wait(?timeout: (Integer|nil), ?signal: bool) -> bool
 ```
 ## Attr accessors
 ### error (accessor)
 ```ruby
-Exception?
+instance.error -> Exception?
 ```

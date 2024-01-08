@@ -14,43 +14,43 @@ Terminal::Base.new-> void
 ### clear
 
 ```ruby
-clear-> untyped
+instance.clear-> untyped
 ```
 ### debug
 
 ```ruby
-debug(untyped text) -> Integer?
+instance.debug(untyped text) -> Integer?
 ```
 ### home
 
 ```ruby
-home-> untyped
+instance.home-> untyped
 ```
 ### next_head
 
 ```ruby
-next_head-> untyped
+instance.next_head-> untyped
 ```
 ### physical_line_count
 
 ```ruby
-physical_line_count-> Integer
+instance.physical_line_count-> Integer
 ```
 ### system
 
 ```ruby
-system(untyped command) -> Integer
+instance.system(untyped command) -> Integer
 ```
 ## Attr accessors
 ### width (reader)
 ```ruby
-Integer
+instance.width -> Integer
 ```
 ### height (reader)
 ```ruby
-Integer
+instance.height -> Integer
 ```
 ### debug_tty (accessor)
 ```ruby
-String?
+instance.debug_tty -> String?
 ```

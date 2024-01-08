@@ -5,11 +5,6 @@ permalink: CYW43.html
 folder: rbs_doc
 ---
 ## Singleton methods
-### _init
-
-```ruby
-CYW43._init(String, bool) -> bool
-```
 ### check_initialized
 
 ```ruby

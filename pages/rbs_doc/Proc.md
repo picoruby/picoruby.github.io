@@ -14,5 +14,5 @@ Proc.new() { (*untyped) -> untyped } -> void
 ### call
 
 ```ruby
-call(*untyped arg0) -> untyped
+instance.call(*untyped arg0) -> untyped
 ```

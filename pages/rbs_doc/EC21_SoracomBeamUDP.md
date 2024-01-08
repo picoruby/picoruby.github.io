@@ -8,10 +8,10 @@ folder: rbs_doc
 ### configure_and_activate_context
 
 ```ruby
-configure_and_activate_context() -> bool
+instance.configure_and_activate_context() -> bool
 ```
 ### connect_and_send
 
 ```ruby
-connect_and_send(String data) -> bool
+instance.connect_and_send(String data) -> bool
 ```

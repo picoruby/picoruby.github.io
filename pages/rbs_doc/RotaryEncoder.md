@@ -8,76 +8,76 @@ folder: rbs_doc
 ### new
 
 ```ruby
-RotaryEncoder.new(Integer pin_a, Integer pin_b) -> void
+RotaryEncoder.new(Integer pin_a, Integer pin_b) -> instance
 ```
 ## Instance methods
 ### call_proc_if
 
 ```ruby
-call_proc_if(Integer) -> void
+instance.call_proc_if(Integer) -> void
 ```
 ### ccw
 
 ```ruby
-ccw() { () -> void } -> void
+instance.ccw() { () -> void } -> void
 ```
 ### clockwise
 
 ```ruby
-clockwise() { () -> void } -> void
+instance.clockwise() { () -> void } -> void
 ```
 ### configure
 
 ```ruby
-configure(Symbol symbol) -> void
+instance.configure(Symbol symbol) -> void
 ```
 ### consume_encoder
 
 ```ruby
-consume_encoder(Integer) -> Integer
+instance.consume_encoder(Integer) -> Integer
 ```
 ### consume_rotation_anchor
 
 ```ruby
-consume_rotation_anchor() -> void
+instance.consume_rotation_anchor() -> void
 ```
 ### consume_rotation_partner
 
 ```ruby
-consume_rotation_partner() -> Integer
+instance.consume_rotation_partner() -> Integer
 ```
 ### counterclockwise
 
 ```ruby
-counterclockwise() { () -> void } -> void
+instance.counterclockwise() { () -> void } -> void
 ```
 ### create_keycodes
 
 ```ruby
-create_keycodes(Integer) -> void
+instance.create_keycodes(Integer) -> void
 ```
 ### cw
 
 ```ruby
-cw() { () -> void } -> void
+instance.cw() { () -> void } -> void
 ```
 ### init_encoder
 
 ```ruby
-init_encoder(Integer, Integer) -> Integer
+instance.init_encoder(Integer, Integer) -> Integer
 ```
 ### init_pins
 
 ```ruby
-init_pins() -> void
+instance.init_pins() -> void
 ```
 ### left?
 
 ```ruby
-left?() -> bool
+instance.left?() -> bool
 ```
 ### right?
 
 ```ruby
-right?() -> bool
+instance.right?() -> bool
 ```

@@ -14,10 +14,10 @@ BLE::AdvertisingData.build() { (AdvertisingData) -> void } -> String
 ### add
 
 ```ruby
-add(Integer, *untyped) -> void
+instance.add(Integer, *untyped) -> void
 ```
 ## Attr accessors
 ### data (reader)
 ```ruby
-String
+instance.data -> String
 ```

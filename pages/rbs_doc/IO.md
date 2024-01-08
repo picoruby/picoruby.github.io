@@ -59,36 +59,36 @@ IO.wait_terminal(?timeout: Integer|Float|nil) -> bool
 ### <<
 
 ```ruby
-<<(untyped) -> self
+instance.<<(untyped) -> self
 ```
 ### flush
 
 ```ruby
-flush-> self
+instance.flush-> self
 ```
 ### getch
 
 ```ruby
-getch-> String
+instance.getch-> String
 ```
 ### iflush
 
 ```ruby
-iflush-> self
+instance.iflush-> self
 ```
 ### noecho
 
 ```ruby
-noecho() { (untyped) -> untyped } -> untyped
+instance.noecho() { (untyped) -> untyped } -> untyped
 ```
 ### raw
 
 ```ruby
-raw() { (untyped) -> untyped } -> untyped
+instance.raw() { (untyped) -> untyped } -> untyped
 ```
 ## Instance methods
 ### read_nonblock
 
 ```ruby
-read_nonblock(Integer maxlen) -> String
+instance.read_nonblock(Integer maxlen) -> String
 ```

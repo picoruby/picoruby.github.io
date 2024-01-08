@@ -14,10 +14,10 @@ CYW43::GPIO.new(Integer) -> void
 ### read
 
 ```ruby
-read() -> Integer
+instance.read() -> GPIO::gpio_logic_t
 ```
 ### write
 
 ```ruby
-write(Integer) -> 0
+instance.write(Integer) -> 0
 ```

@@ -14,60 +14,60 @@ FAT::File.new(String path, String mode) -> void
 ### close
 
 ```ruby
-close() -> nil
+instance.close() -> nil
 ```
 ### each_line
 
 ```ruby
-each_line() { (String) -> void } -> nil
+instance.each_line() { (String) -> void } -> nil
 ```
 ### eof?
 
 ```ruby
-eof?() -> bool
+instance.eof?() -> bool
 ```
 ### expand
 
 ```ruby
-expand(Integer size) -> Integer
+instance.expand(Integer size) -> Integer
 ```
 ### fsync
 
 ```ruby
-fsync() -> 0
+instance.fsync() -> 0
 ```
 ### gets
 
 ```ruby
-gets() -> String?
+instance.gets() -> String?
 ```
 ### puts
 
 ```ruby
-puts(*String) -> nil
+instance.puts(*String) -> nil
 ```
 ### read
 
 ```ruby
-read(?Integer size) -> String
+instance.read(?Integer size) -> String
 ```
 ### seek
 
 ```ruby
-seek(Integer offset, ?Integer whence) -> 0
+instance.seek(Integer offset, ?Integer whence) -> 0
 ```
 ### size
 
 ```ruby
-size() -> Integer
+instance.size() -> Integer
 ```
 ### tell
 
 ```ruby
-tell() -> Integer
+instance.tell() -> Integer
 ```
 ### write
 
 ```ruby
-write(String data) -> Integer
+instance.write(String data) -> Integer
 ```

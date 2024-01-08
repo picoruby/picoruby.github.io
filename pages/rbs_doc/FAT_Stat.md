@@ -8,41 +8,41 @@ folder: rbs_doc
 ### new
 
 ```ruby
-FAT::Stat.new(String device, String path) -> void
+FAT::Stat.new(String device, String path) -> instance
 ```
 ## Instance methods
 ### birthtime
 
 ```ruby
-birthtime() -> untyped
+instance.birthtime() -> untyped
 ```
 ### directory?
 
 ```ruby
-directory?() -> bool
+instance.directory?() -> bool
 ```
 ### mode
 
 ```ruby
-mode() -> Integer
+instance.mode() -> Integer
 ```
 ### mode_str
 
 ```ruby
-mode_str() -> String
+instance.mode_str() -> String
 ```
 ### mtime
 
 ```ruby
-mtime() -> Time
+instance.mtime() -> Time
 ```
 ### size
 
 ```ruby
-size() -> Integer
+instance.size() -> Integer
 ```
 ### writable?
 
 ```ruby
-writable?() -> bool
+instance.writable?() -> bool
 ```

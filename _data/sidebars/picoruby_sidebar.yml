@@ -30,16 +30,8 @@ entries:
   - title: Builtin class
     output: web pdf
     folderitems:
-    - title: ArgumentError
-      url: "/ArgumentError.html"
-      output: web pdf
-      type: homepage
     - title: Array
       url: "/Array.html"
-      output: web pdf
-      type: homepage
-    - title: Exception
-      url: "/Exception.html"
       output: web pdf
       type: homepage
     - title: FalseClass
@@ -62,16 +54,8 @@ entries:
       url: "/Math.html"
       output: web pdf
       type: homepage
-    - title: NameError
-      url: "/NameError.html"
-      output: web pdf
-      type: homepage
     - title: NilClass
       url: "/NilClass.html"
-      output: web pdf
-      type: homepage
-    - title: NoMethodError
-      url: "/NoMethodError.html"
       output: web pdf
       type: homepage
     - title: Object
@@ -86,18 +70,6 @@ entries:
       url: "/Range.html"
       output: web pdf
       type: homepage
-    - title: RangeError
-      url: "/RangeError.html"
-      output: web pdf
-      type: homepage
-    - title: RuntimeError
-      url: "/RuntimeError.html"
-      output: web pdf
-      type: homepage
-    - title: StandardError
-      url: "/StandardError.html"
-      output: web pdf
-      type: homepage
     - title: String
       url: "/String.html"
       output: web pdf
@@ -106,12 +78,55 @@ entries:
       url: "/Symbol.html"
       output: web pdf
       type: homepage
-    - title: SyntaxError
-      url: "/SyntaxError.html"
-      output: web pdf
-      type: homepage
     - title: TrueClass
       url: "/TrueClass.html"
+      output: web pdf
+      type: homepage
+  - title: Error class
+    output: web pdf
+    folderitems:
+    - title: ArgumentError
+      url: "/ArgumentError.html"
+      output: web pdf
+      type: homepage
+    - title: Exception
+      url: "/Exception.html"
+      output: web pdf
+      type: homepage
+    - title: IOError
+      url: "/IOError.html"
+      output: web pdf
+      type: homepage
+    - title: LoadError
+      url: "/LoadError.html"
+      output: web pdf
+      type: homepage
+    - title: NameError
+      url: "/NameError.html"
+      output: web pdf
+      type: homepage
+    - title: NoMethodError
+      url: "/NoMethodError.html"
+      output: web pdf
+      type: homepage
+    - title: RangeError
+      url: "/RangeError.html"
+      output: web pdf
+      type: homepage
+    - title: RuntimeError
+      url: "/RuntimeError.html"
+      output: web pdf
+      type: homepage
+    - title: SQLite3::Exception
+      url: "/SQLite3_Exception.html"
+      output: web pdf
+      type: homepage
+    - title: StandardError
+      url: "/StandardError.html"
+      output: web pdf
+      type: homepage
+    - title: SyntaxError
+      url: "/SyntaxError.html"
       output: web pdf
       type: homepage
     - title: TypeError
@@ -167,6 +182,10 @@ entries:
       type: homepage
     - title: PCF8523
       url: "/PCF8523.html"
+      output: web pdf
+      type: homepage
+    - title: UART::RxBuffer
+      url: "/UART_RxBuffer.html"
       output: web pdf
       type: homepage
   - title: IO Peripheral class
@@ -267,24 +286,16 @@ entries:
       url: "/File.html"
       output: web pdf
       type: homepage
+    - title: File::Stat
+      url: "/File_Stat.html"
+      output: web pdf
+      type: homepage
     - title: IIRFilter
       url: "/IIRFilter.html"
       output: web pdf
       type: homepage
     - title: IO
       url: "/IO.html"
-      output: web pdf
-      type: homepage
-    - title: IOError
-      url: "/IOError.html"
-      output: web pdf
-      type: homepage
-    - title: InstructionSequence
-      url: "/InstructionSequence.html"
-      output: web pdf
-      type: homepage
-    - title: LoadError
-      url: "/LoadError.html"
       output: web pdf
       type: homepage
     - title: MML
@@ -315,20 +326,12 @@ entries:
       url: "/RTD_PT100.html"
       output: web pdf
       type: homepage
-    - title: RubyVM
-      url: "/RubyVM.html"
-      output: web pdf
-      type: homepage
     - title: SQLite3
       url: "/SQLite3.html"
       output: web pdf
       type: homepage
     - title: SQLite3::Database
       url: "/SQLite3_Database.html"
-      output: web pdf
-      type: homepage
-    - title: SQLite3::Exception
-      url: "/SQLite3_Exception.html"
       output: web pdf
       type: homepage
     - title: SQLite3::ResultSet
@@ -353,10 +356,6 @@ entries:
       type: homepage
     - title: Shell::Command
       url: "/Shell_Command.html"
-      output: web pdf
-      type: homepage
-    - title: Stat
-      url: "/Stat.html"
       output: web pdf
       type: homepage
     - title: Task
@@ -387,12 +386,8 @@ entries:
       url: "/Time.html"
       output: web pdf
       type: homepage
-    - title: TimeMethods
-      url: "/TimeMethods.html"
-      output: web pdf
-      type: homepage
-    - title: UART::RxBuffer
-      url: "/UART_RxBuffer.html"
+    - title: Time::TimeMethods
+      url: "/Time_TimeMethods.html"
       output: web pdf
       type: homepage
     - title: VFS

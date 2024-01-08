@@ -25,31 +25,16 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Joystick.new(?Hash[init_axis_t, init_param_t] axes) -> void
+Joystick.new(?Hash[init_axis_t, init_param_t] axes) -> instance
 ```
 ## Instance methods
 ### drift_supression=
 
 ```ruby
-drift_supression=(Integer) -> bool
-```
-### init_axis_offset
-
-```ruby
-init_axis_offset(String axis, Integer pin) -> bool
-```
-### init_sensitivity
-
-```ruby
-init_sensitivity(Integer, Float) -> void
+instance.drift_supression=(Integer) -> bool
 ```
 ### report_hid
 
 ```ruby
-report_hid(Integer, Integer) -> nil
-```
-### reset_axes
-
-```ruby
-reset_axes() -> nil
+instance.report_hid(Integer, Integer) -> nil
 ```

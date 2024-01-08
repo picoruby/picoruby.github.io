@@ -5,24 +5,14 @@ permalink: MML.html
 folder: rbs_doc
 ---
 ## Singleton methods
-### coef
+### new
 
 ```ruby
-MML.coef(Integer) -> Float
-```
-### count_punto
-
-```ruby
-MML.count_punto(String, Integer) -> [Integer, Integer]
-```
-### number_str
-
-```ruby
-MML.number_str(String, Integer) -> [String, Integer]
+MML.new() -> instance
 ```
 ## Instance methods
 ### compile
 
 ```ruby
-compile(String) { (Float, Integer) -> bool } -> Integer
+instance.compile(String) { (Float, Integer) -> bool } -> Integer
 ```

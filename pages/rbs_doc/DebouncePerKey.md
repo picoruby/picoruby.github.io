@@ -8,5 +8,5 @@ folder: rbs_doc
 ### resolve
 
 ```ruby
-resolve(Integer in_pin, Integer out_pin) -> bool
+instance.resolve(Integer in_pin, Integer out_pin) -> bool
 ```

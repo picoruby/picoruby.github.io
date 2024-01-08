@@ -8,87 +8,87 @@ folder: rbs_doc
 ### new
 
 ```ruby
-SQLite3::Statement.new(SQLite3::Database db, String sql) -> void
+SQLite3::Statement.new(SQLite3::Database db, String sql) -> instance
 ```
 ## Instance methods
 ### active?
 
 ```ruby
-active?-> bool
+instance.active?-> bool
 ```
 ### bind_param
 
 ```ruby
-bind_param(Integer|Symbol|String key, var_t var) -> self
+instance.bind_param(Integer|Symbol|String key, sqlite3_var_t var) -> self
 ```
 ### bind_params
 
 ```ruby
-bind_params(*(var_t | Hash[Symbol, var_t]) bind_vars) -> Array[var_t | Hash[Symbol, var_t]]
+instance.bind_params(*(sqlite3_var_t | Hash[Symbol, sqlite3_var_t]) bind_vars) -> Array[sqlite3_var_t | Hash[Symbol, sqlite3_var_t]]
 ```
 ### close
 
 ```ruby
-close-> self
+instance.close-> self
 ```
 ### closed?
 
 ```ruby
-closed?-> bool
+instance.closed?-> bool
 ```
 ### column_count
 
 ```ruby
-column_count-> Integer
+instance.column_count-> Integer
 ```
 ### column_decltype
 
 ```ruby
-column_decltype(Integer index) -> String
+instance.column_decltype(Integer index) -> String
 ```
 ### column_name
 
 ```ruby
-column_name(Integer index) -> String
+instance.column_name(Integer index) -> String
 ```
 ### columns
 
 ```ruby
-columns-> Array[String]
+instance.columns-> Array[String]
 ```
 ### done?
 
 ```ruby
-done?-> bool
+instance.done?-> bool
 ```
 ### execute
 
 ```ruby
-execute(*var_t bind_vars) -> SQLite3::ResultSet
-execute(*var_t bind_vars) { (SQLite3::ResultSet) -> nil } -> nil
+instance.execute(*sqlite3_var_t bind_vars) -> SQLite3::ResultSet
+instance.execute(*sqlite3_var_t bind_vars) { (SQLite3::ResultSet) -> nil } -> nil
 ```
 ### get_metadata
 
 ```ruby
-get_metadata-> void
+instance.get_metadata-> void
 ```
 ### must_be_open!
 
 ```ruby
-must_be_open!-> nil
+instance.must_be_open!-> nil
 ```
 ### reset!
 
 ```ruby
-reset!-> self
+instance.reset!-> self
 ```
 ### step
 
 ```ruby
-step-> (Array[var_t] | nil)
+instance.step-> (Array[sqlite3_var_t] | nil)
 ```
 ### types
 
 ```ruby
-types-> Array[String]
+instance.types-> Array[String]
 ```

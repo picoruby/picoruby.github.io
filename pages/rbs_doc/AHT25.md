@@ -8,21 +8,21 @@ folder: rbs_doc
 ### new
 
 ```ruby
-AHT25.new(i2c: I2C) -> void
+AHT25.new(i2c: I2C) -> instance
 ```
 ## Instance methods
 ### check
 
 ```ruby
-check() -> bool
+instance.check() -> bool
 ```
 ### read
 
 ```ruby
-read() -> {temperature: Float, humidity: Float}
+instance.read() -> { temperature: Float, humidity: Float }
 ```
 ### reset
 
 ```ruby
-reset() -> void
+instance.reset() -> void
 ```

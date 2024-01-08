@@ -14,30 +14,30 @@ FAT::Dir.new(String path) -> void
 ### close
 
 ```ruby
-close-> nil
+instance.close-> nil
 ```
 ### findnext
 
 ```ruby
-findnext-> String?
+instance.findnext-> String?
 ```
 ### fullpath
 
 ```ruby
-fullpath-> String
+instance.fullpath-> String
 ```
 ### read
 
 ```ruby
-read-> String?
+instance.read-> String?
 ```
 ### rewind
 
 ```ruby
-rewind-> self
+instance.rewind-> self
 ```
 ## Attr accessors
 ### pat (accessor)
 ```ruby
-String
+instance.pat -> String
 ```

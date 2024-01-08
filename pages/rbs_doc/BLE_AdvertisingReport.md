@@ -13,42 +13,42 @@ Hash[(Symbol|Integer), String]
 ### new
 
 ```ruby
-BLE::AdvertisingReport.new(String) -> void
+BLE::AdvertisingReport.new(String) -> instance
 ```
 ## Instance methods
 ### format
 
 ```ruby
-format() -> String
+instance.format() -> String
 ```
 ### inspect_reports
 
 ```ruby
-inspect_reports(String) -> report_t
+instance.inspect_reports(String) -> report_t
 ```
 ### name_include?
 
 ```ruby
-name_include?(String) -> (bool | nil)
+instance.name_include?(String) -> (bool | nil)
 ```
 ## Attr accessors
 ### event_type (reader)
 ```ruby
-Symbol|String
+instance.event_type -> Symbol|String
 ```
 ### address_type_code (reader)
 ```ruby
-Integer
+instance.address_type_code -> Integer
 ```
 ### address (reader)
 ```ruby
-String
+instance.address -> String
 ```
 ### rssi (reader)
 ```ruby
-Integer | nil
+instance.rssi -> Integer | nil
 ```
 ### reports (reader)
 ```ruby
-report_t
+instance.reports -> report_t
 ```
