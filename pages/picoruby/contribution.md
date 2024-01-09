@@ -24,6 +24,11 @@ Organizing information and enriching the usage examples for each API, could be m
 
 If you are interested in contributing to the documentation, please visit the repository: [https://github.com/picoruby/picoruby.github.io](https://github.com/picoruby/picoruby.github.io)
 
+### Sponsoring
+
+By becoming a GitHub sponsor of PicoRuby, you can support us financially.
+The sponsorship funds will be used for purchases such as microcontrollers, peripheral devices, testing equipment, and more, assisting us in various ways: [https://github.com/sponsors/picoruby](https://github.com/sponsors/picoruby)
+
 ### Using PicoRuby and writing about it
 
 Above all, create your projects using PicoRuby and share them through your Twitter or blog.
