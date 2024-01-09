@@ -44,7 +44,7 @@ Microcontroller programming framework.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qbs25xDu7t8?si=zcAU2jCnh-boiyow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-##### 2-2 require `adc` loads ADC class
+##### 2-2 `require "adc"` loads ADC class
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dPGCyQrX6Zg?si=jHUfKimEBT-Hy7qP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
