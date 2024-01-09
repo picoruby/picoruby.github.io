@@ -8,10 +8,9 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Array.new() -> void
-Array.new(::Array[Elem] ary) -> void
-Array.new(int size, ?Elem val) -> void
-Array.new(int size) { (::Integer index) -> Elem } -> void
+Array.new() -> instance
+Array.new(::Array[Elem] ary) -> instance
+Array.new(int size, ?Elem val) -> instance
 ```
 ## Instance methods
 ### &

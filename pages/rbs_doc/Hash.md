@@ -8,9 +8,8 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Hash.new() -> void
-Hash.new(untyped default) -> void
-Hash.new[A, B] () { (Hash[A, B] hash, A key) -> B } -> void
+Hash.new() -> instance
+Hash.new(untyped default) -> instance
 ```
 ## Instance methods
 ### <

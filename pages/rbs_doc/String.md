@@ -8,7 +8,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-String.new(?string str) -> void
+String.new(?string str) -> instance
 ```
 ## Instance methods
 ### !

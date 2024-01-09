@@ -8,7 +8,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Range.new(Elem from, Elem to, ?boolish exclude_end) -> void
+Range.new(Elem from, Elem to, ?boolish exclude_end) -> instance
 ```
 ## Instance methods
 ### ==

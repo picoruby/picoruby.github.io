@@ -8,7 +8,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Proc.new() { (*untyped) -> untyped } -> void
+Proc.new() ?{ (*untyped) -> untyped } -> instance
 ```
 ## Instance methods
 ### call
