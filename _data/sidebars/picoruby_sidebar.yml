@@ -184,10 +184,6 @@ entries:
       url: "/PCF8523.html"
       output: web pdf
       type: homepage
-    - title: UART::RxBuffer
-      url: "/UART_RxBuffer.html"
-      output: web pdf
-      type: homepage
   - title: IO Peripheral class
     output: web pdf
     folderitems:
@@ -213,6 +209,10 @@ entries:
       type: homepage
     - title: UART
       url: "/UART.html"
+      output: web pdf
+      type: homepage
+    - title: UART::RxBuffer
+      url: "/UART_RxBuffer.html"
       output: web pdf
       type: homepage
   - title: General class
