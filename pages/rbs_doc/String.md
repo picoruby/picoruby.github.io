@@ -1,5 +1,8 @@
 ---
 title: String
+keywords: String
+tags: [class]
+summary: String class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: String.html
 folder: rbs_doc

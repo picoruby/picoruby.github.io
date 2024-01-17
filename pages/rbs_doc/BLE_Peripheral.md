@@ -1,5 +1,8 @@
 ---
 title: BLE::Peripheral
+keywords: BLE::Peripheral
+tags: [class]
+summary: BLE::Peripheral class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: BLE_Peripheral.html
 folder: rbs_doc

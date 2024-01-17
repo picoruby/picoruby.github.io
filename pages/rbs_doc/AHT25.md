@@ -1,5 +1,8 @@
 ---
 title: AHT25
+keywords: AHT25
+tags: [class]
+summary: AHT25 class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: AHT25.html
 folder: rbs_doc

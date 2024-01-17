@@ -1,5 +1,8 @@
 ---
 title: Float
+keywords: Float
+tags: [class]
+summary: Float class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Float.html
 folder: rbs_doc

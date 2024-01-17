@@ -1,5 +1,8 @@
 ---
 title: BLE
+keywords: BLE
+tags: [class]
+summary: BLE class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: BLE.html
 folder: rbs_doc

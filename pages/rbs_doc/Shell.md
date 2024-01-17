@@ -1,5 +1,8 @@
 ---
 title: Shell
+keywords: Shell
+tags: [class]
+summary: Shell class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Shell.html
 folder: rbs_doc

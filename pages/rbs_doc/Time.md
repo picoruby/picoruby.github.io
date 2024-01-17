@@ -1,5 +1,8 @@
 ---
 title: Time
+keywords: Time
+tags: [class]
+summary: Time class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Time.html
 folder: rbs_doc

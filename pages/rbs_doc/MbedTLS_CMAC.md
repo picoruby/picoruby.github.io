@@ -1,5 +1,8 @@
 ---
 title: MbedTLS::CMAC
+keywords: MbedTLS::CMAC
+tags: [class]
+summary: MbedTLS::CMAC class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: MbedTLS_CMAC.html
 folder: rbs_doc

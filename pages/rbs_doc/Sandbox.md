@@ -1,5 +1,8 @@
 ---
 title: Sandbox
+keywords: Sandbox
+tags: [class]
+summary: Sandbox class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Sandbox.html
 folder: rbs_doc

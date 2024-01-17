@@ -1,5 +1,8 @@
 ---
 title: IO
+keywords: IO
+tags: [class]
+summary: IO class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: IO.html
 folder: rbs_doc

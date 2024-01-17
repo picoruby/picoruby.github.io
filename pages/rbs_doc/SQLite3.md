@@ -1,5 +1,8 @@
 ---
 title: SQLite3
+keywords: SQLite3
+tags: [class]
+summary: SQLite3 class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: SQLite3.html
 folder: rbs_doc

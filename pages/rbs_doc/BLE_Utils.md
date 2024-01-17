@@ -1,5 +1,8 @@
 ---
 title: BLE::Utils
+keywords: BLE::Utils
+tags: [class]
+summary: BLE::Utils class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: BLE_Utils.html
 folder: rbs_doc

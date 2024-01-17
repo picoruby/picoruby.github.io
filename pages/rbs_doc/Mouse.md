@@ -1,5 +1,8 @@
 ---
 title: Mouse
+keywords: Mouse
+tags: [class]
+summary: Mouse class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Mouse.html
 folder: rbs_doc

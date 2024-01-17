@@ -1,5 +1,8 @@
 ---
 title: Task
+keywords: Task
+tags: [class]
+summary: Task class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Task.html
 folder: rbs_doc

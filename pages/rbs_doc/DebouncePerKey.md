@@ -1,5 +1,8 @@
 ---
 title: DebouncePerKey
+keywords: DebouncePerKey
+tags: [class]
+summary: DebouncePerKey class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: DebouncePerKey.html
 folder: rbs_doc

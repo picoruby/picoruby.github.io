@@ -1,5 +1,8 @@
 ---
 title: RGB
+keywords: RGB
+tags: [class]
+summary: RGB class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: RGB.html
 folder: rbs_doc

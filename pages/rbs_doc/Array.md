@@ -1,5 +1,8 @@
 ---
 title: Array
+keywords: Array
+tags: [class]
+summary: Array class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Array.html
 folder: rbs_doc

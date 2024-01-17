@@ -1,5 +1,8 @@
 ---
 title: File
+keywords: File
+tags: [class]
+summary: File class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: File.html
 folder: rbs_doc

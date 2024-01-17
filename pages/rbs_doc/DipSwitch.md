@@ -1,5 +1,8 @@
 ---
 title: DipSwitch
+keywords: DipSwitch
+tags: [class]
+summary: DipSwitch class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: DipSwitch.html
 folder: rbs_doc

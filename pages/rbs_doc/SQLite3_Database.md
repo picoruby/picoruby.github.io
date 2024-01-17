@@ -1,5 +1,8 @@
 ---
 title: SQLite3::Database
+keywords: SQLite3::Database
+tags: [class]
+summary: SQLite3::Database class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: SQLite3_Database.html
 folder: rbs_doc

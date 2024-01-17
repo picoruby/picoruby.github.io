@@ -1,5 +1,8 @@
 ---
 title: Terminal::Editor
+keywords: Terminal::Editor
+tags: [class]
+summary: Terminal::Editor class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Terminal_Editor.html
 folder: rbs_doc

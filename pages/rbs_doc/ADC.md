@@ -1,5 +1,8 @@
 ---
 title: ADC
+keywords: ADC
+tags: [class]
+summary: ADC class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: ADC.html
 folder: rbs_doc

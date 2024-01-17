@@ -1,5 +1,8 @@
 ---
 title: VIA
+keywords: VIA
+tags: [class]
+summary: VIA class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: VIA.html
 folder: rbs_doc

@@ -1,5 +1,8 @@
 ---
 title: Exception
+keywords: Exception
+tags: [class]
+summary: Exception class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Exception.html
 folder: rbs_doc

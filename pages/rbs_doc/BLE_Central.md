@@ -1,5 +1,8 @@
 ---
 title: BLE::Central
+keywords: BLE::Central
+tags: [class]
+summary: BLE::Central class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: BLE_Central.html
 folder: rbs_doc

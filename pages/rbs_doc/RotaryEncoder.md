@@ -1,5 +1,8 @@
 ---
 title: RotaryEncoder
+keywords: RotaryEncoder
+tags: [class]
+summary: RotaryEncoder class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: RotaryEncoder.html
 folder: rbs_doc

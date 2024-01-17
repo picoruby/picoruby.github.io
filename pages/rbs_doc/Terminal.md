@@ -1,5 +1,8 @@
 ---
 title: Terminal
+keywords: Terminal
+tags: [class]
+summary: Terminal class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Terminal.html
 folder: rbs_doc

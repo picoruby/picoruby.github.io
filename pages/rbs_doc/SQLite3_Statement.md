@@ -1,5 +1,8 @@
 ---
 title: SQLite3::Statement
+keywords: SQLite3::Statement
+tags: [class]
+summary: SQLite3::Statement class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: SQLite3_Statement.html
 folder: rbs_doc

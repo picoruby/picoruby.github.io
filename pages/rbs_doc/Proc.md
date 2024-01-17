@@ -1,5 +1,8 @@
 ---
 title: Proc
+keywords: Proc
+tags: [class]
+summary: Proc class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Proc.html
 folder: rbs_doc

@@ -1,5 +1,8 @@
 ---
 title: TrueClass
+keywords: TrueClass
+tags: [class]
+summary: TrueClass class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: TrueClass.html
 folder: rbs_doc

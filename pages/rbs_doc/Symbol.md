@@ -1,5 +1,8 @@
 ---
 title: Symbol
+keywords: Symbol
+tags: [class]
+summary: Symbol class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Symbol.html
 folder: rbs_doc

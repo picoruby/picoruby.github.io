@@ -1,5 +1,8 @@
 ---
 title: Range
+keywords: Range
+tags: [class]
+summary: Range class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Range.html
 folder: rbs_doc

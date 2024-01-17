@@ -1,5 +1,8 @@
 ---
 title: Object
+keywords: Object
+tags: [class]
+summary: Object class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Object.html
 folder: rbs_doc

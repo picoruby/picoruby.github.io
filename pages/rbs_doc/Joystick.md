@@ -1,5 +1,8 @@
 ---
 title: Joystick
+keywords: Joystick
+tags: [class]
+summary: Joystick class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Joystick.html
 folder: rbs_doc

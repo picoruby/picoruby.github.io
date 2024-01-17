@@ -1,5 +1,8 @@
 ---
 title: VFS::File
+keywords: VFS::File
+tags: [class]
+summary: VFS::File class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: VFS_File.html
 folder: rbs_doc

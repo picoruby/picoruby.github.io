@@ -1,5 +1,8 @@
 ---
 title: Watchdog
+keywords: Watchdog
+tags: [class]
+summary: Watchdog class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Watchdog.html
 folder: rbs_doc

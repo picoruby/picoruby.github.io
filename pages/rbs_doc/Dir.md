@@ -1,5 +1,8 @@
 ---
 title: Dir
+keywords: Dir
+tags: [class]
+summary: Dir class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Dir.html
 folder: rbs_doc

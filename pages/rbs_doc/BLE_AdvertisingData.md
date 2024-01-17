@@ -1,5 +1,8 @@
 ---
 title: BLE::AdvertisingData
+keywords: BLE::AdvertisingData
+tags: [class]
+summary: BLE::AdvertisingData class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: BLE_AdvertisingData.html
 folder: rbs_doc

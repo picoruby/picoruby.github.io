@@ -1,5 +1,8 @@
 ---
 title: CYW43
+keywords: CYW43
+tags: [class]
+summary: CYW43 class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: CYW43.html
 folder: rbs_doc

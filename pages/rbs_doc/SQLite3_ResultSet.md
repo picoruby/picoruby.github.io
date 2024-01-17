@@ -1,5 +1,8 @@
 ---
 title: SQLite3::ResultSet
+keywords: SQLite3::ResultSet
+tags: [class]
+summary: SQLite3::ResultSet class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: SQLite3_ResultSet.html
 folder: rbs_doc

@@ -1,5 +1,8 @@
 ---
 title: Integer
+keywords: Integer
+tags: [class]
+summary: Integer class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Integer.html
 folder: rbs_doc

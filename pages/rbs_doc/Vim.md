@@ -1,5 +1,8 @@
 ---
 title: Vim
+keywords: Vim
+tags: [class]
+summary: Vim class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Vim.html
 folder: rbs_doc

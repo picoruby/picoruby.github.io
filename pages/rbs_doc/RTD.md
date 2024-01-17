@@ -1,5 +1,8 @@
 ---
 title: RTD
+keywords: RTD
+tags: [class]
+summary: RTD class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: RTD.html
 folder: rbs_doc

@@ -1,5 +1,8 @@
 ---
 title: Keyboard
+keywords: Keyboard
+tags: [class]
+summary: Keyboard class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Keyboard.html
 folder: rbs_doc

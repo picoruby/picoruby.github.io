@@ -1,5 +1,8 @@
 ---
 title: UART
+keywords: UART
+tags: [class]
+summary: UART class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: UART.html
 folder: rbs_doc

@@ -1,5 +1,8 @@
 ---
 title: Shell::Command
+keywords: Shell::Command
+tags: [class]
+summary: Shell::Command class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Shell_Command.html
 folder: rbs_doc

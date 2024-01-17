@@ -1,5 +1,8 @@
 ---
 title: BLE::GattDatabase
+keywords: BLE::GattDatabase
+tags: [class]
+summary: BLE::GattDatabase class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: BLE_GattDatabase.html
 folder: rbs_doc

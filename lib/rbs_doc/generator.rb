@@ -108,6 +108,9 @@ module RBSDoc
             File.open(filename, "w") do |f|
               f.puts "---"
               f.puts "title: #{classname}"
+              f.puts "keywords: #{classname}"
+              f.puts "tags: [class]"
+              f.puts "summary: #{classname} class of PicoRuby"
               f.puts "sidebar: picoruby_sidebar"
               f.puts "permalink: #{basename}.html"
               f.puts "folder: rbs_doc"

@@ -1,5 +1,8 @@
 ---
 title: CYW43::GPIO
+keywords: CYW43::GPIO
+tags: [class]
+summary: CYW43::GPIO class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: CYW43_GPIO.html
 folder: rbs_doc

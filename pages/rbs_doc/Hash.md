@@ -1,5 +1,8 @@
 ---
 title: Hash
+keywords: Hash
+tags: [class]
+summary: Hash class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Hash.html
 folder: rbs_doc

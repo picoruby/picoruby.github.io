@@ -1,5 +1,8 @@
 ---
 title: SPI
+keywords: SPI
+tags: [class]
+summary: SPI class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: SPI.html
 folder: rbs_doc

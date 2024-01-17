@@ -1,5 +1,8 @@
 ---
 title: FAT::Stat
+keywords: FAT::Stat
+tags: [class]
+summary: FAT::Stat class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: FAT_Stat.html
 folder: rbs_doc

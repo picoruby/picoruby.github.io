@@ -1,5 +1,8 @@
 ---
 title: Sounder
+keywords: Sounder
+tags: [class]
+summary: Sounder class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Sounder.html
 folder: rbs_doc

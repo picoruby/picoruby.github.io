@@ -1,5 +1,8 @@
 ---
 title: PicoRubyVM
+keywords: PicoRubyVM
+tags: [class]
+summary: PicoRubyVM class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: PicoRubyVM.html
 folder: rbs_doc

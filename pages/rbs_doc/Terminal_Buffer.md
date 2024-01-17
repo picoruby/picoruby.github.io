@@ -1,5 +1,8 @@
 ---
 title: Terminal::Buffer
+keywords: Terminal::Buffer
+tags: [class]
+summary: Terminal::Buffer class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Terminal_Buffer.html
 folder: rbs_doc

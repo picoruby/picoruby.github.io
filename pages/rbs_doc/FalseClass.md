@@ -1,5 +1,8 @@
 ---
 title: FalseClass
+keywords: FalseClass
+tags: [class]
+summary: FalseClass class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: FalseClass.html
 folder: rbs_doc

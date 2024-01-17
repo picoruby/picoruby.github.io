@@ -1,5 +1,8 @@
 ---
 title: I2C
+keywords: I2C
+tags: [class]
+summary: I2C class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: I2C.html
 folder: rbs_doc

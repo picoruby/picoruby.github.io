@@ -1,5 +1,8 @@
 ---
 title: DebounceBase
+keywords: DebounceBase
+tags: [class]
+summary: DebounceBase class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: DebounceBase.html
 folder: rbs_doc

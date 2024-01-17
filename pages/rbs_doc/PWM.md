@@ -1,5 +1,8 @@
 ---
 title: PWM
+keywords: PWM
+tags: [class]
+summary: PWM class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: PWM.html
 folder: rbs_doc

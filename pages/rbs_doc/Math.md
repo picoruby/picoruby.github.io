@@ -1,5 +1,8 @@
 ---
 title: Math
+keywords: Math
+tags: [class]
+summary: Math class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Math.html
 folder: rbs_doc

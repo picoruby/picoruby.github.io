@@ -1,5 +1,8 @@
 ---
 title: BLE::Broadcaster
+keywords: BLE::Broadcaster
+tags: [class]
+summary: BLE::Broadcaster class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: BLE_Broadcaster.html
 folder: rbs_doc

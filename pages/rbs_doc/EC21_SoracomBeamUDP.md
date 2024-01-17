@@ -1,5 +1,8 @@
 ---
 title: EC21::SoracomBeamUDP
+keywords: EC21::SoracomBeamUDP
+tags: [class]
+summary: EC21::SoracomBeamUDP class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: EC21_SoracomBeamUDP.html
 folder: rbs_doc

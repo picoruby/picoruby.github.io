@@ -1,5 +1,8 @@
 ---
 title: NilClass
+keywords: NilClass
+tags: [class]
+summary: NilClass class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: NilClass.html
 folder: rbs_doc

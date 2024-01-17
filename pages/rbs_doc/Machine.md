@@ -1,5 +1,8 @@
 ---
 title: Machine
+keywords: Machine
+tags: [class]
+summary: Machine class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Machine.html
 folder: rbs_doc

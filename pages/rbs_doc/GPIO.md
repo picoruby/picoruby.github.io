@@ -1,5 +1,8 @@
 ---
 title: GPIO
+keywords: GPIO
+tags: [class]
+summary: GPIO class of PicoRuby
 sidebar: picoruby_sidebar
 permalink: GPIO.html
 folder: rbs_doc
