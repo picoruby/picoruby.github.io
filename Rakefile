@@ -22,6 +22,7 @@ task :install_picoruby => [PICORUBY_DIR, MRUBYC_DIR]
 
 directory PICORUBY_DIR do
   sh "git clone https://github.com/picoruby/picoruby.git"
+  sh "cd lib && bundle install"
 end
 
 directory MRUBYC_DIR do
@@ -38,24 +39,24 @@ end
 desc "Run steep check"
 task :steep_check do
   FileUtils.cd PICORUBY_DIR do
-    sh "rake steep"
+    sh "BUNDLE_GEMFILE=./Gemfile bundle exec rake steep"
   end
 end
-
-require_relative "lib/rbs_doc"
 
 namespace :rbs_doc do
   desc "Generate documentation"
   task :generate do |t, args|
-    FileUtils.cd File.expand_path("../picoruby", __FILE__) do
-      steepfile = ENV['STEEPFILE'] || File.expand_path("../picoruby/Steepfile", __FILE__)
-      output_dir = ENV['OUTPUT'] || File.expand_path("../pages/rbs_doc", __FILE__)
-      sidebar_path = ENV['SIDEBAR'] || File.expand_path("../_data/sidebars/picoruby_sidebar.yml", __FILE__)
-      RBSDoc::Generator.new(
-        steepfile: steepfile,
-        output_dir: output_dir,
-        sidebar_path: sidebar_path
-      )
-    end
+    work_dir = File.expand_path("../picoruby", __FILE__)
+    steepfile = File.expand_path("../picoruby/Steepfile", __FILE__)
+    output_dir = File.expand_path("../pages/rbs_doc", __FILE__)
+    sidebar_path = File.expand_path("../_data/sidebars/picoruby_sidebar.yml", __FILE__)
+    sh <<~CMD
+      BUNDLE_GEMFILE=./lib/Gemfile \
+      WORK_DIR=#{work_dir} \
+      STEEPFILE=#{steepfile} \
+      OUTPUT_DIR=#{output_dir} \
+      SIDEBAR_PATH=#{sidebar_path} \
+      bundle exec ruby lib/runner.rb
+    CMD
   end
 end
