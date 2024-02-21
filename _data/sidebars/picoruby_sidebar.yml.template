@@ -26,7 +26,7 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
-    - title: Contributiion
+    - title: Contribution
       url: /contribution.html
       output: web, pdf
       type: homepage
