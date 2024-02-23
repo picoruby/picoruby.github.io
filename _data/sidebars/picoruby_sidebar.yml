@@ -4,15 +4,15 @@ entries:
   product: PicoRuby
   version: master
   folders:
-  - title: 
+  - title:
     output: pdf
     type: frontmatter
     folderitems:
-    - title: 
+    - title:
       url: "/titlepage.html"
       output: pdf
       type: frontmatter
-    - title: 
+    - title:
       url: "/tocpage.html"
       output: pdf
       type: frontmatter
