@@ -123,10 +123,10 @@ instance.to_s() -> String
 ### load
 
 ```ruby
-instance.load(String) -> bool
+instance.load(String path) -> bool
 ```
 ### require
 
 ```ruby
-instance.require(String) -> bool
+instance.require(String name) -> bool
 ```

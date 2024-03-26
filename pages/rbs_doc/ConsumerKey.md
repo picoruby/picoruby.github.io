@@ -11,15 +11,15 @@ folder: rbs_doc
 ### keycode
 
 ```ruby
-ConsumerKey.keycode(Symbol) -> Integer?
+ConsumerKey.keycode(Symbol sym) -> Integer?
 ```
 ### keycode_from_mapcode
 
 ```ruby
-ConsumerKey.keycode_from_mapcode(Integer) -> Integer
+ConsumerKey.keycode_from_mapcode(Integer mapcode) -> Integer
 ```
 ### viacode_from_mapcode
 
 ```ruby
-ConsumerKey.viacode_from_mapcode(Integer) -> Integer?
+ConsumerKey.viacode_from_mapcode(Integer mapcode) -> Integer?
 ```

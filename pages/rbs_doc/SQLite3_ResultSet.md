@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-SQLite3::ResultSet.new(SQLite3::Database, SQLite3::Statement) -> instance
+SQLite3::ResultSet.new(SQLite3::Database db, SQLite3::Statement stmt) -> instance
 ```
 ## Instance methods
 ### each

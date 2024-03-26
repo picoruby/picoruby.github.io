@@ -17,5 +17,5 @@ MML.new() -> instance
 ### compile
 
 ```ruby
-instance.compile(String) { (Float, Integer) -> bool } -> Integer
+instance.compile(String str) { (Float, Integer) -> bool } -> Integer
 ```

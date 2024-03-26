@@ -47,7 +47,7 @@ instance.gap_local_bd_addr() -> String
 ### get_write_value
 
 ```ruby
-instance.get_write_value(Integer) -> (String|nil)
+instance.get_write_value(Integer handle) -> (String|nil)
 ```
 ### hci_power_control
 
@@ -67,7 +67,7 @@ instance.packet_callback(String) -> void
 ### set_read_value
 
 ```ruby
-instance.set_read_value(Integer, String) -> void
+instance.set_read_value(Integer handle, String value) -> void
 ```
 ### start
 

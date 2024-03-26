@@ -318,6 +318,22 @@ entries:
       url: "/PicoRubyVM.html"
       output: web pdf
       type: homepage
+    - title: Prism
+      url: "/Prism.html"
+      output: web pdf
+      type: homepage
+    - title: Prism::Location
+      url: "/Prism_Location.html"
+      output: web pdf
+      type: homepage
+    - title: Prism::ParseError
+      url: "/Prism_ParseError.html"
+      output: web pdf
+      type: homepage
+    - title: Prism::ParseResult
+      url: "/Prism_ParseResult.html"
+      output: web pdf
+      type: homepage
     - title: RTD
       url: "/RTD.html"
       output: web pdf

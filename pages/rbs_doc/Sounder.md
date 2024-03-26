@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Sounder.new(Integer) -> instance
+Sounder.new(Integer pin) -> instance
 ```
 ## Instance methods
 ### add_note
@@ -32,7 +32,7 @@ instance.clear_song() -> void
 ### compile
 
 ```ruby
-instance.compile(*String | Symbol) -> void
+instance.compile(*String | Symbol measures) -> void
 ```
 ### lock
 
@@ -42,7 +42,7 @@ instance.lock() -> void
 ### play
 
 ```ruby
-instance.play(*String | Symbol) -> void
+instance.play(*String | Symbol measures) -> void
 ```
 ### replay
 

@@ -100,7 +100,7 @@ Keyboard.wait_keymap() -> void
 ### action_on_release
 
 ```ruby
-instance.action_on_release(Integer | Array[Integer] | Proc | nil) -> void
+instance.action_on_release(Integer | Array[Integer] | Proc | nil mode_key) -> void
 ```
 ### add_layer
 
@@ -135,7 +135,7 @@ instance.calculate_col_position(Integer col_index) -> Integer
 ### convert_composite_keys
 
 ```ruby
-instance.convert_composite_keys(Array[Symbol]) -> Array[Integer]
+instance.convert_composite_keys(Array[Symbol] keys) -> Array[Integer]
 ```
 ### define_composite_key
 
@@ -150,7 +150,7 @@ instance.define_mode_key(Symbol key_name, [Symbol | Array[Symbol] | Proc | nil, 
 ### delete_mode_keys
 
 ```ruby
-instance.delete_mode_keys(Symbol) -> void
+instance.delete_mode_keys(Symbol layer_name) -> void
 ```
 ### entire_cols_size
 
@@ -170,7 +170,7 @@ instance.find_keycode_index(Symbol key) -> (Integer | Symbol)
 ### get_layer
 
 ```ruby
-instance.get_layer(Symbol | nil, Integer) -> ( Array[Array[Integer | Symbol | Proc]] | nil )
+instance.get_layer(Symbol | nil name, Integer num) -> ( Array[Array[Integer | Symbol | Proc]] | nil )
 ```
 ### init_direct_pins
 
@@ -210,7 +210,7 @@ instance.key_pressed?() -> bool
 ### keys_include?
 
 ```ruby
-instance.keys_include?(Symbol) -> bool
+instance.keys_include?(Symbol key) -> bool
 ```
 ### lock_layer
 
@@ -250,7 +250,7 @@ instance.raise_layer-> void
 ### resolve_key_alias
 
 ```ruby
-instance.resolve_key_alias(Symbol) -> Symbol
+instance.resolve_key_alias(Symbol sym) -> Symbol
 ```
 ### ruby
 
@@ -280,17 +280,17 @@ instance.set_anchor(anchor_type val) -> void
 ### set_debounce
 
 ```ruby
-instance.set_debounce(debounce_type) -> void
+instance.set_debounce(debounce_type type) -> void
 ```
 ### set_debounce_threshold
 
 ```ruby
-instance.set_debounce_threshold(Integer) -> void
+instance.set_debounce_threshold(Integer val) -> void
 ```
 ### set_scan_mode
 
 ```ruby
-instance.set_scan_mode(scan_mode_type val) -> void
+instance.set_scan_mode(scan_mode_type mode) -> void
 ```
 ### signal_partner
 
@@ -350,12 +350,12 @@ instance.unlock_layer() -> void
 ### via=
 
 ```ruby
-instance.via=(bool) -> void
+instance.via=(bool val) -> void
 ```
 ### via_layer_count=
 
 ```ruby
-instance.via_layer_count=(Integer) -> void
+instance.via_layer_count=(Integer count) -> void
 ```
 ## Attr accessors
 ### split (accessor)

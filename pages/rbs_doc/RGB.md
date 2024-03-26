@@ -33,12 +33,12 @@ RGB.new(Integer pin, Integer underglow_size, Integer backlight_size, ?bool is_rg
 ### add_pixel
 
 ```ruby
-instance.add_pixel(Integer, Integer) -> void
+instance.add_pixel(Integer x, Integer y) -> void
 ```
 ### effect=
 
 ```ruby
-instance.effect=(rgb_effect_t) -> void
+instance.effect=(rgb_effect_t name) -> void
 ```
 ### fifo_push
 
@@ -53,7 +53,7 @@ instance.hsv2rgb(Float | Integer h, Integer s, Float | Integer v) -> Integer
 ### hue=
 
 ```ruby
-instance.hue=(Integer) -> void
+instance.hue=(Integer val) -> void
 ```
 ### init_values
 
@@ -63,12 +63,12 @@ instance.init_values() -> void
 ### invoke_anchor
 
 ```ruby
-instance.invoke_anchor(Symbol | nil) -> Integer
+instance.invoke_anchor(Symbol | nil key) -> Integer
 ```
 ### invoke_partner
 
 ```ruby
-instance.invoke_partner(Integer) -> void
+instance.invoke_partner(Integer message) -> void
 ```
 ### ping?
 
@@ -88,7 +88,7 @@ instance.resume() -> void
 ### saturation=
 
 ```ruby
-instance.saturation=(Integer) -> void
+instance.saturation=(Integer val) -> void
 ```
 ### show
 
@@ -98,7 +98,7 @@ instance.show-> void
 ### speed=
 
 ```ruby
-instance.speed=(Integer) -> void
+instance.speed=(Integer val) -> void
 ```
 ### thunder
 
@@ -123,7 +123,7 @@ instance.turn_on() -> void
 ### value=
 
 ```ruby
-instance.value=(Integer | Float) -> void
+instance.value=(Integer | Float val) -> void
 ```
 ### ws2812_add_matrix_pixel_at
 

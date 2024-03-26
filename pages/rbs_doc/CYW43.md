@@ -11,7 +11,7 @@ folder: rbs_doc
 ### init
 
 ```ruby
-CYW43.init(?String, ?force: bool) -> void
+CYW43.init(?String country, ?force: bool) -> void
 ```
 ### initialized?
 

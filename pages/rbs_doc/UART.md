@@ -69,7 +69,7 @@ instance.line_ending=(("\n"|"\r\n"|"\r") line_ending) -> void
 ### puts
 
 ```ruby
-instance.puts(String) -> nil
+instance.puts(String str) -> nil
 ```
 ### read
 

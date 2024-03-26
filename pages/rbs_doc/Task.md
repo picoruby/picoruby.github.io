@@ -27,7 +27,7 @@ instance.join(?Integer|nil) -> (self | nil)
 ### name=
 
 ```ruby
-instance.name=(String) -> String
+instance.name=(String name) -> String
 ```
 ### suspend
 

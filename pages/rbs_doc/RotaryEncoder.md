@@ -17,7 +17,7 @@ RotaryEncoder.new(Integer pin_a, Integer pin_b) -> instance
 ### call_proc_if
 
 ```ruby
-instance.call_proc_if(Integer) -> void
+instance.call_proc_if(Integer keycode) -> void
 ```
 ### ccw
 

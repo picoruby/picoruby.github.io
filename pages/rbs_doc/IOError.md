@@ -11,5 +11,5 @@ folder: rbs_doc
 ### peripheral_error
 
 ```ruby
-IOError.peripheral_error(Integer, ?String) -> Integer
+IOError.peripheral_error(Integer code, ?String name) -> Integer
 ```

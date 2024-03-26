@@ -42,7 +42,7 @@ instance.interrupt() -> void
 ### load_file
 
 ```ruby
-instance.load_file(String, ?signal: bool) -> void
+instance.load_file(String path, ?signal: bool) -> void
 ```
 ### result
 
