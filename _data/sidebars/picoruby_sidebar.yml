@@ -4,15 +4,15 @@ entries:
   product: PicoRuby
   version: master
   folders:
-  - title:
+  - title: 
     output: pdf
     type: frontmatter
     folderitems:
-    - title:
+    - title: 
       url: "/titlepage.html"
       output: pdf
       type: frontmatter
-    - title:
+    - title: 
       url: "/tocpage.html"
       output: pdf
       type: frontmatter
@@ -252,6 +252,14 @@ entries:
       type: homepage
     - title: BLE::Utils
       url: "/BLE_Utils.html"
+      output: web pdf
+      type: homepage
+    - title: Base16
+      url: "/Base16.html"
+      output: web pdf
+      type: homepage
+    - title: Base64
+      url: "/Base64.html"
       output: web pdf
       type: homepage
     - title: Dir
