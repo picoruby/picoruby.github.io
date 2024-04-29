@@ -322,6 +322,14 @@ entries:
       url: "/MbedTLS_CMAC.html"
       output: web pdf
       type: homepage
+    - title: MbedTLS::Cipher
+      url: "/MbedTLS_Cipher.html"
+      output: web pdf
+      type: homepage
+    - title: MbedTLS::Digest
+      url: "/MbedTLS_Digest.html"
+      output: web pdf
+      type: homepage
     - title: PicoRubyVM
       url: "/PicoRubyVM.html"
       output: web pdf
@@ -340,6 +348,10 @@ entries:
       type: homepage
     - title: Prism::ParseResult
       url: "/Prism_ParseResult.html"
+      output: web pdf
+      type: homepage
+    - title: RNG
+      url: "/RNG.html"
       output: web pdf
       type: homepage
     - title: RTD

@@ -7,3 +7,14 @@ sidebar: picoruby_sidebar
 permalink: Base64.html
 folder: rbs_doc
 ---
+## Singleton methods
+### decode64
+
+```ruby
+Base64.decode64(String) -> String
+```
+### encode64
+
+```ruby
+Base64.encode64(String) -> String
+```
