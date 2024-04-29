@@ -12,7 +12,7 @@ folder: picoruby
 
 ### Porting
 
-As of 2023, PicoRuby supports only the RP2040 (Raspberry Pi Pico).
+As of 2024, PicoRuby supports only the RP2040 (Raspberry Pi Pico).
 It would be a significant undertaking to port it to other MCUs like the nRF52, STM32, and ESP32.
 
 If you are interested in contributing to a porting, please visit the repository: [https://github.com/picoruby/picoruby](https://github.com/picoruby/picoruby)
