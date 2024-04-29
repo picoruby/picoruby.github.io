@@ -1,7 +1,7 @@
 ---
 title: Contribution
 keywords: documentation
-tags: [introduction]
+tags: [contributing]
 summary: Contributing to PicoRuby is always welcome!
 sidebar: picoruby_sidebar
 permalink: contribution.html
