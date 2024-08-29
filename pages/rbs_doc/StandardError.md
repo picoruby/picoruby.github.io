@@ -1,5 +1,5 @@
 ---
-title: StandardError
+title: class StandardError
 keywords: StandardError
 tags: [class]
 summary: StandardError class of PicoRuby

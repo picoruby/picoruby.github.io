@@ -1,5 +1,5 @@
 ---
-title: BLE::Utils
+title: class BLE::Utils
 keywords: BLE::Utils
 tags: [class]
 summary: BLE::Utils class of PicoRuby

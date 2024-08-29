@@ -1,5 +1,5 @@
 ---
-title: BLE::Peripheral
+title: class BLE::Peripheral
 keywords: BLE::Peripheral
 tags: [class]
 summary: BLE::Peripheral class of PicoRuby

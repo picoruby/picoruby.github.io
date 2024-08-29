@@ -1,5 +1,5 @@
 ---
-title: Sounder
+title: class Sounder
 keywords: Sounder
 tags: [class]
 summary: Sounder class of PicoRuby

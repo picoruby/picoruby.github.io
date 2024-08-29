@@ -1,5 +1,5 @@
 ---
-title: MML
+title: class MML
 keywords: MML
 tags: [class]
 summary: MML class of PicoRuby

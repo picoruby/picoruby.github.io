@@ -1,5 +1,5 @@
 ---
-title: SQLite3
+title: class SQLite3
 keywords: SQLite3
 tags: [class]
 summary: SQLite3 class of PicoRuby

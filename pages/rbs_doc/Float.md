@@ -1,5 +1,5 @@
 ---
-title: Float
+title: class Float
 keywords: Float
 tags: [class]
 summary: Float class of PicoRuby

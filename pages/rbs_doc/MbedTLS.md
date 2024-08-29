@@ -1,5 +1,5 @@
 ---
-title: MbedTLS
+title: class MbedTLS
 keywords: MbedTLS
 tags: [class]
 summary: MbedTLS class of PicoRuby

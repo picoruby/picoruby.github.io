@@ -1,5 +1,5 @@
 ---
-title: Keyboard
+title: class Keyboard
 keywords: Keyboard
 tags: [class]
 summary: Keyboard class of PicoRuby

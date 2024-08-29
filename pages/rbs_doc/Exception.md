@@ -1,5 +1,5 @@
 ---
-title: Exception
+title: class Exception
 keywords: Exception
 tags: [class]
 summary: Exception class of PicoRuby

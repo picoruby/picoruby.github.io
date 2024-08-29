@@ -27,480 +27,528 @@ entries:
       url: "/contribution.html"
       output: web, pdf
       type: homepage
-  - title: Builtin class
+  - title: Builtin
     output: web pdf
     folderitems:
-    - title: Array
+    - title: class Array
       url: "/Array.html"
       output: web pdf
       type: homepage
-    - title: FalseClass
+    - title: module Enumerable
+      url: "/Enumerable.html"
+      output: web pdf
+      type: homepage
+    - title: class FalseClass
       url: "/FalseClass.html"
       output: web pdf
       type: homepage
-    - title: Float
+    - title: class Float
       url: "/Float.html"
       output: web pdf
       type: homepage
-    - title: Hash
+    - title: class Hash
       url: "/Hash.html"
       output: web pdf
       type: homepage
-    - title: Integer
+    - title: class Integer
       url: "/Integer.html"
       output: web pdf
       type: homepage
-    - title: Math
+    - title: module Math
       url: "/Math.html"
       output: web pdf
       type: homepage
-    - title: NilClass
+    - title: class NilClass
       url: "/NilClass.html"
       output: web pdf
       type: homepage
-    - title: Object
+    - title: class Object
       url: "/Object.html"
       output: web pdf
       type: homepage
-    - title: Proc
+    - title: class Proc
       url: "/Proc.html"
       output: web pdf
       type: homepage
-    - title: Range
+    - title: class Range
       url: "/Range.html"
       output: web pdf
       type: homepage
-    - title: String
+    - title: class String
       url: "/String.html"
       output: web pdf
       type: homepage
-    - title: Symbol
+    - title: class Symbol
       url: "/Symbol.html"
       output: web pdf
       type: homepage
-    - title: TrueClass
+    - title: class TrueClass
       url: "/TrueClass.html"
       output: web pdf
       type: homepage
-  - title: Error class
+  - title: Error
     output: web pdf
     folderitems:
-    - title: ArgumentError
+    - title: class ArgumentError
       url: "/ArgumentError.html"
       output: web pdf
       type: homepage
-    - title: Exception
+    - title: class Exception
       url: "/Exception.html"
       output: web pdf
       type: homepage
-    - title: IOError
+    - title: class IOError
       url: "/IOError.html"
       output: web pdf
       type: homepage
-    - title: LoadError
+    - title: class LoadError
       url: "/LoadError.html"
       output: web pdf
       type: homepage
-    - title: NameError
+    - title: class NameError
       url: "/NameError.html"
       output: web pdf
       type: homepage
-    - title: NoMethodError
+    - title: class NoMethodError
       url: "/NoMethodError.html"
       output: web pdf
       type: homepage
-    - title: RangeError
+    - title: class RangeError
       url: "/RangeError.html"
       output: web pdf
       type: homepage
-    - title: RuntimeError
+    - title: class RuntimeError
       url: "/RuntimeError.html"
       output: web pdf
       type: homepage
-    - title: SQLite3::Exception
+    - title: class SQLite3::Exception
       url: "/SQLite3_Exception.html"
       output: web pdf
       type: homepage
-    - title: StandardError
+    - title: class StandardError
       url: "/StandardError.html"
       output: web pdf
       type: homepage
-    - title: SyntaxError
+    - title: class SyntaxError
       url: "/SyntaxError.html"
       output: web pdf
       type: homepage
-    - title: TypeError
+    - title: class TypeError
       url: "/TypeError.html"
       output: web pdf
       type: homepage
-    - title: ZeroDivisionError
+    - title: class ZeroDivisionError
       url: "/ZeroDivisionError.html"
       output: web pdf
       type: homepage
-  - title: Hardware Device class
+  - title: Hardware Device
     output: web pdf
     folderitems:
-    - title: AHT25
+    - title: class AHT25
       url: "/AHT25.html"
       output: web pdf
       type: homepage
-    - title: AQM0802A
+    - title: class AQM0802A
       url: "/AQM0802A.html"
       output: web pdf
       type: homepage
-    - title: CYW43
+    - title: class CYW43
       url: "/CYW43.html"
       output: web pdf
       type: homepage
-    - title: CYW43::GPIO
+    - title: class CYW43::GPIO
       url: "/CYW43_GPIO.html"
       output: web pdf
       type: homepage
-    - title: DipSwitch
+    - title: class DipSwitch
       url: "/DipSwitch.html"
       output: web pdf
       type: homepage
-    - title: EC21
+    - title: class EC21
       url: "/EC21.html"
       output: web pdf
       type: homepage
-    - title: EC21::SoracomBeamUDP
+    - title: class EC21::SoracomBeamUDP
       url: "/EC21_SoracomBeamUDP.html"
       output: web pdf
       type: homepage
-    - title: MCP3204
+    - title: class MCP3004
+      url: "/MCP3004.html"
+      output: web pdf
+      type: homepage
+    - title: class MCP3008
+      url: "/MCP3008.html"
+      output: web pdf
+      type: homepage
+    - title: class MCP3204
       url: "/MCP3204.html"
       output: web pdf
       type: homepage
-    - title: MCP3208
+    - title: class MCP3208
       url: "/MCP3208.html"
       output: web pdf
       type: homepage
-    - title: MCP3424
+    - title: class MCP3424
       url: "/MCP3424.html"
       output: web pdf
       type: homepage
-    - title: PCF8523
+    - title: class MCP3x0x
+      url: "/MCP3x0x.html"
+      output: web pdf
+      type: homepage
+    - title: class PCF8523
       url: "/PCF8523.html"
       output: web pdf
       type: homepage
-  - title: IO Peripheral class
+  - title: IO Peripheral
     output: web pdf
     folderitems:
-    - title: ADC
+    - title: class ADC
       url: "/ADC.html"
       output: web pdf
       type: homepage
-    - title: GPIO
+    - title: class GPIO
       url: "/GPIO.html"
       output: web pdf
       type: homepage
-    - title: I2C
+    - title: class I2C
       url: "/I2C.html"
       output: web pdf
       type: homepage
-    - title: PWM
+    - title: class PWM
       url: "/PWM.html"
       output: web pdf
       type: homepage
-    - title: SPI
+    - title: class SPI
       url: "/SPI.html"
       output: web pdf
       type: homepage
-    - title: UART
+    - title: class UART
       url: "/UART.html"
       output: web pdf
       type: homepage
-    - title: UART::RxBuffer
+    - title: class UART::RxBuffer
       url: "/UART_RxBuffer.html"
       output: web pdf
       type: homepage
-  - title: General class
+  - title: General
     output: web pdf
     folderitems:
-    - title: BLE
+    - title: class BLE
       url: "/BLE.html"
       output: web pdf
       type: homepage
-    - title: BLE::AdvertisingData
+    - title: class BLE::AdvertisingData
       url: "/BLE_AdvertisingData.html"
       output: web pdf
       type: homepage
-    - title: BLE::AdvertisingReport
+    - title: class BLE::AdvertisingReport
       url: "/BLE_AdvertisingReport.html"
       output: web pdf
       type: homepage
-    - title: BLE::Broadcaster
+    - title: class BLE::Broadcaster
       url: "/BLE_Broadcaster.html"
       output: web pdf
       type: homepage
-    - title: BLE::Central
+    - title: class BLE::Central
       url: "/BLE_Central.html"
       output: web pdf
       type: homepage
-    - title: BLE::GattDatabase
+    - title: class BLE::GattDatabase
       url: "/BLE_GattDatabase.html"
       output: web pdf
       type: homepage
-    - title: BLE::Observer
+    - title: class BLE::Observer
       url: "/BLE_Observer.html"
       output: web pdf
       type: homepage
-    - title: BLE::Peripheral
+    - title: class BLE::Peripheral
       url: "/BLE_Peripheral.html"
       output: web pdf
       type: homepage
-    - title: BLE::Utils
+    - title: class BLE::Utils
       url: "/BLE_Utils.html"
       output: web pdf
       type: homepage
-    - title: Base16
+    - title: class Base16
       url: "/Base16.html"
       output: web pdf
       type: homepage
-    - title: Base64
+    - title: class Base64
       url: "/Base64.html"
       output: web pdf
       type: homepage
-    - title: Dir
+    - title: class CYW43::Auth
+      url: "/CYW43_Auth.html"
+      output: web pdf
+      type: homepage
+    - title: class Dir
       url: "/Dir.html"
       output: web pdf
       type: homepage
-    - title: EAGAINWaitReadable
+    - title: class EAGAINWaitReadable
       url: "/EAGAINWaitReadable.html"
       output: web pdf
       type: homepage
-    - title: FAT
+    - title: class FAT
       url: "/FAT.html"
       output: web pdf
       type: homepage
-    - title: FAT::Dir
+    - title: class FAT::Dir
       url: "/FAT_Dir.html"
       output: web pdf
       type: homepage
-    - title: FAT::File
+    - title: class FAT::File
       url: "/FAT_File.html"
       output: web pdf
       type: homepage
-    - title: FAT::Stat
+    - title: class FAT::Stat
       url: "/FAT_Stat.html"
       output: web pdf
       type: homepage
-    - title: FAT::VFSMethods
+    - title: class FAT::VFSMethods
       url: "/FAT_VFSMethods.html"
       output: web pdf
       type: homepage
-    - title: File
+    - title: class File
       url: "/File.html"
       output: web pdf
       type: homepage
-    - title: File::Stat
+    - title: class File::Stat
       url: "/File_Stat.html"
       output: web pdf
       type: homepage
-    - title: IIRFilter
+    - title: class IIRFilter
       url: "/IIRFilter.html"
       output: web pdf
       type: homepage
-    - title: IO
+    - title: class IO
       url: "/IO.html"
       output: web pdf
       type: homepage
-    - title: MML
+    - title: class MML
       url: "/MML.html"
       output: web pdf
       type: homepage
-    - title: Machine
+    - title: class Machine
       url: "/Machine.html"
       output: web pdf
       type: homepage
-    - title: MbedTLS
+    - title: class MbedTLS
       url: "/MbedTLS.html"
       output: web pdf
       type: homepage
-    - title: MbedTLS::CMAC
+    - title: class MbedTLS::CMAC
       url: "/MbedTLS_CMAC.html"
       output: web pdf
       type: homepage
-    - title: MbedTLS::Cipher
+    - title: class MbedTLS::Cipher
       url: "/MbedTLS_Cipher.html"
       output: web pdf
       type: homepage
-    - title: MbedTLS::Digest
+    - title: class MbedTLS::Digest
       url: "/MbedTLS_Digest.html"
       output: web pdf
       type: homepage
-    - title: PicoRubyVM
+    - title: class Module
+      url: "/Module.html"
+      output: web pdf
+      type: homepage
+    - title: class Net
+      url: "/Net.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::DNS
+      url: "/Net_DNS.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPClient
+      url: "/Net_HTTPClient.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPSClient
+      url: "/Net_HTTPSClient.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPUtil
+      url: "/Net_HTTPUtil.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::TCPClient
+      url: "/Net_TCPClient.html"
+      output: web pdf
+      type: homepage
+    - title: class PicoRubyVM
       url: "/PicoRubyVM.html"
       output: web pdf
       type: homepage
-    - title: Prism
+    - title: class Prism
       url: "/Prism.html"
       output: web pdf
       type: homepage
-    - title: Prism::Location
+    - title: class Prism::Location
       url: "/Prism_Location.html"
       output: web pdf
       type: homepage
-    - title: Prism::ParseError
+    - title: class Prism::ParseError
       url: "/Prism_ParseError.html"
       output: web pdf
       type: homepage
-    - title: Prism::ParseResult
+    - title: class Prism::ParseResult
       url: "/Prism_ParseResult.html"
       output: web pdf
       type: homepage
-    - title: RNG
+    - title: class RNG
       url: "/RNG.html"
       output: web pdf
       type: homepage
-    - title: RTD
+    - title: class RTD
       url: "/RTD.html"
       output: web pdf
       type: homepage
-    - title: RTD::PT100
+    - title: class RTD::PT100
       url: "/RTD_PT100.html"
       output: web pdf
       type: homepage
-    - title: SQLite3
+    - title: class SQLite3
       url: "/SQLite3.html"
       output: web pdf
       type: homepage
-    - title: SQLite3::Database
+    - title: class SQLite3::Database
       url: "/SQLite3_Database.html"
       output: web pdf
       type: homepage
-    - title: SQLite3::ResultSet
+    - title: class SQLite3::ResultSet
       url: "/SQLite3_ResultSet.html"
       output: web pdf
       type: homepage
-    - title: SQLite3::Statement
+    - title: class SQLite3::Statement
       url: "/SQLite3_Statement.html"
       output: web pdf
       type: homepage
-    - title: Sandbox
+    - title: class Sandbox
       url: "/Sandbox.html"
       output: web pdf
       type: homepage
-    - title: Sandbox::Abort
+    - title: class Sandbox::Abort
       url: "/Sandbox_Abort.html"
       output: web pdf
       type: homepage
-    - title: Shell
+    - title: class Shell
       url: "/Shell.html"
       output: web pdf
       type: homepage
-    - title: Shell::Command
+    - title: class Shell::Command
       url: "/Shell_Command.html"
       output: web pdf
       type: homepage
-    - title: Task
+    - title: class Task
       url: "/Task.html"
       output: web pdf
       type: homepage
-    - title: Terminal
+    - title: class Terminal
       url: "/Terminal.html"
       output: web pdf
       type: homepage
-    - title: Terminal::Base
+    - title: class Terminal::Base
       url: "/Terminal_Base.html"
       output: web pdf
       type: homepage
-    - title: Terminal::Buffer
+    - title: class Terminal::Buffer
       url: "/Terminal_Buffer.html"
       output: web pdf
       type: homepage
-    - title: Terminal::Editor
+    - title: class Terminal::Editor
       url: "/Terminal_Editor.html"
       output: web pdf
       type: homepage
-    - title: Terminal::Line
+    - title: class Terminal::Line
       url: "/Terminal_Line.html"
       output: web pdf
       type: homepage
-    - title: Time
+    - title: class Time
       url: "/Time.html"
       output: web pdf
       type: homepage
-    - title: Time::TimeMethods
+    - title: class Time::TimeMethods
       url: "/Time_TimeMethods.html"
       output: web pdf
       type: homepage
-    - title: VFS
+    - title: class VFS
       url: "/VFS.html"
       output: web pdf
       type: homepage
-    - title: VFS::Dir
+    - title: class VFS::Dir
       url: "/VFS_Dir.html"
       output: web pdf
       type: homepage
-    - title: VFS::File
+    - title: class VFS::File
       url: "/VFS_File.html"
       output: web pdf
       type: homepage
-    - title: Vim
+    - title: class Vim
       url: "/Vim.html"
       output: web pdf
       type: homepage
-    - title: Watchdog
+    - title: class Watchdog
       url: "/Watchdog.html"
       output: web pdf
       type: homepage
-  - title: PRK Firmware class
+  - title: PRK Firmware
     output: web pdf
     folderitems:
-    - title: ConsumerKey
+    - title: class ConsumerKey
       url: "/ConsumerKey.html"
       output: web pdf
       type: homepage
-    - title: DebounceBase
+    - title: class DebounceBase
       url: "/DebounceBase.html"
       output: web pdf
       type: homepage
-    - title: DebounceNone
+    - title: class DebounceNone
       url: "/DebounceNone.html"
       output: web pdf
       type: homepage
-    - title: DebouncePerKey
+    - title: class DebouncePerKey
       url: "/DebouncePerKey.html"
       output: web pdf
       type: homepage
-    - title: DebouncePerRow
+    - title: class DebouncePerRow
       url: "/DebouncePerRow.html"
       output: web pdf
       type: homepage
-    - title: Joystick
+    - title: class Joystick
       url: "/Joystick.html"
       output: web pdf
       type: homepage
-    - title: Keyboard
+    - title: class Keyboard
       url: "/Keyboard.html"
       output: web pdf
       type: homepage
-    - title: Mouse
+    - title: class Mouse
       url: "/Mouse.html"
       output: web pdf
       type: homepage
-    - title: RGB
+    - title: class RGB
       url: "/RGB.html"
       output: web pdf
       type: homepage
-    - title: RotaryEncoder
+    - title: class RotaryEncoder
       url: "/RotaryEncoder.html"
       output: web pdf
       type: homepage
-    - title: Sounder
+    - title: class Sounder
       url: "/Sounder.html"
       output: web pdf
       type: homepage
-    - title: VIA
+    - title: class VIA
       url: "/VIA.html"
       output: web pdf
       type: homepage
   - title: Type alias
     output: web pdf
     folderitems:
-    - title: Type alias
+    - title: " Type alias"
       url: "/type_alias.html"
       output: web pdf
       type: homepage

@@ -1,5 +1,5 @@
 ---
-title: Terminal
+title: class Terminal
 keywords: Terminal
 tags: [class]
 summary: Terminal class of PicoRuby

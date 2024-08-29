@@ -1,5 +1,5 @@
 ---
-title: Sandbox
+title: class Sandbox
 keywords: Sandbox
 tags: [class]
 summary: Sandbox class of PicoRuby

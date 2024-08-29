@@ -1,5 +1,5 @@
 ---
-title: Object
+title: class Object
 keywords: Object
 tags: [class]
 summary: Object class of PicoRuby
@@ -47,6 +47,11 @@ instance.dup() -> self
 
 ```ruby
 instance.exit(?Integer) -> void
+```
+### include
+
+```ruby
+instance.include(Module) -> void
 ```
 ### inspect
 

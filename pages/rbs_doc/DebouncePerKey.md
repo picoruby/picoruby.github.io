@@ -1,5 +1,5 @@
 ---
-title: DebouncePerKey
+title: class DebouncePerKey
 keywords: DebouncePerKey
 tags: [class]
 summary: DebouncePerKey class of PicoRuby

@@ -1,5 +1,5 @@
 ---
-title: FAT::Stat
+title: class FAT::Stat
 keywords: FAT::Stat
 tags: [class]
 summary: FAT::Stat class of PicoRuby

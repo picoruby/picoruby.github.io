@@ -1,5 +1,5 @@
 ---
-title: EAGAINWaitReadable
+title: class EAGAINWaitReadable
 keywords: EAGAINWaitReadable
 tags: [class]
 summary: EAGAINWaitReadable class of PicoRuby

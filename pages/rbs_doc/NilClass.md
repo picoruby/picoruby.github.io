@@ -1,5 +1,5 @@
 ---
-title: NilClass
+title: class NilClass
 keywords: NilClass
 tags: [class]
 summary: NilClass class of PicoRuby

@@ -1,5 +1,5 @@
 ---
-title: Prism::Location
+title: class Prism::Location
 keywords: Prism::Location
 tags: [class]
 summary: Prism::Location class of PicoRuby

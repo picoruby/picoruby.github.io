@@ -1,5 +1,5 @@
 ---
-title: Prism
+title: class Prism
 keywords: Prism
 tags: [class]
 summary: Prism class of PicoRuby

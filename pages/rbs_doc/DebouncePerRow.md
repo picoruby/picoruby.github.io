@@ -1,5 +1,5 @@
 ---
-title: DebouncePerRow
+title: class DebouncePerRow
 keywords: DebouncePerRow
 tags: [class]
 summary: DebouncePerRow class of PicoRuby

@@ -1,5 +1,5 @@
 ---
-title: Prism::ParseResult
+title: class Prism::ParseResult
 keywords: Prism::ParseResult
 tags: [class]
 summary: Prism::ParseResult class of PicoRuby

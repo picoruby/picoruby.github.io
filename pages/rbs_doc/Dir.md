@@ -1,5 +1,5 @@
 ---
-title: Dir
+title: class Dir
 keywords: Dir
 tags: [class]
 summary: Dir class of PicoRuby

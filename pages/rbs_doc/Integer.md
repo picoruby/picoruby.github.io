@@ -1,5 +1,5 @@
 ---
-title: Integer
+title: class Integer
 keywords: Integer
 tags: [class]
 summary: Integer class of PicoRuby

@@ -1,5 +1,5 @@
 ---
-title: TypeError
+title: class TypeError
 keywords: TypeError
 tags: [class]
 summary: TypeError class of PicoRuby

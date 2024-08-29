@@ -1,5 +1,5 @@
 ---
-title: Time
+title: class Time
 keywords: Time
 tags: [class]
 summary: Time class of PicoRuby

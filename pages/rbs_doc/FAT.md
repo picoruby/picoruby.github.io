@@ -1,5 +1,5 @@
 ---
-title: FAT
+title: class FAT
 keywords: FAT
 tags: [class]
 summary: FAT class of PicoRuby

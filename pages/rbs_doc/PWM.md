@@ -1,5 +1,5 @@
 ---
-title: PWM
+title: class PWM
 keywords: PWM
 tags: [class]
 summary: PWM class of PicoRuby

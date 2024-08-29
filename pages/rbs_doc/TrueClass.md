@@ -1,5 +1,5 @@
 ---
-title: TrueClass
+title: class TrueClass
 keywords: TrueClass
 tags: [class]
 summary: TrueClass class of PicoRuby

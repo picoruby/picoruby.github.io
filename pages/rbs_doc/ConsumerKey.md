@@ -1,5 +1,5 @@
 ---
-title: ConsumerKey
+title: class ConsumerKey
 keywords: ConsumerKey
 tags: [class]
 summary: ConsumerKey class of PicoRuby

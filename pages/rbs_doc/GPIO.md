@@ -1,5 +1,5 @@
 ---
-title: GPIO
+title: class GPIO
 keywords: GPIO
 tags: [class]
 summary: GPIO class of PicoRuby

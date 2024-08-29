@@ -1,5 +1,5 @@
 ---
-title: SQLite3::Statement
+title: class SQLite3::Statement
 keywords: SQLite3::Statement
 tags: [class]
 summary: SQLite3::Statement class of PicoRuby

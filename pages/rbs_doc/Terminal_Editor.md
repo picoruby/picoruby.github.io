@@ -1,5 +1,5 @@
 ---
-title: Terminal::Editor
+title: class Terminal::Editor
 keywords: Terminal::Editor
 tags: [class]
 summary: Terminal::Editor class of PicoRuby

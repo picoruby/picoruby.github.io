@@ -1,5 +1,5 @@
 ---
-title: Task
+title: class Task
 keywords: Task
 tags: [class]
 summary: Task class of PicoRuby

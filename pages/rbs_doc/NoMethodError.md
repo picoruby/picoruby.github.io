@@ -1,5 +1,5 @@
 ---
-title: NoMethodError
+title: class NoMethodError
 keywords: NoMethodError
 tags: [class]
 summary: NoMethodError class of PicoRuby

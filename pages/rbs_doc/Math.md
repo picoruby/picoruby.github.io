@@ -1,8 +1,8 @@
 ---
-title: Math
+title: module Math
 keywords: Math
-tags: [class]
-summary: Math class of PicoRuby
+tags: [module]
+summary: Math module of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Math.html
 folder: rbs_doc

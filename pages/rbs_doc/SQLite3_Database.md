@@ -1,5 +1,5 @@
 ---
-title: SQLite3::Database
+title: class SQLite3::Database
 keywords: SQLite3::Database
 tags: [class]
 summary: SQLite3::Database class of PicoRuby

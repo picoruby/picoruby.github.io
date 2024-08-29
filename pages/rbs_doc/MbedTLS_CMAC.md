@@ -1,5 +1,5 @@
 ---
-title: MbedTLS::CMAC
+title: class MbedTLS::CMAC
 keywords: MbedTLS::CMAC
 tags: [class]
 summary: MbedTLS::CMAC class of PicoRuby

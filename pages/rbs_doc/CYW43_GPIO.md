@@ -1,5 +1,5 @@
 ---
-title: CYW43::GPIO
+title: class CYW43::GPIO
 keywords: CYW43::GPIO
 tags: [class]
 summary: CYW43::GPIO class of PicoRuby

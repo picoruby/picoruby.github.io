@@ -1,5 +1,5 @@
 ---
-title: BLE::Observer
+title: class BLE::Observer
 keywords: BLE::Observer
 tags: [class]
 summary: BLE::Observer class of PicoRuby

@@ -1,5 +1,5 @@
 ---
-title: Prism::ParseError
+title: class Prism::ParseError
 keywords: Prism::ParseError
 tags: [class]
 summary: Prism::ParseError class of PicoRuby

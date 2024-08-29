@@ -1,5 +1,5 @@
 ---
-title: RangeError
+title: class RangeError
 keywords: RangeError
 tags: [class]
 summary: RangeError class of PicoRuby

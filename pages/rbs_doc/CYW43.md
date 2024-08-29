@@ -1,5 +1,5 @@
 ---
-title: CYW43
+title: class CYW43
 keywords: CYW43
 tags: [class]
 summary: CYW43 class of PicoRuby
@@ -8,6 +8,21 @@ permalink: CYW43.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### connect_blocking
+
+```ruby
+CYW43.connect_blocking(String ssid, String password, Integer augh) -> bool
+```
+### disable_sta_mode
+
+```ruby
+CYW43.disable_sta_mode() -> bool
+```
+### enable_sta_mode
+
+```ruby
+CYW43.enable_sta_mode() -> bool
+```
 ### init
 
 ```ruby

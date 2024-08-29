@@ -1,5 +1,5 @@
 ---
-title: File::Stat
+title: class File::Stat
 keywords: File::Stat
 tags: [class]
 summary: File::Stat class of PicoRuby

@@ -1,5 +1,5 @@
 ---
-title: SQLite3::ResultSet
+title: class SQLite3::ResultSet
 keywords: SQLite3::ResultSet
 tags: [class]
 summary: SQLite3::ResultSet class of PicoRuby

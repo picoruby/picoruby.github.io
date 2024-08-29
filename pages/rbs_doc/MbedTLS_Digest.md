@@ -1,5 +1,5 @@
 ---
-title: MbedTLS::Digest
+title: class MbedTLS::Digest
 keywords: MbedTLS::Digest
 tags: [class]
 summary: MbedTLS::Digest class of PicoRuby

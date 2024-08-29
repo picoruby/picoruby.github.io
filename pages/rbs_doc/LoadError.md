@@ -1,5 +1,5 @@
 ---
-title: LoadError
+title: class LoadError
 keywords: LoadError
 tags: [class]
 summary: LoadError class of PicoRuby

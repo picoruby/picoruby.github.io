@@ -1,5 +1,5 @@
 ---
-title: DipSwitch
+title: class DipSwitch
 keywords: DipSwitch
 tags: [class]
 summary: DipSwitch class of PicoRuby

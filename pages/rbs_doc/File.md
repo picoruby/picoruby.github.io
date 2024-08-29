@@ -1,5 +1,5 @@
 ---
-title: File
+title: class File
 keywords: File
 tags: [class]
 summary: File class of PicoRuby

@@ -1,5 +1,5 @@
 ---
-title: Hash
+title: class Hash
 keywords: Hash
 tags: [class]
 summary: Hash class of PicoRuby
@@ -7,6 +7,8 @@ sidebar: picoruby_sidebar
 permalink: Hash.html
 folder: rbs_doc
 ---
+## Include
+[Enumerable](Enumerable.html)
 ## Singleton methods
 ### new
 
@@ -63,7 +65,7 @@ instance.delete(K arg0) -> V?
 ### each
 
 ```ruby
-instance.each() { (K key, V val) -> untyped } -> self
+instance.each() { ([ K, V ] arg0) -> untyped } -> self
 ```
 ### empty?
 

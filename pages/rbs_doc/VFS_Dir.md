@@ -1,5 +1,5 @@
 ---
-title: VFS::Dir
+title: class VFS::Dir
 keywords: VFS::Dir
 tags: [class]
 summary: VFS::Dir class of PicoRuby

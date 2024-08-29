@@ -1,5 +1,5 @@
 ---
-title: IO
+title: class IO
 keywords: IO
 tags: [class]
 summary: IO class of PicoRuby

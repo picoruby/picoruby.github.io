@@ -1,5 +1,5 @@
 ---
-title: ZeroDivisionError
+title: class ZeroDivisionError
 keywords: ZeroDivisionError
 tags: [class]
 summary: ZeroDivisionError class of PicoRuby

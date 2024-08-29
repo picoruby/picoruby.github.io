@@ -1,5 +1,5 @@
 ---
-title: ADC
+title: class ADC
 keywords: ADC
 tags: [class]
 summary: ADC class of PicoRuby

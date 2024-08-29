@@ -1,5 +1,5 @@
 ---
-title: BLE::AdvertisingReport
+title: class BLE::AdvertisingReport
 keywords: BLE::AdvertisingReport
 tags: [class]
 summary: BLE::AdvertisingReport class of PicoRuby

@@ -1,5 +1,5 @@
 ---
-title: BLE::Central
+title: class BLE::Central
 keywords: BLE::Central
 tags: [class]
 summary: BLE::Central class of PicoRuby

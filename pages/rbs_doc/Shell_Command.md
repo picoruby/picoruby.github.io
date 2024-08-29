@@ -1,5 +1,5 @@
 ---
-title: Shell::Command
+title: class Shell::Command
 keywords: Shell::Command
 tags: [class]
 summary: Shell::Command class of PicoRuby

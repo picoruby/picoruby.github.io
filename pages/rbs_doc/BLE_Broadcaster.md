@@ -1,5 +1,5 @@
 ---
-title: BLE::Broadcaster
+title: class BLE::Broadcaster
 keywords: BLE::Broadcaster
 tags: [class]
 summary: BLE::Broadcaster class of PicoRuby

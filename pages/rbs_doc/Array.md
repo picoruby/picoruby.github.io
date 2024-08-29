@@ -1,5 +1,5 @@
 ---
-title: Array
+title: class Array
 keywords: Array
 tags: [class]
 summary: Array class of PicoRuby
@@ -7,6 +7,8 @@ sidebar: picoruby_sidebar
 permalink: Array.html
 folder: rbs_doc
 ---
+## Include
+[Enumerable](Enumerable.html)
 ## Singleton methods
 ### new
 
@@ -85,11 +87,6 @@ instance.at(int index) -> Elem?
 ```ruby
 instance.clear() -> self
 ```
-### collect
-
-```ruby
-instance.collect[U] () { (Elem item) -> U } -> ::Array[U]
-```
 ### collect!
 
 ```ruby
@@ -121,11 +118,6 @@ instance.each() { (Elem item) -> void } -> self
 
 ```ruby
 instance.each_index() { (::Integer index) -> void } -> self
-```
-### each_with_index
-
-```ruby
-instance.each_with_index() { (Elem item, ::Integer index) -> void } -> self
 ```
 ### empty?
 

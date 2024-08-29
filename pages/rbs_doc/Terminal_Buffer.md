@@ -1,5 +1,5 @@
 ---
-title: Terminal::Buffer
+title: class Terminal::Buffer
 keywords: Terminal::Buffer
 tags: [class]
 summary: Terminal::Buffer class of PicoRuby

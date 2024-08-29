@@ -1,5 +1,5 @@
 ---
-title: PicoRubyVM
+title: class PicoRubyVM
 keywords: PicoRubyVM
 tags: [class]
 summary: PicoRubyVM class of PicoRuby

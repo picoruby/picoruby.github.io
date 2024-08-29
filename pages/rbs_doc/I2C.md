@@ -1,5 +1,5 @@
 ---
-title: I2C
+title: class I2C
 keywords: I2C
 tags: [class]
 summary: I2C class of PicoRuby

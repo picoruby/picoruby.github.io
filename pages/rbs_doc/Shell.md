@@ -1,5 +1,5 @@
 ---
-title: Shell
+title: class Shell
 keywords: Shell
 tags: [class]
 summary: Shell class of PicoRuby
@@ -52,5 +52,5 @@ instance.simple_question(String question) { (String answer) -> boolish } -> void
 ### start
 
 ```ruby
-instance.start(?:shell mode) -> nil
+instance.start(?Symbol mode) -> nil
 ```

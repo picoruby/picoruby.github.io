@@ -1,5 +1,5 @@
 ---
-title: UART
+title: class UART
 keywords: UART
 tags: [class]
 summary: UART class of PicoRuby

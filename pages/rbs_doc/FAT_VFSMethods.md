@@ -1,5 +1,5 @@
 ---
-title: FAT::VFSMethods
+title: class FAT::VFSMethods
 keywords: FAT::VFSMethods
 tags: [class]
 summary: FAT::VFSMethods class of PicoRuby

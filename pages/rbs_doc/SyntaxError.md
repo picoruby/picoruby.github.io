@@ -1,5 +1,5 @@
 ---
-title: SyntaxError
+title: class SyntaxError
 keywords: SyntaxError
 tags: [class]
 summary: SyntaxError class of PicoRuby

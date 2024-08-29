@@ -1,5 +1,5 @@
 ---
-title: Symbol
+title: class Symbol
 keywords: Symbol
 tags: [class]
 summary: Symbol class of PicoRuby

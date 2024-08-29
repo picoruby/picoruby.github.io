@@ -1,5 +1,5 @@
 ---
-title: ArgumentError
+title: class ArgumentError
 keywords: ArgumentError
 tags: [class]
 summary: ArgumentError class of PicoRuby

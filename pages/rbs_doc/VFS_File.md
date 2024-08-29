@@ -1,5 +1,5 @@
 ---
-title: VFS::File
+title: class VFS::File
 keywords: VFS::File
 tags: [class]
 summary: VFS::File class of PicoRuby

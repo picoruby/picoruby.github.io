@@ -1,5 +1,5 @@
 ---
-title: IIRFilter
+title: class IIRFilter
 keywords: IIRFilter
 tags: [class]
 summary: IIRFilter class of PicoRuby

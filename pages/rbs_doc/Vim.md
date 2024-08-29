@@ -1,5 +1,5 @@
 ---
-title: Vim
+title: class Vim
 keywords: Vim
 tags: [class]
 summary: Vim class of PicoRuby

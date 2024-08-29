@@ -1,5 +1,5 @@
 ---
-title: Range
+title: class Range
 keywords: Range
 tags: [class]
 summary: Range class of PicoRuby

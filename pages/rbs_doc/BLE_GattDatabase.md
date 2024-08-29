@@ -1,5 +1,5 @@
 ---
-title: BLE::GattDatabase
+title: class BLE::GattDatabase
 keywords: BLE::GattDatabase
 tags: [class]
 summary: BLE::GattDatabase class of PicoRuby

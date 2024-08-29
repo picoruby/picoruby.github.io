@@ -1,5 +1,5 @@
 ---
-title: Mouse
+title: class Mouse
 keywords: Mouse
 tags: [class]
 summary: Mouse class of PicoRuby

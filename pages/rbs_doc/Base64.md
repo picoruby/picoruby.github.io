@@ -1,5 +1,5 @@
 ---
-title: Base64
+title: class Base64
 keywords: Base64
 tags: [class]
 summary: Base64 class of PicoRuby

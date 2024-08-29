@@ -1,5 +1,5 @@
 ---
-title: DebounceNone
+title: class DebounceNone
 keywords: DebounceNone
 tags: [class]
 summary: DebounceNone class of PicoRuby

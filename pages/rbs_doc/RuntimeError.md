@@ -1,5 +1,5 @@
 ---
-title: RuntimeError
+title: class RuntimeError
 keywords: RuntimeError
 tags: [class]
 summary: RuntimeError class of PicoRuby

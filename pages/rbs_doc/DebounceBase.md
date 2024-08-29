@@ -1,5 +1,5 @@
 ---
-title: DebounceBase
+title: class DebounceBase
 keywords: DebounceBase
 tags: [class]
 summary: DebounceBase class of PicoRuby

@@ -1,5 +1,5 @@
 ---
-title: Machine
+title: class Machine
 keywords: Machine
 tags: [class]
 summary: Machine class of PicoRuby

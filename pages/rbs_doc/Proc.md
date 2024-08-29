@@ -1,5 +1,5 @@
 ---
-title: Proc
+title: class Proc
 keywords: Proc
 tags: [class]
 summary: Proc class of PicoRuby

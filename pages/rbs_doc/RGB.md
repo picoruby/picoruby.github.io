@@ -1,5 +1,5 @@
 ---
-title: RGB
+title: class RGB
 keywords: RGB
 tags: [class]
 summary: RGB class of PicoRuby

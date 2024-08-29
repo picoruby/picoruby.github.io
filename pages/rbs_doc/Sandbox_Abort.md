@@ -1,5 +1,5 @@
 ---
-title: Sandbox::Abort
+title: class Sandbox::Abort
 keywords: Sandbox::Abort
 tags: [class]
 summary: Sandbox::Abort class of PicoRuby

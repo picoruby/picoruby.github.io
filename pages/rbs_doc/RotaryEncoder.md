@@ -1,5 +1,5 @@
 ---
-title: RotaryEncoder
+title: class RotaryEncoder
 keywords: RotaryEncoder
 tags: [class]
 summary: RotaryEncoder class of PicoRuby

@@ -1,5 +1,5 @@
 ---
-title: RTD
+title: class RTD
 keywords: RTD
 tags: [class]
 summary: RTD class of PicoRuby

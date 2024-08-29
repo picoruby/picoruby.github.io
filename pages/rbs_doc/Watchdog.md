@@ -1,5 +1,5 @@
 ---
-title: Watchdog
+title: class Watchdog
 keywords: Watchdog
 tags: [class]
 summary: Watchdog class of PicoRuby

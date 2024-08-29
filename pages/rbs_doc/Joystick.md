@@ -1,5 +1,5 @@
 ---
-title: Joystick
+title: class Joystick
 keywords: Joystick
 tags: [class]
 summary: Joystick class of PicoRuby

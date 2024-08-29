@@ -1,5 +1,5 @@
 ---
-title: MbedTLS::Cipher
+title: class MbedTLS::Cipher
 keywords: MbedTLS::Cipher
 tags: [class]
 summary: MbedTLS::Cipher class of PicoRuby

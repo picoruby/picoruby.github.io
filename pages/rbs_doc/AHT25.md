@@ -1,5 +1,5 @@
 ---
-title: AHT25
+title: class AHT25
 keywords: AHT25
 tags: [class]
 summary: AHT25 class of PicoRuby

@@ -45,3 +45,12 @@ string
 String
 ```
 
+## httpreturn
+```rbs
+{
+  status: Integer,
+  headers: Hash[String, String],
+  body: String
+}
+```
+

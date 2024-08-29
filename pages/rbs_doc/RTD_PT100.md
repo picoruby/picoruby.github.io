@@ -1,5 +1,5 @@
 ---
-title: RTD::PT100
+title: class RTD::PT100
 keywords: RTD::PT100
 tags: [class]
 summary: RTD::PT100 class of PicoRuby

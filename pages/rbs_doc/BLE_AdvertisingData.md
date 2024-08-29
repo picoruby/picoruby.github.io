@@ -1,5 +1,5 @@
 ---
-title: BLE::AdvertisingData
+title: class BLE::AdvertisingData
 keywords: BLE::AdvertisingData
 tags: [class]
 summary: BLE::AdvertisingData class of PicoRuby

@@ -1,5 +1,5 @@
 ---
-title: SPI
+title: class SPI
 keywords: SPI
 tags: [class]
 summary: SPI class of PicoRuby

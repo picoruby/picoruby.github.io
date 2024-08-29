@@ -1,5 +1,5 @@
 ---
-title: NameError
+title: class NameError
 keywords: NameError
 tags: [class]
 summary: NameError class of PicoRuby

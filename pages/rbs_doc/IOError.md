@@ -1,5 +1,5 @@
 ---
-title: IOError
+title: class IOError
 keywords: IOError
 tags: [class]
 summary: IOError class of PicoRuby

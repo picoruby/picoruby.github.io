@@ -1,5 +1,5 @@
 ---
-title: UART::RxBuffer
+title: class UART::RxBuffer
 keywords: UART::RxBuffer
 tags: [class]
 summary: UART::RxBuffer class of PicoRuby

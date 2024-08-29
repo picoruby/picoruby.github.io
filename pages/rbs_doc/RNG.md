@@ -1,5 +1,5 @@
 ---
-title: RNG
+title: class RNG
 keywords: RNG
 tags: [class]
 summary: RNG class of PicoRuby

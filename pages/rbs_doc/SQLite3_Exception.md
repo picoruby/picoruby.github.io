@@ -1,5 +1,5 @@
 ---
-title: SQLite3::Exception
+title: class SQLite3::Exception
 keywords: SQLite3::Exception
 tags: [class]
 summary: SQLite3::Exception class of PicoRuby

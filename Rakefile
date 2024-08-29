@@ -22,15 +22,19 @@ task :install_picoruby => [PICORUBY_DIR, MRUBYC_DIR]
 
 directory PICORUBY_DIR do
   sh "git clone https://github.com/picoruby/picoruby.git"
-  sh "cd lib && bundle install"
+  FileUtils.cd("picoruby") do
+    sh "git checkout use-builtin-Task"
+  end
+  FileUtils.cd("lib") do
+    sh "bundle install"
+  end
 end
 
 directory MRUBYC_DIR do
   FileUtils.cd("picoruby/mrbgems/picoruby-mrubyc/repos") do
     sh "git clone https://github.com/mrubyc/mrubyc.git"
     FileUtils.cd("mrubyc") do
-      # HAL directory is relocated
-      sh "git checkout 5fab2b85dce8fc0780293235df6c0daa5fd57dce"
+      sh "git checkout fix-picoruby-irb"
     end
   end
 end

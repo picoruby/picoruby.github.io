@@ -1,5 +1,5 @@
 ---
-title: EC21::SoracomBeamUDP
+title: class EC21::SoracomBeamUDP
 keywords: EC21::SoracomBeamUDP
 tags: [class]
 summary: EC21::SoracomBeamUDP class of PicoRuby

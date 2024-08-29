@@ -1,5 +1,5 @@
 ---
-title: VIA
+title: class VIA
 keywords: VIA
 tags: [class]
 summary: VIA class of PicoRuby

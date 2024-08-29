@@ -1,5 +1,5 @@
 ---
-title: Time::TimeMethods
+title: class Time::TimeMethods
 keywords: Time::TimeMethods
 tags: [class]
 summary: Time::TimeMethods class of PicoRuby

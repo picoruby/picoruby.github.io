@@ -1,5 +1,5 @@
 ---
-title: Base16
+title: class Base16
 keywords: Base16
 tags: [class]
 summary: Base16 class of PicoRuby

@@ -1,5 +1,5 @@
 ---
-title: BLE
+title: class BLE
 keywords: BLE
 tags: [class]
 summary: BLE class of PicoRuby

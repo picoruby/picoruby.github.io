@@ -1,5 +1,5 @@
 ---
-title: String
+title: class String
 keywords: String
 tags: [class]
 summary: String class of PicoRuby

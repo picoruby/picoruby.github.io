@@ -1,5 +1,5 @@
 ---
-title: FalseClass
+title: class FalseClass
 keywords: FalseClass
 tags: [class]
 summary: FalseClass class of PicoRuby
