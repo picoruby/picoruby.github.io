@@ -1,17 +1,17 @@
 ---
-title: class Terminal::Buffer
-keywords: Terminal::Buffer
+title: class Editor::Buffer
+keywords: Editor::Buffer
 tags: [class]
-summary: Terminal::Buffer class of PicoRuby
+summary: Editor::Buffer class of PicoRuby
 sidebar: picoruby_sidebar
-permalink: Terminal_Buffer.html
+permalink: Editor_Buffer.html
 folder: rbs_doc
 ---
 ## Singleton methods
 ### new
 
 ```ruby
-Terminal::Buffer.new() -> instance
+Editor::Buffer.new() -> instance
 ```
 ## Instance methods
 ### bottom

@@ -1,17 +1,17 @@
 ---
-title: class Terminal::Base
-keywords: Terminal::Base
+title: class Editor::Base
+keywords: Editor::Base
 tags: [class]
-summary: Terminal::Base class of PicoRuby
+summary: Editor::Base class of PicoRuby
 sidebar: picoruby_sidebar
-permalink: Terminal_Base.html
+permalink: Editor_Base.html
 folder: rbs_doc
 ---
 ## Singleton methods
 ### new
 
 ```ruby
-Terminal::Base.new-> void
+Editor::Base.new-> void
 ```
 ## Instance methods
 ### clear

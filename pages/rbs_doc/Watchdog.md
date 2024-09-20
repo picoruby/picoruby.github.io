@@ -13,6 +13,11 @@ folder: rbs_doc
 ```ruby
 Watchdog.caused_reboot?() -> bool
 ```
+### disable
+
+```ruby
+Watchdog.disable() -> 0
+```
 ### enable
 
 ```ruby

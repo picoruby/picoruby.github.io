@@ -7,6 +7,12 @@ sidebar: picoruby_sidebar
 permalink: Array.html
 folder: rbs_doc
 ---
+## Instance methods (picoruby-editor)
+### insert
+
+```ruby
+instance.insert(Integer index, *Elem) -> void
+```
 ## Include
 [Enumerable](Enumerable.html)
 ## Singleton methods
@@ -213,10 +219,4 @@ instance.unshift(*Elem obj) -> self
 
 ```ruby
 instance.|[T] (::Array[T] other_ary) -> ::Array[Elem | T]
-```
-## Instance methods (picoruby-terminal)
-### insert
-
-```ruby
-instance.insert(Integer index, *Elem) -> void
 ```

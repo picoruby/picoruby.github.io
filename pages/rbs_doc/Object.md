@@ -7,6 +7,17 @@ sidebar: picoruby_sidebar
 permalink: Object.html
 folder: rbs_doc
 ---
+## Instance methods (picoruby-require)
+### load
+
+```ruby
+instance.load(String path) -> bool
+```
+### require
+
+```ruby
+instance.require(String name) -> bool
+```
 ## Instance methods
 ### <=>
 
@@ -123,15 +134,4 @@ instance.sprintf(String format, *untyped args) -> String
 
 ```ruby
 instance.to_s() -> String
-```
-## Instance methods (picoruby-require)
-### load
-
-```ruby
-instance.load(String path) -> bool
-```
-### require
-
-```ruby
-instance.require(String name) -> bool
 ```

@@ -1,17 +1,17 @@
 ---
-title: class Terminal::Editor
-keywords: Terminal::Editor
+title: class Editor::Screen
+keywords: Editor::Screen
 tags: [class]
-summary: Terminal::Editor class of PicoRuby
+summary: Editor::Screen class of PicoRuby
 sidebar: picoruby_sidebar
-permalink: Terminal_Editor.html
+permalink: Editor_Screen.html
 folder: rbs_doc
 ---
 ## Singleton methods
 ### new
 
 ```ruby
-Terminal::Editor.new-> void
+Editor::Screen.new-> void
 ```
 ## Instance methods
 ### calculate_visual_cursor
@@ -52,7 +52,7 @@ instance.show_cursor-> untyped
 ### start
 
 ```ruby
-instance.start() { (self, Terminal::Buffer, Integer) -> void }  -> void
+instance.start() { (self, Editor::Buffer, Integer) -> void }  -> void
 ```
 ## Attr accessors
 ### footer_height (accessor)

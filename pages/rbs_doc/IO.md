@@ -7,6 +7,43 @@ sidebar: picoruby_sidebar
 permalink: IO.html
 folder: rbs_doc
 ---
+## Instance methods
+### <<
+
+```ruby
+instance.<<(untyped) -> self
+```
+### flush
+
+```ruby
+instance.flush-> self
+```
+### getch
+
+```ruby
+instance.getch-> String
+```
+### iflush
+
+```ruby
+instance.iflush-> self
+```
+### noecho
+
+```ruby
+instance.noecho() { (untyped) -> untyped } -> untyped
+```
+### raw
+
+```ruby
+instance.raw() { (untyped) -> untyped } -> untyped
+```
+## Instance methods
+### read_nonblock
+
+```ruby
+instance.read_nonblock(Integer maxlen) -> String
+```
 ## Singleton methods
 ### clear_screen
 
@@ -57,41 +94,4 @@ IO.read_nonblock(Integer) -> String
 
 ```ruby
 IO.wait_terminal(?timeout: Integer|Float|nil) -> bool
-```
-## Instance methods
-### <<
-
-```ruby
-instance.<<(untyped) -> self
-```
-### flush
-
-```ruby
-instance.flush-> self
-```
-### getch
-
-```ruby
-instance.getch-> String
-```
-### iflush
-
-```ruby
-instance.iflush-> self
-```
-### noecho
-
-```ruby
-instance.noecho() { (untyped) -> untyped } -> untyped
-```
-### raw
-
-```ruby
-instance.raw() { (untyped) -> untyped } -> untyped
-```
-## Instance methods
-### read_nonblock
-
-```ruby
-instance.read_nonblock(Integer maxlen) -> String
 ```

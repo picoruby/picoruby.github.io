@@ -15,7 +15,7 @@ task :install_steep do
 end
 
 PICORUBY_DIR = "picoruby"
-MRUBYC_DIR = "picoruby/mrbgems/picoruby-mrubyc/repos/mrubyc"
+MRUBYC_DIR = "picoruby/mrbgems/picoruby-mrubyc/lib/mrubyc"
 
 desc "Git clone picoruby and mruby/c"
 task :install_picoruby => [PICORUBY_DIR, MRUBYC_DIR]
@@ -31,7 +31,7 @@ directory PICORUBY_DIR do
 end
 
 directory MRUBYC_DIR do
-  FileUtils.cd("picoruby/mrbgems/picoruby-mrubyc/repos") do
+  FileUtils.cd("picoruby/mrbgems/picoruby-mrubyc/lib") do
     sh "git clone https://github.com/mrubyc/mrubyc.git"
     FileUtils.cd("mrubyc") do
       sh "git checkout fix-picoruby-irb"

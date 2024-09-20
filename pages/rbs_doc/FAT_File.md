@@ -52,7 +52,7 @@ instance.puts(*String) -> nil
 ### read
 
 ```ruby
-instance.read(?Integer size) -> String
+instance.read(?Integer size) -> String?
 ```
 ### seek
 

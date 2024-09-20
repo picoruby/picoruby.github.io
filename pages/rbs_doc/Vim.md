@@ -17,7 +17,7 @@ Vim.new(String filepath) -> instance
 ### exec_command
 
 ```ruby
-instance.exec_command(Terminal::Buffer buffer) -> (:quit | String | nil)
+instance.exec_command(Editor::Buffer buffer) -> (:quit | String | nil)
 ```
 ### save_file
 

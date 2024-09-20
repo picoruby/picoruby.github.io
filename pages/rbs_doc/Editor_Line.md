@@ -1,17 +1,17 @@
 ---
-title: class Terminal::Line
-keywords: Terminal::Line
+title: class Editor::Line
+keywords: Editor::Line
 tags: [class]
-summary: Terminal::Line class of PicoRuby
+summary: Editor::Line class of PicoRuby
 sidebar: picoruby_sidebar
-permalink: Terminal_Line.html
+permalink: Editor_Line.html
 folder: rbs_doc
 ---
 ## Singleton methods
 ### new
 
 ```ruby
-Terminal::Line.new-> void
+Editor::Line.new-> void
 ```
 ## Instance methods
 ### feed_at_bottom
@@ -47,5 +47,5 @@ instance.save_history-> Integer
 ### start
 
 ```ruby
-instance.start() { (self, Terminal::Buffer, Integer) -> void }  -> void
+instance.start() { (self, Editor::Buffer, Integer) -> void }  -> void
 ```

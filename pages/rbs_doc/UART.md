@@ -59,7 +59,7 @@ instance.flush() -> self
 ### gets
 
 ```ruby
-instance.gets() -> String
+instance.gets() -> String?
 ```
 ### line_ending=
 

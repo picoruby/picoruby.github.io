@@ -290,6 +290,26 @@ entries:
       url: "/EAGAINWaitReadable.html"
       output: web pdf
       type: homepage
+    - title: module Editor
+      url: "/Editor.html"
+      output: web pdf
+      type: homepage
+    - title: class Editor::Base
+      url: "/Editor_Base.html"
+      output: web pdf
+      type: homepage
+    - title: class Editor::Buffer
+      url: "/Editor_Buffer.html"
+      output: web pdf
+      type: homepage
+    - title: class Editor::Line
+      url: "/Editor_Line.html"
+      output: web pdf
+      type: homepage
+    - title: class Editor::Screen
+      url: "/Editor_Screen.html"
+      output: web pdf
+      type: homepage
     - title: class FAT
       url: "/FAT.html"
       output: web pdf
@@ -444,26 +464,6 @@ entries:
       type: homepage
     - title: class Task
       url: "/Task.html"
-      output: web pdf
-      type: homepage
-    - title: class Terminal
-      url: "/Terminal.html"
-      output: web pdf
-      type: homepage
-    - title: class Terminal::Base
-      url: "/Terminal_Base.html"
-      output: web pdf
-      type: homepage
-    - title: class Terminal::Buffer
-      url: "/Terminal_Buffer.html"
-      output: web pdf
-      type: homepage
-    - title: class Terminal::Editor
-      url: "/Terminal_Editor.html"
-      output: web pdf
-      type: homepage
-    - title: class Terminal::Line
-      url: "/Terminal_Line.html"
       output: web pdf
       type: homepage
     - title: class Time
