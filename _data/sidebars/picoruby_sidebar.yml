@@ -346,6 +346,26 @@ entries:
       url: "/IO.html"
       output: web pdf
       type: homepage
+    - title: module JSON
+      url: "/JSON.html"
+      output: web pdf
+      type: homepage
+    - title: module JSON::Common
+      url: "/JSON_Common.html"
+      output: web pdf
+      type: homepage
+    - title: class JSON::Digger
+      url: "/JSON_Digger.html"
+      output: web pdf
+      type: homepage
+    - title: class JSON::Generator
+      url: "/JSON_Generator.html"
+      output: web pdf
+      type: homepage
+    - title: class JSON::Parser
+      url: "/JSON_Parser.html"
+      output: web pdf
+      type: homepage
     - title: class MML
       url: "/MML.html"
       output: web pdf

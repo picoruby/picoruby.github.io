@@ -29,10 +29,20 @@ instance.*(int n) -> String
 ```ruby
 instance.+(string other_str) -> String
 ```
+### <
+
+```ruby
+instance.<(string other) -> bool
+```
 ### <<
 
 ```ruby
 instance.<<(string | Integer str_or_codepoint) -> String
+```
+### <=
+
+```ruby
+instance.<=(string other) -> bool
 ```
 ### <=>
 
@@ -49,6 +59,16 @@ instance.==(untyped obj) -> bool
 
 ```ruby
 instance.===(untyped obj) -> bool
+```
+### >
+
+```ruby
+instance.>(string other) -> bool
+```
+### >=
+
+```ruby
+instance.>=(string other) -> bool
 ```
 ### []
 

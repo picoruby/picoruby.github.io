@@ -52,7 +52,7 @@ module RBSDoc
               [method[:name]]
             end
           when RBS::AST::Declarations::Module
-            format_class(member, mod[:namespace])
+            format_module(member, mod[:namespace])
           when RBS::AST::Declarations::Class
             format_class(member, mod[:namespace])
           when RBS::AST::Declarations::TypeAlias
@@ -68,7 +68,11 @@ module RBSDoc
       @info << Hash.new.tap do |klass|
         klass[:type] = "class"
         klass[:namespace] = upper_name + [dec.name.name]
+        begin
         klass[:super_class] = dec.super_class.name.name if dec.super_class
+        rescue
+          binding.irb
+        end
         klass[:methods] = {instance: [], singleton: []}
         klass[:type_aliases] = []
         klass[:attr_accessors] = []

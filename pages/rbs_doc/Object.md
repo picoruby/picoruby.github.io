@@ -74,6 +74,11 @@ instance.inspect() -> String
 ```ruby
 instance.is_a?(untyped) -> bool
 ```
+### loop
+
+```ruby
+instance.loop() { () -> void }-> void
+```
 ### nil?
 
 ```ruby
