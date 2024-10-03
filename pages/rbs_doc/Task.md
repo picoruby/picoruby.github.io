@@ -8,39 +8,109 @@ permalink: Task.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### create
+
+```ruby
+Task.create(String) -> Task
+```
+### current
+
+```ruby
+Task.current() -> Task
+```
+### get
+
+```ruby
+Task.get(String) -> Task
+```
 ### list
 
 ```ruby
 Task.list() -> Array[Task]
 ```
-### new
+### name=
 
 ```ruby
-Task.new(*untyped) { (*untyped) -> void } -> instance
+Task.name=(String) -> String
+```
+### name_list
+
+```ruby
+Task.name_list() -> Array[String]
+```
+### pass
+
+```ruby
+Task.pass() -> Task
+```
+### priority=
+
+```ruby
+Task.priority=(Integer) -> Task
+```
+### status
+
+```ruby
+Task.status() -> Task
+```
+### suspend
+
+```ruby
+Task.suspend() -> Task
+```
+### terminate
+
+```ruby
+Task.terminate() -> Task
 ```
 ## Instance methods
 ### join
 
 ```ruby
-instance.join(?Integer|nil) -> (self | nil)
+instance.join() -> void
+```
+### name
+
+```ruby
+instance.name() -> String
 ```
 ### name=
 
 ```ruby
-instance.name=(String name) -> String
+instance.name=(String) -> self
+```
+### priority=
+
+```ruby
+instance.priority=(Integer) -> self
+```
+### resume
+
+```ruby
+instance.resume() -> self
+```
+### rewind
+
+```ruby
+instance.rewind() -> self
+```
+### run
+
+```ruby
+instance.run() -> void
+```
+### status
+
+```ruby
+instance.status() -> String
 ```
 ### suspend
 
 ```ruby
-instance.suspend() -> self
+instance.suspend() -> void
 ```
 ### terminate
 
 ```ruby
 instance.terminate() -> self
-```
-## Attr accessors
-### name (reader)
-```ruby
-instance.name -> String | nil
 ```

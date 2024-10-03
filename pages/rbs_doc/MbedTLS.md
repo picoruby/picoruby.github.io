@@ -1,8 +1,8 @@
 ---
-title: class MbedTLS
+title: module MbedTLS
 keywords: MbedTLS
-tags: [class]
-summary: MbedTLS class of PicoRuby
+tags: [module]
+summary: MbedTLS module of PicoRuby
 sidebar: picoruby_sidebar
 permalink: MbedTLS.html
 folder: rbs_doc

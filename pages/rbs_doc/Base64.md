@@ -18,3 +18,13 @@ Base64.decode64(String) -> String
 ```ruby
 Base64.encode64(String) -> String
 ```
+### urlsafe_decode64
+
+```ruby
+Base64.urlsafe_decode64(String) -> String
+```
+### urlsafe_encode64
+
+```ruby
+Base64.urlsafe_encode64(String) -> String
+```

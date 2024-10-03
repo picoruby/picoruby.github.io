@@ -75,6 +75,11 @@ IO.getc-> String?
 ```ruby
 IO.getch-> String
 ```
+### gets
+
+```ruby
+IO.gets-> String
+```
 ### raw
 
 ```ruby

@@ -18,3 +18,8 @@ RNG.random_int-> Integer
 ```ruby
 RNG.random_string(Integer) -> String
 ```
+### uuid
+
+```ruby
+RNG.uuid-> String
+```

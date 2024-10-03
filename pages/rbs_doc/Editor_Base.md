@@ -19,6 +19,11 @@ Editor::Base.new-> void
 ```ruby
 instance.clear-> untyped
 ```
+### clear_buffer
+
+```ruby
+instance.clear_buffer-> void
+```
 ### debug
 
 ```ruby

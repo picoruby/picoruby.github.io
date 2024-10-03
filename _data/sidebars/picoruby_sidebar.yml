@@ -97,6 +97,10 @@ entries:
       url: "/Exception.html"
       output: web pdf
       type: homepage
+    - title: class GPIO
+      url: "/GPIO.html"
+      output: web pdf
+      type: homepage
     - title: class IOError
       url: "/IOError.html"
       output: web pdf
@@ -205,10 +209,6 @@ entries:
     folderitems:
     - title: class ADC
       url: "/ADC.html"
-      output: web pdf
-      type: homepage
-    - title: class GPIO
-      url: "/GPIO.html"
       output: web pdf
       type: homepage
     - title: class I2C
@@ -338,6 +338,10 @@ entries:
       url: "/File_Stat.html"
       output: web pdf
       type: homepage
+    - title: class GPIO::Error
+      url: "/GPIO_Error.html"
+      output: web pdf
+      type: homepage
     - title: class IIRFilter
       url: "/IIRFilter.html"
       output: web pdf
@@ -358,12 +362,36 @@ entries:
       url: "/JSON_Digger.html"
       output: web pdf
       type: homepage
+    - title: class JSON::DiggerError
+      url: "/JSON_DiggerError.html"
+      output: web pdf
+      type: homepage
     - title: class JSON::Generator
       url: "/JSON_Generator.html"
       output: web pdf
       type: homepage
+    - title: class JSON::GeneratorError
+      url: "/JSON_GeneratorError.html"
+      output: web pdf
+      type: homepage
+    - title: class JSON::JSONError
+      url: "/JSON_JSONError.html"
+      output: web pdf
+      type: homepage
     - title: class JSON::Parser
       url: "/JSON_Parser.html"
+      output: web pdf
+      type: homepage
+    - title: class JSON::ParserError
+      url: "/JSON_ParserError.html"
+      output: web pdf
+      type: homepage
+    - title: module JWT
+      url: "/JWT.html"
+      output: web pdf
+      type: homepage
+    - title: class JWT::VerificationError
+      url: "/JWT_VerificationError.html"
       output: web pdf
       type: homepage
     - title: class MML
@@ -374,7 +402,7 @@ entries:
       url: "/Machine.html"
       output: web pdf
       type: homepage
-    - title: class MbedTLS
+    - title: module MbedTLS
       url: "/MbedTLS.html"
       output: web pdf
       type: homepage
@@ -388,6 +416,10 @@ entries:
       type: homepage
     - title: class MbedTLS::Digest
       url: "/MbedTLS_Digest.html"
+      output: web pdf
+      type: homepage
+    - title: class MbedTLS::HMAC
+      url: "/MbedTLS_HMAC.html"
       output: web pdf
       type: homepage
     - title: class Module
@@ -418,8 +450,20 @@ entries:
       url: "/Net_TCPClient.html"
       output: web pdf
       type: homepage
+    - title: class PicoLine
+      url: "/PicoLine.html"
+      output: web pdf
+      type: homepage
+    - title: class PicoLine::Question
+      url: "/PicoLine_Question.html"
+      output: web pdf
+      type: homepage
     - title: class PicoRubyVM
       url: "/PicoRubyVM.html"
+      output: web pdf
+      type: homepage
+    - title: class PicoRubyVM::InstructionSequence
+      url: "/PicoRubyVM_InstructionSequence.html"
       output: web pdf
       type: homepage
     - title: class Prism
@@ -512,6 +556,10 @@ entries:
       type: homepage
     - title: class Watchdog
       url: "/Watchdog.html"
+      output: web pdf
+      type: homepage
+    - title: module YAML
+      url: "/YAML.html"
       output: web pdf
       type: homepage
   - title: PRK Firmware
