@@ -17,13 +17,13 @@ folder: rbs_doc
 {peak: Integer, valley: Integer}
 ```
 ## Singleton methods
+### alloc_profile
+
+```ruby
+PicoRubyVM.alloc_profile() {() -> untyped} -> untyped
+```
 ### memory_statistics
 
 ```ruby
 PicoRubyVM.memory_statistics-> alloc_stat_t
-```
-### profile_alloc
-
-```ruby
-PicoRubyVM.profile_alloc() {() -> untyped} -> untyped
 ```

@@ -11,12 +11,12 @@ folder: rbs_doc
 ### compile
 
 ```ruby
-PicoRubyVM::InstructionSequence.compile(String code) -> self
+PicoRubyVM::InstructionSequence.compile(String code) -> instance
 ```
 ### compile_file
 
 ```ruby
-PicoRubyVM::InstructionSequence.compile_file(String file) -> self
+PicoRubyVM::InstructionSequence.compile_file(String file) -> instance
 ```
 ## Instance methods
 ### eval

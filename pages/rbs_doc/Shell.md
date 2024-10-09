@@ -16,7 +16,17 @@ Shell.new(?clean: bool) -> void
 ### next_executable
 
 ```ruby
-Shell.next_executable-> {code: String, name: String}
+Shell.next_executable-> {code: String, path: String}
+```
+### setup_rtc
+
+```ruby
+Shell.setup_rtc(rtc_t trc) -> void
+```
+### setup_sdcard
+
+```ruby
+Shell.setup_sdcard(SPI spi) -> void
 ```
 ## Instance methods
 ### run_irb

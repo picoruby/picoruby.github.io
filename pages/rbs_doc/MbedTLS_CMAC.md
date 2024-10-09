@@ -7,27 +7,32 @@ sidebar: picoruby_sidebar
 permalink: MbedTLS_CMAC.html
 folder: rbs_doc
 ---
+## Type aliases
+### digest_t
+```ruby
+"AES" | "aes"
+```
 ## Singleton methods
 ### new
 
 ```ruby
-MbedTLS::CMAC.new(untyped key, String digest) -> MbedTLS::CMAC
+MbedTLS::CMAC.new(String key, digest_t digest) -> MbedTLS::CMAC
 ```
 ## Instance methods
 ### digest
 
 ```ruby
-instance.digest-> String
+instance.digest() -> String
 ```
 ### reset
 
 ```ruby
-instance.reset-> MbedTLS::CMAC
+instance.reset() -> MbedTLS::CMAC
 ```
 ### update
 
 ```ruby
-instance.update(String) -> MbedTLS::CMAC
+instance.update(String input) -> MbedTLS::CMAC
 ```
 ## Attr accessors
 ### _digest (accessor)

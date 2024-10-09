@@ -93,16 +93,40 @@ entries:
       url: "/ArgumentError.html"
       output: web pdf
       type: homepage
+    - title: class EAGAINWaitReadable
+      url: "/EAGAINWaitReadable.html"
+      output: web pdf
+      type: homepage
     - title: class Exception
       url: "/Exception.html"
       output: web pdf
       type: homepage
-    - title: class GPIO
-      url: "/GPIO.html"
+    - title: class GPIO::Error
+      url: "/GPIO_Error.html"
       output: web pdf
       type: homepage
     - title: class IOError
       url: "/IOError.html"
+      output: web pdf
+      type: homepage
+    - title: class JSON::DiggerError
+      url: "/JSON_DiggerError.html"
+      output: web pdf
+      type: homepage
+    - title: class JSON::GeneratorError
+      url: "/JSON_GeneratorError.html"
+      output: web pdf
+      type: homepage
+    - title: class JSON::JSONError
+      url: "/JSON_JSONError.html"
+      output: web pdf
+      type: homepage
+    - title: class JSON::ParserError
+      url: "/JSON_ParserError.html"
+      output: web pdf
+      type: homepage
+    - title: class JWT::VerificationError
+      url: "/JWT_VerificationError.html"
       output: web pdf
       type: homepage
     - title: class LoadError
@@ -117,6 +141,10 @@ entries:
       url: "/NoMethodError.html"
       output: web pdf
       type: homepage
+    - title: class Prism::ParseError
+      url: "/Prism_ParseError.html"
+      output: web pdf
+      type: homepage
     - title: class RangeError
       url: "/RangeError.html"
       output: web pdf
@@ -127,6 +155,10 @@ entries:
       type: homepage
     - title: class SQLite3::Exception
       url: "/SQLite3_Exception.html"
+      output: web pdf
+      type: homepage
+    - title: class Sandbox::Abort
+      url: "/Sandbox_Abort.html"
       output: web pdf
       type: homepage
     - title: class StandardError
@@ -158,6 +190,10 @@ entries:
       type: homepage
     - title: class CYW43
       url: "/CYW43.html"
+      output: web pdf
+      type: homepage
+    - title: class CYW43::Auth
+      url: "/CYW43_Auth.html"
       output: web pdf
       type: homepage
     - title: class CYW43::GPIO
@@ -204,11 +240,27 @@ entries:
       url: "/PCF8523.html"
       output: web pdf
       type: homepage
+    - title: class RTD
+      url: "/RTD.html"
+      output: web pdf
+      type: homepage
+    - title: class RTD::PT100
+      url: "/RTD_PT100.html"
+      output: web pdf
+      type: homepage
+    - title: class Watchdog
+      url: "/Watchdog.html"
+      output: web pdf
+      type: homepage
   - title: IO Peripheral
     output: web pdf
     folderitems:
     - title: class ADC
       url: "/ADC.html"
+      output: web pdf
+      type: homepage
+    - title: class GPIO
+      url: "/GPIO.html"
       output: web pdf
       type: homepage
     - title: class I2C
@@ -234,6 +286,10 @@ entries:
   - title: General
     output: web pdf
     folderitems:
+    - title: class Array
+      url: "/Array.html"
+      output: web pdf
+      type: homepage
     - title: class BLE
       url: "/BLE.html"
       output: web pdf
@@ -278,16 +334,8 @@ entries:
       url: "/Base64.html"
       output: web pdf
       type: homepage
-    - title: class CYW43::Auth
-      url: "/CYW43_Auth.html"
-      output: web pdf
-      type: homepage
     - title: class Dir
       url: "/Dir.html"
-      output: web pdf
-      type: homepage
-    - title: class EAGAINWaitReadable
-      url: "/EAGAINWaitReadable.html"
       output: web pdf
       type: homepage
     - title: module Editor
@@ -338,10 +386,6 @@ entries:
       url: "/File_Stat.html"
       output: web pdf
       type: homepage
-    - title: class GPIO::Error
-      url: "/GPIO_Error.html"
-      output: web pdf
-      type: homepage
     - title: class IIRFilter
       url: "/IIRFilter.html"
       output: web pdf
@@ -362,36 +406,20 @@ entries:
       url: "/JSON_Digger.html"
       output: web pdf
       type: homepage
-    - title: class JSON::DiggerError
-      url: "/JSON_DiggerError.html"
-      output: web pdf
-      type: homepage
     - title: class JSON::Generator
       url: "/JSON_Generator.html"
-      output: web pdf
-      type: homepage
-    - title: class JSON::GeneratorError
-      url: "/JSON_GeneratorError.html"
-      output: web pdf
-      type: homepage
-    - title: class JSON::JSONError
-      url: "/JSON_JSONError.html"
       output: web pdf
       type: homepage
     - title: class JSON::Parser
       url: "/JSON_Parser.html"
       output: web pdf
       type: homepage
-    - title: class JSON::ParserError
-      url: "/JSON_ParserError.html"
-      output: web pdf
-      type: homepage
     - title: module JWT
       url: "/JWT.html"
       output: web pdf
       type: homepage
-    - title: class JWT::VerificationError
-      url: "/JWT_VerificationError.html"
+    - title: module Kernel
+      url: "/Kernel.html"
       output: web pdf
       type: homepage
     - title: class MML
@@ -446,8 +474,20 @@ entries:
       url: "/Net_HTTPUtil.html"
       output: web pdf
       type: homepage
+    - title: class Net::NTP
+      url: "/Net_NTP.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::NTP::Response
+      url: "/Net_NTP_Response.html"
+      output: web pdf
+      type: homepage
     - title: class Net::TCPClient
       url: "/Net_TCPClient.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::UDPClient
+      url: "/Net_UDPClient.html"
       output: web pdf
       type: homepage
     - title: class PicoLine
@@ -474,24 +514,12 @@ entries:
       url: "/Prism_Location.html"
       output: web pdf
       type: homepage
-    - title: class Prism::ParseError
-      url: "/Prism_ParseError.html"
-      output: web pdf
-      type: homepage
     - title: class Prism::ParseResult
       url: "/Prism_ParseResult.html"
       output: web pdf
       type: homepage
     - title: class RNG
       url: "/RNG.html"
-      output: web pdf
-      type: homepage
-    - title: class RTD
-      url: "/RTD.html"
-      output: web pdf
-      type: homepage
-    - title: class RTD::PT100
-      url: "/RTD_PT100.html"
       output: web pdf
       type: homepage
     - title: class SQLite3
@@ -514,16 +542,16 @@ entries:
       url: "/Sandbox.html"
       output: web pdf
       type: homepage
-    - title: class Sandbox::Abort
-      url: "/Sandbox_Abort.html"
-      output: web pdf
-      type: homepage
     - title: class Shell
       url: "/Shell.html"
       output: web pdf
       type: homepage
     - title: class Shell::Command
       url: "/Shell_Command.html"
+      output: web pdf
+      type: homepage
+    - title: class String
+      url: "/String.html"
       output: web pdf
       type: homepage
     - title: class Task
@@ -552,10 +580,6 @@ entries:
       type: homepage
     - title: class Vim
       url: "/Vim.html"
-      output: web pdf
-      type: homepage
-    - title: class Watchdog
-      url: "/Watchdog.html"
       output: web pdf
       type: homepage
     - title: module YAML

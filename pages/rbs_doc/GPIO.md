@@ -32,10 +32,35 @@ GPIO.low_at?(Integer) -> bool
 ```ruby
 GPIO.new(gpio_pin_t pin, Integer flags, ?Integer alt_function) -> instance
 ```
+### open_drain_at
+
+```ruby
+GPIO.open_drain_at(gpio_pin_t) -> 0
+```
+### pull_down_at
+
+```ruby
+GPIO.pull_down_at(gpio_pin_t) -> 0
+```
+### pull_up_at
+
+```ruby
+GPIO.pull_up_at(gpio_pin_t) -> 0
+```
 ### read_at
 
 ```ruby
 GPIO.read_at(gpio_pin_t) -> gpio_logic_t
+```
+### set_dir_at
+
+```ruby
+GPIO.set_dir_at(gpio_pin_t, Integer) -> 0
+```
+### set_function_at
+
+```ruby
+GPIO.set_function_at(gpio_pin_t, Integer) -> 0
 ```
 ### write_at
 
@@ -53,10 +78,30 @@ instance.high?() -> bool
 ```ruby
 instance.low?() -> bool
 ```
+### open_drain
+
+```ruby
+instance.open_drain(Integer flags) -> 0
+```
 ### read
 
 ```ruby
 instance.read() -> gpio_logic_t
+```
+### set_dir
+
+```ruby
+instance.set_dir(Integer flags) -> 0
+```
+### set_function
+
+```ruby
+instance.set_function(Integer flags, Integer alt_function) -> 0
+```
+### set_pull
+
+```ruby
+instance.set_pull(Integer flags) -> 0
 ```
 ### setmode
 

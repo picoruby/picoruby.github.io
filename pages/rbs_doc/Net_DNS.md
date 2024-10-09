@@ -11,5 +11,5 @@ folder: rbs_doc
 ### resolve
 
 ```ruby
-Net::DNS.resolve(String) -> String
+Net::DNS.resolve(String host, bool is_tcp) -> String
 ```

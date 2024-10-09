@@ -33,6 +33,11 @@ CYW43.init(?String country, ?force: bool) -> void
 ```ruby
 CYW43.initialized?() -> bool
 ```
+### link_connected?
+
+```ruby
+CYW43.link_connected?(?bool print_status) -> bool
+```
 ### tcpip_link_status
 
 ```ruby

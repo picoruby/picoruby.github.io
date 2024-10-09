@@ -42,7 +42,7 @@ File.new(string, ?string mode) -> VFS::file_t
 
 ```ruby
 File.open(string, ?string) -> VFS::file_t
-File.open[T] (string, ?string) { (VFS::file_t) -> T } -> nil
+File.open[T] (string, ?string) { (VFS::file_t) -> T } -> untyped
 ```
 ### rename
 

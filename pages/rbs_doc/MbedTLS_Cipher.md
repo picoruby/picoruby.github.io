@@ -7,22 +7,31 @@ sidebar: picoruby_sidebar
 permalink: MbedTLS_Cipher.html
 folder: rbs_doc
 ---
-## Singleton methods
-### _init_ctx
-
+## Type aliases
+### cipher_t
 ```ruby
-MbedTLS::Cipher._init_ctx(Integer, String, Integer) -> MbedTLS::Cipher
+:aes_128_cbc
+                               | :aes_192_cbc
+                               | :aes_256_cbc
+                               | :aes_128_gcm
+                               | :aes_192_gcm
+                               | :aes_256_gcm
 ```
+### operation_t
+```ruby
+:encrypt | :decrypt
+```
+## Singleton methods
 ### new
 
 ```ruby
-MbedTLS::Cipher.new(untyped cipher_suite, untyped key, untyped operation) -> MbedTLS::Cipher
+MbedTLS::Cipher.new(cipher_t cipher_suite, String key, operation_t operation) -> MbedTLS::Cipher
 ```
 ## Instance methods
 ### check_tag
 
 ```ruby
-instance.check_tag(String) -> bool
+instance.check_tag(String tag) -> bool
 ```
 ### finish
 
@@ -32,12 +41,12 @@ instance.finish() -> String
 ### update
 
 ```ruby
-instance.update(String) -> String
+instance.update(String input) -> String
 ```
 ### update_ad
 
 ```ruby
-instance.update_ad(String) -> MbedTLS::Cipher
+instance.update_ad(String input) -> MbedTLS::Cipher
 ```
 ### write_tag
 

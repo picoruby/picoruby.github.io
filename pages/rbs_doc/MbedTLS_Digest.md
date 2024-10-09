@@ -7,11 +7,16 @@ sidebar: picoruby_sidebar
 permalink: MbedTLS_Digest.html
 folder: rbs_doc
 ---
+## Type aliases
+### algorithm_t
+```ruby
+:sha256
+```
 ## Singleton methods
 ### new
 
 ```ruby
-MbedTLS::Digest.new(untyped algorithm) -> MbedTLS::Digest
+MbedTLS::Digest.new(algorithm_t algorithm) -> MbedTLS::Digest
 ```
 ## Instance methods
 ### finish
@@ -22,5 +27,5 @@ instance.finish() -> String
 ### update
 
 ```ruby
-instance.update(String) -> MbedTLS::Digest
+instance.update(String input) -> MbedTLS::Digest
 ```

@@ -17,7 +17,7 @@ Shell::Command.new() -> instance
 ### exec
 
 ```ruby
-instance.exec(*untyped params) -> void
+instance.exec(*untyped params) -> bool
 ```
 ### find_executable
 

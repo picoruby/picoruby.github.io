@@ -8,13 +8,8 @@ permalink: Net_TCPClient.html
 folder: rbs_doc
 ---
 ## Singleton methods
-### _request_impl
-
-```ruby
-Net::TCPClient._request_impl(String, Integer, String, bool) -> String?
-```
 ### request
 
 ```ruby
-Net::TCPClient.request(String, Integer, String, bool) -> String?
+Net::TCPClient.request(String host, Integer port, String content, bool is_tls) -> String?
 ```

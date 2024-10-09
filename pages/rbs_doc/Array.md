@@ -13,6 +13,12 @@ folder: rbs_doc
 ```ruby
 instance.insert(Integer index, *Elem) -> void
 ```
+## Instance methods
+### pack
+
+```ruby
+instance.pack(String format) -> String
+```
 ## Include
 [Enumerable](Enumerable.html)
 ## Singleton methods

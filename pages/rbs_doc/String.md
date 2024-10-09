@@ -8,6 +8,12 @@ permalink: String.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### pack
+
+```ruby
+String.pack(String format, *untyped args) -> String
+```
+## Singleton methods
 ### new
 
 ```ruby

@@ -7,11 +7,16 @@ sidebar: picoruby_sidebar
 permalink: MbedTLS_HMAC.html
 folder: rbs_doc
 ---
+## Type aliases
+### digest_t
+```ruby
+"SHA256" | "sha256"
+```
 ## Singleton methods
 ### new
 
 ```ruby
-MbedTLS::HMAC.new(String key, String digest) -> MbedTLS::HMAC
+MbedTLS::HMAC.new(String key, digest_t digest) -> MbedTLS::HMAC
 ```
 ## Instance methods
 ### digest
@@ -32,7 +37,7 @@ instance.reset() -> MbedTLS::HMAC
 ### update
 
 ```ruby
-instance.update(String) -> MbedTLS::HMAC
+instance.update(String input) -> MbedTLS::HMAC
 ```
 ## Attr accessors
 ### _digest (accessor)

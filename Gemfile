@@ -38,3 +38,5 @@ gem "rake"
 gem "rbs"
 
 gem "jekyll", github: "hasumikin/jekyll", branch: "v3.9.3-patch"
+
+gem "csv"
