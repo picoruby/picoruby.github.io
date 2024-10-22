@@ -13,7 +13,7 @@ folder: rbs_doc
 ```ruby
 instance.insert(Integer index, *Elem) -> void
 ```
-## Instance methods
+## Instance methods (picoruby-pack)
 ### pack
 
 ```ruby

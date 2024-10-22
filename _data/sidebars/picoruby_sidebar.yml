@@ -290,10 +290,6 @@ entries:
   - title: General
     output: web pdf
     folderitems:
-    - title: class Array
-      url: "/Array.html"
-      output: web pdf
-      type: homepage
     - title: class BLE
       url: "/BLE.html"
       output: web pdf
@@ -506,10 +502,6 @@ entries:
       url: "/Net_UDPClient.html"
       output: web pdf
       type: homepage
-    - title: class Object
-      url: "/Object.html"
-      output: web pdf
-      type: homepage
     - title: class PicoLine
       url: "/PicoLine.html"
       output: web pdf
@@ -568,10 +560,6 @@ entries:
       type: homepage
     - title: class Shell::Command
       url: "/Shell_Command.html"
-      output: web pdf
-      type: homepage
-    - title: class String
-      url: "/String.html"
       output: web pdf
       type: homepage
     - title: class Task

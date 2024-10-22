@@ -7,7 +7,7 @@ sidebar: picoruby_sidebar
 permalink: Object.html
 folder: rbs_doc
 ---
-## Instance methods
+## Instance methods (picoruby-metaprog)
 ### __id__
 
 ```ruby
