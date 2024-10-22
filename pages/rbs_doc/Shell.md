@@ -29,6 +29,11 @@ Shell.setup_rtc(rtc_t trc) -> void
 Shell.setup_sdcard(SPI spi) -> void
 ```
 ## Instance methods
+### bootstrap
+
+```ruby
+instance.bootstrap(String file) -> bool
+```
 ### run_irb
 
 ```ruby
@@ -47,7 +52,7 @@ instance.setup_root_volume(Symbol drive, ?label: String) -> void
 ### setup_system_files
 
 ```ruby
-instance.setup_system_files(?force: bool) -> void
+instance.setup_system_files(?(String | nil) root, ?force: bool) -> void
 ```
 ### show_logo
 

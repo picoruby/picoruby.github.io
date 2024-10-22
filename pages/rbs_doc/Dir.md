@@ -7,27 +7,37 @@ sidebar: picoruby_sidebar
 permalink: Dir.html
 folder: rbs_doc
 ---
+## Type aliases
+### path_t
+```ruby
+String
+```
 ## Singleton methods
 ### chdir
 
 ```ruby
-Dir.chdir(?path dir) -> 0
-Dir.chdir[U] (?path dir) { (String dir) -> U } -> U
+Dir.chdir(?path_t dir) -> 0
+Dir.chdir[U] (?path_t dir) { (path_t dir) -> U } -> U
 ```
 ### delete
 
 ```ruby
-Dir.delete(path dirname) -> 0
+Dir.delete(path_t dirname) -> 0
 ```
-### empty?
+### entries
 
 ```ruby
-Dir.empty?(path path_name) -> bool
+Dir.entries(String dir) -> Array[String]
 ```
 ### exist?
 
 ```ruby
-Dir.exist?(path) -> bool
+Dir.exist?(path_t dirname) -> bool
+```
+### foreach
+
+```ruby
+Dir.foreach(String path) { (String path) -> untyped } -> nil
 ```
 ### getwd
 
@@ -37,24 +47,19 @@ Dir.getwd() -> String
 ### glob
 
 ```ruby
-Dir.glob(path pattern, ?int flags, ?base: path?) -> Array[String]
-Dir.glob(path pattern, ?int flags, ?base: path?) { (String pathname) -> void } -> nil
+Dir.glob(path_t pattern, ?int flags, ?base: path?) -> Array[String]
+Dir.glob(path_t pattern, ?int flags, ?base: path?) { (String pathname) -> void } -> nil
 ```
 ### mkdir
 
 ```ruby
-Dir.mkdir(path) -> 0
-```
-### new
-
-```ruby
-Dir.new(path dir) -> VFS::dir_t
+Dir.mkdir(path_t dirname, ?Integer mode) -> 0
 ```
 ### open
 
 ```ruby
-Dir.open(path dirname) -> VFS::dir_t
-Dir.open[U] (path dirname) { (VFS::dir_t) -> U } -> VFS::dir_t
+Dir.open(path_t dirname) -> untyped
+Dir.open[U] (path_t dirname) { (Dir dir) -> U } -> Dir
 ```
 ## Instance methods
 ### close
@@ -65,22 +70,22 @@ instance.close() -> nil
 ### each
 
 ```ruby
-instance.each() { (String) -> void } -> self
+instance.each() { (String item) -> untyped} -> self
+```
+### empty?
+
+```ruby
+instance.empty?() -> bool
 ```
 ### findnext
 
 ```ruby
-instance.findnext() -> String?
+instance.findnext() -> Dir
 ```
 ### pat=
 
 ```ruby
-instance.pat=(path) -> path
-```
-### path
-
-```ruby
-instance.path() -> String?
+instance.pat=(String) -> String
 ```
 ### read
 
@@ -91,4 +96,14 @@ instance.read() -> String?
 
 ```ruby
 instance.rewind() -> self
+```
+### seek
+
+```ruby
+instance.seek(Integer pos) -> 0
+```
+### tell
+
+```ruby
+instance.tell() -> Integer
 ```

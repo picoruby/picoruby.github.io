@@ -17,7 +17,7 @@ File::Stat.new(String file) -> instance
 ### birthtime
 
 ```ruby
-instance.birthtime() -> Time
+instance.birthtime() -> (Time | nil)
 ```
 ### directory?
 
@@ -27,12 +27,12 @@ instance.directory?() -> bool
 ### mode
 
 ```ruby
-instance.mode() -> Integer
+instance.mode() -> (Integer | nil)
 ```
 ### mode_str
 
 ```ruby
-instance.mode_str() -> String
+instance.mode_str() -> (String | nil)
 ```
 ### mtime
 
@@ -47,5 +47,5 @@ instance.size() -> Integer
 ### writable?
 
 ```ruby
-instance.writable?() -> bool
+instance.writable?() -> boolish
 ```

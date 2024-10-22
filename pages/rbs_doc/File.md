@@ -8,6 +8,11 @@ permalink: File.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### basename
+
+```ruby
+File.basename(String filename) -> String
+```
 ### chmod
 
 ```ruby
@@ -33,16 +38,22 @@ File.expand_path(string, ?string) -> String
 ```ruby
 File.file?(string) -> bool
 ```
+### join
+
+```ruby
+File.join(*String parts) -> String
+```
 ### new
 
 ```ruby
-File.new(string, ?string mode) -> VFS::file_t
+File.new(string fd_or_path, ?string mode, ?int perm) -> File
+File.new[T] (string fd_or_path, ?string mode, ?int perm) { (untyped) -> T } -> untyped
 ```
 ### open
 
 ```ruby
-File.open(string, ?string) -> VFS::file_t
-File.open[T] (string, ?string) { (VFS::file_t) -> T } -> untyped
+File.open(string, ?string) -> File
+File.open[T] (string, ?string) { (untyped) -> T } -> untyped
 ```
 ### rename
 

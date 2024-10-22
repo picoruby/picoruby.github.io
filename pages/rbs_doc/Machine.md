@@ -28,6 +28,11 @@ Machine.delay_ms(Integer ms) -> Integer
 ```ruby
 Machine.sleep(Integer sec) -> Integer
 ```
+### unique_id
+
+```ruby
+Machine.unique_id() -> String
+```
 ### using_busy_wait
 
 ```ruby

@@ -5,11 +5,16 @@ permalink: /type_alias.html
 folder: rbs_doc
 ---
 
+## header_t
+```rbs
+Hash[String, String]
+```
+
 ## httpreturn
 ```rbs
 {
   status: Integer,
-  headers: Hash[String, String],
+  headers: header_t,
   body: String
 }
 ```

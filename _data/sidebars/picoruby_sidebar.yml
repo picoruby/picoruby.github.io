@@ -141,6 +141,10 @@ entries:
       url: "/NoMethodError.html"
       output: web pdf
       type: homepage
+    - title: class NotImplementedError
+      url: "/NotImplementedError.html"
+      output: web pdf
+      type: homepage
     - title: class Prism::ParseError
       url: "/Prism_ParseError.html"
       output: web pdf
@@ -338,6 +342,10 @@ entries:
       url: "/Dir.html"
       output: web pdf
       type: homepage
+    - title: class EOFError
+      url: "/EOFError.html"
+      output: web pdf
+      type: homepage
     - title: module Editor
       url: "/Editor.html"
       output: web pdf
@@ -382,8 +390,16 @@ entries:
       url: "/File.html"
       output: web pdf
       type: homepage
+    - title: module File::Constants
+      url: "/File_Constants.html"
+      output: web pdf
+      type: homepage
     - title: class File::Stat
       url: "/File_Stat.html"
+      output: web pdf
+      type: homepage
+    - title: class FileTest
+      url: "/FileTest.html"
       output: web pdf
       type: homepage
     - title: class IIRFilter
@@ -488,6 +504,10 @@ entries:
       type: homepage
     - title: class Net::UDPClient
       url: "/Net_UDPClient.html"
+      output: web pdf
+      type: homepage
+    - title: class Object
+      url: "/Object.html"
       output: web pdf
       type: homepage
     - title: class PicoLine

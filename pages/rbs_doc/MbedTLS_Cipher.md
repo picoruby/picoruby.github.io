@@ -10,22 +10,23 @@ folder: rbs_doc
 ## Type aliases
 ### cipher_t
 ```ruby
-:aes_128_cbc
-                               | :aes_192_cbc
-                               | :aes_256_cbc
-                               | :aes_128_gcm
-                               | :aes_192_gcm
-                               | :aes_256_gcm
-```
-### operation_t
-```ruby
-:encrypt | :decrypt
+"AES-128-CBC"
+                    | "AES-192-CBC"
+                    | "AES-256-CBC"
+                    | "AES-128-GCM"
+                    | "AES-192-GCM"
+                    | "AES-256-GCM"
 ```
 ## Singleton methods
+### ciphers
+
+```ruby
+MbedTLS::Cipher.ciphers() -> Array[cipher_t]
+```
 ### new
 
 ```ruby
-MbedTLS::Cipher.new(cipher_t cipher_suite, String key, operation_t operation) -> MbedTLS::Cipher
+MbedTLS::Cipher.new(cipher_t cipher_suite) -> MbedTLS::Cipher
 ```
 ## Instance methods
 ### check_tag
@@ -33,10 +34,40 @@ MbedTLS::Cipher.new(cipher_t cipher_suite, String key, operation_t operation) ->
 ```ruby
 instance.check_tag(String tag) -> bool
 ```
+### decrypt
+
+```ruby
+instance.decrypt() -> MbedTLS::Cipher
+```
+### encrypt
+
+```ruby
+instance.encrypt() -> MbedTLS::Cipher
+```
 ### finish
 
 ```ruby
 instance.finish() -> String
+```
+### iv=
+
+```ruby
+instance.iv=(String iv) -> String
+```
+### iv_len
+
+```ruby
+instance.iv_len() -> Integer
+```
+### key=
+
+```ruby
+instance.key=(String key) -> String
+```
+### key_len
+
+```ruby
+instance.key_len() -> Integer
 ```
 ### update
 

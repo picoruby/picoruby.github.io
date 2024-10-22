@@ -17,52 +17,67 @@ Editor::Buffer.new() -> instance
 ### bottom
 
 ```ruby
-instance.bottom-> void
+instance.bottom() -> void
 ```
 ### clear
 
 ```ruby
-instance.clear-> void
+instance.clear() -> void
 ```
 ### current_char
 
 ```ruby
-instance.current_char-> String?
+instance.current_char() -> String?
 ```
 ### current_line
 
 ```ruby
-instance.current_line-> String
+instance.current_line() -> String
 ```
 ### current_tail
 
 ```ruby
 instance.current_tail(?Integer n) -> String
 ```
+### delete
+
+```ruby
+instance.delete() -> void
+```
+### delete_line
+
+```ruby
+instance.delete_line() -> (String | nil)
+```
 ### down
 
 ```ruby
-instance.down-> void
+instance.down() -> void
 ```
 ### dump
 
 ```ruby
-instance.dump-> String
+instance.dump() -> String
 ```
 ### head
 
 ```ruby
-instance.head-> void
+instance.head() -> void
 ```
 ### home
 
 ```ruby
-instance.home-> void
+instance.home() -> void
+```
+### insert_line
+
+```ruby
+instance.insert_line(String | nil line) -> void
 ```
 ### left
 
 ```ruby
-instance.left-> void
+instance.left() -> void
 ```
 ### put
 
@@ -72,17 +87,17 @@ instance.put(String | Symbol c) -> void
 ### right
 
 ```ruby
-instance.right-> void
+instance.right() -> void
 ```
 ### tail
 
 ```ruby
-instance.tail-> void
+instance.tail() -> void
 ```
 ### up
 
 ```ruby
-instance.up-> void
+instance.up() -> void
 ```
 ## Attr accessors
 ### lines (accessor)

@@ -11,15 +11,15 @@ folder: rbs_doc
 ### random_int
 
 ```ruby
-RNG.random_int-> Integer
+RNG.random_int() -> Integer
 ```
 ### random_string
 
 ```ruby
-RNG.random_string(Integer) -> String
+RNG.random_string(Integer length) -> String
 ```
 ### uuid
 
 ```ruby
-RNG.uuid-> String
+RNG.uuid() -> String
 ```

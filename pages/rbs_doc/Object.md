@@ -7,6 +7,47 @@ sidebar: picoruby_sidebar
 permalink: Object.html
 folder: rbs_doc
 ---
+## Instance methods
+### __id__
+
+```ruby
+instance.__id__() -> Integer
+```
+### instance_of?
+
+```ruby
+instance.instance_of?(Class klass) -> bool
+```
+### instance_variable_get
+
+```ruby
+instance.instance_variable_get(Symbol name) -> Object
+```
+### instance_variable_set
+
+```ruby
+instance.instance_variable_set(Symbol name, Object value) -> Object
+```
+### instance_variables
+
+```ruby
+instance.instance_variables() -> Array[Symbol]
+```
+### methods
+
+```ruby
+instance.methods() -> Array[Symbol]
+```
+### respond_to?
+
+```ruby
+instance.respond_to?(Symbol | String name) -> bool
+```
+### send
+
+```ruby
+instance.send(Symbol | String name, *Object args) -> Object
+```
 ## Instance methods (picoruby-require)
 ### load
 
@@ -83,34 +124,6 @@ instance.loop() { () -> void }-> void
 
 ```ruby
 instance.nil?() -> bool
-```
-### object_id
-
-```ruby
-instance.object_id() -> Integer
-```
-### p
-
-```ruby
-instance.p[T < _Inspect] (T arg0) -> T
-instance.p(_Inspect arg0, _Inspect arg1, *_Inspect rest) -> Array[_Inspect]
-instance.p() -> nil
-```
-### print
-
-```ruby
-instance.print(*_ToS args) -> nil
-```
-### printf
-
-```ruby
-instance.printf() -> nil
-instance.printf(String fmt, *untyped args) -> nil
-```
-### puts
-
-```ruby
-instance.puts(*_ToS objects) -> nil
 ```
 ### raise
 

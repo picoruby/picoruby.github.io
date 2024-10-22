@@ -7,6 +7,17 @@ sidebar: picoruby_sidebar
 permalink: String.html
 folder: rbs_doc
 ---
+## Instance methods
+### gsub
+
+```ruby
+instance.gsub(String pattern, String replacement) -> String
+```
+### rindex
+
+```ruby
+instance.rindex(String needle) -> (Integer | nil)
+```
 ## Singleton methods
 ### pack
 
