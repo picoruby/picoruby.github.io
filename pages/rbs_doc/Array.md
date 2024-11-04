@@ -198,6 +198,16 @@ instance.pop(int n) -> ::Array[Elem]
 ```ruby
 instance.push(*Elem obj) -> self
 ```
+### reject
+
+```ruby
+instance.reject() { (Elem item) -> boolish } -> ::Array[Elem]
+```
+### reject!
+
+```ruby
+instance.reject!() { (Elem item) -> boolish } -> self
+```
 ### shift
 
 ```ruby

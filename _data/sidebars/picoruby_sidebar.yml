@@ -334,8 +334,16 @@ entries:
       url: "/Base64.html"
       output: web pdf
       type: homepage
+    - title: class Data
+      url: "/Data.html"
+      output: web pdf
+      type: homepage
     - title: class Dir
       url: "/Dir.html"
+      output: web pdf
+      type: homepage
+    - title: class ENVClass
+      url: "/ENVClass.html"
       output: web pdf
       type: homepage
     - title: class EOFError
@@ -518,6 +526,22 @@ entries:
       url: "/PicoRubyVM_InstructionSequence.html"
       output: web pdf
       type: homepage
+    - title: module Picotest
+      url: "/Picotest.html"
+      output: web pdf
+      type: homepage
+    - title: class Picotest::Double
+      url: "/Picotest_Double.html"
+      output: web pdf
+      type: homepage
+    - title: class Picotest::Runner
+      url: "/Picotest_Runner.html"
+      output: web pdf
+      type: homepage
+    - title: class Picotest::Test
+      url: "/Picotest_Test.html"
+      output: web pdf
+      type: homepage
     - title: class Prism
       url: "/Prism.html"
       output: web pdf
@@ -532,6 +556,10 @@ entries:
       type: homepage
     - title: class RNG
       url: "/RNG.html"
+      output: web pdf
+      type: homepage
+    - title: module RbConfig
+      url: "/RbConfig.html"
       output: web pdf
       type: homepage
     - title: class SQLite3

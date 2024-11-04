@@ -32,7 +32,7 @@ instance.execute() -> bool
 ### free_parser
 
 ```ruby
-instance.free_parser() -> void
+instance.free_parser() -> nil
 ```
 ### interrupt
 
@@ -57,7 +57,12 @@ instance.state() -> Integer
 ### suspend
 
 ```ruby
-instance.suspend() -> void
+instance.suspend() -> nil
+```
+### terminate
+
+```ruby
+instance.terminate() -> nil
 ```
 ### wait
 

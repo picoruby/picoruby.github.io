@@ -7,11 +7,29 @@ sidebar: picoruby_sidebar
 permalink: Object.html
 folder: rbs_doc
 ---
+## Include
+[Kernel](Kernel.html)
+## Singleton methods (picoruby-metaprog)
+### ancestors
+
+```ruby
+Object.ancestors() -> Array[Class]
+```
 ## Instance methods (picoruby-metaprog)
 ### __id__
 
 ```ruby
 instance.__id__() -> Integer
+```
+### class?
+
+```ruby
+instance.class?() -> bool
+```
+### const_get
+
+```ruby
+instance.const_get(Symbol name) -> untyped
 ```
 ### instance_of?
 
@@ -21,12 +39,12 @@ instance.instance_of?(Class klass) -> bool
 ### instance_variable_get
 
 ```ruby
-instance.instance_variable_get(Symbol name) -> Object
+instance.instance_variable_get(Symbol name) -> untyped
 ```
 ### instance_variable_set
 
 ```ruby
-instance.instance_variable_set(Symbol name, Object value) -> Object
+instance.instance_variable_set(Symbol name, untyped value) -> untyped
 ```
 ### instance_variables
 
@@ -46,7 +64,7 @@ instance.respond_to?(Symbol | String name) -> bool
 ### send
 
 ```ruby
-instance.send(Symbol | String name, *Object args) -> Object
+instance.send(Symbol | String name, *untyped args) -> untyped
 ```
 ## Instance methods (picoruby-require)
 ### load

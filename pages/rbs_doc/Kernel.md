@@ -31,6 +31,12 @@ instance.printf(String fmt, *untyped args) -> nil
 ```ruby
 instance.puts(*_ToS objects) -> nil
 ```
+## Instance methods (picoruby-metaprog)
+### caller
+
+```ruby
+instance.caller(?Integer start, ?Integer length) -> Array[String]
+```
 ## Instance methods
 ### system
 

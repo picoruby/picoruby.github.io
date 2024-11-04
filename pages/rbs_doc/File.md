@@ -23,6 +23,11 @@ File.chmod(Integer mode, *string) -> Integer
 ```ruby
 File.directory?(string) -> bool
 ```
+### dirname
+
+```ruby
+File.dirname(String filename) -> String
+```
 ### exist?
 
 ```ruby
