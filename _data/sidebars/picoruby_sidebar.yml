@@ -93,8 +93,16 @@ entries:
       url: "/ArgumentError.html"
       output: web pdf
       type: homepage
+    - title: class CYW43::ConnectTimeout
+      url: "/CYW43_ConnectTimeout.html"
+      output: web pdf
+      type: homepage
     - title: class EAGAINWaitReadable
       url: "/EAGAINWaitReadable.html"
+      output: web pdf
+      type: homepage
+    - title: class EOFError
+      url: "/EOFError.html"
       output: web pdf
       type: homepage
     - title: class Exception
@@ -334,10 +342,6 @@ entries:
       url: "/Base64.html"
       output: web pdf
       type: homepage
-    - title: class CYW43::ConnectTimeout
-      url: "/CYW43_ConnectTimeout.html"
-      output: web pdf
-      type: homepage
     - title: class Data
       url: "/Data.html"
       output: web pdf
@@ -348,10 +352,6 @@ entries:
       type: homepage
     - title: class ENVClass
       url: "/ENVClass.html"
-      output: web pdf
-      type: homepage
-    - title: class EOFError
-      url: "/EOFError.html"
       output: web pdf
       type: homepage
     - title: module Editor
