@@ -44,6 +44,11 @@ instance.fsync() -> 0
 ```ruby
 instance.gets() -> String?
 ```
+### physical_address
+
+```ruby
+instance.physical_address() -> Integer
+```
 ### puts
 
 ```ruby
@@ -53,6 +58,11 @@ instance.puts(*String) -> nil
 
 ```ruby
 instance.read(?Integer size) -> String?
+```
+### sector_size
+
+```ruby
+instance.sector_size() -> Integer
 ```
 ### seek
 

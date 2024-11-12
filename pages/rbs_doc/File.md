@@ -156,3 +156,14 @@ instance.tell() -> Integer
 ```ruby
 instance.write(*String string) -> Integer
 ```
+## Instance methods
+### physical_address
+
+```ruby
+instance.physical_address() -> Integer
+```
+### sector_size
+
+```ruby
+instance.sector_size() -> Integer
+```

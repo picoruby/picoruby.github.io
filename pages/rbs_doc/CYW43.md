@@ -8,10 +8,10 @@ permalink: CYW43.html
 folder: rbs_doc
 ---
 ## Singleton methods
-### connect_blocking
+### connect_timeout
 
 ```ruby
-CYW43.connect_blocking(String ssid, String password, Integer augh) -> bool
+CYW43.connect_timeout(String ssid, String password, Integer augh, ?Integer timeout) -> bool
 ```
 ### disable_sta_mode
 

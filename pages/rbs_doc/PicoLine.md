@@ -11,7 +11,7 @@ folder: rbs_doc
 ### ask
 
 ```ruby
-instance.ask(String) ?{ (Question) -> void } -> String
+instance.ask(String, ?allow_empty: bool) ?{ (Question) -> void } -> String
 ```
 ## Attr accessors
 ### default (accessor)

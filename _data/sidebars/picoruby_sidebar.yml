@@ -334,6 +334,10 @@ entries:
       url: "/Base64.html"
       output: web pdf
       type: homepage
+    - title: class CYW43::ConnectTimeout
+      url: "/CYW43_ConnectTimeout.html"
+      output: web pdf
+      type: homepage
     - title: class Data
       url: "/Data.html"
       output: web pdf

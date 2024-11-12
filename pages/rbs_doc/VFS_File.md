@@ -28,3 +28,14 @@ VFS::File.open(String path, String mode) -> file_t
 ```ruby
 VFS::File.utime(Time atime, Time mtime, *String filename) -> Integer
 ```
+## Instance methods
+### physical_address
+
+```ruby
+instance.physical_address() -> Integer
+```
+### sector_size
+
+```ruby
+instance.sector_size() -> Integer
+```

@@ -23,6 +23,11 @@ Machine.deep_sleep(Integer gpio_pin, bool edge, bool high) -> 0
 ```ruby
 Machine.delay_ms(Integer ms) -> Integer
 ```
+### read_memory
+
+```ruby
+Machine.read_memory(Integer address, Integer size) -> String
+```
 ### sleep
 
 ```ruby

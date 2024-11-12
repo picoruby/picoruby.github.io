@@ -17,12 +17,22 @@ Sandbox.new(?bool suppress_error) -> instance
 ### compile
 
 ```ruby
-instance.compile(String) -> bool
+instance.compile(String script) -> bool
+```
+### compile_from_memory
+
+```ruby
+instance.compile_from_memory(Integer address, Integer size) -> bool
 ```
 ### exec_mrb
 
 ```ruby
-instance.exec_mrb(String) -> bool
+instance.exec_mrb(String mrb) -> bool
+```
+### exec_mrb_from_memory
+
+```ruby
+instance.exec_mrb_from_memory(Integer address) -> bool
 ```
 ### execute
 
