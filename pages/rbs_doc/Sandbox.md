@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Sandbox.new(?bool suppress_error) -> instance
+Sandbox.new(?String name) -> instance
 ```
 ## Instance methods
 ### compile
@@ -52,7 +52,7 @@ instance.interrupt() -> void
 ### load_file
 
 ```ruby
-instance.load_file(String path, ?signal: bool) -> void
+instance.load_file(String path, ?signal: bool, ?join: bool) -> void
 ```
 ### result
 

@@ -89,7 +89,7 @@ Keyboard.reload_keymap() -> void
 ### restart
 
 ```ruby
-Keyboard.restart() -> void
+Keyboard.restart() -> bool
 ```
 ### wait_keymap
 
@@ -316,6 +316,11 @@ instance.start!-> void
 
 ```ruby
 instance.start_features-> void
+```
+### toggle_ruby_mode
+
+```ruby
+instance.toggle_ruby_mode() -> bool
 ```
 ### uart_anchor
 

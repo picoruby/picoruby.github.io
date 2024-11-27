@@ -446,6 +446,10 @@ entries:
       url: "/Kernel.html"
       output: web pdf
       type: homepage
+    - title: class Keyboard::IRB
+      url: "/Keyboard_IRB.html"
+      output: web pdf
+      type: homepage
     - title: class MML
       url: "/MML.html"
       output: web pdf

@@ -18,3 +18,8 @@ YAML.dump(Object) -> String
 ```ruby
 YAML.load(String) -> Object
 ```
+### load_file
+
+```ruby
+YAML.load_file(String) -> Object
+```

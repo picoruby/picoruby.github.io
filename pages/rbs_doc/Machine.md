@@ -31,7 +31,17 @@ Machine.read_memory(Integer address, Integer size) -> String
 ### sleep
 
 ```ruby
-Machine.sleep(Integer sec) -> Integer
+Machine.sleep(Integer | Float sec) -> Integer
+```
+### tud_mounted?
+
+```ruby
+Machine.tud_mounted?() -> bool
+```
+### tud_task
+
+```ruby
+Machine.tud_task() -> void
 ```
 ### unique_id
 

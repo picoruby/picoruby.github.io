@@ -151,6 +151,11 @@ instance.raise(string message) -> bot
 instance.raise(Exception exception, ?String cause) -> bot
 instance.raise(_Exception exception, ?String cause) -> bot
 ```
+### relinquish
+
+```ruby
+instance.relinquish-> bool
+```
 ### sleep
 
 ```ruby

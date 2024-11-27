@@ -17,32 +17,42 @@ Editor::Base.new-> void
 ### clear
 
 ```ruby
-instance.clear-> untyped
+instance.clear() -> void
 ```
 ### clear_buffer
 
 ```ruby
-instance.clear_buffer-> void
+instance.clear_buffer() -> void
 ```
 ### debug
 
 ```ruby
 instance.debug(untyped text) -> Integer?
 ```
+### dump_buffer
+
+```ruby
+instance.dump_buffer() -> String
+```
 ### home
 
 ```ruby
-instance.home-> untyped
+instance.home() -> void
 ```
 ### next_head
 
 ```ruby
-instance.next_head-> untyped
+instance.next_head() -> void
 ```
 ### physical_line_count
 
 ```ruby
-instance.physical_line_count-> Integer
+instance.physical_line_count() -> Integer
+```
+### put_buffer
+
+```ruby
+instance.put_buffer(String | Symbol chr) -> void
 ```
 ### system
 

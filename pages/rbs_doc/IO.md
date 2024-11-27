@@ -256,7 +256,7 @@ IO.get_cursor_position-> ([Integer, Integer])
 ### wait_terminal
 
 ```ruby
-IO.wait_terminal(?timeout: Integer|Float|nil) -> bool
+IO.wait_terminal(?timeout: Integer|Float) -> String
 ```
 ## Instance methods
 ### cooked
