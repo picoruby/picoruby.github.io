@@ -418,6 +418,14 @@ entries:
       url: "/IO.html"
       output: web pdf
       type: homepage
+    - title: module JS
+      url: "/JS.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::Object
+      url: "/JS_Object.html"
+      output: web pdf
+      type: homepage
     - title: module JSON
       url: "/JSON.html"
       output: web pdf
@@ -446,8 +454,8 @@ entries:
       url: "/Kernel.html"
       output: web pdf
       type: homepage
-    - title: class Keyboard::IRB
-      url: "/Keyboard_IRB.html"
+    - title: class Keyboard::Irb
+      url: "/Keyboard_Irb.html"
       output: web pdf
       type: homepage
     - title: class MML
@@ -560,6 +568,10 @@ entries:
       type: homepage
     - title: class Prism::ParseResult
       url: "/Prism_ParseResult.html"
+      output: web pdf
+      type: homepage
+    - title: class Proc
+      url: "/Proc.html"
       output: web pdf
       type: homepage
     - title: class RNG

@@ -31,6 +31,11 @@ instance.class?() -> bool
 ```ruby
 instance.const_get(Symbol name) -> untyped
 ```
+### instance_eval
+
+```ruby
+instance.instance_eval() { (self) -> untyped } -> Object
+```
 ### instance_of?
 
 ```ruby

@@ -35,6 +35,11 @@ VFS.chdir(String dir) -> 0
 ```ruby
 VFS.chmod(Integer mode, String path) -> 0
 ```
+### contiguous?
+
+```ruby
+VFS.contiguous?(String path) -> bool
+```
 ### directory?
 
 ```ruby

@@ -37,6 +37,11 @@ instance.puts(*_ToS objects) -> nil
 ```ruby
 instance.caller(?Integer start, ?Integer length) -> Array[String]
 ```
+### eval
+
+```ruby
+instance.eval(String code) -> nil
+```
 ## Instance methods
 ### system
 

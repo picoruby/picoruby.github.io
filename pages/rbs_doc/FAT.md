@@ -48,6 +48,11 @@ instance.chdir(String path) -> 0
 ```ruby
 instance.chmod(Integer mode, String path) -> 0
 ```
+### contiguous?
+
+```ruby
+instance.contiguous?(String path) -> bool
+```
 ### directory?
 
 ```ruby
