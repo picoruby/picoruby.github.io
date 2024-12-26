@@ -8,6 +8,11 @@ permalink: JS.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### document
+
+```ruby
+JS.document() -> JS::Object
+```
 ### global
 
 ```ruby
