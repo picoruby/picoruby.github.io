@@ -48,6 +48,11 @@ File.file?(string) -> bool
 ```ruby
 File.join(*String parts) -> String
 ```
+### load_file
+
+```ruby
+File.load_file(string fd_or_path, ?Integer length, ?String outbuf) -> String?
+```
 ### new
 
 ```ruby

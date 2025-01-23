@@ -4,15 +4,15 @@ entries:
   product: PicoRuby
   version: master
   folders:
-  - title: 
+  - title:
     output: pdf
     type: frontmatter
     folderitems:
-    - title: 
+    - title:
       url: "/titlepage.html"
       output: pdf
       type: frontmatter
-    - title: 
+    - title:
       url: "/tocpage.html"
       output: pdf
       type: frontmatter
@@ -484,6 +484,22 @@ entries:
       type: homepage
     - title: class MbedTLS::HMAC
       url: "/MbedTLS_HMAC.html"
+      output: web pdf
+      type: homepage
+    - title: module MbedTLS::PKey
+      url: "/MbedTLS_PKey.html"
+      output: web pdf
+      type: homepage
+    - title: class MbedTLS::PKey::PKeyBase
+      url: "/MbedTLS_PKey_PKeyBase.html"
+      output: web pdf
+      type: homepage
+    - title: class MbedTLS::PKey::PKeyError
+      url: "/MbedTLS_PKey_PKeyError.html"
+      output: web pdf
+      type: homepage
+    - title: class MbedTLS::PKey::RSA
+      url: "/MbedTLS_PKey_RSA.html"
       output: web pdf
       type: homepage
     - title: class Module

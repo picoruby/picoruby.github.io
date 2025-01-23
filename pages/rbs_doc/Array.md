@@ -226,6 +226,16 @@ instance.sort() { (Elem a, Elem b) -> ::Integer } -> ::Array[Elem]
 instance.sort!() -> self
 instance.sort!() { (Elem a, Elem b) -> ::Integer } -> self
 ```
+### uniq
+
+```ruby
+instance.uniq() -> ::Array[Elem]
+```
+### uniq!
+
+```ruby
+instance.uniq!() -> self
+```
 ### unshift
 
 ```ruby
