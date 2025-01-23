@@ -41,7 +41,7 @@ end
 
 desc "Run jekyll"
 task :s do
-  sh "bundle exec jekyll serve"
+  sh "bundle exec jekyll serve --host 0.0.0.0"
 end
 
 desc "Run steep check"
