@@ -13,6 +13,12 @@ summary: PicoRuby is the smallest Ruby implementation for one-chip microcontroll
 
 ## Products by PicoRuby
 
+### PicoRuby.wasm
+
+PicoRuby port to WebAssembly.
+
+- [https://www.npmjs.com/package/@picoruby/wasm-wasi](https://www.npmjs.com/package/@picoruby/wasm-wasi)
+
 ### PRK Firmware
 
 Firmware framework for DIY keyboards.
