@@ -31,7 +31,7 @@ Firmware framework for DIY keyboards.
 Microcontroller programming framework.
 
 - For Raspberry Pi Pico: [https://github.com/picoruby/R2P2](https://github.com/picoruby/R2P2)
-- For ESP32: Coming soon
+- For ESP32: [https://github.com/picoruby/R2P2-ESP32](https://github.com/picoruby/R2P2-ESP32)
 
 #### Porting
 
@@ -41,11 +41,11 @@ Microcontroller programming framework.
 |picoruby-ble| |✓| |
 |picoruby-cyw43|✓|✓| |
 |picoruby-env|✓|✓| |
-|picoruby-filesystem-fat|✓|✓| |
+|picoruby-filesystem-fat|✓|✓|✓|
 |picoruby-gpio|✓|✓| |
 |picoruby-i2c|✓|✓| |
-|picoruby-io-console|✓|✓| |
-|picoruby-machine|✓|✓| |
+|picoruby-io-console|✓|✓|✓|
+|picoruby-machine|✓|✓|✓|
 |picoruby-net| |✓| |
 |picoruby-pwm|✓|✓| |
 |picoruby-rng|✓|✓| |
