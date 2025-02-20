@@ -133,6 +133,10 @@ entries:
       url: "/JSON_ParserError.html"
       output: web pdf
       type: homepage
+    - title: class JWT::DecodeError
+      url: "/JWT_DecodeError.html"
+      output: web pdf
+      type: homepage
     - title: class JWT::VerificationError
       url: "/JWT_VerificationError.html"
       output: web pdf

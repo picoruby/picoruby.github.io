@@ -16,5 +16,5 @@ JWT.decode(String token, ?String|nil secret, ?bool validate) -> [Object, Hash[St
 ### encode
 
 ```ruby
-JWT.encode(String payload, ?String|nil secret, ?String algorithm) -> String
+JWT.encode(String payload, ?String|nil secret, ?String algorithm, ?Hash[String ,String] headers ) -> String
 ```
