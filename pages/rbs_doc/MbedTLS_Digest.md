@@ -24,6 +24,11 @@ MbedTLS::Digest.new(algorithm_t algorithm) -> MbedTLS::Digest
 ```ruby
 instance.finish() -> String
 ```
+### free
+
+```ruby
+instance.free() -> self
+```
 ### update
 
 ```ruby

@@ -39,7 +39,7 @@ Microcontroller programming framework.
 |-----------|----------|------------|-----|
 |picoruby-adc|✓|✓| |
 |picoruby-ble| |✓| |
-|picoruby-cyw43|✓|✓| |
+|picoruby-cyw43| |✓| |
 |picoruby-env|✓|✓| |
 |picoruby-filesystem-fat|✓|✓|✓|
 |picoruby-gpio|✓|✓| |

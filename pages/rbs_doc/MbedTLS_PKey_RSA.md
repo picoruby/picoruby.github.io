@@ -20,23 +20,28 @@ MbedTLS::PKey::RSA.new(String key) -> MbedTLS::PKey::RSA
 MbedTLS::PKey::RSA.new(Integer bits, ?Integer exponent) -> MbedTLS::PKey::RSA
 ```
 ## Instance methods
+### free
+
+```ruby
+instance.free() -> self
+```
 ### private?
 
 ```ruby
-instance.private?-> bool
+instance.private?() -> bool
 ```
 ### public?
 
 ```ruby
-instance.public?-> bool
+instance.public?() -> bool
 ```
 ### public_key
 
 ```ruby
-instance.public_key-> MbedTLS::PKey::PKeyBase
+instance.public_key() -> MbedTLS::PKey::PKeyBase
 ```
 ### to_pem
 
 ```ruby
-instance.to_pem-> String
+instance.to_pem() -> String
 ```

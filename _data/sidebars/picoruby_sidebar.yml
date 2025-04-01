@@ -137,6 +137,14 @@ entries:
       url: "/JWT_DecodeError.html"
       output: web pdf
       type: homepage
+    - title: class JWT::ExpiredSignature
+      url: "/JWT_ExpiredSignature.html"
+      output: web pdf
+      type: homepage
+    - title: class JWT::IncorrectAlgorithm
+      url: "/JWT_IncorrectAlgorithm.html"
+      output: web pdf
+      type: homepage
     - title: class JWT::VerificationError
       url: "/JWT_VerificationError.html"
       output: web pdf
@@ -314,24 +322,8 @@ entries:
       url: "/BLE_AdvertisingReport.html"
       output: web pdf
       type: homepage
-    - title: class BLE::Broadcaster
-      url: "/BLE_Broadcaster.html"
-      output: web pdf
-      type: homepage
-    - title: class BLE::Central
-      url: "/BLE_Central.html"
-      output: web pdf
-      type: homepage
     - title: class BLE::GattDatabase
       url: "/BLE_GattDatabase.html"
-      output: web pdf
-      type: homepage
-    - title: class BLE::Observer
-      url: "/BLE_Observer.html"
-      output: web pdf
-      type: homepage
-    - title: class BLE::Peripheral
-      url: "/BLE_Peripheral.html"
       output: web pdf
       type: homepage
     - title: class BLE::Utils
@@ -452,6 +444,10 @@ entries:
       type: homepage
     - title: module JWT
       url: "/JWT.html"
+      output: web pdf
+      type: homepage
+    - title: class JWT::Decoder
+      url: "/JWT_Decoder.html"
       output: web pdf
       type: homepage
     - title: module Kernel

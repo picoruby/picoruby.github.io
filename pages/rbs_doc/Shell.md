@@ -8,6 +8,11 @@ permalink: Shell.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### bootstrap
+
+```ruby
+Shell.bootstrap(String file) -> bool
+```
 ### new
 
 ```ruby
@@ -17,6 +22,11 @@ Shell.new(?clean: bool) -> void
 
 ```ruby
 Shell.next_executable-> {code: String, path: String}
+```
+### setup_root_volume
+
+```ruby
+Shell.setup_root_volume(Symbol drive, ?label: String) -> void
 ```
 ### setup_rtc
 
@@ -28,12 +38,12 @@ Shell.setup_rtc(rtc_t trc) -> void
 ```ruby
 Shell.setup_sdcard(SPI spi) -> void
 ```
-## Instance methods
-### bootstrap
+### setup_system_files
 
 ```ruby
-instance.bootstrap(String file) -> bool
+Shell.setup_system_files(?(String | nil) root, ?force: bool) -> void
 ```
+## Instance methods
 ### run_irb
 
 ```ruby
@@ -43,16 +53,6 @@ instance.run_irb-> void
 
 ```ruby
 instance.run_shell-> void
-```
-### setup_root_volume
-
-```ruby
-instance.setup_root_volume(Symbol drive, ?label: String) -> void
-```
-### setup_system_files
-
-```ruby
-instance.setup_system_files(?(String | nil) root, ?force: bool) -> void
 ```
 ### show_logo
 

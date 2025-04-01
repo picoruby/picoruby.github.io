@@ -26,7 +26,7 @@ CYW43.enable_sta_mode() -> bool
 ### init
 
 ```ruby
-CYW43.init(?String country, ?force: bool) -> void
+CYW43.init(?String country, ?force: bool) -> 0
 ```
 ### initialized?
 

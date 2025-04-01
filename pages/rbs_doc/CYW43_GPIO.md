@@ -14,6 +14,16 @@ folder: rbs_doc
 CYW43::GPIO.new(Integer pin) -> void
 ```
 ## Instance methods
+### high?
+
+```ruby
+instance.high?() -> bool
+```
+### low?
+
+```ruby
+instance.low?() -> bool
+```
 ### read
 
 ```ruby
