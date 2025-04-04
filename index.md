@@ -37,19 +37,19 @@ Microcontroller programming framework.
 
 |           |Raspi Pico|Raspi Pico W|ESP32|
 |-----------|----------|------------|-----|
-|picoruby-adc|✓|✓| |
+|picoruby-adc|✓|✓|✓|
 |picoruby-ble| |✓| |
 |picoruby-cyw43| |✓| |
-|picoruby-env|✓|✓| |
+|picoruby-env|✓|✓|✓ |
 |picoruby-filesystem-fat|✓|✓|✓|
-|picoruby-gpio|✓|✓| |
+|picoruby-gpio|✓|✓|✓|
 |picoruby-i2c|✓|✓| |
 |picoruby-io-console|✓|✓|✓|
 |picoruby-machine|✓|✓|✓|
 |picoruby-net| |✓| |
-|picoruby-pwm|✓|✓| |
-|picoruby-rng|✓|✓| |
-|picoruby-spi|✓|✓| |
+|picoruby-pwm|✓|✓|✓|
+|picoruby-rng|✓|✓|✓|
+|picoruby-spi|✓|✓|✓|
 |picoruby-uart|✓|✓| |
 |picoruby-watchdog|✓|✓| |
 
