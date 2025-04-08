@@ -23,8 +23,12 @@ entries:
       url: "/index.html"
       output: web, pdf
       type: homepage
+    - title: R2P2 WiFi Config
+      url: "/wifi"
+      output: web
+      type: homepage
     - title: Contribution
-      url: "/contribution.html"
+      url: "/contribution"
       output: web, pdf
       type: homepage
   - title: Builtin
@@ -652,6 +656,14 @@ entries:
       type: homepage
     - title: class Vim
       url: "/Vim.html"
+      output: web pdf
+      type: homepage
+    - title: class WifiConfigPeripheral
+      url: "/WifiConfigPeripheral.html"
+      output: web pdf
+      type: homepage
+    - title: class WifiConfigPeripheral::Utils
+      url: "/WifiConfigPeripheral_Utils.html"
       output: web pdf
       type: homepage
     - title: module YAML

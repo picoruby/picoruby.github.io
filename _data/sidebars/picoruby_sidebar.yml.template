@@ -26,7 +26,11 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
+    - title: R2P2 WiFi Config
+      url: /wifi
+      output: web
+      type: homepage
     - title: Contribution
-      url: /contribution.html
+      url: /contribution
       output: web, pdf
       type: homepage
