@@ -658,14 +658,6 @@ entries:
       url: "/Vim.html"
       output: web pdf
       type: homepage
-    - title: class WifiConfigPeripheral
-      url: "/WifiConfigPeripheral.html"
-      output: web pdf
-      type: homepage
-    - title: class WifiConfigPeripheral::Utils
-      url: "/WifiConfigPeripheral_Utils.html"
-      output: web pdf
-      type: homepage
     - title: module YAML
       url: "/YAML.html"
       output: web pdf
