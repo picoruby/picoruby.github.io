@@ -8,9 +8,9 @@ permalink: wifi
 folder: r2p2
 ---
 
-<p>This is a web-based tool to configure WiFi settings of R2P2 devices via Bluetooth Low Energy (BLE).</p>
+<p>This is a web-based tool to configure WiFi setting of R2P2 device via BLE.</p>
 
-<button id="connect">Connect to Device</button>
+<button id="connect">Scan Devices</button>
 
 <form id="wifiForm" style="display:none;">
   <table>
@@ -44,36 +44,40 @@ folder: r2p2
           <option value="n">No</option>
         </select>
       </td>
-      <td>If you choose No, manual reboot is required when WiFi is disconnected.</td>
+      <td>If you select 'No', manual reboot is required if WiFi connection fails.</td>
     </tr>
     <tr>
       <td></td>
       <td><button type="submit">Send Configuration</button></td>
+      <td><p id="status"></p></td>
     </tr>
   </table>
 </form>
-<p id="status"></p>
+
 
 <h2>How to Use</h2>
 <ol>
-  <li>Start the device in WiFi configuration mode. The method varies by device:
+  <li>Start the R2P2 in WiFi configuration mode. The method varies by device:
     <ul>
-      <li>For Raspberry Pi Pico W and Pico2 W: Boot the device with pin 22 connected to GND.</li>
+      <li>For Raspberry Pi Pico W and Pico2 W: Boot the device with GPIO22 connected to GND.</li>
       <li>For other microcontrollers: Refer to the device manual.</li>
       <li>You can also run the <code>nmble</code> command in the R2P2 shell.</li>
     </ul>
   </li>
   <li>Ensure Bluetooth is enabled on your PC or Android device.</li>
-  <li>Click the "Connect to Device" button to scan for available BLE devices.</li>
-  <li>Look for "R2P2 BLE" in the list. If it doesn't appear, the device may not be functioning correctly.</li>
+  <li>Click the "Scan Devices" button to scan for available Bluetooth devices.</li>
+  <li>Look for "R2P2 BLE" in the list. If it doesn't appear, your R2P2 may not be functioning correctly.</li>
     <ul>
-      <li>The name may differ based on the production. See the manual.</li>
+      <li>The device name may differ based on the production/release. See the manual.</li>
     </ul>
-  <li>Pair with "R2P2 BLE" to display the configuration form.</li>
-  <li>Fill in all the fields in the form.</li>
-  <li>Click the "Send Configuration" button to submit the WiFi settings to the device.</li>
-  <li>Once successful, reboot the device to connect it to the WiFi network. (Make sure the pin 22 is open)</li>
+  <li>Pair with "R2P2 BLE". Configuration form will show.</li>
+  <li>Fill in the form and click the "Send Configuration" button.</li>
+  <li>Once successful, reboot the device (make sure the GPIO22 is open). It will connect it to the WiFi network🛜 Enjoy!!</li>
 </ol>
+
+<h3>Disclaimer</h3>
+
+<p>The WiFi password is stored on the device in an encrypted format. However, if the device falls into the hands of a third party, the password may potentially be decrypted. Additionally, communication between the browser and the device over BLE (Bluetooth Low Energy) is not encrypted. Therefore, the authors and contributors of PicoRuby and R2P2 disclaim any and all responsibility for issues arising from password leaks or eavesdropping on BLE communication.</p>
 
 <h3>Supported OSes and Browsers</h3>
 <table>
@@ -106,7 +110,7 @@ folder: r2p2
 <p>Report an issue if any correction is needed.</p>
 
 <h3>If the BLE doesn't work</h3>
-<p>You can configure by <code>nmcli</code> command in R2P2 shell.</p>
+<p>Instead of <code>nmble</code>, you can wired-configure by <code>nmcli</code> command in R2P2 shell.</p>
 
 <script>
   const WIFI_CONFIG_SERVICE = 0x181C;
@@ -129,6 +133,7 @@ folder: r2p2
       countryChar = await service.getCharacteristic(COUNTRY);
       watchdogChar = await service.getCharacteristic(WATCHDOG);
       document.getElementById("wifiForm").style.display = "block";
+      document.getElementById("connect").style.display = "none";
       document.getElementById("status").textContent = "Connected to " + device.name;
     } catch (error) {
       document.getElementById("status").textContent = "Error: " + error;
