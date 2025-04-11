@@ -66,18 +66,20 @@ folder: r2p2
   </li>
   <li>Ensure Bluetooth is enabled on your PC or Android device.</li>
   <li>Click the "Scan Devices" button to scan for available Bluetooth devices.</li>
-  <li>Look for "R2P2 BLE" in the list. If it doesn't appear, your R2P2 may not be functioning correctly.</li>
+  <li>Look for "R2P2 BLE xxxx" (xxxx is a random 4-digit) in the list. If it doesn't appear, your R2P2 may not be functioning correctly.</li>
     <ul>
-      <li>The device name may differ based on the production/release. See the manual.</li>
+      <li>The device naming may differ based on the production/release. See the manual.</li>
     </ul>
-  <li>Pair with "R2P2 BLE". Configuration form will show.</li>
+  <li>Pair with "R2P2 BLE xxxx". Configuration form will show.</li>
   <li>Fill in the form and click the "Send Configuration" button.</li>
   <li>Once successful, reboot the device (make sure the GPIO22 is open). It will connect it to the WiFi network🛜 Enjoy!!</li>
 </ol>
 
 <h3>Disclaimer</h3>
 
-<p>The WiFi password is stored on the device in an encrypted format. However, if the device falls into the hands of a third party, the password may potentially be decrypted. Additionally, communication between the browser and the device over BLE (Bluetooth Low Energy) is not encrypted. Therefore, the authors and contributors of PicoRuby and R2P2 disclaim any and all responsibility for issues arising from password leaks or eavesdropping on BLE communication.</p>
+<p>The WiFi password is stored on the device in an encrypted format. However, if the device falls into the hands of a third party, the password may potentially be decrypted. Additionally, communication between the browser and the device over BLE (Bluetooth Low Energy) is not encrypted. The authors and contributors of PicoRuby and R2P2 disclaim any and all responsibility for issues arising from password leaks or eavesdropping on BLE communication.</p>
+
+<p>To avoid being eavesdropped, you can also use <code>nmcli</code> command in the R2P2 shell for wired-configuration.</p>
 
 <h3>Supported OSes and Browsers</h3>
 <table>
@@ -107,10 +109,7 @@ folder: r2p2
     <td>No BLE allowed in Web Browsers in iOS</td>
   </tr>
 </table>
-<p>Report an issue if any correction is needed.</p>
-
-<h3>If the BLE doesn't work</h3>
-<p>Instead of <code>nmble</code>, you can wired-configure by <code>nmcli</code> command in R2P2 shell.</p>
+<p>Report an issue if any correction is needed. Repository: <a href="https://github.com/picoruby/picoruby.github.io" target="_blank">picoruby/picoruby.github.io</a></p>
 
 <script>
   const WIFI_CONFIG_SERVICE = 0x181C;
