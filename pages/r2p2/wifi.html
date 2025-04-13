@@ -77,9 +77,11 @@ folder: r2p2
 
 <h3>Disclaimer</h3>
 
-<p>The WiFi password is stored on the device in an encrypted format. However, if the device falls into the hands of a third party, the password may potentially be decrypted. Additionally, communication between the browser and the device over BLE (Bluetooth Low Energy) is not encrypted. The authors and contributors of PicoRuby and R2P2 disclaim any and all responsibility for issues arising from password leaks or eavesdropping on BLE communication.</p>
+<p>
+The WiFi password is stored in an encrypted format on the device. However, if the device is lost or stolen, the password could potentially be decrypted by a third party. Additionally, we cannot guarantee that communication between the browser and the device over BLE (Bluetooth Low Energy) is adequately encrypted in all environments. The authors and contributors of PicoRuby and R2P2 disclaim any and all responsibility for any issues arising from the use of our software.
+</p>
 
-<p>To avoid being eavesdropped, you can also use <code>nmcli</code> command in the R2P2 shell for wired-configuration.</p>
+<p>FYI: You can also use <code>nmcli</code> command in the R2P2 shell for wired-configuration.</p>
 
 <h3>Supported OSes and Browsers</h3>
 <table>
