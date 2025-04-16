@@ -124,7 +124,7 @@ The WiFi password is stored in an encrypted format on the device. However, if th
   document.getElementById("connect").addEventListener("click", async () => {
     try {
       device = await navigator.bluetooth.requestDevice({
-        acceptAllDevices: true,
+        filters: [{ namePrefix: "R2P2 BLE" }],
         optionalServices: [WIFI_CONFIG_SERVICE]
       });
       server = await device.gatt.connect();
