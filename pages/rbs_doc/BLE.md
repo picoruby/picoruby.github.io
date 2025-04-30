@@ -54,11 +54,6 @@ folder: rbs_doc
 ```ruby
 BLE.new(role_t role, ?(String|nil) profile_data) -> void
 ```
-### instance
-
-```ruby
-BLE.instance() -> BLE
-```
 ## Instance methods
 ### _init
 
@@ -68,7 +63,7 @@ instance._init(String | nil) -> void
 ### advertise
 
 ```ruby
-instance.advertise(String) -> 0
+instance.advertise(String | nil) -> 0
 ```
 ### advertising_report_callback
 
@@ -83,7 +78,7 @@ instance.blink_led() -> void
 ### broadcaster_advertise
 
 ```ruby
-instance.broadcaster_advertise(String) -> 0
+instance.broadcaster_advertise(String | nil) -> 0
 ```
 ### connect
 
@@ -98,17 +93,17 @@ instance.debug_puts(*untyped) -> nil
 ### discover_characteristic_descriptors
 
 ```ruby
-instance.discover_characteristic_descriptors(Integer, Integer, Integer) -> Integer
+instance.discover_characteristic_descriptors(Integer conn_handle, Integer value_handle, Integer end_handle) -> Integer
 ```
 ### discover_characteristics_for_service
 
 ```ruby
-instance.discover_characteristics_for_service(Integer, Integer, Integer) -> Integer
+instance.discover_characteristics_for_service(Integer conn_handle, Integer start_handle, Integer end_handle) -> Integer
 ```
 ### discover_primary_services
 
 ```ruby
-instance.discover_primary_services(Integer) -> Integer
+instance.discover_primary_services(Integer conn_handle) -> Integer
 ```
 ### ensure
 
@@ -118,7 +113,7 @@ instance.ensure() { () -> void }-> void
 ### gap_connect
 
 ```ruby
-instance.gap_connect(String, Integer) -> Integer
+instance.gap_connect(String addr, Integer addr_time) -> Integer
 ```
 ### gap_local_bd_addr
 
@@ -130,15 +125,10 @@ instance.gap_local_bd_addr() -> String
 ```ruby
 instance.get_packet() -> String
 ```
-### get_write_value
-
-```ruby
-instance.get_write_value(Integer handle) -> (String|nil)
-```
 ### hci_power_control
 
 ```ruby
-instance.hci_power_control(Integer) -> 0
+instance.hci_power_control(Integer power_mode) -> 0
 ```
 ### heartbeat_callback
 
@@ -153,7 +143,7 @@ instance.init_central() -> void
 ### notify
 
 ```ruby
-instance.notify(Integer) -> void
+instance.notify(Integer) -> 0
 ```
 ### packet_callback
 
@@ -163,17 +153,37 @@ instance.packet_callback(String) -> void
 ### peripheral_advertise
 
 ```ruby
-instance.peripheral_advertise(String) -> 0
+instance.peripheral_advertise(String | nil) -> 0
+```
+### pop_heartbeat
+
+```ruby
+instance.pop_heartbeat() -> bool
+```
+### pop_packet
+
+```ruby
+instance.pop_packet() -> (String | nil)
+```
+### pop_write_value
+
+```ruby
+instance.pop_write_value(Integer handle) -> (String|nil)
+```
+### push_read_value
+
+```ruby
+instance.push_read_value(Integer handle, String value) -> void
 ```
 ### read_value_of_characteristic_using_value_handle
 
 ```ruby
-instance.read_value_of_characteristic_using_value_handle(Integer, Integer) -> Integer
+instance.read_value_of_characteristic_using_value_handle(Integer conn_handle, Integer value_handle) -> Integer
 ```
 ### request_can_send_now_event
 
 ```ruby
-instance.request_can_send_now_event() -> void
+instance.request_can_send_now_event() -> 0
 ```
 ### reset_state
 
@@ -196,11 +206,6 @@ instance.scan(
       ?stop_state: Symbol,
       ?debug: bool
     ) -> void
-```
-### set_read_value
-
-```ruby
-instance.set_read_value(Integer handle, String value) -> void
 ```
 ### set_scan_params
 

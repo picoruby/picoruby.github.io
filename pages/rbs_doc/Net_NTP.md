@@ -11,10 +11,5 @@ folder: rbs_doc
 ### get
 
 ```ruby
-Net::NTP.get(?String ntp_server, ?Integer ntp_port) -> Response
-```
-### set_hwclock
-
-```ruby
-Net::NTP.set_hwclock() -> void
+Net::NTP.get(?String ntp_server, ?Integer ntp_port) -> [Integer, Integer]
 ```

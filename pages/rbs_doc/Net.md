@@ -1,8 +1,8 @@
 ---
-title: class Net
+title: module Net
 keywords: Net
-tags: [class]
-summary: Net class of PicoRuby
+tags: [module]
+summary: Net module of PicoRuby
 sidebar: picoruby_sidebar
 permalink: Net.html
 folder: rbs_doc

@@ -12,12 +12,6 @@ folder: rbs_doc
 ```ruby
 "SHA256" | "sha256"
 ```
-## Singleton methods
-### new
-
-```ruby
-MbedTLS::HMAC.new(String key, digest_t digest) -> MbedTLS::HMAC
-```
 ## Instance methods
 ### digest
 
@@ -28,6 +22,11 @@ instance.digest() -> String
 
 ```ruby
 instance.hexdigest() -> String
+```
+### initialze
+
+```ruby
+instance.initialze(String key, digest_t digest) -> void
 ```
 ### reset
 

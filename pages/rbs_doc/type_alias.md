@@ -19,11 +19,6 @@ Hash[String, String]
 }
 ```
 
-## rtc_t
-```rbs
-PCF8523
-```
-
 ## array
 ```rbs
 Array[T]

@@ -32,5 +32,5 @@ instance.read() -> GPIO::gpio_logic_t
 ### write
 
 ```ruby
-instance.write(Integer) -> 0
+instance.write(Integer) -> Integer
 ```

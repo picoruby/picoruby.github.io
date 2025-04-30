@@ -16,7 +16,7 @@ folder: rbs_doc
 ### at
 
 ```ruby
-Time.at((Integer|Time), ?in: String | Integer | nil) -> Time
+Time.at((Integer|Float|Time), ?in: String | Integer | nil) -> Time
 ```
 ### new
 

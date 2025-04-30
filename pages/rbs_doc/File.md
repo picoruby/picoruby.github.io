@@ -7,6 +7,12 @@ sidebar: picoruby_sidebar
 permalink: File.html
 folder: rbs_doc
 ---
+## Instance methods
+### mtime
+
+```ruby
+instance.mtime() -> Time
+```
 ## Singleton methods
 ### basename
 

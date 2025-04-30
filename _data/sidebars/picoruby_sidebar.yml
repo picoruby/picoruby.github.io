@@ -342,6 +342,10 @@ entries:
       url: "/Base64.html"
       output: web pdf
       type: homepage
+    - title: module CRC
+      url: "/CRC.html"
+      output: web pdf
+      type: homepage
     - title: class Data
       url: "/Data.html"
       output: web pdf
@@ -408,6 +412,10 @@ entries:
       type: homepage
     - title: class FileTest
       url: "/FileTest.html"
+      output: web pdf
+      type: homepage
+    - title: class GC
+      url: "/GC.html"
       output: web pdf
       type: homepage
     - title: class IIRFilter
@@ -510,7 +518,7 @@ entries:
       url: "/Module.html"
       output: web pdf
       type: homepage
-    - title: class Net
+    - title: module Net
       url: "/Net.html"
       output: web pdf
       type: homepage
@@ -534,16 +542,16 @@ entries:
       url: "/Net_NTP.html"
       output: web pdf
       type: homepage
-    - title: class Net::NTP::Response
-      url: "/Net_NTP_Response.html"
-      output: web pdf
-      type: homepage
     - title: class Net::TCPClient
       url: "/Net_TCPClient.html"
       output: web pdf
       type: homepage
     - title: class Net::UDPClient
       url: "/Net_UDPClient.html"
+      output: web pdf
+      type: homepage
+    - title: class ObjectSpace
+      url: "/ObjectSpace.html"
       output: web pdf
       type: homepage
     - title: class PicoLine
@@ -594,12 +602,20 @@ entries:
       url: "/Proc.html"
       output: web pdf
       type: homepage
+    - title: class RMT
+      url: "/RMT.html"
+      output: web pdf
+      type: homepage
     - title: class RNG
       url: "/RNG.html"
       output: web pdf
       type: homepage
     - title: module RbConfig
       url: "/RbConfig.html"
+      output: web pdf
+      type: homepage
+    - title: class SK6812
+      url: "/SK6812.html"
       output: web pdf
       type: homepage
     - title: class SQLite3

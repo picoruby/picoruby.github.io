@@ -17,12 +17,12 @@ Sandbox.new(?String name) -> instance
 ### compile
 
 ```ruby
-instance.compile(String script) -> bool
+instance.compile(String script, ?remove_lv: bool) -> bool
 ```
 ### compile_from_memory
 
 ```ruby
-instance.compile_from_memory(Integer address, Integer size) -> bool
+instance.compile_from_memory(Integer address, Integer size, ?remove_lv: bool) -> bool
 ```
 ### exec_mrb
 

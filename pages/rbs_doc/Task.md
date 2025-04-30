@@ -8,6 +8,12 @@ permalink: Task.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### stat
+
+```ruby
+Task.stat() -> String
+```
+## Singleton methods
 ### create
 
 ```ruby

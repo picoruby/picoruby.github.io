@@ -7,11 +7,35 @@ sidebar: picoruby_sidebar
 permalink: Shell.html
 folder: rbs_doc
 ---
+## Type aliases
+### rtc_t
+```ruby
+PCF8523
+```
+### device_t
+```ruby
+GPIO | ADC | I2C | SPI | UART | PWM
+```
 ## Singleton methods
 ### bootstrap
 
 ```ruby
 Shell.bootstrap(String file) -> bool
+```
+### ensure_system_file
+
+```ruby
+Shell.ensure_system_file(String path, String code, ?(Integer | nil) crc) -> void
+```
+### get_device
+
+```ruby
+Shell.get_device(:gpio, String | Symbol name) -> GPIO
+Shell.get_device(:adc,  String | Symbol name) -> ADC
+Shell.get_device(:i2c,  String | Symbol name) -> I2C
+Shell.get_device(:spi,  String | Symbol name) -> SPI
+Shell.get_device(:uart, String | Symbol name) -> UART
+Shell.get_device(:pwm,  String | Symbol name) -> PWM
 ```
 ### new
 
@@ -21,7 +45,7 @@ Shell.new(?clean: bool) -> void
 ### next_executable
 
 ```ruby
-Shell.next_executable-> {code: String, path: String}
+Shell.next_executable-> {code: String, path: String, crc: Integer}
 ```
 ### setup_root_volume
 
@@ -43,6 +67,11 @@ Shell.setup_sdcard(SPI spi) -> void
 ```ruby
 Shell.setup_system_files(?(String | nil) root, ?force: bool) -> void
 ```
+### simple_question
+
+```ruby
+Shell.simple_question(String question) { (String answer) -> boolish } -> void
+```
 ## Instance methods
 ### run_irb
 
@@ -58,11 +87,6 @@ instance.run_shell-> void
 
 ```ruby
 instance.show_logo-> nil
-```
-### simple_question
-
-```ruby
-instance.simple_question(String question) { (String answer) -> boolish } -> void
 ```
 ### start
 

@@ -23,10 +23,20 @@ Machine.deep_sleep(Integer gpio_pin, bool edge, bool high) -> 0
 ```ruby
 Machine.delay_ms(Integer ms) -> Integer
 ```
+### get_hwclock
+
+```ruby
+Machine.get_hwclock() -> [Integer, Integer]
+```
 ### read_memory
 
 ```ruby
 Machine.read_memory(Integer address, Integer size) -> String
+```
+### set_hwclock
+
+```ruby
+Machine.set_hwclock(Integer tv_sec, Integer tv_nsec) -> Integer
 ```
 ### sleep
 

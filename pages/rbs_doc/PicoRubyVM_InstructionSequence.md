@@ -11,7 +11,7 @@ folder: rbs_doc
 ### compile
 
 ```ruby
-PicoRubyVM::InstructionSequence.compile(String code) -> instance
+PicoRubyVM::InstructionSequence.compile(String code, ?remove_lv: bool) -> instance
 ```
 ### compile_file
 
