@@ -20,7 +20,8 @@ I2C.new(
     unit: Symbol|nil,
     ?frequency: Integer,
     ?sda_pin: Integer,
-    ?scl_pin: Integer
+    ?scl_pin: Integer,
+    ?timeout: Integer
   ) -> instance
 ```
 ## Instance methods
@@ -37,19 +38,21 @@ instance.outputs_array(
 instance.read(
     Integer i2c_adrs_7,
     Integer len,
-    *outputs_t outputs
+    *outputs_t outputs,
+    ?timeout: Integer,
   ) -> String
 ```
 ### scan
 
 ```ruby
-instance.scan() -> nil
+instance.scan(?timeout: Integer) -> nil
 ```
 ### write
 
 ```ruby
 instance.write(
     Integer i2c_adrs_7,
-    *outputs_t outputs
+    *outputs_t outputs,
+    ?timeout: Integer,
   ) -> Integer
 ```

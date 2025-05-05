@@ -58,13 +58,3 @@ Machine.tud_task() -> void
 ```ruby
 Machine.unique_id() -> String
 ```
-### using_busy_wait
-
-```ruby
-Machine.using_busy_wait() { () -> void } -> void
-```
-### using_delay
-
-```ruby
-Machine.using_delay() { () -> void } -> void
-```

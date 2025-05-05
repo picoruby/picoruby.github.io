@@ -11,5 +11,5 @@ folder: rbs_doc
 ### peripheral_error
 
 ```ruby
-GPIO::Error.peripheral_error(Integer code, ?String name) -> Integer
+GPIO::Error.peripheral_error(Integer code, ?String name) -> void
 ```
