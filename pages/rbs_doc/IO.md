@@ -297,5 +297,5 @@ instance.raw!() -> self
 ### read_nonblock
 
 ```ruby
-instance.read_nonblock(Integer maxlen) -> String
+instance.read_nonblock(Integer maxlen) -> (String | nil)
 ```

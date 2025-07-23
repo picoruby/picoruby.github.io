@@ -63,6 +63,7 @@ instance./(Float) -> Float
 
 ```ruby
 instance.<(Integer) -> bool
+instance.<(Float) -> bool
 ```
 ### <<
 
@@ -73,6 +74,7 @@ instance.<<(int) -> Integer
 
 ```ruby
 instance.<=(Integer) -> bool
+instance.<=(Float) -> bool
 ```
 ### <=>
 
@@ -94,11 +96,13 @@ instance.===(untyped) -> bool
 
 ```ruby
 instance.>(Integer) -> bool
+instance.>(Float) -> bool
 ```
 ### >=
 
 ```ruby
 instance.>=(Integer) -> bool
+instance.>=(Float) -> bool
 ```
 ### >>
 

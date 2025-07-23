@@ -44,15 +44,10 @@ instance.execute() -> bool
 ```ruby
 instance.free_parser() -> nil
 ```
-### interrupt
-
-```ruby
-instance.interrupt() -> void
-```
 ### load_file
 
 ```ruby
-instance.load_file(String path, ?signal: bool, ?join: bool) -> void
+instance.load_file(String path, ?join: bool) -> void
 ```
 ### result
 
@@ -62,7 +57,12 @@ instance.result() -> untyped
 ### state
 
 ```ruby
-instance.state() -> Integer
+instance.state() -> (Integer | Symbol)
+```
+### stop
+
+```ruby
+instance.stop() -> void
 ```
 ### suspend
 
@@ -77,7 +77,7 @@ instance.terminate() -> nil
 ### wait
 
 ```ruby
-instance.wait(?timeout: (Integer|nil), ?signal: bool) -> bool
+instance.wait(?timeout: (Integer|nil)) -> bool
 ```
 ## Attr accessors
 ### error (accessor)

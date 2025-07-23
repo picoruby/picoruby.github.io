@@ -42,6 +42,17 @@ instance.caller(?Integer start, ?Integer length) -> Array[String]
 ```ruby
 instance.eval(String code) -> nil
 ```
+## Instance methods (picoruby-require)
+### load
+
+```ruby
+instance.load(String path) -> bool
+```
+### require
+
+```ruby
+instance.require(String name) -> bool
+```
 ## Instance methods
 ### system
 

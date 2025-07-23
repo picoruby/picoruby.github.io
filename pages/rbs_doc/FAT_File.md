@@ -39,6 +39,11 @@ instance.expand(Integer size) -> Integer
 ```ruby
 instance.fsync() -> 0
 ```
+### getbyte
+
+```ruby
+instance.getbyte() -> (Integer | nil)
+```
 ### gets
 
 ```ruby

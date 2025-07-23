@@ -8,17 +8,6 @@ permalink: Task.html
 folder: rbs_doc
 ---
 ## Singleton methods
-### stat
-
-```ruby
-Task.stat() -> String
-```
-## Singleton methods
-### create
-
-```ruby
-Task.create(String) -> Task
-```
 ### current
 
 ```ruby
@@ -27,74 +16,86 @@ Task.current() -> Task
 ### get
 
 ```ruby
-Task.get(String) -> Task
+Task.get(String name) -> Task?
 ```
 ### list
 
 ```ruby
 Task.list() -> Array[Task]
 ```
-### name=
+### new
 
 ```ruby
-Task.name=(String) -> String
-```
-### name_list
-
-```ruby
-Task.name_list() -> Array[String]
+Task.new(?name: String, ?priority: Integer) {() -> void} -> Task
 ```
 ### pass
 
 ```ruby
-Task.pass() -> Task
+Task.pass() -> nil
 ```
-### priority=
+### pp_status
 
 ```ruby
-Task.priority=(Integer) -> Task
+Task.pp_status() -> void
 ```
-### status
+### stat
 
 ```ruby
-Task.status() -> Task
-```
-### suspend
-
-```ruby
-Task.suspend() -> Task
-```
-### terminate
-
-```ruby
-Task.terminate() -> Task
+Task.stat() -> Task::Stat
 ```
 ## Instance methods
 ### join
 
 ```ruby
-instance.join() -> void
+instance.join() -> self
 ```
 ### name
 
 ```ruby
-instance.name() -> String
+instance.name() -> (String | nil)
 ```
 ### name=
 
 ```ruby
-instance.name=(String) -> self
+instance.name=(String name) -> String
+```
+### priority
+
+```ruby
+instance.priority() -> Integer
 ```
 ### priority=
 
 ```ruby
-instance.priority=(Integer) -> self
+instance.priority=(Integer priority) -> Integer
 ```
 ### resume
 
 ```ruby
 instance.resume() -> self
 ```
+### status
+
+```ruby
+instance.status() -> Symbol
+```
+### suspend
+
+```ruby
+instance.suspend() -> self
+```
+### terminate
+
+```ruby
+instance.terminate() -> self
+```
+## Singleton methods
+### name_list
+
+```ruby
+Task.name_list() -> Array[String]
+```
+## Instance methods
 ### rewind
 
 ```ruby
@@ -104,19 +105,4 @@ instance.rewind() -> self
 
 ```ruby
 instance.run() -> void
-```
-### status
-
-```ruby
-instance.status() -> String
-```
-### suspend
-
-```ruby
-instance.suspend() -> void
-```
-### terminate
-
-```ruby
-instance.terminate() -> self
 ```

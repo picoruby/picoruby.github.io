@@ -71,6 +71,7 @@ instance.==(untyped other) -> bool
 ```ruby
 instance.[](int index) -> Elem
 instance.[](int start, int length) -> ::Array[Elem]?
+instance.[](::Range[::Integer?]) -> ::Array[Elem]?
 ```
 ### []=
 

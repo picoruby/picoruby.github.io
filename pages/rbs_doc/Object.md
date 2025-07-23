@@ -71,17 +71,6 @@ instance.respond_to?(Symbol | String name) -> bool
 ```ruby
 instance.send(Symbol | String name, *untyped args) -> untyped
 ```
-## Instance methods (picoruby-require)
-### load
-
-```ruby
-instance.load(String path) -> bool
-```
-### require
-
-```ruby
-instance.require(String name) -> bool
-```
 ## Instance methods
 ### <=>
 
@@ -147,6 +136,11 @@ instance.loop() { () -> void }-> void
 
 ```ruby
 instance.nil?() -> bool
+```
+### private
+
+```ruby
+instance.private(?Symbol) -> void
 ```
 ### raise
 

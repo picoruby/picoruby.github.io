@@ -17,10 +17,15 @@ ENVClass.new() -> ENVClass
 ### []
 
 ```ruby
-instance.[](String) -> String
+instance.[](String key) -> String
 ```
 ### []=
 
 ```ruby
-instance.[]=(String, String) -> String
+instance.[]=(String key, String value) -> String
+```
+### delete
+
+```ruby
+instance.delete(String key) ?{ (String key) -> void } -> (String | nil)
 ```

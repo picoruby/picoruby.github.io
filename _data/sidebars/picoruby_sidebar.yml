@@ -4,15 +4,15 @@ entries:
   product: PicoRuby
   version: master
   folders:
-  - title:
+  - title: 
     output: pdf
     type: frontmatter
     folderitems:
-    - title:
+    - title: 
       url: "/titlepage.html"
       output: pdf
       type: frontmatter
-    - title:
+    - title: 
       url: "/tocpage.html"
       output: pdf
       type: frontmatter
@@ -56,6 +56,10 @@ entries:
       type: homepage
     - title: class Integer
       url: "/Integer.html"
+      output: web pdf
+      type: homepage
+    - title: module Kernel
+      url: "/Kernel.html"
       output: web pdf
       type: homepage
     - title: module Math
@@ -121,6 +125,10 @@ entries:
       url: "/IOError.html"
       output: web pdf
       type: homepage
+    - title: class Interrupt
+      url: "/Interrupt.html"
+      output: web pdf
+      type: homepage
     - title: class JSON::DiggerError
       url: "/JSON_DiggerError.html"
       output: web pdf
@@ -183,10 +191,6 @@ entries:
       type: homepage
     - title: class SQLite3::Exception
       url: "/SQLite3_Exception.html"
-      output: web pdf
-      type: homepage
-    - title: class Sandbox::Abort
-      url: "/Sandbox_Abort.html"
       output: web pdf
       type: homepage
     - title: class StandardError
@@ -554,6 +558,30 @@ entries:
       url: "/ObjectSpace.html"
       output: web pdf
       type: homepage
+    - title: module PNGBIT
+      url: "/PNGBIT.html"
+      output: web pdf
+      type: homepage
+    - title: module PRS
+      url: "/PRS.html"
+      output: web pdf
+      type: homepage
+    - title: class PRS::Compiler
+      url: "/PRS_Compiler.html"
+      output: web pdf
+      type: homepage
+    - title: module PSG
+      url: "/PSG.html"
+      output: web pdf
+      type: homepage
+    - title: class PSG::Driver
+      url: "/PSG_Driver.html"
+      output: web pdf
+      type: homepage
+    - title: class PSG::Keyboard
+      url: "/PSG_Keyboard.html"
+      output: web pdf
+      type: homepage
     - title: class PicoLine
       url: "/PicoLine.html"
       output: web pdf
@@ -610,6 +638,22 @@ entries:
       url: "/RNG.html"
       output: web pdf
       type: homepage
+    - title: class Rapicco
+      url: "/Rapicco.html"
+      output: web pdf
+      type: homepage
+    - title: class Rapicco::Parser
+      url: "/Rapicco_Parser.html"
+      output: web pdf
+      type: homepage
+    - title: class Rapicco::Slide
+      url: "/Rapicco_Slide.html"
+      output: web pdf
+      type: homepage
+    - title: class Rapicco::Sprite
+      url: "/Rapicco_Sprite.html"
+      output: web pdf
+      type: homepage
     - title: module RbConfig
       url: "/RbConfig.html"
       output: web pdf
@@ -646,8 +690,20 @@ entries:
       url: "/Shell_Command.html"
       output: web pdf
       type: homepage
+    - title: module Shinonome
+      url: "/Shinonome.html"
+      output: web pdf
+      type: homepage
+    - title: module Signal
+      url: "/Signal.html"
+      output: web pdf
+      type: homepage
     - title: class Task
       url: "/Task.html"
+      output: web pdf
+      type: homepage
+    - title: class Task::Stat
+      url: "/Task_Stat.html"
       output: web pdf
       type: homepage
     - title: class Time

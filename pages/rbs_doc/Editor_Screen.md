@@ -59,7 +59,7 @@ instance.start() { (self, Editor::Buffer, Integer) -> void }  -> void
 ```ruby
 instance.footer_height -> Integer
 ```
-### quit_by_ctrl_c (accessor)
+### quit_by_sigint (accessor)
 ```ruby
-instance.quit_by_ctrl_c -> bool
+instance.quit_by_sigint -> bool
 ```

@@ -18,3 +18,8 @@ GC.disable() -> bool
 ```ruby
 GC.enable() -> bool
 ```
+### start
+
+```ruby
+GC.start() -> bool
+```

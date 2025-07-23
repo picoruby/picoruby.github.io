@@ -155,6 +155,11 @@ instance.each_byte() { (Integer byte) -> void } -> self
 ```ruby
 instance.each_char() { (String char) -> void } -> self
 ```
+### each_line
+
+```ruby
+instance.each_line() { (String line) -> untyped } -> String
+```
 ### empty?
 
 ```ruby

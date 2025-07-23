@@ -86,7 +86,7 @@ instance.run_shell-> void
 ### show_logo
 
 ```ruby
-instance.show_logo-> nil
+instance.show_logo(?Integer color_num)-> void
 ```
 ### start
 

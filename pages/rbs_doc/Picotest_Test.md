@@ -59,6 +59,11 @@ instance.assert_true(bool result) -> void
 ```ruby
 instance.list_tests() -> Array[Symbol]
 ```
+### report_exeption
+
+```ruby
+instance.report_exeption(untyped data) -> void
+```
 ### setup
 
 ```ruby
