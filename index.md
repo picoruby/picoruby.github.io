@@ -57,9 +57,10 @@ Microcontroller programming framework.
 
 #### 1-1 Getting start with R2P2
 
-- Download the latest `R2P2-*.uf2` from the releases page of the repository
+- Download the latest `R2P2-*.uf2` from [the releases page of the repository](https://github.com/picoruby/R2P2/releases)
 - Drag and drop it into the RPI-RP2 drive
 - Open a proper port in your terminal emulator
+- Check if the ROM is sane. See [R2P2 ROM corruption on RP2040/RP2350](rom-corruption)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/s4M4rBnPSus?si=--2VC4Od8wssmHUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

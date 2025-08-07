@@ -26,6 +26,10 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
+    - title: R2P2 ROM corruption
+      url: /rom-corruption
+      output: web, pdf
+      type: homepage
     - title: R2P2 WiFi Config
       url: /wifi
       output: web
