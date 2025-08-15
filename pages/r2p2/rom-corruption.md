@@ -20,7 +20,7 @@ This process may sometimes fail, so please follow the steps below to verify that
   ![](/images/r2p2-init-failure.png)
 
 - If this happens, please `reboot` again
-- If the same file check fails again, of if another file fails, it is suspected that the flash ROM state has become corrupted
+- If the same file check fails again, or if another file fails, it is suspicious that the flash ROM state has become corrupted
 - Download `flash_nuke.uf2` from the page below and install it on the microcontroller
 
     [https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#resetting-flash-memory](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#resetting-flash-memory)
@@ -29,4 +29,4 @@ This process may sometimes fail, so please follow the steps below to verify that
 
   ![](/images/r2p2-init-success.png)
 
-Even in cases other than the above, if you feel that the ROM has become corrupted, please refer to this procedure to initialize the microcontroller.
+Even in cases other than the above, if you feel that the ROM has become corrupted, use `flash_nuke.uf2` to initialize the microcontroller.
