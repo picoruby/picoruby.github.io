@@ -7,6 +7,12 @@ sidebar: picoruby_sidebar
 permalink: Kernel.html
 folder: rbs_doc
 ---
+## Instance methods (picoruby-eval)
+### eval
+
+```ruby
+instance.eval(String code) -> Object
+```
 ## Instance methods
 ### p
 
@@ -36,11 +42,6 @@ instance.puts(*_ToS objects) -> nil
 
 ```ruby
 instance.caller(?Integer start, ?Integer length) -> Array[String]
-```
-### eval
-
-```ruby
-instance.eval(String code) -> nil
 ```
 ## Instance methods (picoruby-require)
 ### load

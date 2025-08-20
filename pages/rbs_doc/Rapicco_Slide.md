@@ -11,13 +11,13 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Rapicco::Slide.new(?Hash[Symbol, String]|nil colors) -> void
+Rapicco::Slide.new(?usakame_h: Integer, ?colors: Hash[Symbol, String]|nil) -> void
 ```
 ## Instance methods
-### check_height
+### get_screen_size
 
 ```ruby
-instance.check_height() -> bool
+instance.get_screen_size() -> void
 ```
 ### render_slide
 
@@ -30,7 +30,23 @@ instance.render_slide(parser_dump_t lines) -> void
 instance.render_sprite(Sprite sprite) -> void
 ```
 ## Attr accessors
+### page_h (reader)
+```ruby
+instance.page_h -> Integer
+```
 ### page_w (reader)
 ```ruby
 instance.page_w -> Integer
+```
+### bullet (accessor)
+```ruby
+instance.bullet -> Sprite
+```
+### code_indent (accessor)
+```ruby
+instance.code_indent -> Integer
+```
+### line_margin (accessor)
+```ruby
+instance.line_margin -> Integer
 ```

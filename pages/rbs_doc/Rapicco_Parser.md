@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Rapicco::Parser.new(?font: Symbol, ?title_font: Symbol, ?code_font: Symbol, ?bold_color: Symbol) -> void
+Rapicco::Parser.new() -> void
 ```
 ### parse_attrs
 
@@ -21,13 +21,13 @@ Rapicco::Parser.parse_attrs(String str) -> Hash[Symbol, String]
 ### parse_inline
 
 ```ruby
-Rapicco::Parser.parse_inline(String src, Symbol base_color, Symbol bold_color) -> parser_dump_t
+Rapicco::Parser.parse_inline(String src, Symbol base_color, Symbol | String bold_color) -> parser_dump_t
 ```
 ## Instance methods
 ### default_font
 
 ```ruby
-instance.default_font(String | nil str) -> Symbol
+instance.default_font(String | nil str) -> (Symbol | String)
 ```
 ### dump
 
@@ -38,4 +38,21 @@ instance.dump() -> parser_dump_t
 
 ```ruby
 instance.parse(String raw_line) -> void
+```
+## Attr accessors
+### align (accessor)
+```ruby
+instance.align -> Symbol | String
+```
+### title_font (accessor)
+```ruby
+instance.title_font -> Symbol | String
+```
+### font (accessor)
+```ruby
+instance.font -> Symbol | String
+```
+### bold_color (accessor)
+```ruby
+instance.bold_color -> Symbol | String
 ```

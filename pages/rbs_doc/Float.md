@@ -13,6 +13,11 @@ folder: rbs_doc
 ```ruby
 instance.ceil_to_i() -> Integer
 ```
+### round
+
+```ruby
+instance.round() -> Integer
+```
 ## Instance methods
 ### %
 

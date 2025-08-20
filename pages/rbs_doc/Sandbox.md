@@ -54,6 +54,11 @@ instance.load_file(String path, ?join: bool) -> void
 ```ruby
 instance.result() -> untyped
 ```
+### resume
+
+```ruby
+instance.resume() -> bool
+```
 ### state
 
 ```ruby
@@ -62,17 +67,17 @@ instance.state() -> (Integer | Symbol)
 ### stop
 
 ```ruby
-instance.stop() -> void
+instance.stop() -> bool
 ```
 ### suspend
 
 ```ruby
-instance.suspend() -> nil
+instance.suspend() -> bool
 ```
 ### terminate
 
 ```ruby
-instance.terminate() -> nil
+instance.terminate() -> bool
 ```
 ### wait
 

@@ -8,10 +8,6 @@ permalink: GPIO.html
 folder: rbs_doc
 ---
 ## Type aliases
-### gpio_pin_t
-```ruby
-Integer|String|Symbol
-```
 ### gpio_logic_t
 ```ruby
 0 | 1
@@ -113,3 +109,10 @@ instance.setmode(Integer flags, ?Integer alt_function) -> 0
 ```ruby
 instance.write(Integer value) -> 0
 ```
+## Attr accessors
+### pin (reader)
+```ruby
+instance.pin -> gpio_pin_t
+```
+## Include
+[IRQ](IRQ.html)

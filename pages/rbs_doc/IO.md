@@ -127,6 +127,11 @@ instance.gets(?String rs, ?Integer limit) -> (String | nil)
 ```ruby
 instance.isatty() -> bool
 ```
+### p
+
+```ruby
+instance.p(*untyped objs) -> Object
+```
 ### path=
 
 ```ruby

@@ -197,6 +197,10 @@ entries:
       url: "/SQLite3_Exception.html"
       output: web pdf
       type: homepage
+    - title: class SignalException
+      url: "/SignalException.html"
+      output: web pdf
+      type: homepage
     - title: class StandardError
       url: "/StandardError.html"
       output: web pdf
@@ -248,6 +252,10 @@ entries:
       url: "/EC21_SoracomBeamUDP.html"
       output: web pdf
       type: homepage
+    - title: class HCSR04
+      url: "/HCSR04.html"
+      output: web pdf
+      type: homepage
     - title: class MCP3004
       url: "/MCP3004.html"
       output: web pdf
@@ -293,10 +301,6 @@ entries:
     folderitems:
     - title: class ADC
       url: "/ADC.html"
-      output: web pdf
-      type: homepage
-    - title: class GPIO
-      url: "/GPIO.html"
       output: web pdf
       type: homepage
     - title: class I2C
@@ -426,12 +430,32 @@ entries:
       url: "/GC.html"
       output: web pdf
       type: homepage
+    - title: class GPIO
+      url: "/GPIO.html"
+      output: web pdf
+      type: homepage
+    - title: class HCSR04::TimeoutError
+      url: "/HCSR04_TimeoutError.html"
+      output: web pdf
+      type: homepage
+    - title: class HCSR04::WraparoundError
+      url: "/HCSR04_WraparoundError.html"
+      output: web pdf
+      type: homepage
     - title: class IIRFilter
       url: "/IIRFilter.html"
       output: web pdf
       type: homepage
     - title: class IO
       url: "/IO.html"
+      output: web pdf
+      type: homepage
+    - title: module IRQ
+      url: "/IRQ.html"
+      output: web pdf
+      type: homepage
+    - title: class IRQ::IRQInstance
+      url: "/IRQ_IRQInstance.html"
       output: web pdf
       type: homepage
     - title: module JS
@@ -618,6 +642,14 @@ entries:
       url: "/Picotest_Test.html"
       output: web pdf
       type: homepage
+    - title: class PitchDetector
+      url: "/PitchDetector.html"
+      output: web pdf
+      type: homepage
+    - title: class PitchDetector::Note
+      url: "/PitchDetector_Note.html"
+      output: web pdf
+      type: homepage
     - title: class Prism
       url: "/Prism.html"
       output: web pdf
@@ -690,8 +722,8 @@ entries:
       url: "/Shell.html"
       output: web pdf
       type: homepage
-    - title: class Shell::Command
-      url: "/Shell_Command.html"
+    - title: class Shell::Job
+      url: "/Shell_Job.html"
       output: web pdf
       type: homepage
     - title: module Shinonome

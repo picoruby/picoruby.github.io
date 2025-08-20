@@ -40,11 +40,6 @@ Time.mktime(Integer year, ?Integer | String month, ?Integer day, ?Integer hour, 
 ```ruby
 Time.now(?in: String | Integer | nil) -> Time
 ```
-### set_hwclock
-
-```ruby
-Time.set_hwclock(Time) -> void
-```
 ### time_methods
 
 ```ruby

@@ -38,3 +38,8 @@ instance.read_raw() -> Integer
 ```ruby
 instance.read_voltage() -> Float
 ```
+## Attr accessors
+### input (reader)
+```ruby
+instance.input -> Integer
+```

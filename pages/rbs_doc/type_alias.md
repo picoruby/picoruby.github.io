@@ -5,6 +5,11 @@ permalink: /type_alias.html
 folder: rbs_doc
 ---
 
+## gpio_pin_t
+```rbs
+Integer|String|Symbol
+```
+
 ## header_t
 ```rbs
 Hash[String, String]

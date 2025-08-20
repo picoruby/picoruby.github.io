@@ -13,8 +13,3 @@ folder: rbs_doc
 ```ruby
 instance.[](Symbol key) -> untyped
 ```
-### to_s
-
-```ruby
-instance.to_s() -> String
-```

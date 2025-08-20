@@ -19,26 +19,6 @@ Array[Hash[Symbol, untyped]]
 Rapicco.new(String path) -> void
 ```
 ## Instance methods
-### next_page
-
-```ruby
-instance.next_page() -> void
-```
-### prev_page
-
-```ruby
-instance.prev_page() -> void
-```
-### render_page
-
-```ruby
-instance.render_page(Integer page) -> void
-```
-### render_usakame
-
-```ruby
-instance.render_usakame() -> void
-```
 ### run
 
 ```ruby

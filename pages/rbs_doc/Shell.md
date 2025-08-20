@@ -27,6 +27,11 @@ Shell.bootstrap(String file) -> bool
 ```ruby
 Shell.ensure_system_file(String path, String code, ?(Integer | nil) crc) -> void
 ```
+### find_executable
+
+```ruby
+Shell.find_executable(String name) -> String?
+```
 ### get_device
 
 ```ruby
@@ -73,6 +78,11 @@ Shell.setup_system_files(?(String | nil) root, ?force: bool) -> void
 Shell.simple_question(String question) { (String answer) -> boolish } -> void
 ```
 ## Instance methods
+### builtin?
+
+```ruby
+instance.builtin?(String name) -> bool
+```
 ### run_irb
 
 ```ruby
