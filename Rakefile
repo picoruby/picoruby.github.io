@@ -23,7 +23,7 @@ task :install_picoruby => [PICORUBY_DIR, MRUBYC_DIR]
 directory PICORUBY_DIR do
   sh "git clone https://github.com/picoruby/picoruby.git"
   FileUtils.cd("picoruby") do
-    sh "git checkout use-builtin-Task"
+    sh "git submodule update --init --recursive"
   end
   FileUtils.cd("lib") do
     sh "bundle install"
@@ -34,7 +34,7 @@ directory MRUBYC_DIR do
   FileUtils.cd("picoruby/mrbgems/picoruby-mrubyc/lib") do
     sh "git clone https://github.com/mrubyc/mrubyc.git"
     FileUtils.cd("mrubyc") do
-      sh "git checkout fix-picoruby-irb"
+      sh "git submodule update --init --recursive"
     end
   end
 end
