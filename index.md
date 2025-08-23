@@ -40,17 +40,17 @@ Microcontroller programming framework.
 |picoruby-adc|✓|✓|✓|
 |picoruby-ble| |✓| |
 |picoruby-cyw43| |✓| |
-|picoruby-env|✓|✓|✓ |
+|picoruby-env|✓|✓|✓|
 |picoruby-filesystem-fat|✓|✓|✓|
 |picoruby-gpio|✓|✓|✓|
-|picoruby-i2c|✓|✓| |
+|picoruby-i2c|✓|✓|✓|
 |picoruby-io-console|✓|✓|✓|
 |picoruby-machine|✓|✓|✓|
 |picoruby-net| |✓| |
 |picoruby-pwm|✓|✓|✓|
 |picoruby-rng|✓|✓|✓|
 |picoruby-spi|✓|✓|✓|
-|picoruby-uart|✓|✓| |
+|picoruby-uart|✓|✓|✓|
 |picoruby-watchdog|✓|✓| |
 
 ### Tutorial of R2P2
