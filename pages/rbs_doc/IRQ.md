@@ -40,5 +40,5 @@ IRQ.unregister(irq_id_t id) -> bool
 ### irq
 
 ```ruby
-instance.irq(irq_event_type_t event_type, **untyped opts) { (irq_peri_t peri, irq_event_type_t event_type) -> void } -> void
+instance.irq(irq_event_type_t event_type, **untyped opts) { (irq_peri_t peri, irq_event_type_t event_type, Object capture) -> void } -> void
 ```

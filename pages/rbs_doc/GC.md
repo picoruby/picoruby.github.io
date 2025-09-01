@@ -1,8 +1,8 @@
 ---
-title: class GC
+title: module GC
 keywords: GC
-tags: [class]
-summary: GC class of PicoRuby
+tags: [module]
+summary: GC module of PicoRuby
 sidebar: picoruby_sidebar
 permalink: GC.html
 folder: rbs_doc

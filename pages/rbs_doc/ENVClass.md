@@ -17,7 +17,7 @@ ENVClass.new() -> ENVClass
 ### []
 
 ```ruby
-instance.[](String key) -> String
+instance.[](String key) -> (String | nil)
 ```
 ### []=
 

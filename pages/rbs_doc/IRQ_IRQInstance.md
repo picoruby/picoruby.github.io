@@ -40,6 +40,10 @@ instance.enabled?() -> bool
 instance.unregister() -> bool
 ```
 ## Attr accessors
+### capture (accessor)
+```ruby
+instance.capture -> Object
+```
 ### peripheral (reader)
 ```ruby
 instance.peripheral -> irq_peri_t

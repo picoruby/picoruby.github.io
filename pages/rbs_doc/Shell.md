@@ -35,12 +35,12 @@ Shell.find_executable(String name) -> String?
 ### get_device
 
 ```ruby
-Shell.get_device(:gpio, String | Symbol name) -> GPIO
-Shell.get_device(:adc,  String | Symbol name) -> ADC
-Shell.get_device(:i2c,  String | Symbol name) -> I2C
-Shell.get_device(:spi,  String | Symbol name) -> SPI
-Shell.get_device(:uart, String | Symbol name) -> UART
-Shell.get_device(:pwm,  String | Symbol name) -> PWM
+Shell.get_device(:gpio, String | Symbol name) -> GPIO?
+Shell.get_device(:adc,  String | Symbol name) -> ADC?
+Shell.get_device(:i2c,  String | Symbol name) -> I2C?
+Shell.get_device(:spi,  String | Symbol name) -> SPI?
+Shell.get_device(:uart, String | Symbol name) -> UART?
+Shell.get_device(:pwm,  String | Symbol name) -> PWM?
 ```
 ### new
 

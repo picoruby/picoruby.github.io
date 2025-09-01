@@ -25,13 +25,6 @@ I2C.new(
   ) -> instance
 ```
 ## Instance methods
-### outputs_array
-
-```ruby
-instance.outputs_array(
-    Array[outputs_t] outputs
-  ) -> Array[Integer]
-```
 ### read
 
 ```ruby
@@ -54,5 +47,6 @@ instance.write(
     Integer i2c_adrs_7,
     *outputs_t outputs,
     ?timeout: Integer,
+    ?nostop: bool,
   ) -> Integer
 ```

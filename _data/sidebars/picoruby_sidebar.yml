@@ -426,7 +426,7 @@ entries:
       url: "/FileTest.html"
       output: web pdf
       type: homepage
-    - title: class GC
+    - title: module GC
       url: "/GC.html"
       output: web pdf
       type: homepage
@@ -760,6 +760,10 @@ entries:
       type: homepage
     - title: class VFS::File
       url: "/VFS_File.html"
+      output: web pdf
+      type: homepage
+    - title: class VRAM
+      url: "/VRAM.html"
       output: web pdf
       type: homepage
     - title: class Vim
