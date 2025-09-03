@@ -24,6 +24,16 @@ VRAM.new(w: Integer, h: Integer, cols: Integer, rows: Integer) -> void
 ```ruby
 instance.dirty_pages() -> Array[page_t]
 ```
+### draw_bitmap
+
+```ruby
+instance.draw_bitmap(x: Integer, y: Integer, w: Integer, h: Integer, data: Array[Integer]) -> void
+```
+### draw_bytes
+
+```ruby
+instance.draw_bytes(x: Integer, y: Integer, w: Integer, h: Integer, data: String) -> void
+```
 ### draw_line
 
 ```ruby

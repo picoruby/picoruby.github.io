@@ -562,6 +562,10 @@ entries:
       url: "/Net_HTTPClient.html"
       output: web pdf
       type: homepage
+    - title: class Net::HTTPClientBase
+      url: "/Net_HTTPClientBase.html"
+      output: web pdf
+      type: homepage
     - title: class Net::HTTPSClient
       url: "/Net_HTTPSClient.html"
       output: web pdf
@@ -712,6 +716,10 @@ entries:
       type: homepage
     - title: class SQLite3::Statement
       url: "/SQLite3_Statement.html"
+      output: web pdf
+      type: homepage
+    - title: class SSD1306
+      url: "/SSD1306.html"
       output: web pdf
       type: homepage
     - title: class Sandbox

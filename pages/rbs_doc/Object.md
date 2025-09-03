@@ -142,6 +142,11 @@ instance.nil?() -> bool
 ```ruby
 instance.private(?Symbol) -> void
 ```
+### public
+
+```ruby
+instance.public(?Symbol) -> void
+```
 ### raise
 
 ```ruby

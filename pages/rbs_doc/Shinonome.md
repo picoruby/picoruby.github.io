@@ -10,7 +10,7 @@ folder: rbs_doc
 ## Type aliases
 ### shinonome_t
 ```ruby
-[Integer, Integer,     Array[Integer], Array[Integer]]
+[Integer, Integer,     Array[Integer], Array[Array[Integer]]]
 ```
 ## Singleton methods
 ### draw
