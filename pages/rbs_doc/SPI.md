@@ -16,12 +16,16 @@ folder: rbs_doc
 ```ruby
 0|1|2|3
 ```
+### spi_output_t
+```ruby
+Integer|String|Array[Integer]
+```
 ## Singleton methods
 ### new
 
 ```ruby
 SPI.new(
-    unit: Symbol,
+    unit: Symbol | String,
     ?frequency: Integer,
     ?sck_pin: Integer,
     ?cipo_pin: Integer,
@@ -29,7 +33,7 @@ SPI.new(
     ?cs_pin: Integer,
     ?mode: spi_mode_t,
     ?first_bit: spi_first_bit_t
-  ) -> instance
+  ) -> SPI
 ```
 ## Instance methods
 ### cipo_pin
@@ -52,11 +56,6 @@ instance.cs_pin() -> Integer
 ```ruby
 instance.deselect() -> void
 ```
-### params_to_array
-
-```ruby
-instance.params_to_array(*(Integer|String)|Array[Integer] params) -> Array[Integer]
-```
 ### read
 
 ```ruby
@@ -75,15 +74,19 @@ instance.select() ?{ (SPI) -> untyped } -> untyped
 ### transfer
 
 ```ruby
-instance.transfer(*(Integer|String)|Array[Integer] outputs, ?additional_read_bytes: Integer) -> String
+instance.transfer(*spi_output_t outputs, ?additional_read_bytes: Integer) -> String
 ```
 ### write
 
 ```ruby
-instance.write(*(Integer|String)|Array[Integer] outputs) -> Integer
+instance.write(*spi_output_t outputs) -> Integer
 ```
 ## Attr accessors
-### unit (reader)
+### cs (accessor)
+```ruby
+instance.cs -> GPIO
+```
+### unit (accessor)
 ```ruby
 instance.unit -> String
 ```

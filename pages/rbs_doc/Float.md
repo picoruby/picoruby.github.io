@@ -7,16 +7,24 @@ sidebar: picoruby_sidebar
 permalink: Float.html
 folder: rbs_doc
 ---
-## Instance methods (picoruby-float-ext)
-### ceil_to_i
+## Instance methods (picoruby-numeric-ext)
+### ceil
 
 ```ruby
-instance.ceil_to_i() -> Integer
+instance.ceil() -> Integer
+instance.ceil(?Integer digits) -> (Integer | Float)
+```
+### floor
+
+```ruby
+instance.floor() -> Integer
+instance.floor(Integer digits) -> (Integer | Float)
 ```
 ### round
 
 ```ruby
 instance.round() -> Integer
+instance.round(?Integer digits) -> (Integer | Float)
 ```
 ## Instance methods
 ### %

@@ -53,7 +53,7 @@ sudo yum install gtkterm
 
 ## macOS Environment
 
-Unfortunately, macOS has very few excellent GUI-based serial terminal emulators. Please choose from the following options:
+Unfortunately, macOS has very few excellent serial terminal emulators. Please choose from the following options:
 
 ### Option 1: screen (Simple method)
 
@@ -157,12 +157,15 @@ Logout and login required after this setting.
 ## For Workshop Participants: What to Bring on the Day
 
 - Laptop (with setup completed as above)
-- **USB Cable** (Important)
+- USB Cable
   - **Microcontroller side**: Micro-B (Raspberry Pi Pico at EuRuKo 2024 and 2025) or USB-C (M5Stack at mruby Girls Matsue 2025)
   - **PC side**: Compatible with your laptop (Type-A, Type-C, etc.)
   - **Required**: Data communication capable (charging-only cables won't work)
   
 > **Important**: While the organizers will also provide USB cables, **we recommend bringing your own for peace of mind**. Many recent laptops have only Type-C ports, so please bring appropriate adapter cables or hubs.
+
+- Glasses: Workshop will be detailed work, so bring glasses if you are not confident in your eyesight
+- Tweezers: Not required, but for handling small components, they will be very helpful
 
 ## Questions & Support
 
