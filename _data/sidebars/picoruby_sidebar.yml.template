@@ -26,6 +26,14 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
+    - title: Setup and General Information
+      url: /setup
+      output: web, pdf
+      type: homepage
+    - title: Terminal Emulator
+      url: /terminal-emulator
+      output: web, pdf
+      type: homepage
     - title: R2P2 ROM corruption
       url: /rom-corruption
       output: web, pdf

@@ -162,7 +162,7 @@ Logout and login required after this setting.
   - **PC side**: Compatible with your laptop (Type-A, Type-C, etc.)
   - **Required**: Data communication capable (charging-only cables won't work)
   
-> **Important**: While the organizers will also provide USB cables, **we recommend bringing your own for peace of mind**. Many recent laptops have only Type-C ports, so please bring appropriate adapter cables or hubs.
+  > While the organizers will also provide USB cables, **we recommend bringing your own for peace of mind**. Many recent laptops have only Type-C ports, so please bring appropriate adapter cables or hubs.
 
 - Glasses: Workshop will be detailed work, so bring glasses if you are not confident in your eyesight
 - Tweezers: Not required, but for handling small components, they will be very helpful
