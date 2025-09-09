@@ -10,7 +10,7 @@ folder: r2p2
 
 This page describes how to set up R2P2 and provides general information about its usage.
 
-## Laptop Security Settings
+## **IMPORTANT**: Laptop Security Settings
 
 If your laptop is configured to prohibit writing to USB memory devices, likely due to your company's security policy, it will not function😣
 
