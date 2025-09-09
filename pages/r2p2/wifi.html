@@ -12,8 +12,6 @@ folder: r2p2
 
 <p>In general, PicoRuby workshops do not use the BLE WiFi setup described on this page to avoid BLE signal interference. Instead, we use the command line tool <code>nmcli</code>.</p>
 
-<button id="connect">Scan Devices</button>
-
 <form id="wifiForm" style="display:none;">
   <table>
     <tr>
@@ -56,6 +54,17 @@ folder: r2p2
   </table>
 </form>
 
+<h2>Prerequisites</h2>
+<ul>
+  <li>R2P2 device with BLE support (as of 2025, Raspberry Pi Pico W and Pico2 W are supported)</li>
+  <li>PC or Android device with Bluetooth and a compatible web browser (see Supported OSes and Browsers below)</li>
+  <li>WiFi network has to be 2.4GHz. 5GHz is not supported by Raspberry Pi Pico (2) W.</li>
+  <li>Also, IPv4 only. IPv6 is not supported.</li>
+</ul>
+
+<hr />
+
+<button id="connect">Scan Devices</button>
 
 <h2>How to Use</h2>
 <ol>

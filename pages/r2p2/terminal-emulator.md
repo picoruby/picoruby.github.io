@@ -55,7 +55,7 @@ sudo yum install gtkterm
 ## macOS
 
 Implementing a terminal emulator seems to be no easy task, as it involves dealing with escape sequences, timing issues, and all sorts of edge cases that have become complicated due to historical reasons.
-Unfortunately, we don't know if there are any serial terminal emulators for macOS comparable to Tera Term or GTKTerm (if there are, please let us know).
+Unfortunately, we don't know if there are any serial terminal emulators for macOS comparable to Tera Term or GTKTerm.
 
 So far, you can choose from the following options:
 
@@ -74,9 +74,13 @@ brew install screen
 sudo port install screen
 ```
 
+In addition to screen, you may also be able to use **minicom**, **picocom**, **CoolTerm**, or **PuTTY**.
+
+Actually, the author of PicoRuby doesn't have a Mac, so we can't decide which one is the best.
+
 ### Option 2: Ubuntu in Virtual Environment (Recommended)
 
-**We strongly recommend this option for a more stable environment.**
+**We recommend this option for a more stable environment.**
 
 1. Create a virtual machine using **VirtualBox** or **VMware**
 2. Install **Ubuntu Desktop**
