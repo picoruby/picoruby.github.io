@@ -31,6 +31,10 @@ entries:
       url: /terminal-emulator
       output: web, pdf
       type: homepage
+    - title: Breadboard Basics
+      url: /breadboard-basics
+      output: web, pdf
+      type: homepage
     - title: R2P2 ROM corruption
       url: "/rom-corruption"
       output: web, pdf
