@@ -2,7 +2,7 @@
 keywords: documentation
 layout: page
 tags: [tips]
-title: R2P2 ROM corruption on RP2040/RP2350
+title: R2P2 ROM Corruption on RP2040/RP2350
 sidebar: picoruby_sidebar
 permalink: rom-corruption
 folder: r2p2

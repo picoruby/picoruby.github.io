@@ -10,6 +10,8 @@ folder: r2p2
 
 <p>This is a web-based tool to configure WiFi setting of R2P2 device via BLE.</p>
 
+<p>In general, PicoRuby workshops do not use the BLE WiFi setup described on this page to avoid BLE signal interference. Instead, we use the command line tool <code>nmcli</code>.</p>
+
 <button id="connect">Scan Devices</button>
 
 <form id="wifiForm" style="display:none;">
@@ -80,8 +82,6 @@ folder: r2p2
 <p>
 The WiFi password is stored in an encrypted format on the device. However, if the device is lost or stolen, the password could potentially be decrypted by a third party. Additionally, we cannot guarantee that communication between the browser and the device over BLE (Bluetooth Low Energy) is adequately encrypted in all environments. The authors and contributors of PicoRuby and R2P2 disclaim any and all responsibility for any issues arising from the use of our software.
 </p>
-
-<p>FYI: You can also use <code>nmcli</code> command in the R2P2 shell for wired-configuration.</p>
 
 <h3>Supported OSes and Browsers</h3>
 <table>

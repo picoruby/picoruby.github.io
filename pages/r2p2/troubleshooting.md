@@ -2,13 +2,13 @@
 keywords: documentation
 layout: page
 tags: [tips]
-title:  Trouble Shoot
+title:  Troubleshooting
 sidebar: picoruby_sidebar
-permalink: trouble-shoot
+permalink: troubleshooting
 folder: r2p2
 ---
 
-## Trouble Shoot
+## Troubleshooting
 
 ### If R2P2 hang up (sorry for a bug😓)
 - Plug off, wait 3 seconds, and plug in again

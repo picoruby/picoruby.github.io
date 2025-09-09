@@ -2,13 +2,13 @@
 keywords: documentation
 layout: page
 tags: [tips]
-title:  Setup and General Information
+title:  Setup & General Information
 sidebar: picoruby_sidebar
 permalink: setup
 folder: r2p2
 ---
 
-This page describes how to set up R2P2 and provides general information about its usage.
+This section describes how to set up R2P2 and provides general information for R2P2 newbies.
 
 ## **IMPORTANT**: Laptop Security Settings
 
@@ -38,11 +38,9 @@ If your laptop is configured to prohibit writing to USB memory devices, likely d
 
   ![](/images/r2p2-drive.png)
 
-- Open a proper serial port on the terminal emulator
+- Open a proper serial port on the terminal emulator. Information about terminal emulators can be found in [/terminal-emulator](/terminal-emulator)
 
   ![](/images/open-com-port.png)
-
-  Information about terminal emulators can be found in [/terminal-emulator](/terminal-emulator).
 
 - If you could see a screen like this, congrats, now you are at the gate🎉
 
@@ -51,5 +49,7 @@ If your laptop is configured to prohibit writing to USB memory devices, likely d
   - R2P2 shell is a Unix-like shell, so you can use commands like `ls`, `cd`, `cat`, `rm`, etc.
   - `irb` command starts an interactive Ruby shell
 
-- Lastly, we would like you to stargaze at the [picoruby/picoruby](https://github.com/picoruby/picoruby) repo🌟
+Congratulations! Now you at the gate!
+
+Before starting to dig into R2P2, we would like you to **stargaze** at the [picoruby/picoruby](https://github.com/picoruby/picoruby) repo🌟
 

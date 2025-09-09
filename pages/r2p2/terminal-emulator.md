@@ -12,11 +12,12 @@ This page explains how to set up a serial terminal emulator to operate the R2P2 
 
 ## Required Preparation
 
-A **serial terminal emulator** is required for communication with microcontroller boards. Please follow the setup instructions below according to your operating system.
+A **serial terminal emulator** is required for communication with R2P2.
+Please follow the setup instructions below according to your operating system.
 
 ---
 
-## Windows Environment
+## Windows
 
 ### Installing Tera Term
 
@@ -27,7 +28,7 @@ We recommend **Tera Term**. It's free, user-friendly, and ideal for serial commu
 
 ---
 
-## Linux Environment
+## Linux
 
 ### Installing GTKTerm
 
@@ -51,9 +52,12 @@ sudo yum install gtkterm
 
 ---
 
-## macOS Environment
+## macOS
 
-Unfortunately, macOS has very few excellent serial terminal emulators. Please choose from the following options:
+Implementing a terminal emulator seems to be no easy task, as it involves dealing with escape sequences, timing issues, and all sorts of edge cases that have become complicated due to historical reasons.
+Unfortunately, we don't know if there are any serial terminal emulators for macOS comparable to Tera Term or GTKTerm (if there are, please let us know).
+
+So far, you can choose from the following options:
 
 ### Option 1: screen (Simple method)
 
@@ -157,6 +161,7 @@ Logout and login required after this setting.
 ## For Workshop Participants: What to Bring on the Day
 
 - Laptop (with setup completed as above)
+  - **IMPORTANT**: If your laptop is configured to prohibit writing to USB memory devices, likely due to your company's security policy, it won't work. Please check in advance.
 - USB Cable
   - **Microcontroller side**: Micro-B (Raspberry Pi Pico at EuRuKo 2024 and 2025) or USB-C (M5Stack at mruby Girls Matsue 2025)
   - **PC side**: Compatible with your laptop (Type-A, Type-C, etc.)

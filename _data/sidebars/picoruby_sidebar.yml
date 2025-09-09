@@ -23,6 +23,13 @@ entries:
       url: "/index.html"
       output: web, pdf
       type: homepage
+    - title: Contribution
+      url: "/contribution.html"
+      output: web, pdf
+      type: homepage
+  - title: R2P2 & Workshop
+    output: web, pdf
+    folderitems:
     - title: Setup and General Information
       url: /setup
       output: web, pdf
@@ -35,16 +42,16 @@ entries:
       url: /breadboard-basics
       output: web, pdf
       type: homepage
-    - title: R2P2 ROM corruption
-      url: "/rom-corruption"
-      output: web, pdf
-      type: homepage
     - title: R2P2 WiFi Config
       url: "/wifi"
       output: web
       type: homepage
-    - title: Contribution
-      url: "/contribution.html"
+    - title: Troubleshooting
+      url: "/troubleshooting"
+      output: web, pdf
+      type: homepage
+    - title: ROM Corruption
+      url: "/rom-corruption"
       output: web, pdf
       type: homepage
   - title: Builtin
