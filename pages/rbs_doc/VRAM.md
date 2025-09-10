@@ -22,17 +22,17 @@ VRAM.new(w: Integer, h: Integer, cols: Integer, rows: Integer) -> void
 ### dirty_pages
 
 ```ruby
-instance.dirty_pages() -> Array[page_t]
+instance.dirty_pages(?bool clear_dirty) -> Array[page_t]
 ```
 ### draw_bitmap
 
 ```ruby
-instance.draw_bitmap(x: Integer, y: Integer, w: Integer, h: Integer, data: Array[Integer]) -> void
+instance.draw_bitmap(x: Integer, y: Integer, w: Integer, h: Integer, data: Array[Integer]) -> self
 ```
 ### draw_bytes
 
 ```ruby
-instance.draw_bytes(x: Integer, y: Integer, w: Integer, h: Integer, data: String) -> void
+instance.draw_bytes(x: Integer, y: Integer, w: Integer, h: Integer, data: String) -> self
 ```
 ### draw_line
 
@@ -44,6 +44,11 @@ instance.draw_line(Integer x0, Integer y0, Integer x1, Integer y1, Integer color
 ```ruby
 instance.draw_rect(Integer x, Integer y, Integer w, Integer h, Integer color) -> self
 ```
+### erase
+
+```ruby
+instance.erase(Integer x, Integer y, Integer w, Integer h) -> self
+```
 ### fill
 
 ```ruby
@@ -52,7 +57,7 @@ instance.fill(Integer color) -> self
 ### pages
 
 ```ruby
-instance.pages() -> Array[page_t]
+instance.pages(?bool clear_dirty) -> Array[page_t]
 ```
 ### set_pixel
 

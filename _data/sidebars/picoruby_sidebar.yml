@@ -31,15 +31,15 @@ entries:
     output: web, pdf
     folderitems:
     - title: Setup and General Information
-      url: /setup
+      url: "/setup"
       output: web, pdf
       type: homepage
     - title: Terminal Emulator
-      url: /terminal-emulator
+      url: "/terminal-emulator"
       output: web, pdf
       type: homepage
     - title: Breadboard Basics
-      url: /breadboard-basics
+      url: "/breadboard-basics"
       output: web, pdf
       type: homepage
     - title: R2P2 WiFi Config
@@ -767,6 +767,10 @@ entries:
       type: homepage
     - title: class Task::Stat
       url: "/Task_Stat.html"
+      output: web pdf
+      type: homepage
+    - title: module Terminus
+      url: "/Terminus.html"
       output: web pdf
       type: homepage
     - title: class Time
