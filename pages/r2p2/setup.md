@@ -26,7 +26,7 @@ If your laptop is configured to prohibit writing to USB memory devices, likely d
 
   ![](/images/download-r2p2.png)
 
-- Connect Pi Pico and PC while\\npressing the BOOTSEL button. Then you'll find *RPI-RP2* drive in file manager (File Explorer or Finder)
+- Connect Pi Pico and PC while\\npressing the BOOTSEL button. Then you'll find *RPI-RP2* (for Raspi Pico) or *RP2350* (for Pico2) drive in file manager (File Explorer or Finder)
 
   ![](/images/bootsel-button.png)
 

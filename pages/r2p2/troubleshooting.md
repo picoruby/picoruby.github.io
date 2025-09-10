@@ -11,13 +11,23 @@ folder: r2p2
 ## Troubleshooting
 
 ### If R2P2 hang up (sorry for a bug😓)
-- Plug off, wait 3 seconds, and plug in again
+Plug off, wait 3 seconds, and plug in again.
+If it obviously hangs up again, please report it to us with the detail steps to reproduce the hang up.
 
 ### NoMethodError???
 
-Picoruby is a small implementation for limited resources.
+PicoRuby is a small implementation for limited resources.
 It has less classes and methods than your usual CRuby.
 You can check API documentation here: https://picoruby.github.io/Array.html
+
+### NoMemoryError???
+
+You will get `NoMemoryError` if you use R2P2 and IRB for a long time.
+Please reboot R2P2.
+
+If a single script causes `NoMemoryError`, the script might be too large.
+Otherwise, you have hit a memory leak bug.
+Please report it to us with the script!
 
 ### If you `app.rb` doesn't work as you wish and you get lost control of Raspi Pico
 
