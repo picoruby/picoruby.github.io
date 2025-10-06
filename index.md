@@ -79,7 +79,7 @@ Microcontroller programming framework.
 #### 2-1 LED blinking (L-chika) with PicoRuby
 
 - Turn on the on-board LED using PicoIRB
-- If you use "Pico W", write `led = CYW43::GPIO.new(CYW43::GPIO::LED_PIN)`
+- If you use "Pico W", write `led = CYW43::GPIO.new(CYW43::GPIO::LED_PIN)` but CYW43 must be initialized first with `CYW43.init`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qbs25xDu7t8?si=zcAU2jCnh-boiyow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
