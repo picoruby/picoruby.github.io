@@ -21,6 +21,11 @@ Object.ancestors() -> Array[Class]
 ```ruby
 instance.__id__() -> Integer
 ```
+### alias_method
+
+```ruby
+instance.alias_method(Symbol|String new_name, Symbol|String old_name) -> Symbol
+```
 ### class?
 
 ```ruby
@@ -121,6 +126,11 @@ instance.include(Module) -> void
 
 ```ruby
 instance.inspect() -> String
+```
+### instance_methods
+
+```ruby
+instance.instance_methods(?bool inherited_too) -> Array[Symbol]
 ```
 ### is_a?
 

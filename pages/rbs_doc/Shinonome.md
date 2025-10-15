@@ -16,8 +16,8 @@ folder: rbs_doc
 ### draw
 
 ```ruby
-Shinonome.draw(Symbol | String fontname, String line, Integer scale) { (shinonome_t) -> void } -> void
-Shinonome.draw(Symbol | String fontname, String line, Integer scale) -> shinonome_t
+Shinonome.draw(Symbol | String name, String line, Integer scale) { (shinonome_t) -> void } -> void
+Shinonome.draw(Symbol | String name, String line, Integer scale) -> shinonome_t
 ```
 ### go12
 

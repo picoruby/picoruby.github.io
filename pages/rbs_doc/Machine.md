@@ -13,6 +13,11 @@ folder: rbs_doc
 ```ruby
 Machine.busy_wait_ms(Integer ms) -> Integer
 ```
+### debug_puts
+
+```ruby
+Machine.debug_puts(String str) -> nil
+```
 ### deep_sleep
 
 ```ruby

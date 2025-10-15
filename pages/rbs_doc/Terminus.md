@@ -36,6 +36,6 @@ Terminus._8x16(String text) -> terminus_t
 ### draw
 
 ```ruby
-Terminus.draw(Symbol | String fontname, String line, ?Integer scale) { (terminus_t) -> void } -> void
-Terminus.draw(Symbol | String fontname, String line, ?Integer scale) -> terminus_t
+Terminus.draw(String name, String line, ?Integer scale) { (terminus_t) -> void } -> void
+Terminus.draw(String name, String line, ?Integer scale) -> terminus_t
 ```
