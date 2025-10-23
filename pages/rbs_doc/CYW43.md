@@ -13,10 +13,20 @@ folder: rbs_doc
 ```ruby
 CYW43.connect_timeout(String ssid, String password, Integer augh, ?Integer timeout) -> bool
 ```
+### dhcp_supplied?
+
+```ruby
+CYW43.dhcp_supplied?() -> bool
+```
 ### disable_sta_mode
 
 ```ruby
 CYW43.disable_sta_mode() -> bool
+```
+### disconnect
+
+```ruby
+CYW43.disconnect() -> bool
 ```
 ### enable_sta_mode
 
@@ -42,4 +52,9 @@ CYW43.link_connected?(?bool print_status) -> bool
 
 ```ruby
 CYW43.tcpip_link_status() -> Integer
+```
+### tcpip_link_status_name
+
+```ruby
+CYW43.tcpip_link_status_name() -> String
 ```

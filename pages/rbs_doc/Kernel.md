@@ -55,8 +55,19 @@ instance.load(String path) -> bool
 instance.require(String name) -> bool
 ```
 ## Instance methods
+### gets
+
+```ruby
+instance.gets() -> String?
+```
 ### system
 
 ```ruby
 instance.system(String command) -> bool
+```
+## Instance methods
+### each_line_from_files_or_stdin
+
+```ruby
+instance.each_line_from_files_or_stdin() { (String line) -> void } -> void
 ```

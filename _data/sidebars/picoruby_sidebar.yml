@@ -521,6 +521,10 @@ entries:
       url: "/Keyboard_Irb.html"
       output: web pdf
       type: homepage
+    - title: class Logger
+      url: "/Logger.html"
+      output: web pdf
+      type: homepage
     - title: class MML
       url: "/MML.html"
       output: web pdf
@@ -753,6 +757,26 @@ entries:
       url: "/Shell_Job.html"
       output: web pdf
       type: homepage
+    - title: class Shell::Parser
+      url: "/Shell_Parser.html"
+      output: web pdf
+      type: homepage
+    - title: class Shell::Parser::Node
+      url: "/Shell_Parser_Node.html"
+      output: web pdf
+      type: homepage
+    - title: class Shell::Pipeline
+      url: "/Shell_Pipeline.html"
+      output: web pdf
+      type: homepage
+    - title: class Shell::Pipeline::PipeIO
+      url: "/Shell_Pipeline_PipeIO.html"
+      output: web pdf
+      type: homepage
+    - title: class Shell::Tokenizer
+      url: "/Shell_Tokenizer.html"
+      output: web pdf
+      type: homepage
     - title: module Shinonome
       url: "/Shinonome.html"
       output: web pdf
@@ -791,6 +815,10 @@ entries:
       type: homepage
     - title: class VFS::File
       url: "/VFS_File.html"
+      output: web pdf
+      type: homepage
+    - title: class VM
+      url: "/VM.html"
       output: web pdf
       type: homepage
     - title: class VRAM

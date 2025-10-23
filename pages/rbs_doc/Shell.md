@@ -8,6 +8,11 @@ permalink: Shell.html
 folder: rbs_doc
 ---
 ## Type aliases
+### token_hash
+```ruby
+Hash[Symbol, untyped]
+```
+## Type aliases
 ### rtc_t
 ```ruby
 PCF8523
@@ -82,6 +87,31 @@ Shell.simple_question(String question) { (String answer) -> boolish } -> void
 
 ```ruby
 instance.builtin?(String name) -> bool
+```
+### execute_ast
+
+```ruby
+instance.execute_ast(Parser::Node ast) -> void
+```
+### execute_builtin_with_redirect
+
+```ruby
+instance.execute_builtin_with_redirect(String name, Array[String] args, String? redirect_in, String? redirect_out, Symbol? redirect_mode) -> void
+```
+### execute_command_node
+
+```ruby
+instance.execute_command_node(Parser::Node node) -> void
+```
+### execute_pipeline_node
+
+```ruby
+instance.execute_pipeline_node(Parser::Node node) -> void
+```
+### execute_with_file_redirect
+
+```ruby
+instance.execute_with_file_redirect(Array[String] cmd_args, String? redirect_in, String? redirect_out, Symbol? redirect_mode) -> void
 ```
 ### run_irb
 

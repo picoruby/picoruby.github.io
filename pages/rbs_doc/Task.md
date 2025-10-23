@@ -43,6 +43,11 @@ Task.pp_status() -> void
 ```ruby
 Task.stat() -> Task::Stat
 ```
+### tick
+
+```ruby
+Task.tick() -> Integer
+```
 ## Instance methods
 ### join
 

@@ -73,3 +73,13 @@ Machine.tud_task() -> void
 ```ruby
 Machine.unique_id() -> String
 ```
+### uptime_formatted
+
+```ruby
+Machine.uptime_formatted() -> String
+```
+### uptime_us
+
+```ruby
+Machine.uptime_us() -> Integer
+```
