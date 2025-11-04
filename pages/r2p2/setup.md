@@ -56,15 +56,16 @@ function copyToClipboard(text) {
 </script>
 
 This script will:
-- Fetch the latest R2P2 release from GitHub
-- Display available binaries for your platform
-- Download and decompress the selected binary to the current directory automatically
+- Display available binaries for Raspberry Pi Pico series
+- Download the selected binary from GitHub and decompress it in the current directory automatically
+
+**For downloadable options, see the image in the section below.**
 
 ### Method 2: Manual Download
 
-- Download the latest *R2P2-PICORUBY-\*.uf2* from GitHub https://github.com/picoruby/R2P2/releases (Of course, unzip it)
+- Download the latest *R2P2-PICORUBY-\*.uf2* from GitHub [https://github.com/picoruby/R2P2/releases/latest](https://github.com/picoruby/R2P2/releases/latest) (Of course, unzip or tar it)
 
-  ![](/images/download-r2p2.png)
+  ![*-PICO-*.ufs for Raspi Pico (works on Pico W but no wireless feature. *-PICO2_W-*.uf2 for Pico 2 W (works on Pico 2)](/images/download-r2p2.png)
 
 ### Install the UF2 File
 
