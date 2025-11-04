@@ -22,9 +22,53 @@ If your laptop is configured to prohibit writing to USB memory devices, likely d
 
 ## Install R2P2 into Raspi Pico
 
+There are two ways to download the R2P2 binary:
+
+### Method 1: Automated Download (Recommended)
+
+First, navigate to the directory where you want to download the binary:
+
+```sh
+cd path/to/your/directory
+```
+
+Then run the following command in your terminal:
+
+<div style="position: relative; margin: 16px 0;">
+<pre style="position: relative; margin: 0;"><code>curl -fsSL https://picoruby.org/r2p2-latest.sh | sh</code></pre>
+<button onclick="copyToClipboard('curl -fsSL https://picoruby.org/r2p2-latest.sh | sh')" style="position: absolute; top: 8px; right: 8px; padding: 5px 10px; background-color: #0366d6; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">Copy</button>
+</div>
+
+<span id="copy-feedback" style="color: green; font-size: 12px; display: none;">Copied to clipboard!</span>
+
+<script>
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(function() {
+    var feedback = document.getElementById('copy-feedback');
+    feedback.style.display = 'inline';
+    setTimeout(function() {
+      feedback.style.display = 'none';
+    }, 2000);
+  }).catch(function(err) {
+    alert('Failed to copy: ' + err);
+  });
+}
+</script>
+
+This script will:
+- Fetch the latest R2P2 release from GitHub
+- Display available binaries for your platform
+- Download and decompress the selected binary to the current directory automatically
+
+### Method 2: Manual Download
+
 - Download the latest *R2P2-PICORUBY-\*.uf2* from GitHub https://github.com/picoruby/R2P2/releases (Of course, unzip it)
 
   ![](/images/download-r2p2.png)
+
+### Install the UF2 File
+
+Regardless of which download method you used, you need to manually install the UF2 file to your Pi Pico:
 
 - Connect Pi Pico and PC while\\npressing the BOOTSEL button. Then you'll find *RPI-RP2* (for Raspi Pico) or *RP2350* (for Pico2) drive in file manager (File Explorer or Finder)
 
