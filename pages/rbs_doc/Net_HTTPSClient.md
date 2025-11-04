@@ -7,3 +7,9 @@ sidebar: picoruby_sidebar
 permalink: Net_HTTPSClient.html
 folder: rbs_doc
 ---
+## Singleton methods
+### new
+
+```ruby
+Net::HTTPSClient.new(String host, Integer port) -> void
+```

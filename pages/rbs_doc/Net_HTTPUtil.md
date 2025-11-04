@@ -11,5 +11,5 @@ folder: rbs_doc
 ### format_response
 
 ```ruby
-Net::HTTPUtil.format_response(String?) -> (httpreturn | nil)
+Net::HTTPUtil.format_response(String? raw_response) -> (httpreturn | nil)
 ```

@@ -15,7 +15,7 @@ for u in $urls; do
 done
 
 printf "Enter the number to download: "
-read n
+read n < /dev/tty
 
 eval "url=\$url$n"
 

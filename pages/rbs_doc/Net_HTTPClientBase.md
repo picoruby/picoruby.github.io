@@ -34,3 +34,8 @@ instance.post(String path, header_t headers, String body) -> (httpreturn | nil)
 ```ruby
 instance.put(String path, header_t headers, String body) -> (httpreturn | nil)
 ```
+## Attr accessors
+### port (reader)
+```ruby
+instance.port -> Integer
+```

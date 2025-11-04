@@ -58,3 +58,9 @@ CYW43.tcpip_link_status() -> Integer
 ```ruby
 CYW43.tcpip_link_status_name() -> String
 ```
+## Singleton methods
+### ipv4_address
+
+```ruby
+CYW43.ipv4_address() -> (String | nil)
+```

@@ -377,6 +377,10 @@ entries:
       url: "/CRC.html"
       output: web pdf
       type: homepage
+    - title: class CYW43
+      url: "/CYW43.html"
+      output: web pdf
+      type: homepage
     - title: class Data
       url: "/Data.html"
       output: web pdf
@@ -719,6 +723,10 @@ entries:
       type: homepage
     - title: module RbConfig
       url: "/RbConfig.html"
+      output: web pdf
+      type: homepage
+    - title: class RotateLogger
+      url: "/RotateLogger.html"
       output: web pdf
       type: homepage
     - title: class SK6812
