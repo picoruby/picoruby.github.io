@@ -51,7 +51,7 @@ Machine.read_memory(Integer address, Integer size) -> String
 ### set_hwclock
 
 ```ruby
-Machine.set_hwclock(Integer tv_sec, Integer tv_nsec) -> Integer
+Machine.set_hwclock(Integer tv_sec) -> Integer
 ```
 ### sleep
 

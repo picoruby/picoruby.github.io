@@ -82,7 +82,7 @@ instance.resume() -> self
 ### status
 
 ```ruby
-instance.status() -> Symbol
+instance.status() -> String
 ```
 ### suspend
 

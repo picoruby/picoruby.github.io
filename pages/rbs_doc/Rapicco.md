@@ -16,7 +16,7 @@ Array[Hash[Symbol, untyped]]
 ### new
 
 ```ruby
-Rapicco.new(String path) -> void
+Rapicco.new(String path, ?cols: Integer, ?rows: Integer) -> void
 ```
 ## Instance methods
 ### run

@@ -11,7 +11,7 @@ folder: rbs_doc
 ### connect_timeout
 
 ```ruby
-CYW43.connect_timeout(String ssid, String password, Integer augh, ?Integer timeout) -> bool
+CYW43.connect_timeout(String ssid, String password, Integer auth, ?Integer timeout) -> bool
 ```
 ### dhcp_supplied?
 
@@ -43,6 +43,21 @@ CYW43.init(?String country, ?force: bool) -> bool
 ```ruby
 CYW43.initialized?() -> bool
 ```
+### ipv4_address
+
+```ruby
+CYW43.ipv4_address() -> (String | nil)
+```
+### ipv4_gateway
+
+```ruby
+CYW43.ipv4_gateway() -> (String | nil)
+```
+### ipv4_netmask
+
+```ruby
+CYW43.ipv4_netmask() -> (String | nil)
+```
 ### link_connected?
 
 ```ruby
@@ -57,10 +72,4 @@ CYW43.tcpip_link_status() -> Integer
 
 ```ruby
 CYW43.tcpip_link_status_name() -> String
-```
-## Singleton methods
-### ipv4_address
-
-```ruby
-CYW43.ipv4_address() -> (String | nil)
 ```

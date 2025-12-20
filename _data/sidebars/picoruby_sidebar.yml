@@ -136,6 +136,10 @@ entries:
       url: "/EOFError.html"
       output: web pdf
       type: homepage
+    - title: class ESP32::ConnectTimeout
+      url: "/ESP32_ConnectTimeout.html"
+      output: web pdf
+      type: homepage
     - title: class Exception
       url: "/Exception.html"
       output: web pdf
@@ -263,12 +267,12 @@ entries:
       url: "/DipSwitch.html"
       output: web pdf
       type: homepage
-    - title: class EC21
-      url: "/EC21.html"
+    - title: class ESP32
+      url: "/ESP32.html"
       output: web pdf
       type: homepage
-    - title: class EC21::SoracomBeamUDP
-      url: "/EC21_SoracomBeamUDP.html"
+    - title: class ESP32::Auth
+      url: "/ESP32_Auth.html"
       output: web pdf
       type: homepage
     - title: class HCSR04
@@ -301,6 +305,22 @@ entries:
       type: homepage
     - title: class PCF8523
       url: "/PCF8523.html"
+      output: web pdf
+      type: homepage
+    - title: class QuectelCellular
+      url: "/QuectelCellular.html"
+      output: web pdf
+      type: homepage
+    - title: class QuectelCellular::HTTPSClient
+      url: "/QuectelCellular_HTTPSClient.html"
+      output: web pdf
+      type: homepage
+    - title: class QuectelCellular::SoracomBeamUDP
+      url: "/QuectelCellular_SoracomBeamUDP.html"
+      output: web pdf
+      type: homepage
+    - title: class QuectelCellular::UDPClient
+      url: "/QuectelCellular_UDPClient.html"
       output: web pdf
       type: homepage
     - title: class RTD
@@ -373,12 +393,12 @@ entries:
       url: "/Base64.html"
       output: web pdf
       type: homepage
-    - title: module CRC
-      url: "/CRC.html"
+    - title: class BasicSocket
+      url: "/BasicSocket.html"
       output: web pdf
       type: homepage
-    - title: class CYW43
-      url: "/CYW43.html"
+    - title: module CRC
+      url: "/CRC.html"
       output: web pdf
       type: homepage
     - title: class Data
@@ -391,6 +411,10 @@ entries:
       type: homepage
     - title: class ENVClass
       url: "/ENVClass.html"
+      output: web pdf
+      type: homepage
+    - title: class ESP32::WiFi
+      url: "/ESP32_WiFi.html"
       output: web pdf
       type: homepage
     - title: module Editor
@@ -585,6 +609,34 @@ entries:
       url: "/Net_DNS.html"
       output: web pdf
       type: homepage
+    - title: class Net::Delete
+      url: "/Net_Delete.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::Get
+      url: "/Net_Get.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTP
+      url: "/Net_HTTP.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPAccepted
+      url: "/Net_HTTPAccepted.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPBadGateway
+      url: "/Net_HTTPBadGateway.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPBadRequest
+      url: "/Net_HTTPBadRequest.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPBadResponse
+      url: "/Net_HTTPBadResponse.html"
+      output: web pdf
+      type: homepage
     - title: class Net::HTTPClient
       url: "/Net_HTTPClient.html"
       output: web pdf
@@ -593,16 +645,136 @@ entries:
       url: "/Net_HTTPClientBase.html"
       output: web pdf
       type: homepage
+    - title: class Net::HTTPClientError
+      url: "/Net_HTTPClientError.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPCreated
+      url: "/Net_HTTPCreated.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPForbidden
+      url: "/Net_HTTPForbidden.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPFound
+      url: "/Net_HTTPFound.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPGenericRequest
+      url: "/Net_HTTPGenericRequest.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPInformation
+      url: "/Net_HTTPInformation.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPInternalServerError
+      url: "/Net_HTTPInternalServerError.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPMethodNotAllowed
+      url: "/Net_HTTPMethodNotAllowed.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPMovedPermanently
+      url: "/Net_HTTPMovedPermanently.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPNoContent
+      url: "/Net_HTTPNoContent.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPNotFound
+      url: "/Net_HTTPNotFound.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPNotImplemented
+      url: "/Net_HTTPNotImplemented.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPNotModified
+      url: "/Net_HTTPNotModified.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPOK
+      url: "/Net_HTTPOK.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPRedirection
+      url: "/Net_HTTPRedirection.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPRequest
+      url: "/Net_HTTPRequest.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPResponse
+      url: "/Net_HTTPResponse.html"
+      output: web pdf
+      type: homepage
     - title: class Net::HTTPSClient
       url: "/Net_HTTPSClient.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPSeeOther
+      url: "/Net_HTTPSeeOther.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPServerError
+      url: "/Net_HTTPServerError.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPServiceUnavailable
+      url: "/Net_HTTPServiceUnavailable.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPSuccess
+      url: "/Net_HTTPSuccess.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPTemporaryRedirect
+      url: "/Net_HTTPTemporaryRedirect.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPUnauthorized
+      url: "/Net_HTTPUnauthorized.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::HTTPUnknownResponse
+      url: "/Net_HTTPUnknownResponse.html"
       output: web pdf
       type: homepage
     - title: class Net::HTTPUtil
       url: "/Net_HTTPUtil.html"
       output: web pdf
       type: homepage
+    - title: class Net::Head
+      url: "/Net_Head.html"
+      output: web pdf
+      type: homepage
     - title: class Net::NTP
       url: "/Net_NTP.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::NTP::Packet
+      url: "/Net_NTP_Packet.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::Options
+      url: "/Net_Options.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::Patch
+      url: "/Net_Patch.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::Post
+      url: "/Net_Post.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::Put
+      url: "/Net_Put.html"
       output: web pdf
       type: homepage
     - title: class Net::TCPClient
@@ -753,6 +925,14 @@ entries:
       url: "/SSD1306.html"
       output: web pdf
       type: homepage
+    - title: class SSLContext
+      url: "/SSLContext.html"
+      output: web pdf
+      type: homepage
+    - title: class SSLSocket
+      url: "/SSLSocket.html"
+      output: web pdf
+      type: homepage
     - title: class Sandbox
       url: "/Sandbox.html"
       output: web pdf
@@ -793,6 +973,14 @@ entries:
       url: "/Signal.html"
       output: web pdf
       type: homepage
+    - title: class TCPServer
+      url: "/TCPServer.html"
+      output: web pdf
+      type: homepage
+    - title: class TCPSocket
+      url: "/TCPSocket.html"
+      output: web pdf
+      type: homepage
     - title: class Task
       url: "/Task.html"
       output: web pdf
@@ -811,6 +999,18 @@ entries:
       type: homepage
     - title: class Time::TimeMethods
       url: "/Time_TimeMethods.html"
+      output: web pdf
+      type: homepage
+    - title: class UDPSocket
+      url: "/UDPSocket.html"
+      output: web pdf
+      type: homepage
+    - title: module URI
+      url: "/URI.html"
+      output: web pdf
+      type: homepage
+    - title: class URI::URIClass
+      url: "/URI_URIClass.html"
       output: web pdf
       type: homepage
     - title: class VFS

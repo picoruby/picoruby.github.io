@@ -11,5 +11,5 @@ folder: rbs_doc
 ### get
 
 ```ruby
-Net::NTP.get(?String ntp_server, ?Integer ntp_port) -> [Integer, Integer]
+Net::NTP.get(?String host, ?Integer port, ?Integer timeout) -> (Integer | nil)
 ```

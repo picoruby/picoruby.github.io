@@ -62,7 +62,7 @@ instance.resume() -> bool
 ### state
 
 ```ruby
-instance.state() -> (Integer | Symbol)
+instance.state() -> Symbol
 ```
 ### stop
 

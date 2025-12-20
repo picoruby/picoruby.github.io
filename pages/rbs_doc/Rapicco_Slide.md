@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Rapicco::Slide.new(?usakame_h: Integer, ?colors: Hash[Symbol, String]|nil) -> void
+Rapicco::Slide.new(?usakame_h: Integer, ?colors: Hash[Symbol, String]|nil, ?cols: Integer, ?rows: Integer) -> void
 ```
 ## Instance methods
 ### get_screen_size

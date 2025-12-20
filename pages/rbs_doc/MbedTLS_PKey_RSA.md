@@ -20,11 +20,6 @@ MbedTLS::PKey::RSA.new(String key) -> MbedTLS::PKey::RSA
 MbedTLS::PKey::RSA.new(Integer bits, ?Integer exponent) -> MbedTLS::PKey::RSA
 ```
 ## Instance methods
-### free
-
-```ruby
-instance.free() -> self
-```
 ### private?
 
 ```ruby
