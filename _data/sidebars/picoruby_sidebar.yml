@@ -873,7 +873,7 @@ entries:
       url: "/RMT.html"
       output: web pdf
       type: homepage
-    - title: class RNG
+    - title: module RNG
       url: "/RNG.html"
       output: web pdf
       type: homepage

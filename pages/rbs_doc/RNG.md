@@ -1,8 +1,8 @@
 ---
-title: class RNG
+title: module RNG
 keywords: RNG
-tags: [class]
-summary: RNG class of PicoRuby
+tags: [module]
+summary: RNG module of PicoRuby
 sidebar: picoruby_sidebar
 permalink: RNG.html
 folder: rbs_doc

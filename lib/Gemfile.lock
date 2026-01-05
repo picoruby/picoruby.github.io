@@ -1,38 +1,52 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.2.1)
+    activesupport (8.1.1)
       base64
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.3.1)
       connection_pool (>= 2.2.5)
       drb
       i18n (>= 1.6, < 2)
+      json
       logger (>= 1.4.2)
       minitest (>= 5.1)
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
-    ast (2.4.2)
-    base64 (0.2.0)
-    bigdecimal (3.1.8)
-    concurrent-ruby (1.3.4)
-    connection_pool (2.4.1)
-    csv (3.3.0)
-    drb (2.2.1)
-    ffi (1.17.0)
-    fileutils (1.7.2)
-    i18n (1.14.6)
+      uri (>= 0.13.1)
+    ast (2.4.3)
+    base64 (0.3.0)
+    bigdecimal (4.0.1)
+    concurrent-ruby (1.3.6)
+    connection_pool (3.0.2)
+    csv (3.3.5)
+    drb (2.2.3)
+    ffi (1.17.3)
+    ffi (1.17.3-aarch64-linux-gnu)
+    ffi (1.17.3-aarch64-linux-musl)
+    ffi (1.17.3-arm-linux-gnu)
+    ffi (1.17.3-arm-linux-musl)
+    ffi (1.17.3-arm64-darwin)
+    ffi (1.17.3-x86-linux-gnu)
+    ffi (1.17.3-x86-linux-musl)
+    ffi (1.17.3-x86_64-darwin)
+    ffi (1.17.3-x86_64-linux-gnu)
+    ffi (1.17.3-x86_64-linux-musl)
+    fileutils (1.8.0)
+    i18n (1.14.8)
       concurrent-ruby (~> 1.0)
-    json (2.7.2)
-    language_server-protocol (3.17.0.3)
+    json (2.18.0)
+    language_server-protocol (3.17.0.5)
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    logger (1.6.1)
-    minitest (5.25.1)
-    parser (3.3.5.0)
+    logger (1.7.0)
+    minitest (6.0.1)
+      prism (~> 1.5)
+    parser (3.3.10.0)
       ast (~> 2.4.1)
       racc
+    prism (1.7.0)
     racc (1.8.1)
     rainbow (3.1.1)
     rb-fsevent (0.11.2)
@@ -40,8 +54,8 @@ GEM
       ffi (~> 1.0)
     rbs (3.6.1)
       logger
-    securerandom (0.3.1)
-    steep (1.8.1)
+    securerandom (0.4.1)
+    steep (1.8.3)
       activesupport (>= 5.1)
       concurrent-ruby (>= 1.1.10)
       csv (>= 3.0.9)
@@ -56,21 +70,73 @@ GEM
       securerandom (>= 0.1)
       strscan (>= 1.0.0)
       terminal-table (>= 2, < 4)
-    strscan (3.1.0)
+    strscan (3.1.6)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.6.0)
+    uri (1.1.1)
 
 PLATFORMS
-  arm64-darwin-22
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux-gnu
+  arm-linux-musl
+  arm64-darwin
   ruby
+  x86-linux-gnu
+  x86-linux-musl
+  x86_64-darwin
+  x86_64-linux-gnu
+  x86_64-linux-musl
 
 DEPENDENCIES
   activesupport
   rbs
-  steep
+  steep (= 1.8.3)
+
+CHECKSUMS
+  activesupport (8.1.1) sha256=5e92534e8d0c8b8b5e6b16789c69dbea65c1d7b752269f71a39422e9546cea67
+  ast (2.4.3) sha256=954615157c1d6a382bc27d690d973195e79db7f55e9765ac7c481c60bdb4d383
+  base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
+  bigdecimal (4.0.1) sha256=8b07d3d065a9f921c80ceaea7c9d4ae596697295b584c296fe599dd0ad01c4a7
+  concurrent-ruby (1.3.6) sha256=6b56837e1e7e5292f9864f34b69c5a2cbc75c0cf5338f1ce9903d10fa762d5ab
+  connection_pool (3.0.2) sha256=33fff5ba71a12d2aa26cb72b1db8bba2a1a01823559fb01d29eb74c286e62e0a
+  csv (3.3.5) sha256=6e5134ac3383ef728b7f02725d9872934f523cb40b961479f69cf3afa6c8e73f
+  drb (2.2.3) sha256=0b00d6fdb50995fe4a45dea13663493c841112e4068656854646f418fda13373
+  ffi (1.17.3) sha256=0e9f39f7bb3934f77ad6feab49662be77e87eedcdeb2a3f5c0234c2938563d4c
+  ffi (1.17.3-aarch64-linux-gnu) sha256=28ad573df26560f0aedd8a90c3371279a0b2bd0b4e834b16a2baa10bd7a97068
+  ffi (1.17.3-aarch64-linux-musl) sha256=020b33b76775b1abacc3b7d86b287cef3251f66d747092deec592c7f5df764b2
+  ffi (1.17.3-arm-linux-gnu) sha256=5bd4cea83b68b5ec0037f99c57d5ce2dd5aa438f35decc5ef68a7d085c785668
+  ffi (1.17.3-arm-linux-musl) sha256=0d7626bb96265f9af78afa33e267d71cfef9d9a8eb8f5525344f8da6c7d76053
+  ffi (1.17.3-arm64-darwin) sha256=0c690555d4cee17a7f07c04d59df39b2fba74ec440b19da1f685c6579bb0717f
+  ffi (1.17.3-x86-linux-gnu) sha256=868a88fcaf5186c3a46b7c7c2b2c34550e1e61a405670ab23f5b6c9971529089
+  ffi (1.17.3-x86-linux-musl) sha256=f0286aa6ef40605cf586e61406c446de34397b85dbb08cc99fdaddaef8343945
+  ffi (1.17.3-x86_64-darwin) sha256=1f211811eb5cfaa25998322cdd92ab104bfbd26d1c4c08471599c511f2c00bb5
+  ffi (1.17.3-x86_64-linux-gnu) sha256=3746b01f677aae7b16dc1acb7cb3cc17b3e35bdae7676a3f568153fb0e2c887f
+  ffi (1.17.3-x86_64-linux-musl) sha256=086b221c3a68320b7564066f46fed23449a44f7a1935f1fe5a245bd89d9aea56
+  fileutils (1.8.0) sha256=8c6b1df54e2540bdb2f39258f08af78853aa70bad52b4d394bbc6424593c6e02
+  i18n (1.14.8) sha256=285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5
+  json (2.18.0) sha256=b10506aee4183f5cf49e0efc48073d7b75843ce3782c68dbeb763351c08fd505
+  language_server-protocol (3.17.0.5) sha256=fd1e39a51a28bf3eec959379985a72e296e9f9acfce46f6a79d31ca8760803cc
+  listen (3.9.0) sha256=db9e4424e0e5834480385197c139cb6b0ae0ef28cc13310cfd1ca78377d59c67
+  logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
+  minitest (6.0.1) sha256=7854c74f48e2e975969062833adc4013f249a4b212f5e7b9d5c040bf838d54bb
+  parser (3.3.10.0) sha256=ce3587fa5cc55a88c4ba5b2b37621b3329aadf5728f9eafa36bbd121462aabd6
+  prism (1.7.0) sha256=10062f734bf7985c8424c44fac382ac04a58124ea3d220ec3ba9fe4f2da65103
+  racc (1.8.1) sha256=4a7f6929691dbec8b5209a0b373bc2614882b55fc5d2e447a21aaa691303d62f
+  rainbow (3.1.1) sha256=039491aa3a89f42efa1d6dec2fc4e62ede96eb6acd95e52f1ad581182b79bc6a
+  rb-fsevent (0.11.2) sha256=43900b972e7301d6570f64b850a5aa67833ee7d87b458ee92805d56b7318aefe
+  rb-inotify (0.11.1) sha256=a0a700441239b0ff18eb65e3866236cd78613d6b9f78fea1f9ac47a85e47be6e
+  rbs (3.6.1) sha256=ed7273d018556844583d1785ac54194e67eec594d68e317d57fa90ad035532c0
+  securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
+  steep (1.8.3) sha256=ace32b0cc5075a57b372adeb4f593feb859f043f3017f84eb822c7f844fb5662
+  strscan (3.1.6) sha256=ebd56df0b0468b00a1f2004b4078c34df58c3506b2bba939e7531892aece81f3
+  terminal-table (3.0.2) sha256=f951b6af5f3e00203fb290a669e0a85c5dd5b051b3b023392ccfd67ba5abae91
+  tzinfo (2.0.6) sha256=8daf828cc77bcf7d63b0e3bdb6caa47e2272dcfaf4fbfe46f8c3a9df087a829b
+  unicode-display_width (2.6.0) sha256=12279874bba6d5e4d2728cef814b19197dbb10d7a7837a869bab65da943b7f5a
+  uri (1.1.1) sha256=379fa58d27ffb1387eaada68c749d1426738bd0f654d812fcc07e7568f5c57c6
 
 BUNDLED WITH
-   2.6.0.dev
+  4.0.3
