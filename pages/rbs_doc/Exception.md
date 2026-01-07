@@ -7,6 +7,12 @@ sidebar: picoruby_sidebar
 permalink: Exception.html
 folder: rbs_doc
 ---
+## Instance methods
+### backtrace
+
+```ruby
+instance.backtrace() -> ::Array[String]
+```
 ## Singleton methods
 ### exception
 
@@ -16,7 +22,7 @@ Exception.exception(?string) -> instance
 ### new
 
 ```ruby
-Exception.new(?string | _ToS message) -> self
+Exception.new(?string | _ToS message) -> Exception
 ```
 ## Instance methods
 ### ==

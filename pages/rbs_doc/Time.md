@@ -18,13 +18,6 @@ folder: rbs_doc
 ```ruby
 Time.at((Integer|Float|Time), ?in: String | Integer | nil) -> Time
 ```
-### new
-
-```ruby
-Time.new(?Integer? year, ?Integer? month, ?Integer? day, ?Integer? hour, ?Integer? min, ?Integer? sec, ?String | Integer | nil) -> void
-Time.new(?Integer? year, ?Integer? month, ?Integer? day, ?Integer? hour, ?Integer? min, ?Integer? sec, in: String | Integer | nil) -> void
-Time.new(String, ?in: string | int | nil, ?precision: int) -> void
-```
 ### local
 
 ```ruby
@@ -34,6 +27,13 @@ Time.local(Integer year, ?Integer | String month, ?Integer day, ?Integer hour, ?
 
 ```ruby
 Time.mktime(Integer year, ?Integer | String month, ?Integer day, ?Integer hour, ?Integer min, ?Integer sec, ?Integer usec_with_frac) -> Time
+```
+### new
+
+```ruby
+Time.new(?Integer? year, ?Integer? month, ?Integer? day, ?Integer? hour, ?Integer? min, ?Integer? sec, ?String | Integer | nil) -> Time
+Time.new(?Integer? year, ?Integer? month, ?Integer? day, ?Integer? hour, ?Integer? min, ?Integer? sec, in: String | Integer | nil) -> Time
+Time.new(String, ?in: string | int | nil, ?precision: int) -> Time
 ```
 ### now
 

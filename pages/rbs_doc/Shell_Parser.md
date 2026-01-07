@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Shell::Parser.new(String input) -> void
+Shell::Parser.new(String input) -> Parser
 ```
 ## Instance methods
 ### advance

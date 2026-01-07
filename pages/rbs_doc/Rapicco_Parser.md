@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Rapicco::Parser.new() -> void
+Rapicco::Parser.new() -> Parser
 ```
 ### parse_attrs
 

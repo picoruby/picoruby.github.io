@@ -22,7 +22,7 @@ String | Integer
 ### new
 
 ```ruby
-JSON::Digger.new(String) -> void
+JSON::Digger.new(String) -> Digger
 ```
 ## Instance methods
 ### dig

@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-FAT::Dir.new(String path) -> void
+FAT::Dir.new(String path) -> Dir
 ```
 ## Instance methods
 ### close

@@ -54,6 +54,8 @@ module RBSDoc
       else
         format_param(params) if params
       end
+    rescue => e
+      puts "Error formatting params for key #{key}: #{e.message}"
     end
 
     def format_param(param)

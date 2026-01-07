@@ -33,7 +33,7 @@ MML.compile_multi(Array[String] tracks, ?exception: bool, ?loop: bool) { (Intege
 ### new
 
 ```ruby
-MML.new(Integer track_id, String track, ?exception: bool, ?loop: bool) -> void
+MML.new(Integer track_id, String track, ?exception: bool, ?loop: bool) -> MML
 ```
 ## Instance methods
 ### reduce_next

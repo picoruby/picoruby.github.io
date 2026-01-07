@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-PSG::Keyboard.new(PSG::Driver driver, ?channel: Integer) -> void
+PSG::Keyboard.new(PSG::Driver driver, ?channel: Integer) -> PSG::Keyboard
 ```
 ### note_to_period
 

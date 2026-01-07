@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-PRS::Compiler.new() -> void
+PRS::Compiler.new() -> PRS::Compiler
 ```
 ### save
 

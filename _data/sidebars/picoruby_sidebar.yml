@@ -346,6 +346,10 @@ entries:
       url: "/I2C.html"
       output: web pdf
       type: homepage
+    - title: module IRQ
+      url: "/IRQ.html"
+      output: web pdf
+      type: homepage
     - title: class PWM
       url: "/PWM.html"
       output: web pdf
@@ -365,6 +369,10 @@ entries:
   - title: General
     output: web pdf
     folderitems:
+    - title: class Array
+      url: "/Array.html"
+      output: web pdf
+      type: homepage
     - title: class BLE
       url: "/BLE.html"
       output: web pdf
@@ -393,12 +401,56 @@ entries:
       url: "/Base64.html"
       output: web pdf
       type: homepage
+    - title: class BasicObject
+      url: "/BasicObject.html"
+      output: web pdf
+      type: homepage
     - title: class BasicSocket
       url: "/BasicSocket.html"
       output: web pdf
       type: homepage
     - title: module CRC
       url: "/CRC.html"
+      output: web pdf
+      type: homepage
+    - title: class Class
+      url: "/Class.html"
+      output: web pdf
+      type: homepage
+    - title: module DRb
+      url: "/DRb.html"
+      output: web pdf
+      type: homepage
+    - title: class DRb::DRbBadURI
+      url: "/DRb_DRbBadURI.html"
+      output: web pdf
+      type: homepage
+    - title: class DRb::DRbConnError
+      url: "/DRb_DRbConnError.html"
+      output: web pdf
+      type: homepage
+    - title: class DRb::DRbError
+      url: "/DRb_DRbError.html"
+      output: web pdf
+      type: homepage
+    - title: class DRb::DRbMessage
+      url: "/DRb_DRbMessage.html"
+      output: web pdf
+      type: homepage
+    - title: class DRb::DRbObject
+      url: "/DRb_DRbObject.html"
+      output: web pdf
+      type: homepage
+    - title: class DRb::DRbServer
+      url: "/DRb_DRbServer.html"
+      output: web pdf
+      type: homepage
+    - title: class DRb::DRbUnknown
+      url: "/DRb_DRbUnknown.html"
+      output: web pdf
+      type: homepage
+    - title: class DRb::DRbUnknownError
+      url: "/DRb_DRbUnknownError.html"
       output: web pdf
       type: homepage
     - title: class Data
@@ -437,6 +489,10 @@ entries:
       url: "/Editor_Screen.html"
       output: web pdf
       type: homepage
+    - title: class Exception
+      url: "/Exception.html"
+      output: web pdf
+      type: homepage
     - title: class FAT
       url: "/FAT.html"
       output: web pdf
@@ -473,6 +529,118 @@ entries:
       url: "/FileTest.html"
       output: web pdf
       type: homepage
+    - title: module Funicular
+      url: "/Funicular.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::Cable
+      url: "/Funicular_Cable.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Cable::Consumer
+      url: "/Funicular_Cable_Consumer.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Cable::Subscription
+      url: "/Funicular_Cable_Subscription.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Cable::Subscriptions
+      url: "/Funicular_Cable_Subscriptions.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Component
+      url: "/Funicular_Component.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Component::StateAccessor
+      url: "/Funicular_Component_StateAccessor.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::Debug
+      url: "/Funicular_Debug.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::EnvironmentInquirer
+      url: "/Funicular_EnvironmentInquirer.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::ErrorBoundary
+      url: "/Funicular_ErrorBoundary.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::FileUpload
+      url: "/Funicular_FileUpload.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::FormBuilder
+      url: "/Funicular_FormBuilder.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::HTTP
+      url: "/Funicular_HTTP.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::HTTP::Response
+      url: "/Funicular_HTTP_Response.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Model
+      url: "/Funicular_Model.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::RouteHelpers
+      url: "/Funicular_RouteHelpers.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Router
+      url: "/Funicular_Router.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::StyleAccessor
+      url: "/Funicular_StyleAccessor.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::StyleBuilder
+      url: "/Funicular_StyleBuilder.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::StyleValue
+      url: "/Funicular_StyleValue.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::VDOM
+      url: "/Funicular_VDOM.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::Component
+      url: "/Funicular_VDOM_Component.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::Differ
+      url: "/Funicular_VDOM_Differ.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::Element
+      url: "/Funicular_VDOM_Element.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::Patcher
+      url: "/Funicular_VDOM_Patcher.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::Renderer
+      url: "/Funicular_VDOM_Renderer.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::Text
+      url: "/Funicular_VDOM_Text.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::VNode
+      url: "/Funicular_VDOM_VNode.html"
+      output: web pdf
+      type: homepage
     - title: module GC
       url: "/GC.html"
       output: web pdf
@@ -489,6 +657,10 @@ entries:
       url: "/HCSR04_WraparoundError.html"
       output: web pdf
       type: homepage
+    - title: class Hash
+      url: "/Hash.html"
+      output: web pdf
+      type: homepage
     - title: class IIRFilter
       url: "/IIRFilter.html"
       output: web pdf
@@ -497,16 +669,16 @@ entries:
       url: "/IO.html"
       output: web pdf
       type: homepage
-    - title: module IRQ
-      url: "/IRQ.html"
-      output: web pdf
-      type: homepage
     - title: class IRQ::IRQInstance
       url: "/IRQ_IRQInstance.html"
       output: web pdf
       type: homepage
     - title: module JS
       url: "/JS.html"
+      output: web pdf
+      type: homepage
+    - title: module JS::Bridge
+      url: "/JS_Bridge.html"
       output: web pdf
       type: homepage
     - title: class JS::Object
@@ -559,6 +731,14 @@ entries:
       type: homepage
     - title: class Machine
       url: "/Machine.html"
+      output: web pdf
+      type: homepage
+    - title: class Markdown
+      url: "/Markdown.html"
+      output: web pdf
+      type: homepage
+    - title: module Marshal
+      url: "/Marshal.html"
       output: web pdf
       type: homepage
     - title: module MbedTLS
@@ -813,6 +993,10 @@ entries:
       url: "/PSG_Keyboard.html"
       output: web pdf
       type: homepage
+    - title: class PackHelper
+      url: "/PackHelper.html"
+      output: web pdf
+      type: homepage
     - title: class PicoLine
       url: "/PicoLine.html"
       output: web pdf
@@ -973,6 +1157,10 @@ entries:
       url: "/Signal.html"
       output: web pdf
       type: homepage
+    - title: class String
+      url: "/String.html"
+      output: web pdf
+      type: homepage
     - title: class TCPServer
       url: "/TCPServer.html"
       output: web pdf
@@ -1035,6 +1223,10 @@ entries:
       type: homepage
     - title: class Vim
       url: "/Vim.html"
+      output: web pdf
+      type: homepage
+    - title: class WebSocket
+      url: "/WebSocket.html"
       output: web pdf
       type: homepage
     - title: module YAML

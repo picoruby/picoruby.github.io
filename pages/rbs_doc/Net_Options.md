@@ -11,5 +11,5 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Net::Options.new(String path, ?Hash[String, String]? initheader) -> void
+Net::Options.new(String path, ?Hash[String, String]? initheader) -> Options
 ```

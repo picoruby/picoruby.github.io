@@ -16,7 +16,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-QuectelCellular.new(uart: UART, ?log_size: Integer) -> void
+QuectelCellular.new(uart: UART, ?log_size: Integer) -> QuectelCellular
 ```
 ## Instance methods
 ### check_sim_status

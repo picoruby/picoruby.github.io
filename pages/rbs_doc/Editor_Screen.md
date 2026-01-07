@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Editor::Screen.new-> void
+Editor::Screen.new-> Screen
 ```
 ## Instance methods
 ### calculate_visual_cursor

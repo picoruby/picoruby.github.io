@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-QuectelCellular::HTTPSClient.new(cacert: String, uart: UART, ?log_size: Integer) -> void
+QuectelCellular::HTTPSClient.new(cacert: String, uart: UART, ?log_size: Integer) -> HTTPSClient
 ```
 ## Instance methods
 ### post

@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Editor::Line.new-> void
+Editor::Line.new-> Line
 ```
 ## Instance methods
 ### feed_at_bottom

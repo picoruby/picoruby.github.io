@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-TCPServer.new(String? host, Integer service, ?Integer backlog) -> void
+TCPServer.new(String? host, Integer service, ?Integer backlog) -> TCPServer
 ```
 ## Instance methods
 ### accept

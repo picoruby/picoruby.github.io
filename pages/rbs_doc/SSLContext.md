@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-SSLContext.new() -> void
+SSLContext.new() -> SSLContext
 ```
 ## Instance methods
 ### ca_file=

@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-UDPSocket.new(?Integer port) -> void
+UDPSocket.new(?Integer port) -> UDPSocket
 ```
 ## Instance methods
 ### bind

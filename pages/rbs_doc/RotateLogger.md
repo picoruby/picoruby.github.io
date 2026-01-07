@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-RotateLogger.new(dir: String, ?basename: String, ?ext: String, ?interval: Integer, ?keep_size: Integer | nil) -> void
+RotateLogger.new(dir: String, ?basename: String, ?ext: String, ?interval: Integer, ?keep_size: Integer | nil) -> RotateLogger
 ```
 ## Instance methods
 ### close

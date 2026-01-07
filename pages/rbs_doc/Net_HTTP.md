@@ -21,7 +21,7 @@ Net::HTTP.get_response(String uri_or_host, ?String? path, ?Integer? port) -> HTT
 ### new
 
 ```ruby
-Net::HTTP.new(String address, ?Integer? port) -> void
+Net::HTTP.new(String address, ?Integer? port) -> Net::HTTP
 ```
 ### post_form
 
@@ -47,7 +47,7 @@ instance.finish() -> void
 ### get
 
 ```ruby
-instance.get(String path, ?Hash[String, String]? initheader, ?untyped dest) { (String) -> void } -> HTTPResponse
+instance.get(String path, ?Hash[String, String]? initheader, ?untyped dest) ?{ (String) -> void } -> HTTPResponse
 ```
 ### head
 
@@ -72,7 +72,7 @@ instance.request(HTTPGenericRequest req, ?String? body) ?{ (String) -> void } ->
 ### start
 
 ```ruby
-instance.start() { (HTTP) -> untyped } -> HTTP
+instance.start() { (HTTP) -> untyped } -> HTTPResponse
 instance.start() -> HTTP
 ```
 ### use_ssl?

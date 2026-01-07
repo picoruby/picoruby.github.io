@@ -16,7 +16,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-MbedTLS::Digest.new(algorithm_t algorithm) -> void
+MbedTLS::Digest.new(algorithm_t algorithm) -> MbedTLS::Digest
 ```
 ## Instance methods
 ### finish

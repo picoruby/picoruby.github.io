@@ -19,7 +19,7 @@ PCF8523
 ```
 ### device_t
 ```ruby
-GPIO | ADC | I2C | SPI | UART | PWM
+GPIO | ADC | I2C | SPI | UART | PWM | CYW43::GPIO
 ```
 ## Singleton methods
 ### bootstrap
@@ -46,11 +46,13 @@ Shell.get_device(:i2c,  String | Symbol name) -> I2C?
 Shell.get_device(:spi,  String | Symbol name) -> SPI?
 Shell.get_device(:uart, String | Symbol name) -> UART?
 Shell.get_device(:pwm,  String | Symbol name) -> PWM?
+Shell.get_device(:gpio_led, String | Symbol name) -> CYW43::GPIO?
+Shell.get_device(:gpio_trigger, String | Symbol name) -> GPIO?
 ```
 ### new
 
 ```ruby
-Shell.new(?clean: bool) -> void
+Shell.new(?clean: bool) -> Shell
 ```
 ### next_executable
 

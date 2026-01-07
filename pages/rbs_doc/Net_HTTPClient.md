@@ -11,5 +11,5 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Net::HTTPClient.new(String host, Integer port) -> void
+Net::HTTPClient.new(String host, Integer port) -> HTTPClient
 ```

@@ -16,7 +16,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Logger.new(String | untyped io_or_filename, ?level: level_t, ?buffer_max: Integer, ?trailing_lines: Integer) -> void
+Logger.new(String | untyped io_or_filename, ?level: level_t, ?buffer_max: Integer, ?trailing_lines: Integer) -> Logger
 ```
 ## Instance methods
 ### close

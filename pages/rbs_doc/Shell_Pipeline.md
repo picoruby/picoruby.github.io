@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Shell::Pipeline.new(Array[Array[String]] commands) -> void
+Shell::Pipeline.new(Array[Array[String]] commands) -> Pipeline
 ```
 ### parse
 

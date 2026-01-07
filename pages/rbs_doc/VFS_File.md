@@ -11,12 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-VFS::File.new(String path, String mode) -> void
-```
-### new
-
-```ruby
-VFS::File.new(String path, String mode) -> void
+VFS::File.new(String path, String mode) -> VFS::File
 ```
 ### open
 

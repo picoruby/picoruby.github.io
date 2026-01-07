@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Sandbox.new(?String name) -> instance
+Sandbox.new(?String name) -> Sandbox
 ```
 ## Instance methods
 ### compile

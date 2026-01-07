@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Shell::Tokenizer.new(String input) -> void
+Shell::Tokenizer.new(String input) -> Tokenizer
 ```
 ## Instance methods
 ### create_token

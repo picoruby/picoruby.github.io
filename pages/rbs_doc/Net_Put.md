@@ -11,5 +11,5 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Net::Put.new(String path, ?Hash[String, String]? initheader) -> void
+Net::Put.new(String path, ?Hash[String, String]? initheader) -> Put
 ```

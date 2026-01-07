@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Net::HTTPClientBase.new(String host) -> void
+Net::HTTPClientBase.new(String host) -> HTTPClientBase
 ```
 ## Instance methods
 ### get

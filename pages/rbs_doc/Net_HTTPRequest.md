@@ -11,5 +11,5 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Net::HTTPRequest.new(String path, ?Hash[String, String]? initheader) -> void
+Net::HTTPRequest.new(String path, ?Hash[String, String]? initheader) -> HTTPRequest
 ```

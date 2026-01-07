@@ -11,5 +11,5 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Net::Delete.new(String path, ?Hash[String, String]? initheader) -> void
+Net::Delete.new(String path, ?Hash[String, String]? initheader) -> Delete
 ```

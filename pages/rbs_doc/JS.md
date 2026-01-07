@@ -13,6 +13,11 @@ folder: rbs_doc
 ```ruby
 JS.document() -> JS::Object
 ```
+### generic_callbacks
+
+```ruby
+JS.generic_callbacks() -> JS::Object
+```
 ### global
 
 ```ruby

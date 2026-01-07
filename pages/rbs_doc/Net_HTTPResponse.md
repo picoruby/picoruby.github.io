@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Net::HTTPResponse.new(?String? code, ?String? message, ?String? http_version) -> void
+Net::HTTPResponse.new(?String? code, ?String? message, ?String? http_version) -> HTTPResponse
 ```
 ### parse
 
@@ -52,8 +52,7 @@ instance.get_fields(String key) -> Array[String | nil]
 ### read_body
 
 ```ruby
-instance.read_body() { (String) -> void } -> String?
-instance.read_body() -> String?
+instance.read_body() ?{ (String) -> void } -> String?
 ```
 ### redirect?
 

@@ -16,7 +16,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-VRAM.new(w: Integer, h: Integer, cols: Integer, rows: Integer) -> void
+VRAM.new(w: Integer, h: Integer, cols: Integer, rows: Integer) -> VRAM
 ```
 ## Instance methods
 ### dirty_pages

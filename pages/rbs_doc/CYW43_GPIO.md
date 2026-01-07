@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-CYW43::GPIO.new(Integer pin) -> void
+CYW43::GPIO.new(Integer pin) -> CYW43::GPIO
 ```
 ## Instance methods
 ### high?
