@@ -7,32 +7,6 @@ sidebar: picoruby_sidebar
 permalink: Hash.html
 folder: rbs_doc
 ---
-## Instance methods
-### any?
-
-```ruby
-instance.any?() ?{ (Key, Value) -> bool } -> bool
-```
-### dig
-
-```ruby
-instance.dig(Key, *Array[Key]) -> untyped
-```
-### each_key
-
-```ruby
-instance.each_key() { (Key) -> untyped } -> ::Hash[Key, Value]
-```
-### key?
-
-```ruby
-instance.key?(Key) -> bool
-```
-### reject
-
-```ruby
-instance.reject[K, V] { (Key, Value) -> bool } -> ::Hash[Key, Value]
-```
 ## Include
 [Enumerable](Enumerable.html)
 ## Singleton methods

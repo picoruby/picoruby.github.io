@@ -19,10 +19,30 @@ SSLContext.new() -> SSLContext
 ```ruby
 instance.ca_file=(String path) -> String
 ```
-### set_ca_cert
+### cert_file=
 
 ```ruby
-instance.set_ca_cert(Integer addr, Integer size) -> nil
+instance.cert_file=(String path) -> String
+```
+### key_file=
+
+```ruby
+instance.key_file=(String path) -> String
+```
+### set_ca
+
+```ruby
+instance.set_ca(Integer addr, Integer size) -> nil
+```
+### set_cert
+
+```ruby
+instance.set_cert(Integer addr, Integer size) -> nil
+```
+### set_key
+
+```ruby
+instance.set_key(Integer addr, Integer size) -> nil
 ```
 ### verify_mode
 

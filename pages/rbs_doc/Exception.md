@@ -7,12 +7,6 @@ sidebar: picoruby_sidebar
 permalink: Exception.html
 folder: rbs_doc
 ---
-## Instance methods
-### backtrace
-
-```ruby
-instance.backtrace() -> ::Array[String]
-```
 ## Singleton methods
 ### exception
 

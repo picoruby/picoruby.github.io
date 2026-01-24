@@ -18,33 +18,6 @@ instance.gsub(String pattern, String replacement) -> String
 ```ruby
 instance.rindex(String needle) -> (Integer | nil)
 ```
-## Instance methods
-### capitalize
-
-```ruby
-instance.capitalize() -> String
-```
-### chars
-
-```ruby
-instance.chars() -> ::Array[String]
-```
-### lines
-
-```ruby
-instance.lines() -> ::Array[String]
-```
-### slice
-
-```ruby
-instance.slice(Integer start, Integer length) -> String?
-instance.slice(Range[Integer] range) -> String?
-```
-### sub
-
-```ruby
-instance.sub(String pattern, String replacement) -> String
-```
 ## Instance methods (picoruby-pack)
 ### unpack
 
