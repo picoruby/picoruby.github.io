@@ -192,20 +192,36 @@ entries:
       url: "/LoadError.html"
       output: web pdf
       type: homepage
-    - title: class MQTT::ConnectionError
-      url: "/MQTT_ConnectionError.html"
-      output: web pdf
-      type: homepage
-    - title: class MQTT::MQTTError
-      url: "/MQTT_MQTTError.html"
-      output: web pdf
-      type: homepage
-    - title: class MQTT::ProtocolError
-      url: "/MQTT_ProtocolError.html"
-      output: web pdf
-      type: homepage
     - title: class NameError
       url: "/NameError.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::MQTT::ConnectionError
+      url: "/Net_MQTT_ConnectionError.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::MQTT::MQTTError
+      url: "/Net_MQTT_MQTTError.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::MQTT::ProtocolError
+      url: "/Net_MQTT_ProtocolError.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::WebSocket::ConnectionClosed
+      url: "/Net_WebSocket_ConnectionClosed.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::WebSocket::HandshakeError
+      url: "/Net_WebSocket_HandshakeError.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::WebSocket::ProtocolError
+      url: "/Net_WebSocket_ProtocolError.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::WebSocket::WebSocketError
+      url: "/Net_WebSocket_WebSocketError.html"
       output: web pdf
       type: homepage
     - title: class NoMethodError
@@ -283,8 +299,8 @@ entries:
       url: "/ESP32.html"
       output: web pdf
       type: homepage
-    - title: class ESP32::Auth
-      url: "/ESP32_Auth.html"
+    - title: class ESP32::WiFi::Auth
+      url: "/ESP32_WiFi_Auth.html"
       output: web pdf
       type: homepage
     - title: class HCSR04
@@ -362,8 +378,20 @@ entries:
       url: "/IRQ.html"
       output: web pdf
       type: homepage
+    - title: module PIO
+      url: "/PIO.html"
+      output: web pdf
+      type: homepage
     - title: class PWM
       url: "/PWM.html"
+      output: web pdf
+      type: homepage
+    - title: class RotaryEncoder
+      url: "/RotaryEncoder.html"
+      output: web pdf
+      type: homepage
+    - title: class SDMMC
+      url: "/SDMMC.html"
       output: web pdf
       type: homepage
     - title: class SPI
@@ -381,6 +409,10 @@ entries:
   - title: General
     output: web pdf
     folderitems:
+    - title: class Array
+      url: "/Array.html"
+      output: web pdf
+      type: homepage
     - title: class BLE
       url: "/BLE.html"
       output: web pdf
@@ -397,6 +429,18 @@ entries:
       url: "/BLE_GattDatabase.html"
       output: web pdf
       type: homepage
+    - title: class BLE::HID
+      url: "/BLE_HID.html"
+      output: web pdf
+      type: homepage
+    - title: class BLE::UART
+      url: "/BLE_UART.html"
+      output: web pdf
+      type: homepage
+    - title: class BLE::UART::BufferIO
+      url: "/BLE_UART_BufferIO.html"
+      output: web pdf
+      type: homepage
     - title: class BLE::Utils
       url: "/BLE_Utils.html"
       output: web pdf
@@ -409,12 +453,36 @@ entries:
       url: "/Base64.html"
       output: web pdf
       type: homepage
+    - title: class BasicObject
+      url: "/BasicObject.html"
+      output: web pdf
+      type: homepage
     - title: class BasicSocket
       url: "/BasicSocket.html"
       output: web pdf
       type: homepage
     - title: module CRC
       url: "/CRC.html"
+      output: web pdf
+      type: homepage
+    - title: class Class
+      url: "/Class.html"
+      output: web pdf
+      type: homepage
+    - title: module DFU
+      url: "/DFU.html"
+      output: web pdf
+      type: homepage
+    - title: module DFU::BootManager
+      url: "/DFU_BootManager.html"
+      output: web pdf
+      type: homepage
+    - title: class DFU::Meta
+      url: "/DFU_Meta.html"
+      output: web pdf
+      type: homepage
+    - title: class DFU::Updater
+      url: "/DFU_Updater.html"
       output: web pdf
       type: homepage
     - title: module DRb
@@ -445,12 +513,32 @@ entries:
       url: "/DRb_DRbServer.html"
       output: web pdf
       type: homepage
+    - title: class DRb::DRbTCPServer
+      url: "/DRb_DRbTCPServer.html"
+      output: web pdf
+      type: homepage
     - title: class DRb::DRbUnknown
       url: "/DRb_DRbUnknown.html"
       output: web pdf
       type: homepage
     - title: class DRb::DRbUnknownError
       url: "/DRb_DRbUnknownError.html"
+      output: web pdf
+      type: homepage
+    - title: module DRb::WebSocket
+      url: "/DRb_WebSocket.html"
+      output: web pdf
+      type: homepage
+    - title: class DRb::WebSocket::Adapter
+      url: "/DRb_WebSocket_Adapter.html"
+      output: web pdf
+      type: homepage
+    - title: class DRb::WebSocket::BrowserSocket
+      url: "/DRb_WebSocket_BrowserSocket.html"
+      output: web pdf
+      type: homepage
+    - title: class DRb::WebSocket::Server
+      url: "/DRb_WebSocket_Server.html"
       output: web pdf
       type: homepage
     - title: class Data
@@ -489,6 +577,10 @@ entries:
       url: "/Editor_Screen.html"
       output: web pdf
       type: homepage
+    - title: class Exception
+      url: "/Exception.html"
+      output: web pdf
+      type: homepage
     - title: class FAT
       url: "/FAT.html"
       output: web pdf
@@ -525,6 +617,118 @@ entries:
       url: "/FileTest.html"
       output: web pdf
       type: homepage
+    - title: module Funicular
+      url: "/Funicular.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::Cable
+      url: "/Funicular_Cable.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Cable::Consumer
+      url: "/Funicular_Cable_Consumer.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Cable::Subscription
+      url: "/Funicular_Cable_Subscription.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Cable::Subscriptions
+      url: "/Funicular_Cable_Subscriptions.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Component
+      url: "/Funicular_Component.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Component::StateAccessor
+      url: "/Funicular_Component_StateAccessor.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::Debug
+      url: "/Funicular_Debug.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::EnvironmentInquirer
+      url: "/Funicular_EnvironmentInquirer.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::ErrorBoundary
+      url: "/Funicular_ErrorBoundary.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::FileUpload
+      url: "/Funicular_FileUpload.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::FormBuilder
+      url: "/Funicular_FormBuilder.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::HTTP
+      url: "/Funicular_HTTP.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::HTTP::Response
+      url: "/Funicular_HTTP_Response.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Model
+      url: "/Funicular_Model.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::RouteHelpers
+      url: "/Funicular_RouteHelpers.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Router
+      url: "/Funicular_Router.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::StyleAccessor
+      url: "/Funicular_StyleAccessor.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::StyleBuilder
+      url: "/Funicular_StyleBuilder.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::StyleValue
+      url: "/Funicular_StyleValue.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::VDOM
+      url: "/Funicular_VDOM.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::Component
+      url: "/Funicular_VDOM_Component.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::Differ
+      url: "/Funicular_VDOM_Differ.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::Element
+      url: "/Funicular_VDOM_Element.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::Patcher
+      url: "/Funicular_VDOM_Patcher.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::Renderer
+      url: "/Funicular_VDOM_Renderer.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::Text
+      url: "/Funicular_VDOM_Text.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::VNode
+      url: "/Funicular_VDOM_VNode.html"
+      output: web pdf
+      type: homepage
     - title: module GC
       url: "/GC.html"
       output: web pdf
@@ -539,6 +743,10 @@ entries:
       type: homepage
     - title: class HCSR04::WraparoundError
       url: "/HCSR04_WraparoundError.html"
+      output: web pdf
+      type: homepage
+    - title: class Hash
+      url: "/Hash.html"
       output: web pdf
       type: homepage
     - title: class IIRFilter
@@ -557,8 +765,48 @@ entries:
       url: "/JS.html"
       output: web pdf
       type: homepage
+    - title: module JS::BLE
+      url: "/JS_BLE.html"
+      output: web pdf
+      type: homepage
+    - title: module JS::BLE::GATT
+      url: "/JS_BLE_GATT.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::BLE::GATT::Characteristic
+      url: "/JS_BLE_GATT_Characteristic.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::BLE::GATT::Device
+      url: "/JS_BLE_GATT_Device.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::BLE::GATT::Server
+      url: "/JS_BLE_GATT_Server.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::BLE::GATT::Service
+      url: "/JS_BLE_GATT_Service.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::BLE::UART
+      url: "/JS_BLE_UART.html"
+      output: web pdf
+      type: homepage
+    - title: module JS::Bridge
+      url: "/JS_Bridge.html"
+      output: web pdf
+      type: homepage
     - title: class JS::Object
       url: "/JS_Object.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::WebSerial
+      url: "/JS_WebSerial.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::WebSocket
+      url: "/JS_WebSocket.html"
       output: web pdf
       type: homepage
     - title: module JSON
@@ -593,8 +841,36 @@ entries:
       url: "/Kernel.html"
       output: web pdf
       type: homepage
-    - title: class Keyboard::Irb
-      url: "/Keyboard_Irb.html"
+    - title: class Keyboard
+      url: "/Keyboard.html"
+      output: web pdf
+      type: homepage
+    - title: class KeyboardMatrix
+      url: "/KeyboardMatrix.html"
+      output: web pdf
+      type: homepage
+    - title: module LayerKeycode
+      url: "/LayerKeycode.html"
+      output: web pdf
+      type: homepage
+    - title: class Littlefs
+      url: "/Littlefs.html"
+      output: web pdf
+      type: homepage
+    - title: class Littlefs::Dir
+      url: "/Littlefs_Dir.html"
+      output: web pdf
+      type: homepage
+    - title: class Littlefs::File
+      url: "/Littlefs_File.html"
+      output: web pdf
+      type: homepage
+    - title: class Littlefs::Stat
+      url: "/Littlefs_Stat.html"
+      output: web pdf
+      type: homepage
+    - title: class Littlefs::VFSMethods
+      url: "/Littlefs_VFSMethods.html"
       output: web pdf
       type: homepage
     - title: class Logger
@@ -605,20 +881,20 @@ entries:
       url: "/MML.html"
       output: web pdf
       type: homepage
-    - title: module MQTT
-      url: "/MQTT.html"
-      output: web pdf
-      type: homepage
-    - title: class MQTT::Client
-      url: "/MQTT_Client.html"
-      output: web pdf
-      type: homepage
-    - title: class Machine
+    - title: module Machine
       url: "/Machine.html"
+      output: web pdf
+      type: homepage
+    - title: class Markdown
+      url: "/Markdown.html"
       output: web pdf
       type: homepage
     - title: module Marshal
       url: "/Marshal.html"
+      output: web pdf
+      type: homepage
+    - title: class MatchData
+      url: "/MatchData.html"
       output: web pdf
       type: homepage
     - title: module MbedTLS
@@ -645,6 +921,10 @@ entries:
       url: "/MbedTLS_PKey.html"
       output: web pdf
       type: homepage
+    - title: class MbedTLS::PKey::EC
+      url: "/MbedTLS_PKey_EC.html"
+      output: web pdf
+      type: homepage
     - title: class MbedTLS::PKey::PKeyBase
       url: "/MbedTLS_PKey_PKeyBase.html"
       output: web pdf
@@ -655,6 +935,10 @@ entries:
       type: homepage
     - title: class MbedTLS::PKey::RSA
       url: "/MbedTLS_PKey_RSA.html"
+      output: web pdf
+      type: homepage
+    - title: class Method
+      url: "/Method.html"
       output: web pdf
       type: homepage
     - title: class Module
@@ -813,6 +1097,14 @@ entries:
       url: "/Net_Head.html"
       output: web pdf
       type: homepage
+    - title: module Net::MQTT
+      url: "/Net_MQTT.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::MQTT::Client
+      url: "/Net_MQTT_Client.html"
+      output: web pdf
+      type: homepage
     - title: class Net::NTP
       url: "/Net_NTP.html"
       output: web pdf
@@ -845,8 +1137,48 @@ entries:
       url: "/Net_UDPClient.html"
       output: web pdf
       type: homepage
+    - title: module Net::WebSocket
+      url: "/Net_WebSocket.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::WebSocket::Client
+      url: "/Net_WebSocket_Client.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::WebSocket::Server
+      url: "/Net_WebSocket_Server.html"
+      output: web pdf
+      type: homepage
+    - title: class Net::WebSocket::Server::Connection
+      url: "/Net_WebSocket_Server_Connection.html"
+      output: web pdf
+      type: homepage
+    - title: module Network
+      url: "/Network.html"
+      output: web pdf
+      type: homepage
+    - title: class Network::ConnectTimeout
+      url: "/Network_ConnectTimeout.html"
+      output: web pdf
+      type: homepage
+    - title: class Network::WiFi
+      url: "/Network_WiFi.html"
+      output: web pdf
+      type: homepage
     - title: class ObjectSpace
       url: "/ObjectSpace.html"
+      output: web pdf
+      type: homepage
+    - title: class PIO::Assembler
+      url: "/PIO_Assembler.html"
+      output: web pdf
+      type: homepage
+    - title: class PIO::Program
+      url: "/PIO_Program.html"
+      output: web pdf
+      type: homepage
+    - title: class PIO::StateMachine
+      url: "/PIO_StateMachine.html"
       output: web pdf
       type: homepage
     - title: module PNGBIT
@@ -885,6 +1217,18 @@ entries:
       url: "/PicoLine_Question.html"
       output: web pdf
       type: homepage
+    - title: module PicoModem
+      url: "/PicoModem.html"
+      output: web pdf
+      type: homepage
+    - title: class PicoModemNullIO
+      url: "/PicoModemNullIO.html"
+      output: web pdf
+      type: homepage
+    - title: class PicoModemStringReader
+      url: "/PicoModemStringReader.html"
+      output: web pdf
+      type: homepage
     - title: class PicoRubyVM
       url: "/PicoRubyVM.html"
       output: web pdf
@@ -903,6 +1247,10 @@ entries:
       type: homepage
     - title: class Picotest::Runner
       url: "/Picotest_Runner.html"
+      output: web pdf
+      type: homepage
+    - title: class Picotest::Skip
+      url: "/Picotest_Skip.html"
       output: web pdf
       type: homepage
     - title: class Picotest::Test
@@ -959,6 +1307,10 @@ entries:
       type: homepage
     - title: module RbConfig
       url: "/RbConfig.html"
+      output: web pdf
+      type: homepage
+    - title: class Regexp
+      url: "/Regexp.html"
       output: web pdf
       type: homepage
     - title: class RotateLogger
@@ -1037,6 +1389,14 @@ entries:
       url: "/Signal.html"
       output: web pdf
       type: homepage
+    - title: class SocketError
+      url: "/SocketError.html"
+      output: web pdf
+      type: homepage
+    - title: class String
+      url: "/String.html"
+      output: web pdf
+      type: homepage
     - title: class TCPServer
       url: "/TCPServer.html"
       output: web pdf
@@ -1077,6 +1437,18 @@ entries:
       url: "/URI_URIClass.html"
       output: web pdf
       type: homepage
+    - title: module USB
+      url: "/USB.html"
+      output: web pdf
+      type: homepage
+    - title: class USB::HID
+      url: "/USB_HID.html"
+      output: web pdf
+      type: homepage
+    - title: module USB::HID::Keycode
+      url: "/USB_HID_Keycode.html"
+      output: web pdf
+      type: homepage
     - title: class VFS
       url: "/VFS.html"
       output: web pdf
@@ -1103,57 +1475,6 @@ entries:
       type: homepage
     - title: module YAML
       url: "/YAML.html"
-      output: web pdf
-      type: homepage
-  - title: PRK Firmware
-    output: web pdf
-    folderitems:
-    - title: class ConsumerKey
-      url: "/ConsumerKey.html"
-      output: web pdf
-      type: homepage
-    - title: class DebounceBase
-      url: "/DebounceBase.html"
-      output: web pdf
-      type: homepage
-    - title: class DebounceNone
-      url: "/DebounceNone.html"
-      output: web pdf
-      type: homepage
-    - title: class DebouncePerKey
-      url: "/DebouncePerKey.html"
-      output: web pdf
-      type: homepage
-    - title: class DebouncePerRow
-      url: "/DebouncePerRow.html"
-      output: web pdf
-      type: homepage
-    - title: class Joystick
-      url: "/Joystick.html"
-      output: web pdf
-      type: homepage
-    - title: class Keyboard
-      url: "/Keyboard.html"
-      output: web pdf
-      type: homepage
-    - title: class Mouse
-      url: "/Mouse.html"
-      output: web pdf
-      type: homepage
-    - title: class RGB
-      url: "/RGB.html"
-      output: web pdf
-      type: homepage
-    - title: class RotaryEncoder
-      url: "/RotaryEncoder.html"
-      output: web pdf
-      type: homepage
-    - title: class Sounder
-      url: "/Sounder.html"
-      output: web pdf
-      type: homepage
-    - title: class VIA
-      url: "/VIA.html"
       output: web pdf
       type: homepage
   - title: Type alias

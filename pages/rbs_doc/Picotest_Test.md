@@ -59,15 +59,30 @@ instance.assert_true(bool result) -> void
 ```ruby
 instance.list_tests() -> Array[Symbol]
 ```
+### mruby?
+
+```ruby
+instance.mruby?() -> bool
+```
 ### report_exeption
 
 ```ruby
 instance.report_exeption(untyped data) -> void
 ```
+### report_skip
+
+```ruby
+instance.report_skip(untyped data) -> void
+```
 ### setup
 
 ```ruby
 instance.setup() -> void
+```
+### skip
+
+```ruby
+instance.skip(?String reason) -> void
 ```
 ### teardown
 

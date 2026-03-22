@@ -34,3 +34,8 @@ instance.delete(String key) ?{ (String key) -> void } -> (String | nil)
 ```ruby
 instance.each() { (String key, String value) -> void } -> void
 ```
+### keys
+
+```ruby
+instance.keys() -> Array[String]
+```

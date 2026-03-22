@@ -14,6 +14,8 @@ folder: rbs_doc
     "success_count" => Integer,
     "failures" => Array[Hash[untyped, untyped]],
     "exceptions" => Array[Hash[untyped, untyped]],
-    "crashes" => Array[String]
+    "crashes" => Array[String],
+    "skipped_count" => Integer,
+    "skipped" => Array[Hash[untyped, untyped]]
   }
 ```

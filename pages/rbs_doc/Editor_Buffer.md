@@ -24,6 +24,16 @@ instance.bottom() -> void
 ```ruby
 instance.clear() -> void
 ```
+### clear_dirty
+
+```ruby
+instance.clear_dirty() -> void
+```
+### clear_selection
+
+```ruby
+instance.clear_selection() -> void
+```
 ### current_char
 
 ```ruby
@@ -49,6 +59,11 @@ instance.delete() -> void
 ```ruby
 instance.delete_line() -> (String | nil)
 ```
+### delete_selected_text
+
+```ruby
+instance.delete_selected_text() -> (String | nil)
+```
 ### down
 
 ```ruby
@@ -58,6 +73,16 @@ instance.down() -> void
 
 ```ruby
 instance.dump() -> String
+```
+### empty?
+
+```ruby
+instance.empty?() -> bool
+```
+### has_selection?
+
+```ruby
+instance.has_selection?() -> bool
 ```
 ### head
 
@@ -74,20 +99,60 @@ instance.home() -> void
 ```ruby
 instance.insert_line(String | nil line) -> void
 ```
+### insert_lines_below
+
+```ruby
+instance.insert_lines_below(Array[String] | nil lines_to_insert) -> void
+```
+### insert_string_after_cursor
+
+```ruby
+instance.insert_string_after_cursor(String | nil str) -> void
+```
 ### left
 
 ```ruby
 instance.left() -> void
+```
+### mark_dirty
+
+```ruby
+instance.mark_dirty(Symbol level) -> void
+```
+### move_to
+
+```ruby
+instance.move_to(Integer x, Integer y) -> void
 ```
 ### put
 
 ```ruby
 instance.put(String | Symbol c) -> void
 ```
+### replace_char
+
+```ruby
+instance.replace_char(String ch) -> void
+```
 ### right
 
 ```ruby
 instance.right() -> void
+```
+### selected_text
+
+```ruby
+instance.selected_text() -> (String | nil)
+```
+### selection_range
+
+```ruby
+instance.selection_range() -> ([Integer, Integer, Integer, Integer] | nil)
+```
+### start_selection
+
+```ruby
+instance.start_selection(Symbol mode) -> void
 ```
 ### tail
 
@@ -98,6 +163,26 @@ instance.tail() -> void
 
 ```ruby
 instance.up() -> void
+```
+### word_backward
+
+```ruby
+instance.word_backward() -> void
+```
+### word_char?
+
+```ruby
+instance.word_char?(String? ch) -> bool
+```
+### word_end
+
+```ruby
+instance.word_end() -> void
+```
+### word_forward
+
+```ruby
+instance.word_forward() -> void
 ```
 ## Attr accessors
 ### lines (accessor)
@@ -115,4 +200,20 @@ instance.cursor_x -> Integer
 ### cursor_y (reader)
 ```ruby
 instance.cursor_y -> Integer
+```
+### dirty (reader)
+```ruby
+instance.dirty -> Symbol
+```
+### selection_start_x (reader)
+```ruby
+instance.selection_start_x -> Integer?
+```
+### selection_start_y (reader)
+```ruby
+instance.selection_start_y -> Integer?
+```
+### selection_mode (reader)
+```ruby
+instance.selection_mode -> Symbol?
 ```

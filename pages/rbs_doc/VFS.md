@@ -10,7 +10,7 @@ folder: rbs_doc
 ## Type aliases
 ### driver_t
 ```ruby
-FAT
+FAT | Littlefs
 ```
 ### volume_t
 ```ruby
@@ -18,11 +18,15 @@ FAT
 ```
 ### file_t
 ```ruby
-FAT::File
+FAT::File | Littlefs::File
 ```
 ### dir_t
 ```ruby
-FAT::Dir
+FAT::Dir | Littlefs::Dir
+```
+### methods_t
+```ruby
+FAT::VFSMethods | Littlefs::VFSMethods
 ```
 ## Singleton methods
 ### chdir

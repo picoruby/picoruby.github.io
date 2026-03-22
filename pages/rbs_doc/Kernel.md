@@ -13,6 +13,12 @@ folder: rbs_doc
 ```ruby
 instance.eval(String code) -> Object
 ```
+## Instance methods
+### exit
+
+```ruby
+instance.exit(?Integer status) -> void
+```
 ## Instance methods (picoruby-metaprog)
 ### caller
 

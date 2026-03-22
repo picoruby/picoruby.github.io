@@ -16,7 +16,7 @@ SSLSocket.new(TCPSocket tcp_socket, SSLContext ssl_context) -> SSLSocket
 ### open
 
 ```ruby
-SSLSocket.open(TCPSocket tcp_socket, SSLContext ssl_context) -> SSLSocket
+SSLSocket.open(String hostname, Integer port, SSLContext ssl_context) -> SSLSocket
 ```
 ## Instance methods
 ### addr

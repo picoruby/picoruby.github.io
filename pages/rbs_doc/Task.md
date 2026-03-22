@@ -8,6 +8,11 @@ permalink: Task.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### create
+
+```ruby
+Task.create(String bytecode) -> Task
+```
 ### current
 
 ```ruby

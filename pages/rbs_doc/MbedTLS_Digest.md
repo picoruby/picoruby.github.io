@@ -10,7 +10,7 @@ folder: rbs_doc
 ## Type aliases
 ### algorithm_t
 ```ruby
-:none | :sha256
+:none | :sha1 | :sha256
 ```
 ## Singleton methods
 ### new

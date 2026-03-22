@@ -11,18 +11,18 @@ folder: rbs_doc
 ### new
 
 ```ruby
-DRb::DRbMessage.new(TCPSocket socket) -> DRbMessage
+DRb::DRbMessage.new(untyped socket) -> DRbMessage
 ```
 ## Instance methods
 ### recv_reply
 
 ```ruby
-instance.recv_reply() -> ::Marshal::marshallable
+instance.recv_reply() -> [bool, untyped]
 ```
 ### recv_request
 
 ```ruby
-instance.recv_request() -> ::Marshal::marshallable
+instance.recv_request() -> [untyped, Symbol, Array[untyped], Proc?]
 ```
 ### send_reply
 

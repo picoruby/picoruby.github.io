@@ -54,6 +54,11 @@ instance.physical_line_count() -> Integer
 ```ruby
 instance.put_buffer(String | Symbol chr) -> void
 ```
+### raw_takeover
+
+```ruby
+instance.raw_takeover() -> bool
+```
 ### system
 
 ```ruby

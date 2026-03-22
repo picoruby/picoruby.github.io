@@ -8,18 +8,18 @@ permalink: Marshal.html
 folder: rbs_doc
 ---
 ## Type aliases
-### marshallable
+### marshalable
 ```ruby
-nil | bool | Integer | String | Symbol | Array[marshallable] | Hash[marshallable, marshallable]
+nil | Proc | bool | Integer | Float | String | Symbol | Array[marshalable] | Hash[marshalable, marshalable]
 ```
 ## Singleton methods
 ### dump
 
 ```ruby
-Marshal.dump(marshallable obj) -> String
+Marshal.dump(marshalable obj) -> String
 ```
 ### load
 
 ```ruby
-Marshal.load(String data) -> marshallable
+Marshal.load(String data) -> marshalable
 ```

@@ -18,6 +18,12 @@ instance._get_self() -> Object
 ```ruby
 instance._set_self(Object) -> Object
 ```
+## Instance methods
+### arity
+
+```ruby
+instance.arity() -> Integer
+```
 ## Singleton methods
 ### new
 

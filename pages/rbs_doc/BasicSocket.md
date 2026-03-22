@@ -53,6 +53,11 @@ instance.puts(*untyped args) -> nil
 ```ruby
 instance.read(Integer maxlen) -> String?
 ```
+### ready?
+
+```ruby
+instance.ready?() -> bool
+```
 ### recv
 
 ```ruby

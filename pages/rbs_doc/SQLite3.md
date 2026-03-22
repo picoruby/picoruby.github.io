@@ -21,5 +21,5 @@ SQLite3.time_methods=(Time::TimeMethods) -> Time::TimeMethods
 ### vfs_methods=
 
 ```ruby
-SQLite3.vfs_methods=(FAT::VFSMethods) -> FAT::VFSMethods
+SQLite3.vfs_methods=(VFS::methods_t) -> VFS::methods_t
 ```

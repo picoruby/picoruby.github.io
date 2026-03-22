@@ -24,6 +24,11 @@ PSG::Driver.select_pwm(Integer left, Integer right) -> void
 ```ruby
 instance.buffer_empty?() -> bool
 ```
+### buffer_flush
+
+```ruby
+instance.buffer_flush() -> nil
+```
 ### deinit
 
 ```ruby
@@ -44,6 +49,11 @@ instance.join() -> void
 ```ruby
 instance.mute(Integer ch, Integer flag, ?Integer tick_delay) -> bool
 ```
+### mute_direct
+
+```ruby
+instance.mute_direct(Integer ch, Integer flag) -> nil
+```
 ### play_mml
 
 ```ruby
@@ -53,6 +63,11 @@ instance.play_mml(Array[String] tracks, ?terminate: bool) -> self
 
 ```ruby
 instance.play_prs(String filename, ?terminate: bool) -> void
+```
+### replay
+
+```ruby
+instance.replay() -> Symbol
 ```
 ### send_reg
 
@@ -78,4 +93,24 @@ instance.set_pan(Integer ch, Integer pan, ?Integer tick_delay) -> bool
 
 ```ruby
 instance.set_timbre(Integer ch, Integer timbre_index, ?Integer tick_delay) -> bool
+```
+### start_bgm
+
+```ruby
+instance.start_bgm(Array[String] tracks) -> void
+```
+### stop_bgm
+
+```ruby
+instance.stop_bgm() -> void
+```
+### stop_mml
+
+```ruby
+instance.stop_mml() -> Symbol
+```
+### write_reg_direct
+
+```ruby
+instance.write_reg_direct(Integer reg, Integer value) -> nil
 ```

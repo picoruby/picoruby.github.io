@@ -31,6 +31,11 @@ instance.alias_method(Symbol|String new_name, Symbol|String old_name) -> Symbol
 ```ruby
 instance.class?() -> bool
 ```
+### const_defined?
+
+```ruby
+instance.const_defined?(Symbol | String name) -> bool
+```
 ### const_get
 
 ```ruby
@@ -49,12 +54,12 @@ instance.instance_of?(Class klass) -> bool
 ### instance_variable_get
 
 ```ruby
-instance.instance_variable_get(Symbol name) -> untyped
+instance.instance_variable_get(Symbol | String name) -> untyped
 ```
 ### instance_variable_set
 
 ```ruby
-instance.instance_variable_set(Symbol name, untyped value) -> untyped
+instance.instance_variable_set(Symbol | String name, untyped value) -> untyped
 ```
 ### instance_variables
 

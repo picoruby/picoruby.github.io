@@ -18,6 +18,11 @@ GC.disable() -> bool
 ```ruby
 GC.enable() -> bool
 ```
+### interval_ratio=
+
+```ruby
+GC.interval_ratio=(Integer) -> Integer
+```
 ### start
 
 ```ruby

@@ -30,7 +30,7 @@ Shell.bootstrap(String file) -> bool
 ### ensure_system_file
 
 ```ruby
-Shell.ensure_system_file(String path, String code, ?(Integer | nil) crc) -> void
+Shell.ensure_system_file(String path, String code, Integer crc) -> bool
 ```
 ### find_executable
 
@@ -59,6 +59,11 @@ Shell.new(?clean: bool) -> Shell
 ```ruby
 Shell.next_executable-> {code: String, path: String, crc: Integer}
 ```
+### read_config
+
+```ruby
+Shell.read_config() -> void
+```
 ### setup_root_volume
 
 ```ruby
@@ -72,12 +77,17 @@ Shell.setup_rtc(rtc_t trc) -> void
 ### setup_sdcard
 
 ```ruby
-Shell.setup_sdcard(SPI spi) -> void
+Shell.setup_sdcard(SPI | SDMMC driver) -> void
+```
+### setup_system_executables
+
+```ruby
+Shell.setup_system_executables(String root) -> void
 ```
 ### setup_system_files
 
 ```ruby
-Shell.setup_system_files(?(String | nil) root, ?force: bool) -> void
+Shell.setup_system_files(?(String | nil) root) -> void
 ```
 ### simple_question
 

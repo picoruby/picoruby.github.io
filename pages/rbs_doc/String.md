@@ -18,11 +18,54 @@ instance.gsub(String pattern, String replacement) -> String
 ```ruby
 instance.rindex(String needle) -> (Integer | nil)
 ```
+## Instance methods
+### capitalize
+
+```ruby
+instance.capitalize() -> String
+```
+### chars
+
+```ruby
+instance.chars() -> ::Array[String]
+```
+### lines
+
+```ruby
+instance.lines() -> ::Array[String]
+```
+### slice
+
+```ruby
+instance.slice(Integer start, Integer length) -> String?
+instance.slice(Range[Integer] range) -> String?
+```
+### sub
+
+```ruby
+instance.sub(String pattern, String replacement) -> String
+```
 ## Instance methods (picoruby-pack)
 ### unpack
 
 ```ruby
 instance.unpack(String format) -> Array[Integer]
+```
+## Instance methods
+### =~
+
+```ruby
+instance.=~(Regexp | String pattern) -> Integer?
+```
+### match
+
+```ruby
+instance.match(Regexp | String pattern) -> MatchData?
+```
+### match?
+
+```ruby
+instance.match?(Regexp | String pattern) -> bool
 ```
 ## Singleton methods
 ### new
@@ -113,6 +156,13 @@ instance.__ljust_rjust_argcheck(Integer width, String padding) -> void
 ```ruby
 instance.bytes() -> Array[Integer]
 instance.bytes() { (Integer byte) -> void } -> String
+```
+### byteslice
+
+```ruby
+instance.byteslice(int index) -> String?
+instance.byteslice(int start, int length) -> String?
+instance.byteslice(::Range[::Integer] | ::Range[::Integer?] range) -> String?
 ```
 ### chomp
 

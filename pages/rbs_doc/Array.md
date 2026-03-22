@@ -13,6 +13,22 @@ folder: rbs_doc
 ```ruby
 instance.insert(Integer index, *Elem) -> void
 ```
+## Instance methods
+### compact
+
+```ruby
+instance.compact() -> ::Array[Elem]
+```
+### concat
+
+```ruby
+instance.concat[U] (Array[U]) -> ::Array[Elem | U]
+```
+### find
+
+```ruby
+instance.find() ?{ (Elem) -> bool } -> Elem?
+```
 ## Instance methods (picoruby-pack)
 ### pack
 
@@ -208,6 +224,11 @@ instance.reject() { (Elem item) -> boolish } -> ::Array[Elem]
 
 ```ruby
 instance.reject!() { (Elem item) -> boolish } -> self
+```
+### select
+
+```ruby
+instance.select() { (Elem item) -> boolish } -> ::Array[Elem]
 ```
 ### shift
 

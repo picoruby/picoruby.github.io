@@ -227,6 +227,16 @@ instance.start_scan() -> 0
 ```ruby
 instance.stop_scan() -> 0
 ```
+### write_characteristic_descriptor_using_descriptor_handle
+
+```ruby
+instance.write_characteristic_descriptor_using_descriptor_handle(Integer conn_handle, Integer descriptor_handle, String data) -> Integer
+```
+### write_value_of_characteristic_without_response
+
+```ruby
+instance.write_value_of_characteristic_without_response(Integer conn_handle, Integer value_handle, String data) -> Integer
+```
 ## Attr accessors
 ### debug (accessor)
 ```ruby

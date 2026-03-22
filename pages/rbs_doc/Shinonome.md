@@ -47,10 +47,10 @@ Shinonome.min16(String text, ?Integer scale) -> shinonome_t
 ### test12
 
 ```ruby
-Shinonome.test12(String text) -> nil
+Shinonome.test12(String text, ?Integer scale) -> nil
 ```
 ### test16
 
 ```ruby
-Shinonome.test16(String text) -> nil
+Shinonome.test16(String text, ?Integer scale) -> nil
 ```

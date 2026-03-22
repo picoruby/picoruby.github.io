@@ -11,22 +11,32 @@ folder: rbs_doc
 ### connect_timeout
 
 ```ruby
-ESP32::WiFi.connect_timeout(String ssid, String password, Integer augh, ?Integer timeout) -> bool
+ESP32::WiFi.connect_timeout(String ssid, String password, Integer auth, ?Integer timeout) -> bool
 ```
 ### disconnect
 
 ```ruby
 ESP32::WiFi.disconnect() -> bool
 ```
+### enable_sta_mode
+
+```ruby
+ESP32::WiFi.enable_sta_mode() -> bool
+```
 ### init
 
 ```ruby
-ESP32::WiFi.init() -> bool
+ESP32::WiFi.init(?String country, ?force: bool) -> bool
 ```
 ### initialized?
 
 ```ruby
 ESP32::WiFi.initialized?() -> bool
+```
+### link_connected?
+
+```ruby
+ESP32::WiFi.link_connected?() -> bool
 ```
 ### tcpip_link_status
 

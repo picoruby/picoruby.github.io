@@ -41,7 +41,7 @@ Watchdog.get_count() -> Integer
 ### reboot
 
 ```ruby
-Watchdog.reboot(Integer delay_ms) -> 0
+Watchdog.reboot(Integer delay_ms) -> nil
 ```
 ### start_tick
 

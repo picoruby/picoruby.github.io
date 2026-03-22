@@ -14,9 +14,14 @@ folder: rbs_doc
 ```
 ### driver_t
 ```ruby
-nil|SPI
+nil|SPI|SDMMC
 ```
 ## Singleton methods
+### init_sdmmc
+
+```ruby
+FAT.init_sdmmc(Integer clk_pin, Integer cmd_pin, Integer d0_pin) -> 0
+```
 ### init_spi
 
 ```ruby
