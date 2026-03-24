@@ -163,6 +163,17 @@ folder: r2p2
       padding: 1px 6px;
       font-family: 'Courier Prime', Courier, monospace;
     }
+    #gem-filter {
+      font-size: 12px;
+      padding: 2px 6px;
+      background: #1a1a1a;
+      border: 1px solid #444;
+      border-radius: 3px;
+      color: #ccc;
+      width: 120px;
+      outline: none;
+    }
+    #gem-filter:focus { border-color: #7ec8e3; }
     .upload-hint { font-size: 12px; color: #666; margin: 0 8px; }
     .upload-hint code { padding: 1px 4px; border-radius: 3px; font-size: 11px; background: #222; color: #aaa; }
     @media (prefers-color-scheme: light) {
@@ -209,7 +220,12 @@ folder: r2p2
         <table>
           <thead>
             <tr>
-              <th>Name</th>
+              <th>
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <span>Name</span>
+                  <input id="gem-filter" type="text" placeholder="Filter..." autocomplete="off">
+                </div>
+              </th>
               <th>Description</th>
               <th></th>
               <th></th>

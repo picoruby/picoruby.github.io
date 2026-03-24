@@ -16,6 +16,7 @@
         @auto_reconnect = false
         @readme_cache  = {}
         @gems          = []
+        @gem_rows      = []
         @upload_btns   = []
         @uploading     = false
         @terminal      = JS.global[:__nullTerminal]
@@ -73,12 +74,17 @@
         tbody = el('gems-tbody')
         n.times do |i|
           g = js_arr[i]
+          tags_js = g[:tags]
+          tags_n = tags_js[:length].to_i rescue 0
+          tags_arr = []
+          tags_n.times { |j| tags_arr << tags_js[j].to_s }
           gem = {
             'name'        => g[:name].to_s,
             'repo'        => g[:repo].to_s,
             'path'        => g[:path].to_s,
             'ref'         => g[:ref].to_s,
-            'description' => g[:description].to_s
+            'description' => g[:description].to_s,
+            'tags'        => tags_arr
           }
           @gems << gem
           add_gem_row(tbody, gem, i)
@@ -129,7 +135,17 @@
         tr.appendChild(td_upload)
         @upload_btns << ubtn
 
+        search_text = ([gem['name'], gem['description']] + gem['tags']).join(' ').downcase
+        @gem_rows << { tr: tr, text: search_text }
+
         tbody.appendChild(tr)
+      end
+
+      def filter_gems(query)
+        q = query.downcase.strip
+        @gem_rows.each do |row|
+          row[:tr].style.display = (q.empty? || row[:text].include?(q)) ? '' : 'none'
+        end
       end
 
       def update_upload_buttons
@@ -479,6 +495,7 @@
 
       def bind_events
         el('connect-btn').addEventListener('click') { connected? ? disconnect(manual: true) : connect }
+        el('gem-filter').addEventListener('input') { filter_gems(el('gem-filter')[:value].to_s) }
         JS.global.addEventListener('serial-reader-closed') { disconnect }
 
         if JS::WebSerial.supported?
