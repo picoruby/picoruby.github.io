@@ -1,0 +1,273 @@
+---
+layout: none
+keywords: documentation
+tags: [gems]
+title: RuntimeGems Installer
+sidebar: picoruby_sidebar
+permalink: runtimegems
+folder: r2p2
+---
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>RuntimeGems Installer - PicoRuby</title>
+  <link rel="stylesheet" href="picoruby.wasm/test.css">
+  <link rel="stylesheet" href="pages/r2p2/r2p2-tools.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html, body { height: 100%; }
+    #app {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    #top-pane {
+      display: flex;
+      flex-direction: column;
+      height: 50vh;
+      min-height: 120px;
+    }
+    #gems-table-wrap {
+      flex: 1;
+      overflow-y: auto;
+      background: #1a1a1a;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      background: #252525;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      padding: 6px 8px;
+      text-align: left;
+      border-bottom: 2px solid #444;
+      font-size: 13px;
+      color: #aaa;
+      user-select: none;
+    }
+    tbody td {
+      padding: 5px 8px;
+      border-bottom: 1px solid #222;
+      vertical-align: middle;
+    }
+    tbody tr:hover td { background: #1e1e1e; }
+    tbody td:nth-child(1) { width: 220px; font-family: 'Courier Prime', Courier, monospace; font-size: 13px; color: #7ec8e3; }
+    tbody td:nth-child(3) { width: 80px; }
+    tbody td:nth-child(4) { width: 90px; text-align: center; }
+    .upload-btn { padding: 3px 8px; font-size: 12px; cursor: pointer; background: #1a3a1a; color: #5dbb8a; border: 1px solid #2a5a2a; border-radius: 3px; }
+    .upload-btn:hover:not([disabled]) { background: #2a4a2a; }
+    .upload-btn[disabled] { cursor: default; opacity: 0.5; }
+    .upload-btn.done { background: #3a1010; color: #cc4444; border-color: #5a2020; opacity: 1; }
+    .readme-btn {
+      padding: 3px 8px;
+      font-size: 12px;
+      cursor: pointer;
+      background: #1e3a4a;
+      color: #7ec8e3;
+      border: 1px solid #2a5a7a;
+      border-radius: 3px;
+    }
+    .readme-btn:hover { background: #2a4a5a; }
+    #pane-resizer {
+      height: 5px;
+      background: #2a2a2a;
+      cursor: row-resize;
+      user-select: none;
+      flex-shrink: 0;
+      transition: background 0.15s;
+    }
+    #pane-resizer:hover { background: #555; }
+    #bottom-pane {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px 16px;
+      min-height: 60px;
+      background: #151515;
+    }
+    #disclaimer {
+      margin-top: 24px;
+      padding: 10px 12px;
+      border-top: 1px solid #2a2a2a;
+      color: #555;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    #disclaimer strong { color: #666; }
+    #bottom-placeholder {
+      color: #555;
+      font-style: italic;
+      padding: 12px 0;
+    }
+    #readme-content { color: #ccc; line-height: 1.65; }
+    #readme-content h1, #readme-content h2, #readme-content h3 {
+      color: #eee;
+      border-bottom: 1px solid #333;
+      padding-bottom: 4px;
+    }
+    #readme-content h4, #readme-content h5, #readme-content h6 { color: #ddd; }
+    #readme-content code {
+      background: #222;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-family: 'Courier Prime', Courier, monospace;
+      font-size: 13px;
+      color: #e6db74;
+    }
+    #readme-content pre {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 4px;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    #readme-content pre code { background: none; padding: 0; color: #f8f8f2; }
+    #readme-content a { color: #58a6ff; }
+    #readme-content a:hover { color: #79b8ff; }
+    #readme-content table { border-collapse: collapse; margin: 8px 0; }
+    #readme-content th, #readme-content td { border: 1px solid #444; padding: 4px 8px; }
+    #readme-content th { background: #252525; }
+    #readme-content blockquote {
+      border-left: 3px solid #555;
+      margin: 4px 0;
+      padding: 0 0 0 12px;
+      color: #999;
+    }
+    #readme-content ul, #readme-content ol { padding-left: 20px; }
+    #readme-content img { max-width: 100%; }
+    .gem-meta {
+      margin-bottom: 12px;
+      padding: 8px 10px;
+      background: #1e2830;
+      border: 1px solid #2a4a5a;
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+    .gem-meta-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px; }
+    .gem-meta-row + .gem-meta-row { margin-top: 4px; }
+    .gem-meta-label { color: #7ec8e3; font-weight: bold; margin-right: 4px; white-space: nowrap; }
+    .gem-meta-dep {
+      background: #0d2a1a;
+      color: #5dbb8a;
+      border: 1px solid #1a4a2a;
+      border-radius: 3px;
+      padding: 1px 6px;
+      font-family: 'Courier Prime', Courier, monospace;
+    }
+    .gem-meta-conflict {
+      background: #2a1010;
+      color: #cc6666;
+      border: 1px solid #4a2020;
+      border-radius: 3px;
+      padding: 1px 6px;
+      font-family: 'Courier Prime', Courier, monospace;
+    }
+    .upload-hint { font-size: 12px; color: #666; margin: 0 8px; }
+    .upload-hint code { padding: 1px 4px; border-radius: 3px; font-size: 11px; background: #222; color: #aaa; }
+    @media (prefers-color-scheme: light) {
+      .upload-hint { color: #888; }
+      .upload-hint code { background: #e8e8e8; color: #444; }
+    }
+    #upload-log {
+      font-family: 'Courier Prime', Courier, monospace;
+      font-size: 13px;
+      white-space: pre-wrap;
+      color: #0f0;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div id="not-supported" style="display:none">
+    Web Serial API is not supported in this browser.
+    Please use <strong>Google Chrome</strong> or <strong>Microsoft Edge</strong> (desktop, version 89+).
+  </div>
+
+  <div id="app">
+    <div id="top-pane">
+      <div class="controls">
+        <button id="connect-btn">Connect</button>
+        <label>Baud:
+          <select id="baud-rate">
+            <option value="9600">9600</option>
+            <option value="19200">19200</option>
+            <option value="38400">38400</option>
+            <option value="57600">57600</option>
+            <option value="115200" selected>115200</option>
+            <option value="230400">230400</option>
+            <option value="921600">921600</option>
+          </select>
+        </label>
+        <span id="status" class="disconnected">Disconnected</span>
+        <span class="upload-hint">e.g. <code>picoruby-aht25</code> is uploaded to <code>/lib/aht25.mrb</code> on R2P2 and can be loaded with <code>require 'aht25'</code>.</span>
+        <nav class="page-nav">
+          <a href="/terminal">Terminal</a>
+        </nav>
+      </div>
+      <div id="gems-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="gems-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="pane-resizer"></div>
+
+    <div id="bottom-pane">
+      <div id="bottom-placeholder">Select a gem's README to preview, or click Upload on any gem row.</div>
+      <div id="readme-content" style="display:none"></div>
+      <div id="upload-log" style="display:none"></div>
+      <div id="disclaimer">
+        <strong>Disclaimer:</strong>
+        All gems provided through RuntimeGems are offered "as is", without any warranties or guarantees of any kind.
+        The maintainers do not warrant the accuracy, completeness, reliability, or suitability of any content.
+        By uploading gems to your device, you acknowledge that the maintainers shall not be held liable for any damages arising from the use of any content provided through this repository.
+        Use all content at your own risk.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Null terminal object required by JS::WebSerial#start_terminal_read.
+    // Discards all output; the read loop must be running for PicoModem capture.
+    window.__nullTerminal = { write: function() {}, reset: function() {} };
+
+    // Vertical pane resizer
+    (function() {
+      var resizer = document.getElementById('pane-resizer');
+      var topPane = document.getElementById('top-pane');
+      var startY = 0, startH = 0, dragging = false;
+      resizer.addEventListener('mousedown', function(e) {
+        startY = e.clientY;
+        startH = topPane.offsetHeight;
+        dragging = true;
+        document.body.style.userSelect = 'none';
+        document.body.style.cursor = 'row-resize';
+        e.preventDefault();
+      });
+      document.addEventListener('mousemove', function(e) {
+        if (!dragging) return;
+        var newH = startH + (e.clientY - startY);
+        topPane.style.height = Math.max(80, newH) + 'px';
+      });
+      document.addEventListener('mouseup', function() {
+        if (!dragging) return;
+        dragging = false;
+        document.body.style.userSelect = '';
+        document.body.style.cursor = '';
+      });
+    })();
+  </script>
+  <script type="application/x-mrb" src="pages/r2p2/runtimegems.mrb"></script>
+  <script src="picoruby.wasm/init.iife.js"></script>
+</body>
+</html>

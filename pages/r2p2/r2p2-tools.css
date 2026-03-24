@@ -1,0 +1,259 @@
+/* ================================================================
+ * r2p2-tools.css  -- shared styles for R2P2 browser tools
+ * ================================================================ */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #121212;
+  color: #ccc;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* ----------------------------------------------------------------
+ * Page navigation (right end of controls bar)
+ * ---------------------------------------------------------------- */
+.page-nav {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.page-nav a {
+  font-size: 12px;
+  padding: 3px 9px;
+  background: #1e1e1e;
+  color: #7ec8e3;
+  border: 1px solid #2a5a7a;
+  border-radius: 3px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.page-nav a:hover {
+  background: #2a4a5a;
+  color: #a8d8f0;
+}
+
+/* ----------------------------------------------------------------
+ * Not-supported banner
+ * ---------------------------------------------------------------- */
+#not-supported {
+  color: #f44;
+  font-weight: bold;
+  padding: 10px;
+  background: #300;
+  border: 1px solid #f44;
+  margin: 4px;
+}
+
+/* ----------------------------------------------------------------
+ * Controls bar
+ * ---------------------------------------------------------------- */
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 8px;
+  background: #1e1e1e;
+  border-bottom: 1px solid #333;
+  flex-shrink: 0;
+}
+
+.controls button {
+  padding: 5px 13px;
+  cursor: pointer;
+  background: #2a2a2a;
+  color: #ddd;
+  border: 1px solid #555;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.controls button:hover:not(:disabled) { background: #383838; color: #fff; }
+.controls button:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.controls select {
+  background: #2a2a2a;
+  color: #ccc;
+  border: 1px solid #555;
+  border-radius: 3px;
+  padding: 3px 5px;
+  font-size: 13px;
+}
+
+.controls label { color: #aaa; font-size: 13px; }
+
+/* ----------------------------------------------------------------
+ * Connection status badge
+ * ---------------------------------------------------------------- */
+#status {
+  font-size: 12px;
+  padding: 3px 9px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+#status.connected    { color: #0f0; background: #030; border: 1px solid #0f0; }
+#status.disconnected { color: #f66; background: #200; border: 1px solid #f44; }
+
+/* ----------------------------------------------------------------
+ * Font size control widget  (+/- spinner)
+ * ---------------------------------------------------------------- */
+.font-ctrl { display: inline-flex; align-items: center; gap: 2px; }
+
+.font-ctrl button {
+  padding: 4px 6px;
+  cursor: pointer;
+  font-size: 9px;
+  line-height: 1;
+  background: #2a2a2a;
+  color: #ccc;
+  border: 1px solid #555;
+  border-radius: 2px;
+}
+
+.font-ctrl button:hover { background: #383838; }
+
+.font-ctrl input[type=number] {
+  width: 38px;
+  text-align: center;
+  padding: 2px 0;
+  background: #1a1a1a;
+  color: #ccc;
+  border: 1px solid #444;
+  border-radius: 2px;
+  -moz-appearance: textfield;
+}
+
+.font-ctrl input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+/* ----------------------------------------------------------------
+ * Fieldset panel (used in terminal.html File Editor section)
+ * ---------------------------------------------------------------- */
+fieldset.tool-panel {
+  margin: 4px 0;
+  padding: 4px 6px;
+  border: 1px solid #444;
+}
+
+fieldset.tool-panel legend {
+  font-weight: bold;
+  font-size: 13px;
+  color: #aaa;
+  padding: 0 4px;
+}
+
+/* ----------------------------------------------------------------
+ * Path input
+ * ---------------------------------------------------------------- */
+.path-input {
+  font-family: 'Courier Prime', Courier, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #f8f8f2;
+  background: #1a1a1a;
+  padding: 3px 6px;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+
+/* ----------------------------------------------------------------
+ * File open label (styled as button)
+ * ---------------------------------------------------------------- */
+.file-open-label {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid #555;
+  background: #2a2a2a;
+  color: #ccc;
+  font-size: 13px;
+  border-radius: 3px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.file-open-label:hover { background: #383838; color: #fff; }
+
+/* ----------------------------------------------------------------
+ * Split editor container (editor + log side by side)
+ * ---------------------------------------------------------------- */
+.editor-container {
+  display: flex;
+  height: 300px;
+  gap: 0;
+  margin: 2px 0;
+  border: 1px solid #444;
+  resize: vertical;
+  overflow: hidden;
+}
+
+.editor-container textarea {
+  flex: 0.6;
+  font-family: 'Courier Prime', Courier, monospace;
+  font-size: 14px;
+  background: #1a1a1a;
+  color: #f8f8f2;
+  border: none;
+  border-right: 1px solid #555;
+  padding: 8px;
+  resize: none;
+  tab-size: 2;
+  display: block;
+  overflow-y: auto;
+}
+
+.editor-container textarea::placeholder { color: #444; font-style: italic; }
+
+/* ----------------------------------------------------------------
+ * Horizontal col-resizer (drag handle between editor / log)
+ * ---------------------------------------------------------------- */
+.col-resizer {
+  width: 4px;
+  background: #2a2a2a;
+  cursor: col-resize;
+  user-select: none;
+  transition: background 0.15s;
+}
+
+.col-resizer:hover { background: #666; }
+
+/* ----------------------------------------------------------------
+ * Log panel (monospace green-on-dark)
+ * ---------------------------------------------------------------- */
+.log-panel {
+  flex: 0.4;
+  font-family: 'Courier Prime', Courier, monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+  background: #1a1a1a;
+  color: #0f0;
+  padding: 6px 8px;
+  overflow-y: auto;
+  border: none;
+  border-left: 1px solid #555;
+  line-height: 1.5;
+}
+
+/* ----------------------------------------------------------------
+ * Terminal container (xterm host)
+ * ---------------------------------------------------------------- */
+#terminal-container {
+  margin: 4px 0;
+  border: 1px solid #444;
+  background: #000;
+  padding: 4px;
+  resize: vertical;
+  overflow: hidden;
+  height: 300px;
+  min-height: 60px;
+}
+
+/* ----------------------------------------------------------------
+ * Hint text
+ * ---------------------------------------------------------------- */
+p.hint { color: #666; font-size: 0.85em; margin: 4px 0; }
