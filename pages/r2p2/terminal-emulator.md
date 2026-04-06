@@ -8,14 +8,30 @@ permalink: terminal-emulator
 folder: r2p2
 ---
 
-This page explains how to set up a serial terminal emulator to operate the R2P2 from a PC.
+This page explains how to set up a serial terminal emulator to operate R2P2 from a PC.
 
-## Required Preparation
+## Recommended: Use the R2P2 Web Terminal
 
-A **serial terminal emulator** is required for communication with R2P2.
-Please follow the setup instructions below according to your operating system.
+**If you are using PicoRuby 3.4 or later, you can use the [R2P2 Web Terminal](https://picoruby.org/terminal) directly from your browser — no installation required.**
+
+The R2P2 Web Terminal is the easiest way to get started and is recommended for most users, especially beginners.
+There is no need to install a separate serial terminal emulator.
 
 ---
+
+## When You Need a Serial Terminal Emulator
+
+The following setup is **only necessary** if you have a specific reason to use a dedicated serial terminal emulator
+(e.g., your environment does not support the Web Terminal, or you prefer a native application).
+
+If the Web Terminal works for you, you can skip the rest of this page.
+
+---
+
+## Setup by Operating System
+
+A **serial terminal emulator** is required for serial communication with R2P2.
+Follow the instructions below for your operating system.
 
 ## Windows
 
@@ -170,7 +186,7 @@ Logout and login required after this setting.
   - **Microcontroller side**: Micro-B (Raspberry Pi Pico at EuRuKo 2024 and 2025) or USB-C (M5Stack at mruby Girls Matsue 2025)
   - **PC side**: Compatible with your laptop (Type-A, Type-C, etc.)
   - **Required**: Data communication capable (charging-only cables won't work)
-  
+
   > While the organizers will also provide USB cables, **we recommend bringing your own for peace of mind**. Many recent laptops have only Type-C ports, so please bring appropriate adapter cables or hubs.
 
 - Glasses: Workshop will be detailed work, so bring glasses if you are not confident in your eyesight
