@@ -54,6 +54,13 @@ entries:
       url: "/rom-corruption"
       output: web, pdf
       type: homepage
+  - title: Funicular
+    output: web, pdf
+    folderitems:
+    - title: Getting Started
+      url: "/funicular-getting-started"
+      output: web, pdf
+      type: homepage
   - title: Builtin
     output: web pdf
     folderitems:
