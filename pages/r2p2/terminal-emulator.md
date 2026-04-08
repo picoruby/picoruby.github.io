@@ -2,7 +2,7 @@
 keywords: documentation
 layout: page
 tags: [tips]
-title:  Terminal Emulator Setup for PicoRuby Shell (R2P2)
+title:  Terminal Emulator Setup for R2P2
 sidebar: picoruby_sidebar
 permalink: terminal-emulator
 folder: r2p2
@@ -12,10 +12,27 @@ This page explains how to set up a serial terminal emulator to operate R2P2 from
 
 ## Recommended: Use the R2P2 Web Terminal
 
-**If you are using PicoRuby 3.4 or later, you can use the [R2P2 Web Terminal](https://picoruby.org/terminal) directly from your browser — no installation required.**
+**If you are using R2P2 3.4 or later, you can use the [R2P2 Web Terminal](https://picoruby.org/terminal) directly from your browser — no installation required.**
 
 The R2P2 Web Terminal is the easiest way to get started and is recommended for most users, especially beginners.
 There is no need to install a separate serial terminal emulator.
+
+## Give It a Try!
+
+- Open a proper serial port on the terminal emulator. This example uses Tera Term in Windows.
+
+  ![](/images/open-com-port.png)
+
+- If you could see a screen like this, congrats, now you are at the gate🎉
+
+  ![](/images/r2p2.png)
+
+  - R2P2 shell is a Unix-like shell, so you can use commands like `ls`, `cd`, `cat`, `rm`, etc.
+  - `irb` command starts an interactive Ruby shell
+
+Congratulations! Now you at the gate!
+
+Before starting to dig into R2P2, we would like you to **stargaze** at the [picoruby/picoruby](https://github.com/picoruby/picoruby) repo🌟
 
 ---
 
@@ -69,6 +86,12 @@ sudo yum install gtkterm
 ---
 
 ## macOS
+
+### Mac Issues
+
+- From our experience, Mac laptops occasionally encounter issues during the workshop
+- We are unsure of the specific models that may have problems. Both Intel Macs and M1/M2/M3 Macs have had issues in the past
+- Please be aware that we will not be able to know if your Mac will work until the day of the workshop
 
 Implementing a terminal emulator seems to be no easy task, as it involves dealing with escape sequences, timing issues, and all sorts of edge cases that have become complicated due to historical reasons.
 Unfortunately, we don't know if there are any serial terminal emulators for macOS comparable to Tera Term or GTKTerm.
@@ -177,20 +200,6 @@ sudo usermod -a -G dialout $USER
 Logout and login required after this setting.
 
 ---
-
-## For Workshop Participants: What to Bring on the Day
-
-- Laptop (with setup completed as above)
-  - **IMPORTANT**: If your laptop is configured to prohibit writing to USB memory devices, likely due to your company's security policy, it won't work. Please check in advance.
-- USB Cable
-  - **Microcontroller side**: Micro-B (Raspberry Pi Pico at EuRuKo 2024 and 2025) or USB-C (M5Stack at mruby Girls Matsue 2025)
-  - **PC side**: Compatible with your laptop (Type-A, Type-C, etc.)
-  - **Required**: Data communication capable (charging-only cables won't work)
-
-  > While the organizers will also provide USB cables, **we recommend bringing your own for peace of mind**. Many recent laptops have only Type-C ports, so please bring appropriate adapter cables or hubs.
-
-- Glasses: Workshop will be detailed work, so bring glasses if you are not confident in your eyesight
-- Tweezers: Not required, but for handling small components, they will be very helpful
 
 ## Questions & Support
 

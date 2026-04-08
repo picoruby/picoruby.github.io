@@ -2,29 +2,33 @@
 keywords: documentation
 layout: page
 tags: [tips]
-title:  Setup & General Information
+title:  Setup and General Information
 sidebar: picoruby_sidebar
 permalink: setup
 folder: r2p2
 ---
 
+R2P2 is a shell system running on Rasberry Pi Pico series.
+You can explore PicoRuby on it and create your own microcontroller application with ease.
+
+![](/images/r2p2.png)
+
 This section describes how to set up R2P2 and provides general information for R2P2 newbies.
 
-## **IMPORTANT**: Laptop Security Settings
+## **NOTICE**: Laptop Security Settings
 
-If your laptop is configured to prohibit writing to USB memory devices, likely due to your company's security policy, it will not function😣
+If your laptop is configured to prohibit writing to USB memory devices, likely due to your company's security policy, installing UF2 will not be doable😣
 
-### Mac Issues
-
-- From our experience, Mac laptops occasionally encounter issues during the workshop
-- We are unsure of the specific models that may have problems. Both Intel Macs and M1/M2/M3 Macs have had issues in the past
-- Please be aware that we will not be able to know if your Mac will work until the day of the workshop
+However, since MSC is only required for installing UF2, you can ask the instructor or other participants for help with just that step at the workshop venue.
+If you're tackling this on your own, you'll need another PC to complete the process.
 
 ## Install R2P2 into Raspi Pico
 
+### Download
+
 There are two ways to download the R2P2 binary:
 
-### Method 1: Automated Download (Recommended)
+#### Method 1: Automated Download (Recommended)
 
 First, navigate to the directory where you want to download the binary:
 
@@ -61,7 +65,7 @@ This script will:
 
 **For downloadable options, see the image in the section below.**
 
-### Method 2: Manual Download
+#### Method 2: Manual Download
 
 - Download the latest *R2P2-PICORUBY-\*.uf2* from GitHub [https://github.com/picoruby/R2P2/releases/latest](https://github.com/picoruby/R2P2/releases/latest) (Of course, unzip or tar it)
 
@@ -71,11 +75,11 @@ This script will:
 
 Regardless of which download method you used, you need to manually install the UF2 file to your Pi Pico:
 
-- Connect Pi Pico and PC while\\npressing the BOOTSEL button. Then you'll find *RPI-RP2* (for Raspi Pico) or *RP2350* (for Pico2) drive in file manager (File Explorer or Finder)
+- Connect Pi Pico and PC while pressing the BOOTSEL button. Then you'll find *RPI-RP2* (for Raspi Pico) or *RP2350* (for Pico2) drive in file manager (File Explorer or Finder)
 
   ![](/images/bootsel-button.png)
 
-- Drag & drop *R2P2-\*.uf2* into RPI-RP2 drive
+- Drag & drop *R2P2-\*.uf2* into RPI-RP2 (RP2350) drive
 
   ![](/images/drag-and-drop.png)
 
@@ -83,18 +87,12 @@ Regardless of which download method you used, you need to manually install the U
 
   ![](/images/r2p2-drive.png)
 
-- Open a proper serial port on the terminal emulator. Information about terminal emulators can be found in [/terminal-emulator](/terminal-emulator)
+## For Workshop Participants: What to Bring on the Day
 
-  ![](/images/open-com-port.png)
-
-- If you could see a screen like this, congrats, now you are at the gate🎉
-
-  ![](/images/r2p2.png)
-
-  - R2P2 shell is a Unix-like shell, so you can use commands like `ls`, `cd`, `cat`, `rm`, etc.
-  - `irb` command starts an interactive Ruby shell
-
-Congratulations! Now you at the gate!
-
-Before starting to dig into R2P2, we would like you to **stargaze** at the [picoruby/picoruby](https://github.com/picoruby/picoruby) repo🌟
+- USB Cable
+  - **Microcontroller side**: Micro-B (for Raspberry Pi Pico) or USB-C (for M5Stack)
+  - **PC side**: Compatible with your laptop (Type-A, Type-C, etc.)
+  - **Required**: Data communication capable (charging-only cables won't work)
+- Glasses: Workshop will be detailed work, so bring glasses if you are not confident in your eyesight
+- Tweezers: Not required, but for handling small components, they will be very helpful
 

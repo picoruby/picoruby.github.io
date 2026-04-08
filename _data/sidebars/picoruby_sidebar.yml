@@ -27,7 +27,7 @@ entries:
       url: "/contribution.html"
       output: web, pdf
       type: homepage
-  - title: R2P2 & Workshop
+  - title: Getting Start with R2P2
     output: web, pdf
     folderitems:
     - title: Setup and General Information
