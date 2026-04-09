@@ -15,6 +15,7 @@ folder: r2p2
   <link rel="stylesheet" href="picoruby.wasm/test.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xterm/xterm@6.0.0/css/xterm.css">
   <link rel="stylesheet" href="pages/r2p2/r2p2-tools.css">
+  <script src="pages/r2p2/version-selector.js"></script>
   <style>
     body { padding: 4px; }
     #dfu-section { margin: 4px 0; padding: 2px 6px; border: 1px solid #444; }
@@ -26,6 +27,7 @@ folder: r2p2
   </style>
 </head>
 <body>
+  <div id="version-bar"></div>
   <div id="not-supported" style="display:none">
     Web Serial API is not supported in this browser.
     Please use <strong>Google Chrome</strong> or <strong>Microsoft Edge</strong> (desktop, version 89+).
@@ -91,8 +93,7 @@ folder: r2p2
   <script src="https://cdn.jsdelivr.net/npm/@xterm/xterm@6.0.0/lib/xterm.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@xterm/addon-fit@0.11.0/lib/addon-fit.js"></script>
 
-  <script type="application/x-mrb" src="pages/r2p2/terminal.mrb"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@picoruby/wasm-wasi@3.4.2/dist/init.iife.js"></script>
-
+  <script type="text/ruby" src="pages/r2p2/terminal.rb"></script>
+  <!-- wasm script is loaded dynamically by version-selector.js -->
 </body>
 </html>
