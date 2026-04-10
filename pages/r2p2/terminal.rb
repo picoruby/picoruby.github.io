@@ -671,4 +671,5 @@ class App
   end
 end
 
+JS.global[:__ruby_description] = RUBY_DESCRIPTION
 App.new

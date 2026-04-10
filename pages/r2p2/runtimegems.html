@@ -15,6 +15,7 @@ folder: r2p2
   <link rel="stylesheet" href="picoruby.wasm/test.css">
   <link rel="stylesheet" href="pages/r2p2/r2p2-tools.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="pages/r2p2/version-selector.js"></script>
   <style>
     html, body { height: 100%; }
     #app {
@@ -190,6 +191,7 @@ folder: r2p2
   </style>
 </head>
 <body>
+  <div id="version-bar"></div>
   <div id="not-supported" style="display:none">
     Web Serial API is not supported in this browser.
     Please use <strong>Google Chrome</strong> or <strong>Microsoft Edge</strong> (desktop, version 89+).
@@ -283,7 +285,8 @@ folder: r2p2
       });
     })();
   </script>
-  <script type="application/x-mrb" src="pages/r2p2/runtimegems.mrb"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@picoruby/wasm-wasi@3.4.2/dist/init.iife.js"></script>
+
+  <script type="text/ruby" src="pages/r2p2/runtimegems.rb"></script>
+  <!-- wasm script is loaded dynamically by version-selector.js -->
 </body>
 </html>
