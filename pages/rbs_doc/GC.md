@@ -8,23 +8,8 @@ permalink: GC.html
 folder: rbs_doc
 ---
 ## Singleton methods
-### disable
-
-```ruby
-GC.disable() -> bool
-```
-### enable
-
-```ruby
-GC.enable() -> bool
-```
 ### interval_ratio=
 
 ```ruby
 GC.interval_ratio=(Integer) -> Integer
-```
-### start
-
-```ruby
-GC.start() -> bool
 ```

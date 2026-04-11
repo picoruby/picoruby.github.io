@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-DRb::DRbServer.new(String uri, untyped front, ?Hash[untyped, untyped] config) -> DRbServer
+DRb::DRbServer.new(String uri, untyped front, ?Hash[untyped, untyped] config) -> void
 ```
 ## Instance methods
 ### accept

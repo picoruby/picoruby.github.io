@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-SQLite3::Statement.new(SQLite3::Database db, String sql) -> instance
+SQLite3::Statement.new(SQLite3::Database db, String sql) -> SQLite3::Statement
 ```
 ## Instance methods
 ### active?

@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-FAT::Stat.new(String device, String path) -> instance
+FAT::Stat.new(String device, String path) -> void
 ```
 ## Instance methods
 ### birthtime

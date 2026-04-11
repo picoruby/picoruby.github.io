@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::VDOM::Element.new(String tag, ?Hash[Symbol, untyped] props, ?Array[child_t] children) -> Element
+Funicular::VDOM::Element.new(String tag, ?Hash[Symbol, untyped] props, ?Array[child_t] children) -> void
 ```
 ## Instance methods
 ### ==

@@ -52,7 +52,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-BLE.new(role_t role, ?(String|nil) profile_data) -> BLE
+BLE.new(role_t role, ?(String|nil) profile_data) -> void
 ```
 ## Instance methods
 ### _init

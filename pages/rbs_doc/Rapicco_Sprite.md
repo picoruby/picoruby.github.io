@@ -20,7 +20,7 @@ Hash[String, Integer]
 ### new
 
 ```ruby
-Rapicco::Sprite.new(Symbol name, String author) -> Sprite
+Rapicco::Sprite.new(Symbol name, String author) -> void
 ```
 ## Instance methods
 ### show

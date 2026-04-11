@@ -30,7 +30,7 @@ Littlefs.init_spi(String unit, Integer sck_pin, Integer cipo_pin, Integer copi_p
 ### new
 
 ```ruby
-Littlefs.new(Symbol|String device, ?label: String?, ?driver: driver_t) -> Littlefs
+Littlefs.new(Symbol | String device, ?label: String?, ?driver: driver_t) -> void
 ```
 ### unixtime_offset=
 

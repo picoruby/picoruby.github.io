@@ -16,7 +16,7 @@ Hash[String, String] | Array[String]
 ### new
 
 ```ruby
-SQLite3::Database.new(String filename, ?results_as_hash: bool) ?{ (SQLite3::Database) -> void } -> SQLite3::Database
+SQLite3::Database.new(String filename, ?results_as_hash: bool) ?{ (SQLite3::Database) -> void } -> void
 ```
 ### open
 

@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-IRQ::IRQInstance.new(irq_peri_t peripheral, irq_event_type_t event_type, Hash[Symbol, untyped] opts, Proc callback) -> IRQ::IRQInstance
+IRQ::IRQInstance.new(irq_peri_t peripheral, irq_event_type_t event_type, Hash[Symbol, untyped] opts, Proc callback) -> void
 ```
 ## Instance methods
 ### call

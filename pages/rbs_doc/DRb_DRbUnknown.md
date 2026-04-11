@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-DRb::DRbUnknown.new(untyped err, String buf) -> DRbUnknown
+DRb::DRbUnknown.new(untyped err, String buf) -> void
 ```
 ## Instance methods
 ### exception

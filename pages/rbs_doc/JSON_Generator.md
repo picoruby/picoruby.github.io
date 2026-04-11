@@ -13,7 +13,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-JSON::Generator.new(untyped) -> Generator
+JSON::Generator.new(untyped) -> void
 ```
 ## Instance methods
 ### generate

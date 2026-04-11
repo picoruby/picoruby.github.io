@@ -8,6 +8,11 @@ permalink: PSG_Driver.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### new
+
+```ruby
+PSG::Driver.new(Symbol type, **Integer opt) -> void
+```
 ### select_mcp4922
 
 ```ruby
@@ -33,11 +38,6 @@ instance.buffer_flush() -> nil
 
 ```ruby
 instance.deinit() -> nil
-```
-### initalize
-
-```ruby
-instance.initalize(Symbol type, **Integer opt) -> void
 ```
 ### join
 

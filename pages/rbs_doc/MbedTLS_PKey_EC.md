@@ -19,6 +19,11 @@ MbedTLS::PKey::EC.generate(?String curve) -> MbedTLS::PKey::EC
 MbedTLS::PKey::EC.new(String key) -> MbedTLS::PKey::EC
 ```
 ## Instance methods
+### free
+
+```ruby
+instance.free() -> nil
+```
 ### private?
 
 ```ruby

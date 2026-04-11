@@ -51,17 +51,22 @@ instance.puts(*untyped args) -> nil
 ### read
 
 ```ruby
-instance.read(Integer maxlen) -> String?
+instance.read(?Integer maxlen) -> (String | nil)
+```
+### read_nonblock
+
+```ruby
+instance.read_nonblock(Integer maxlen) -> String?
+```
+### readpartial
+
+```ruby
+instance.readpartial(Integer maxlen) -> String
 ```
 ### ready?
 
 ```ruby
 instance.ready?() -> bool
-```
-### recv
-
-```ruby
-instance.recv(Integer maxlen, ?Integer flags) -> String?
 ```
 ### remote_address
 
@@ -86,5 +91,5 @@ instance.send(String data, Integer flags) -> Integer
 ### write
 
 ```ruby
-instance.write(String data) -> Integer
+instance.write(*String str) -> Integer
 ```

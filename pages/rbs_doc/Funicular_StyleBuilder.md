@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::StyleBuilder.new() -> StyleBuilder
+Funicular::StyleBuilder.new() -> void
 ```
 ## Instance methods
 ### to_definitions

@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-AHT25.new(i2c: I2C) -> instance
+AHT25.new(i2c: I2C) -> void
 ```
 ## Instance methods
 ### check

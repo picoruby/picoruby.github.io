@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::VDOM::Renderer.new(?JS::Object? doc) -> Renderer
+Funicular::VDOM::Renderer.new(?JS::Object? doc) -> void
 ```
 ## Instance methods
 ### render

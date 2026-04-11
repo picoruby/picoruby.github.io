@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Net::HTTPGenericRequest.new(String method, String path, ?Hash[String, String]? initheader) -> HTTPGenericRequest
+Net::HTTPGenericRequest.new(String method, String path, ?Hash[String, String]? initheader) -> void
 ```
 ## Instance methods
 ### []

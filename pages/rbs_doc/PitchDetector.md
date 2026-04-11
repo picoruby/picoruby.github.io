@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-PitchDetector.new(Integer pin) -> PitchDetector
+PitchDetector.new(Integer pin) -> void
 ```
 ## Instance methods
 ### detect_pitch

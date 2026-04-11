@@ -48,6 +48,11 @@ Machine.exit(?Integer status) -> void
 ```ruby
 Machine.get_hwclock() -> [Integer, Integer]
 ```
+### mcu_name
+
+```ruby
+Machine.mcu_name() -> String
+```
 ### pop_signal_self_manage
 
 ```ruby

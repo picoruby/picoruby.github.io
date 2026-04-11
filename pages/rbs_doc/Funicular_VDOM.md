@@ -14,7 +14,7 @@ Array[untyped]
 ```
 ### child_t
 ```ruby
-Element | Text | Component | Array[Element | Text | Component]
+Element | Text | Component | String | Array[Element | Text | Component | String]
 ```
 ## Singleton methods
 ### create_element

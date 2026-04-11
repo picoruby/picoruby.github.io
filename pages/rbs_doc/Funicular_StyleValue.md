@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::StyleValue.new(String | untyped value) -> StyleValue
+Funicular::StyleValue.new(String | untyped value) -> void
 ```
 ## Instance methods
 ### to_s

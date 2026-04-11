@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Editor::Base.new-> Base
+Editor::Base.new() -> void
 ```
 ## Instance methods
 ### clear

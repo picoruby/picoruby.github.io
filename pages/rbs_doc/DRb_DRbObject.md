@@ -11,7 +11,12 @@ folder: rbs_doc
 ### new
 
 ```ruby
-DRb::DRbObject.new(String uri, ?untyped? ref) -> DRbObject
+DRb::DRbObject.new(String uri, ?untyped? ref) -> void
+```
+### new_with_uri
+
+```ruby
+DRb::DRbObject.new_with_uri(String uri) -> DRbObject
 ```
 ## Instance methods
 ### ==

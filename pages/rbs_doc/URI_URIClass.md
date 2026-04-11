@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-URI::URIClass.new(String scheme, String host, Integer port, String path, ?String? query, ?String? fragment) -> URIClass
+URI::URIClass.new(String scheme, String host, Integer port, String path, ?String? query, ?String? fragment) -> void
 ```
 ## Instance methods
 ### default_port

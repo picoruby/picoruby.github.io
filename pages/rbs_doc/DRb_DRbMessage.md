@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-DRb::DRbMessage.new(untyped socket) -> DRbMessage
+DRb::DRbMessage.new(untyped socket) -> void
 ```
 ## Instance methods
 ### recv_reply

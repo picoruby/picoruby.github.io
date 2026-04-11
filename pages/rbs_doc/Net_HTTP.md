@@ -21,7 +21,7 @@ Net::HTTP.get_response(String uri_or_host, ?String? path, ?Integer? port) -> HTT
 ### new
 
 ```ruby
-Net::HTTP.new(String address, ?Integer? port) -> Net::HTTP
+Net::HTTP.new(String address, ?Integer? port) -> void
 ```
 ### post_form
 

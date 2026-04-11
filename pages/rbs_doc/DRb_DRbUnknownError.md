@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-DRb::DRbUnknownError.new(untyped err, String buf) -> DRbUnknownError
+DRb::DRbUnknownError.new(untyped err, String buf) -> void
 ```
 ## Attr accessors
 ### err (reader)

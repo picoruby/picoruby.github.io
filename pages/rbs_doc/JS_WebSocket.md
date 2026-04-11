@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-JS::WebSocket.new(String url) -> WebSocket
+JS::WebSocket.new(String url) -> void
 ```
 ## Instance methods
 ### binary_type

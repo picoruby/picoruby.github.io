@@ -21,7 +21,7 @@ RTD.new(
     current_gpio: GPIO,
     r_ref: (Float | Integer),
     ?channels: Hash[Symbol, (Integer | ADC)]
-  ) -> instance
+  ) -> void
 ```
 ## Instance methods
 ### read

@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-RotaryEncoder.new(Integer pin_a, Integer pin_b) -> instance
+RotaryEncoder.new(Integer pin_a, Integer pin_b) -> void
 ```
 ## Instance methods
 ### clockwise

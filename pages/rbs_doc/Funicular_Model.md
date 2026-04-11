@@ -38,15 +38,15 @@ Funicular::Model.endpoints=(Hash[String, Hash[String, String]] endpoints) -> Has
 ```ruby
 Funicular::Model.find(?untyped id, ?endpoint_name: String, ?model_class: singleton(Model)) ?{ (Model? instance, String? error) -> void } -> void
 ```
+### new
+
+```ruby
+Funicular::Model.new(?Hash[untyped, untyped] attributes) -> void
+```
 ### load_schema
 
 ```ruby
 Funicular::Model.load_schema(Hash[String, untyped] schema_data) -> void
-```
-### new
-
-```ruby
-Funicular::Model.new(?Hash[untyped, untyped] attributes) -> Model
 ```
 ### schema
 

@@ -11,5 +11,5 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::StyleAccessor.new(Hash[Symbol, Hash[Symbol, untyped]] definitions) -> StyleAccessor
+Funicular::StyleAccessor.new(Hash[Symbol, Hash[Symbol, untyped]] definitions) -> void
 ```

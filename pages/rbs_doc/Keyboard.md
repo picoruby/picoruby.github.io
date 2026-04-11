@@ -47,7 +47,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Keyboard.new(Array[Integer] row_pins, Array[Integer] col_pins, ?debounce_ms: Integer, ?keymap_rows: Integer?, ?keymap_cols: Integer?) -> Keyboard
+Keyboard.new(Array[Integer] row_pins, Array[Integer] col_pins, ?debounce_ms: Integer, ?keymap_rows: Integer?, ?keymap_cols: Integer?) -> void
 ```
 ## Instance methods
 ### add_combo

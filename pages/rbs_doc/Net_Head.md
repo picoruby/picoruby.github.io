@@ -11,5 +11,5 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Net::Head.new(String path, ?Hash[String, String]? initheader) -> Head
+Net::Head.new(String path, ?Hash[String, String]? initheader) -> void
 ```

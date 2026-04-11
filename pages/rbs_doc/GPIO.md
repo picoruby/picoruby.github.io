@@ -18,15 +18,15 @@ folder: rbs_doc
 ```ruby
 GPIO.high_at?(gpio_pin_t pin) -> bool
 ```
+### new
+
+```ruby
+GPIO.new(gpio_pin_t pin, Integer flags, ?Integer alt_function) -> void
+```
 ### low_at?
 
 ```ruby
 GPIO.low_at?(Integer) -> bool
-```
-### new
-
-```ruby
-GPIO.new(gpio_pin_t pin, Integer flags, ?Integer alt_function) -> instance
 ```
 ### open_drain_at
 

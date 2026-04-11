@@ -17,7 +17,7 @@ Net::WebSocket::Client.connect(String) -> Client
 ### new
 
 ```ruby
-Net::WebSocket::Client.new(String) -> Net::WebSocket::Client
+Net::WebSocket::Client.new(String url) -> void
 ```
 ## Instance methods
 ### add_header

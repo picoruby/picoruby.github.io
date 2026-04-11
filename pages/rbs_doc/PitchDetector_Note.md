@@ -16,7 +16,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-PitchDetector::Note.new(Float | Integer reference) -> Note
+PitchDetector::Note.new(Float | Integer reference) -> void
 ```
 ## Instance methods
 ### freq_to_note

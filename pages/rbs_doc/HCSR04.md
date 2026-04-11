@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-HCSR04.new(trig: Integer, echo: Integer) -> HCSR04
+HCSR04.new(trig: Integer, echo: Integer) -> void
 ```
 ## Instance methods
 ### distance_cm

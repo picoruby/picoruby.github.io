@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::Component::StateAccessor.new(Hash[Symbol, untyped] state_hash) -> StateAccessor
+Funicular::Component::StateAccessor.new(Hash[Symbol, untyped] state_hash) -> void
 ```
 ## Instance methods
 ### []

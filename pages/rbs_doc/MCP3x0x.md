@@ -18,7 +18,7 @@ MCP3x0x.new(
     ?cipo_pin: Integer,
     ?copi_pin: Integer,
     ?cs_pin: Integer
-  ) -> instance
+  ) -> void
 ```
 ## Instance methods
 ### read

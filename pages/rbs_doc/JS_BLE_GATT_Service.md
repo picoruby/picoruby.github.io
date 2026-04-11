@@ -7,6 +7,12 @@ sidebar: picoruby_sidebar
 permalink: JS_BLE_GATT_Service.html
 folder: rbs_doc
 ---
+## Singleton methods
+### new
+
+```ruby
+JS::BLE::GATT::Service.new(JS::Object js_service) -> void
+```
 ## Instance methods
 ### characteristic
 

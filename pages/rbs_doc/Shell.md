@@ -52,7 +52,7 @@ Shell.get_device(:gpio_trigger, String | Symbol name) -> GPIO?
 ### new
 
 ```ruby
-Shell.new(?clean: bool) -> Shell
+Shell.new(?clean: bool) -> void
 ```
 ### next_executable
 

@@ -11,5 +11,5 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Net::Get.new(String path, ?Hash[String, String]? initheader) -> Get
+Net::Get.new(String path, ?Hash[String, String]? initheader) -> void
 ```

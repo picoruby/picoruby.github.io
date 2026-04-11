@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::FormBuilder.new(Component component, Symbol model_key, ?Hash[Symbol, untyped] options) -> FormBuilder
+Funicular::FormBuilder.new(Component component, Symbol model_key, ?Hash[Symbol, untyped] options) -> void
 ```
 ## Instance methods
 ### checkbox

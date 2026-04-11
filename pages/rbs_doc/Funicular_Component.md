@@ -16,7 +16,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::Component.new(?Hash[Symbol, untyped] props) -> Component
+Funicular::Component.new(?Hash[Symbol, untyped] props) -> void
 ```
 ### styles
 

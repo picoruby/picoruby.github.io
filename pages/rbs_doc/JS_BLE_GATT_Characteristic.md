@@ -7,6 +7,12 @@ sidebar: picoruby_sidebar
 permalink: JS_BLE_GATT_Characteristic.html
 folder: rbs_doc
 ---
+## Singleton methods
+### new
+
+```ruby
+JS::BLE::GATT::Characteristic.new(JS::Object js_char) -> void
+```
 ## Instance methods
 ### on_change
 

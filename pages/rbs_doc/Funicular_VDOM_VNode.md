@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::VDOM::VNode.new(Symbol type) -> VNode
+Funicular::VDOM::VNode.new(Symbol type) -> void
 ```
 ## Attr accessors
 ### type (reader)

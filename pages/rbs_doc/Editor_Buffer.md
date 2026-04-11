@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Editor::Buffer.new() -> instance
+Editor::Buffer.new() -> void
 ```
 ## Instance methods
 ### bottom
