@@ -6,15 +6,15 @@ entries:
   version: master
   folders:
 
-  - title: 
+  - title:
     output: pdf
     type: frontmatter
     folderitems:
-    - title: 
+    - title:
       url: "/titlepage.html"
       output: pdf
       type: frontmatter
-    - title: 
+    - title:
       url: "/tocpage.html"
       output: pdf
       type: frontmatter
@@ -23,11 +23,11 @@ entries:
     output: web, pdf
     folderitems:
     - title: Introduction
-      url: "/index.html"
+      url: "/index"
       output: web, pdf
       type: homepage
     - title: Contribution
-      url: "/contribution.html"
+      url: "/contribution"
       output: web, pdf
       type: homepage
 

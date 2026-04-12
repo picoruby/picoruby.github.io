@@ -2,7 +2,7 @@
 
 ## Web site
 
-https://picoruby.github.io/
+https://picoruby.org/
 
 ## First time setup
 

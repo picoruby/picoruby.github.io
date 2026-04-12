@@ -20,11 +20,11 @@ entries:
     output: web, pdf
     folderitems:
     - title: Introduction
-      url: "/index.html"
+      url: "/index"
       output: web, pdf
       type: homepage
     - title: Contribution
-      url: "/contribution.html"
+      url: "/contribution"
       output: web, pdf
       type: homepage
   - title: R2P2 & Workshop
