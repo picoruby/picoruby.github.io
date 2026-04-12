@@ -4,7 +4,7 @@ keywords: documentation
 tags: [contributing]
 summary: Contributing to PicoRuby is always welcome!
 sidebar: picoruby_sidebar
-permalink: contribution.html
+permalink: contribution
 folder: picoruby
 ---
 
@@ -12,8 +12,8 @@ folder: picoruby
 
 ### Porting
 
-As of 2024, PicoRuby supports only the RP2040 (Raspberry Pi Pico).
-It would be a significant undertaking to port it to other MCUs like the nRF52, STM32, and ESP32.
+As of 2026, PicoRuby supports RP2040/RP2350 (Raspberry Pi Pico series) and ESP32.
+It would be a significant undertaking to port it to other MCUs like the nRF52 and STM32.
 
 If you are interested in contributing to a porting, please visit the repository: [https://github.com/picoruby/picoruby](https://github.com/picoruby/picoruby)
 
@@ -29,8 +29,8 @@ If you are interested in contributing to the documentation, please visit the rep
 By becoming a GitHub sponsor of PicoRuby, you can support us financially.
 The sponsorship funds will be used for purchases such as microcontrollers, peripheral devices, testing equipment, and more, assisting us in various ways: [https://github.com/sponsors/picoruby](https://github.com/sponsors/picoruby)
 
-### Using PicoRuby and writing about it
+### Using PicoRuby and Writing about It
 
-Above all, create your projects using PicoRuby and share them through your Twitter or blog.
-This step will significantly contribute to expanding the world of Ruby on Microcontroller, marking a big leap forward.
+Above all, create your projects using PicoRuby and share them through your Twitter, blog, and tech conferences.
+This step will significantly contribute to expanding the world of Ruby on microcontroller and web browser, marking a big leap forward.
 

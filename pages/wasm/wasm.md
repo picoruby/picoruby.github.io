@@ -8,7 +8,7 @@ permalink: wasm
 folder: wasm
 ---
 
-PicoRuby also works on browsers.
+PicoRuby also works on web browsers.
 Because of its portability, PicoRuby.wasm supports the language's full features while CRuby.wasm doesn't.
 
 | |CRuby.wasm (4.0)|PicoRuby.wasm (3.4)|
