@@ -4,8 +4,8 @@ layout: page
 tags: [funicular, SPA, Virtual DOM]
 title: Getting Started with Funicular
 sidebar: picoruby_sidebar
-permalink: funicular
-folder: funicular
+permalink: funicular-getting-started
+folder: wasm
 ---
 
 Funicular is a React-inspired SPA framework for PicoRuby.

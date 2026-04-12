@@ -54,109 +54,37 @@ entries:
       url: "/rom-corruption"
       output: web, pdf
       type: homepage
-  - title: Funicular
+  - title: PicoRuby.WASM
     output: web, pdf
     folderitems:
-    - title: Getting Started
+    - title: Ruby on Browser
+      url: "/wasm"
+      output: web, pdf
+      type: homepage
+    - title: Getting Started with Funicular
       url: "/funicular-getting-started"
       output: web, pdf
       type: homepage
   - title: Builtin
     output: web pdf
     folderitems:
-    - title: class Array
-      url: "/Array.html"
-      output: web pdf
-      type: homepage
-    - title: module Enumerable
-      url: "/Enumerable.html"
-      output: web pdf
-      type: homepage
-    - title: class FalseClass
-      url: "/FalseClass.html"
-      output: web pdf
-      type: homepage
-    - title: class Float
-      url: "/Float.html"
-      output: web pdf
-      type: homepage
-    - title: class Hash
-      url: "/Hash.html"
-      output: web pdf
-      type: homepage
-    - title: class Integer
-      url: "/Integer.html"
-      output: web pdf
-      type: homepage
-    - title: module Kernel
-      url: "/Kernel.html"
-      output: web pdf
-      type: homepage
-    - title: module Math
-      url: "/Math.html"
-      output: web pdf
-      type: homepage
-    - title: class NilClass
-      url: "/NilClass.html"
-      output: web pdf
-      type: homepage
     - title: class Object
       url: "/Object.html"
-      output: web pdf
-      type: homepage
-    - title: class Proc
-      url: "/Proc.html"
-      output: web pdf
-      type: homepage
-    - title: class Range
-      url: "/Range.html"
-      output: web pdf
-      type: homepage
-    - title: class String
-      url: "/String.html"
-      output: web pdf
-      type: homepage
-    - title: class Symbol
-      url: "/Symbol.html"
-      output: web pdf
-      type: homepage
-    - title: class TrueClass
-      url: "/TrueClass.html"
       output: web pdf
       type: homepage
   - title: Error
     output: web pdf
     folderitems:
-    - title: class ArgumentError
-      url: "/ArgumentError.html"
-      output: web pdf
-      type: homepage
     - title: class CYW43::ConnectTimeout
       url: "/CYW43_ConnectTimeout.html"
-      output: web pdf
-      type: homepage
-    - title: class EAGAINWaitReadable
-      url: "/EAGAINWaitReadable.html"
-      output: web pdf
-      type: homepage
-    - title: class EOFError
-      url: "/EOFError.html"
       output: web pdf
       type: homepage
     - title: class ESP32::ConnectTimeout
       url: "/ESP32_ConnectTimeout.html"
       output: web pdf
       type: homepage
-    - title: class Exception
-      url: "/Exception.html"
-      output: web pdf
-      type: homepage
     - title: class GPIO::Error
       url: "/GPIO_Error.html"
-      output: web pdf
-      type: homepage
-    - title: class IOError
-      url: "/IOError.html"
       output: web pdf
       type: homepage
     - title: class Interrupt
@@ -195,14 +123,6 @@ entries:
       url: "/JWT_VerificationError.html"
       output: web pdf
       type: homepage
-    - title: class LoadError
-      url: "/LoadError.html"
-      output: web pdf
-      type: homepage
-    - title: class NameError
-      url: "/NameError.html"
-      output: web pdf
-      type: homepage
     - title: class Net::MQTT::ConnectionError
       url: "/Net_MQTT_ConnectionError.html"
       output: web pdf
@@ -231,24 +151,8 @@ entries:
       url: "/Net_WebSocket_WebSocketError.html"
       output: web pdf
       type: homepage
-    - title: class NoMethodError
-      url: "/NoMethodError.html"
-      output: web pdf
-      type: homepage
-    - title: class NotImplementedError
-      url: "/NotImplementedError.html"
-      output: web pdf
-      type: homepage
     - title: class Prism::ParseError
       url: "/Prism_ParseError.html"
-      output: web pdf
-      type: homepage
-    - title: class RangeError
-      url: "/RangeError.html"
-      output: web pdf
-      type: homepage
-    - title: class RuntimeError
-      url: "/RuntimeError.html"
       output: web pdf
       type: homepage
     - title: class SQLite3::Exception
@@ -257,22 +161,6 @@ entries:
       type: homepage
     - title: class SignalException
       url: "/SignalException.html"
-      output: web pdf
-      type: homepage
-    - title: class StandardError
-      url: "/StandardError.html"
-      output: web pdf
-      type: homepage
-    - title: class SyntaxError
-      url: "/SyntaxError.html"
-      output: web pdf
-      type: homepage
-    - title: class TypeError
-      url: "/TypeError.html"
-      output: web pdf
-      type: homepage
-    - title: class ZeroDivisionError
-      url: "/ZeroDivisionError.html"
       output: web pdf
       type: homepage
   - title: Hardware Device
@@ -416,10 +304,6 @@ entries:
   - title: General
     output: web pdf
     folderitems:
-    - title: class Array
-      url: "/Array.html"
-      output: web pdf
-      type: homepage
     - title: class BLE
       url: "/BLE.html"
       output: web pdf
@@ -460,20 +344,12 @@ entries:
       url: "/Base64.html"
       output: web pdf
       type: homepage
-    - title: class BasicObject
-      url: "/BasicObject.html"
-      output: web pdf
-      type: homepage
     - title: class BasicSocket
       url: "/BasicSocket.html"
       output: web pdf
       type: homepage
     - title: module CRC
       url: "/CRC.html"
-      output: web pdf
-      type: homepage
-    - title: class Class
-      url: "/Class.html"
       output: web pdf
       type: homepage
     - title: module DFU
@@ -584,10 +460,6 @@ entries:
       url: "/Editor_Screen.html"
       output: web pdf
       type: homepage
-    - title: class Exception
-      url: "/Exception.html"
-      output: web pdf
-      type: homepage
     - title: class FAT
       url: "/FAT.html"
       output: web pdf
@@ -612,16 +484,8 @@ entries:
       url: "/File.html"
       output: web pdf
       type: homepage
-    - title: module File::Constants
-      url: "/File_Constants.html"
-      output: web pdf
-      type: homepage
     - title: class File::Stat
       url: "/File_Stat.html"
-      output: web pdf
-      type: homepage
-    - title: class FileTest
-      url: "/FileTest.html"
       output: web pdf
       type: homepage
     - title: module Funicular
@@ -750,10 +614,6 @@ entries:
       type: homepage
     - title: class HCSR04::WraparoundError
       url: "/HCSR04_WraparoundError.html"
-      output: web pdf
-      type: homepage
-    - title: class Hash
-      url: "/Hash.html"
       output: web pdf
       type: homepage
     - title: class IIRFilter
@@ -900,10 +760,6 @@ entries:
       url: "/Marshal.html"
       output: web pdf
       type: homepage
-    - title: class MatchData
-      url: "/MatchData.html"
-      output: web pdf
-      type: homepage
     - title: module MbedTLS
       url: "/MbedTLS.html"
       output: web pdf
@@ -942,14 +798,6 @@ entries:
       type: homepage
     - title: class MbedTLS::PKey::RSA
       url: "/MbedTLS_PKey_RSA.html"
-      output: web pdf
-      type: homepage
-    - title: class Method
-      url: "/Method.html"
-      output: web pdf
-      type: homepage
-    - title: class Module
-      url: "/Module.html"
       output: web pdf
       type: homepage
     - title: module Net
@@ -1172,8 +1020,8 @@ entries:
       url: "/Network_WiFi.html"
       output: web pdf
       type: homepage
-    - title: class ObjectSpace
-      url: "/ObjectSpace.html"
+    - title: class Object
+      url: "/Object.html"
       output: web pdf
       type: homepage
     - title: class PIO::Assembler
@@ -1310,10 +1158,6 @@ entries:
       type: homepage
     - title: class Rapicco::Sprite
       url: "/Rapicco_Sprite.html"
-      output: web pdf
-      type: homepage
-    - title: module RbConfig
-      url: "/RbConfig.html"
       output: web pdf
       type: homepage
     - title: class Regexp
@@ -1466,10 +1310,6 @@ entries:
       type: homepage
     - title: class VFS::File
       url: "/VFS_File.html"
-      output: web pdf
-      type: homepage
-    - title: class VM
-      url: "/VM.html"
       output: web pdf
       type: homepage
     - title: class VRAM
