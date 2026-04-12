@@ -13,6 +13,16 @@ folder: rbs_doc
 ```ruby
 Shell::Parser::Node.define(:type, :data, :token) -> singleton(Node)
 ```
+### new
+
+```ruby
+Shell::Parser::Node.new(Symbol type, Hash[Symbol, untyped] data, String token) -> void
+```
+### new
+
+```ruby
+Shell::Parser::Node.new(Symbol type, Hash[Symbol, untyped] data, String token) -> Node
+```
 ## Attr accessors
 ### type (reader)
 ```ruby

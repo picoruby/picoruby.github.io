@@ -22,7 +22,7 @@ I2C.new(
     ?sda_pin: Integer,
     ?scl_pin: Integer,
     ?timeout: Integer
-  ) -> instance
+  ) -> void
 ```
 ## Instance methods
 ### read

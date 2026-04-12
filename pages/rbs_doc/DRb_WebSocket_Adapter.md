@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-DRb::WebSocket::Adapter.new(untyped ws) -> DRb::WebSocket::Adapter
+DRb::WebSocket::Adapter.new(untyped ws, ?read_timeout: Integer?) -> void
 ```
 ## Instance methods
 ### close
@@ -28,6 +28,11 @@ instance.closed?-> bool
 
 ```ruby
 instance.read(Integer n) -> String
+```
+### real_close
+
+```ruby
+instance.real_close-> void
 ```
 ### write
 

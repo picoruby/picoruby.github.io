@@ -17,7 +17,7 @@ BLE::UART.new(
       ?service_uuid: String,
       ?rx_uuid: String,
       ?tx_uuid: String
-    ) -> BLE::UART
+    ) -> void
 ```
 ## Instance methods
 ### available
@@ -73,7 +73,7 @@ instance.read_nonblock(?Integer nbytes) -> (String | nil)
 ### start
 
 ```ruby
-instance.start() { () -> void } -> Integer
+instance.start(?Integer? timeout_ms) ?{ () -> void } -> Integer
 ```
 ### write
 

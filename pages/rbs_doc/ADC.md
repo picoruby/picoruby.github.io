@@ -20,7 +20,7 @@ Hash[untyped, untyped]
 ### new
 
 ```ruby
-ADC.new(pin_t pin, ?additional_params_t additional_params) -> instance
+ADC.new(pin_t pin, ?additional_params_t additional_params) -> void
 ```
 ## Instance methods
 ### read

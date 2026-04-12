@@ -30,7 +30,7 @@ FAT.init_spi(String unit, Integer sck_pin, Integer cipo_pin, Integer copi_pin, I
 ### new
 
 ```ruby
-FAT.new(Symbol|String device, ?label: String?, ?driver: driver_t) -> FAT
+FAT.new(Symbol|String device, ?label: String?, ?driver: driver_t) -> void
 ```
 ### unixtime_offset=
 

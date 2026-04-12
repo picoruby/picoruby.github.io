@@ -12,14 +12,3 @@ folder: rbs_doc
 ```ruby
 nil | Proc | bool | Integer | Float | String | Symbol | Array[marshalable] | Hash[marshalable, marshalable]
 ```
-## Singleton methods
-### dump
-
-```ruby
-Marshal.dump(marshalable obj) -> String
-```
-### load
-
-```ruby
-Marshal.load(String data) -> marshalable
-```

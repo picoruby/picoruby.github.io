@@ -17,7 +17,7 @@ Net::MQTT::Client.connect(String, ?Integer, ?client_id: String?, ?keep_alive: In
 ### new
 
 ```ruby
-Net::MQTT::Client.new(String, ?Integer, ?client_id: String?, ?keep_alive: Integer, ?clean_session: bool, ?username: String?, ?password: String?, ?ssl: bool, ?ca_file: String?, ?cert_file: String?, ?key_file: String?) -> MQTT::Client
+Net::MQTT::Client.new(String host, ?Integer port, ?client_id: String?, ?keep_alive: Integer, ?clean_session: bool, ?username: String?, ?password: String?, ?ssl: bool, ?ca_file: String?, ?cert_file: String?, ?key_file: String?) -> void
 ```
 ## Instance methods
 ### connect

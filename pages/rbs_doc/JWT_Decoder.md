@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-JWT::Decoder.new(String token, key_t key, String algorithm) -> JWT::Decoder
+JWT::Decoder.new(String token, key_t key, String algorithm) -> void
 ```
 ## Instance methods
 ### verify_hmac

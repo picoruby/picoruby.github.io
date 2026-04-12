@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::HTTP::Response.new(Integer status, untyped data) -> Response
+Funicular::HTTP::Response.new(Integer status, untyped data) -> void
 ```
 ## Instance methods
 ### error?

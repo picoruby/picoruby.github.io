@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::VDOM::Text.new(String content) -> Text
+Funicular::VDOM::Text.new(String content) -> void
 ```
 ## Instance methods
 ### ==

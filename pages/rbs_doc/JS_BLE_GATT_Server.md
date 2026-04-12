@@ -7,6 +7,12 @@ sidebar: picoruby_sidebar
 permalink: JS_BLE_GATT_Server.html
 folder: rbs_doc
 ---
+## Singleton methods
+### new
+
+```ruby
+JS::BLE::GATT::Server.new(JS::Object js_server) -> void
+```
 ## Instance methods
 ### service
 

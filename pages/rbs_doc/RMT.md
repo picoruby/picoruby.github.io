@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-RMT.new(Integer pin, ?t0h_ns: Integer, ?t0l_ns: Integer, ?t1h_ns: Integer, ?t1l_ns: Integer, ?reset_ns: Integer) -> RMT
+RMT.new(Integer pin, ?t0h_ns: Integer, ?t0l_ns: Integer, ?t1h_ns: Integer, ?t1l_ns: Integer, ?reset_ns: Integer) -> void
 ```
 ## Instance methods
 ### write

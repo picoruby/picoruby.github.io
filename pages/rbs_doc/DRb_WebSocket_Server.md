@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-DRb::WebSocket::Server.new(String uri, untyped front, Hash[untyped, untyped] config) -> DRb::WebSocket::Server
+DRb::WebSocket::Server.new(String uri, untyped front, ?Hash[untyped, untyped] config) -> void
 ```
 ## Instance methods
 ### accept

@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::Cable::Consumer.new(String url) -> Consumer
+Funicular::Cable::Consumer.new(String url) -> void
 ```
 ## Instance methods
 ### cleanup

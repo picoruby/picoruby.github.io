@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::EnvironmentInquirer.new(EnvironmentInquirer | String env) -> EnvironmentInquirer
+Funicular::EnvironmentInquirer.new(EnvironmentInquirer | String env) -> void
 ```
 ## Instance methods
 ### ==

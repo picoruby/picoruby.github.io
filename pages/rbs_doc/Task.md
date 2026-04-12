@@ -84,6 +84,11 @@ instance.priority=(Integer priority) -> Integer
 ```ruby
 instance.resume() -> self
 ```
+### run
+
+```ruby
+instance.run() -> self
+```
 ### status
 
 ```ruby
@@ -98,21 +103,4 @@ instance.suspend() -> self
 
 ```ruby
 instance.terminate() -> self
-```
-## Singleton methods
-### name_list
-
-```ruby
-Task.name_list() -> Array[String]
-```
-## Instance methods
-### rewind
-
-```ruby
-instance.rewind() -> self
-```
-### run
-
-```ruby
-instance.run() -> void
 ```

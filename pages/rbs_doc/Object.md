@@ -82,93 +82,38 @@ instance.respond_to?(Symbol | String name) -> bool
 instance.send(Symbol | String name, *untyped args) -> untyped
 ```
 ## Instance methods
-### <=>
+### relinquish
 
 ```ruby
-instance.<=>(untyped) -> Integer?
+instance.relinquish() -> bool
 ```
-### ===
+### sleep
 
 ```ruby
-instance.===(untyped) -> bool
+instance.sleep(Integer | Float) -> Integer
 ```
-### attr_accessor
+### sleep_ms
 
 ```ruby
-instance.attr_accessor(*Symbol) -> void
+instance.sleep_ms(Integer) -> Integer
 ```
-### attr_reader
+## Instance methods
+### open
 
 ```ruby
-instance.attr_reader(*Symbol) -> void
+instance.open[T] (String file, ?String mode) { (IO) -> T } -> T
+instance.open(String file, ?String mode) -> (IO | nil)
 ```
-### block_given?
-
-```ruby
-instance.block_given?() -> bool
-```
-### class
-
-```ruby
-instance.class-> class
-```
-### dup
-
-```ruby
-instance.dup() -> self
-```
+## Instance methods
 ### exit
 
 ```ruby
 instance.exit(?Integer) -> void
 ```
-### include
-
-```ruby
-instance.include(Module) -> void
-```
-### inspect
-
-```ruby
-instance.inspect() -> String
-```
-### instance_methods
-
-```ruby
-instance.instance_methods(?bool inherited_too) -> Array[Symbol]
-```
-### is_a?
-
-```ruby
-instance.is_a?(untyped) -> bool
-```
 ### loop
 
 ```ruby
-instance.loop() { () -> void }-> void
-```
-### nil?
-
-```ruby
-instance.nil?() -> bool
-```
-### private
-
-```ruby
-instance.private(?Symbol) -> void
-```
-### public
-
-```ruby
-instance.public(?Symbol) -> void
-```
-### raise
-
-```ruby
-instance.raise() -> bot
-instance.raise(string message) -> bot
-instance.raise(Exception exception, ?String cause) -> bot
-instance.raise(_Exception exception, ?String cause) -> bot
+instance.loop() { () -> void } -> void
 ```
 ### relinquish
 
@@ -184,14 +129,4 @@ instance.sleep(Integer | Float) -> Integer
 
 ```ruby
 instance.sleep_ms(Integer) -> Integer
-```
-### sprintf
-
-```ruby
-instance.sprintf(String format, *untyped args) -> String
-```
-### to_s
-
-```ruby
-instance.to_s() -> String
 ```

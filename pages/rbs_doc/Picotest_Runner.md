@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Picotest::Runner.new(String dir, ?filter: (String | nil), ?tmpdir: String, ?lib_name: String, ?load_files: Array[String], ?load_path: String) -> Picotest::Runner
+Picotest::Runner.new(String dir, ?filter: (String | nil), ?tmpdir: String, ?lib_name: String, ?load_files: Array[String], ?load_path: String) -> void
 ```
 ## Instance methods
 ### run

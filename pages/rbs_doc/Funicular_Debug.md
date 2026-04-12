@@ -13,6 +13,11 @@ folder: rbs_doc
 ```ruby
 Funicular::Debug.all_components() -> Array[Funicular::Component]
 ```
+### clear_errors
+
+```ruby
+Funicular::Debug.clear_errors() -> void
+```
 ### component_registry
 
 ```ruby
@@ -27,6 +32,16 @@ Funicular::Debug.component_tree() -> String
 
 ```ruby
 Funicular::Debug.enabled?() -> bool
+```
+### error_count
+
+```ruby
+Funicular::Debug.error_count() -> Integer
+```
+### error_list
+
+```ruby
+Funicular::Debug.error_list() -> String
 ```
 ### expose_to_global
 
@@ -47,6 +62,11 @@ Funicular::Debug.get_component_instance_variables(Integer) -> String
 
 ```ruby
 Funicular::Debug.get_component_state(Integer) -> String
+```
+### last_error
+
+```ruby
+Funicular::Debug.last_error() -> Hash[Symbol, untyped]?
 ```
 ### register_component
 

@@ -28,7 +28,7 @@ UART.new(
     ?rts_pin: Integer,
     ?cts_pin: Integer,
     ?rx_buffer_size: Integer?
-  ) -> instance
+  ) -> void
 ```
 ## Instance methods
 ### break

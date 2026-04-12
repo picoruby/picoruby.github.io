@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::VDOM::Patcher.new(?JS::Object? doc) -> Patcher
+Funicular::VDOM::Patcher.new(?JS::Object? doc) -> void
 ```
 ## Instance methods
 ### apply

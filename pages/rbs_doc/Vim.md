@@ -16,7 +16,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Vim.new(String | nil filepath) -> instance
+Vim.new(String | nil filepath) -> void
 ```
 ## Instance methods
 ### clear_command_buffer

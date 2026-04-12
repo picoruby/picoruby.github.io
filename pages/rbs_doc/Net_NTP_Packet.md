@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Net::NTP::Packet.new(?String? data) -> Net::NTP::Packet
+Net::NTP::Packet.new(?String? data) -> void
 ```
 ## Instance methods
 ### parse

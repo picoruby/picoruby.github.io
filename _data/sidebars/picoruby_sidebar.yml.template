@@ -58,3 +58,14 @@ entries:
       url: "/rom-corruption"
       output: web, pdf
       type: homepage
+  - title: PicoRuby.WASM
+    output: web, pdf
+    folderitems:
+    - title: Ruby on Browser
+      url: "/wasm"
+      output: web, pdf
+      type: homepage
+    - title: Getting Started with Funicular
+      url: "/funicular-getting-started"
+      output: web, pdf
+      type: homepage

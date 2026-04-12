@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::VDOM::Component.new(untyped component_class, ?Hash[Symbol, untyped] props) -> Component
+Funicular::VDOM::Component.new(untyped component_class, ?Hash[Symbol, untyped] props) -> void
 ```
 ## Instance methods
 ### ==

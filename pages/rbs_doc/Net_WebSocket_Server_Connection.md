@@ -7,6 +7,12 @@ sidebar: picoruby_sidebar
 permalink: Net_WebSocket_Server_Connection.html
 folder: rbs_doc
 ---
+## Singleton methods
+### new
+
+```ruby
+Net::WebSocket::Server::Connection.new(TCPSocket socket) -> void
+```
 ## Instance methods
 ### close
 

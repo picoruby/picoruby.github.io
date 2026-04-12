@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-DipSwitch.new(GPIO|nil c_pin, Array[Integer] pin_nums) -> instance
+DipSwitch.new(GPIO|nil c_pin, Array[Integer] pin_nums) -> void
 ```
 ## Instance methods
 ### read

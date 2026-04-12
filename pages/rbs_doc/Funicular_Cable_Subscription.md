@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::Cable::Subscription.new(Consumer consumer, String identifier, Hash[Symbol, untyped] params) ?{ (untyped message) -> void } -> Subscription
+Funicular::Cable::Subscription.new(Consumer consumer, String identifier, Hash[Symbol, untyped] params) ?{ (untyped message) -> void } -> void
 ```
 ## Instance methods
 ### notify_connected

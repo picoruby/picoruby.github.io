@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-PWM.new(Integer pin, ?frequency: (Float|Integer), ?duty:  (Float|Integer)) -> instance
+PWM.new(Integer pin, ?frequency: (Float|Integer), ?duty:  (Float|Integer)) -> void
 ```
 ## Instance methods
 ### duty

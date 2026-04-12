@@ -19,30 +19,15 @@ UDPSocket.new(?Integer port) -> UDPSocket
 ```ruby
 instance.bind(String host, Integer port) -> void
 ```
-### close
-
-```ruby
-instance.close() -> void
-```
-### closed?
-
-```ruby
-instance.closed?() -> bool
-```
 ### connect
 
 ```ruby
 instance.connect(String host, Integer port) -> void
 ```
-### eof?
-
-```ruby
-instance.eof?() -> bool
-```
 ### read
 
 ```ruby
-instance.read(?Integer maxlen) -> String?
+instance.read(Integer maxlen) -> String?
 ```
 ### recvfrom
 
@@ -58,9 +43,4 @@ instance.recvfrom_nonblock(Integer maxlen, ?Integer flags) -> ([String, Array[St
 
 ```ruby
 instance.send(String data, Integer flags, ?String? host, ?Integer? port) -> Integer
-```
-### write
-
-```ruby
-instance.write(String data) -> Integer
 ```

@@ -7,6 +7,12 @@ sidebar: picoruby_sidebar
 permalink: PIO_Program.html
 folder: rbs_doc
 ---
+## Singleton methods
+### new
+
+```ruby
+PIO::Program.new(Array[Integer] instructions, Integer side_set_count, bool side_set_optional, Integer wrap_target_idx, Integer wrap_idx) -> void
+```
 ## Instance methods
 ### length
 

@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::Router.new(JS::Object container) -> Router
+Funicular::Router.new(JS::Object container) -> void
 ```
 ## Instance methods
 ### add_route

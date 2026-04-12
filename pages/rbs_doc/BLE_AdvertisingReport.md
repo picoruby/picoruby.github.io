@@ -16,7 +16,7 @@ Hash[(Symbol|Integer), String]
 ### new
 
 ```ruby
-BLE::AdvertisingReport.new(String) -> instance
+BLE::AdvertisingReport.new(String) -> void
 ```
 ## Instance methods
 ### format

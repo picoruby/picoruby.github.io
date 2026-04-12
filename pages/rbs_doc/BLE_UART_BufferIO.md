@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-BLE::UART::BufferIO.new(String str) -> BLE::UART::BufferIO
+BLE::UART::BufferIO.new(String str) -> void
 ```
 ## Instance methods
 ### read

@@ -13,7 +13,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-JSON::Parser.new(String) -> Parser
+JSON::Parser.new(String) -> void
 ```
 ## Instance methods
 ### parse

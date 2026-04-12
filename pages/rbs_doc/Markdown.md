@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Markdown.new(String text) -> Markdown
+Markdown.new(String text) -> void
 ```
 ## Instance methods
 ### count_leading_spaces

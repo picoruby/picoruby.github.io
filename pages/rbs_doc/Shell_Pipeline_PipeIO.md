@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Shell::Pipeline::PipeIO.new() -> PipeIO
+Shell::Pipeline::PipeIO.new() -> void
 ```
 ## Instance methods
 ### clear

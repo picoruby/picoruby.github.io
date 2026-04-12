@@ -7,6 +7,12 @@ sidebar: picoruby_sidebar
 permalink: JS_BLE_GATT_Device.html
 folder: rbs_doc
 ---
+## Singleton methods
+### new
+
+```ruby
+JS::BLE::GATT::Device.new(JS::Object js_device) -> void
+```
 ## Instance methods
 ### connect
 

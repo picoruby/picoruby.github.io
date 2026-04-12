@@ -30,7 +30,7 @@ Firmware framework for DIY keyboards.
 
 Microcontroller programming framework.
 
-- For Raspberry Pi Pico: [https://github.com/picoruby/R2P2](https://github.com/picoruby/R2P2)
+- For Raspberry Pi Pico: [https://github.com/picoruby/picoruby/tree/master/mrbgems/picoruby-r2p2](https://github.com/picoruby/picoruby/tree/master/mrbgems/picoruby-r2p2)
 - For ESP32: [https://github.com/picoruby/R2P2-ESP32](https://github.com/picoruby/R2P2-ESP32)
 
 #### Porting

@@ -20,7 +20,7 @@ Integer
 ### new
 
 ```ruby
-BLE::GattDatabase.new() ?{ (GattDatabase) -> void } -> instance
+BLE::GattDatabase.new() ?{ (GattDatabase) -> void } -> void
 ```
 ## Instance methods
 ### add_characteristic

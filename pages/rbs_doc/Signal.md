@@ -17,19 +17,8 @@ Integer | String | Symbol
 String | Proc | nil
 ```
 ## Singleton methods
-### list
-
-```ruby
-Signal.list() -> Hash[String, Integer]
-```
 ### raise
 
 ```ruby
 Signal.raise(signal_t signal) -> void
-```
-### trap
-
-```ruby
-Signal.trap(signal_t signal) { () -> void } -> handler_t
-Signal.trap(signal_t signal, String command) -> handler_t
 ```

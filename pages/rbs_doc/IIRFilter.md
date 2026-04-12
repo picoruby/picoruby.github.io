@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-IIRFilter.new() -> instance
+IIRFilter.new() -> void
 ```
 ## Instance methods
 ### filter

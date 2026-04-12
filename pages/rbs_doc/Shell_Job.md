@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Shell::Job.new(*String params) -> instance
+Shell::Job.new(*String params) -> void
 ```
 ## Instance methods
 ### exec

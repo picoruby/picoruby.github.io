@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Net::HTTPResponse.new(?String? code, ?String? message, ?String? http_version) -> HTTPResponse
+Net::HTTPResponse.new(?String? code, ?String? message, ?String? http_version) -> void
 ```
 ### parse
 

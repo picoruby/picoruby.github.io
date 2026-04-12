@@ -58,15 +58,15 @@ instance.get() -> Integer
 ```ruby
 instance.get_nonblocking() -> Integer?
 ```
-### put
+### put_buffer
 
 ```ruby
-instance.put(Integer value) -> void
+instance.put_buffer(Array[Integer] values) -> void
 ```
 ### put_bytes
 
 ```ruby
-instance.put_bytes(String | Array[Integer] data) -> void
+instance.put_bytes(String data) -> void
 ```
 ### put_nonblocking
 

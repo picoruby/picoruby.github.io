@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Net::WebSocket::Server.new(?host: String, ?port: Integer) -> Server
+Net::WebSocket::Server.new(?host: String, ?port: Integer) -> void
 ```
 ## Instance methods
 ### accept

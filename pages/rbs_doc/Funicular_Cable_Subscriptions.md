@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::Cable::Subscriptions.new(Consumer consumer) -> Subscriptions
+Funicular::Cable::Subscriptions.new(Consumer consumer) -> void
 ```
 ## Instance methods
 ### create

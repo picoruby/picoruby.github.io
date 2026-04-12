@@ -87,7 +87,7 @@ JS::WebSerial.connect(?baud_rate: Integer, ?data_bits: Integer, ?stop_bits: Inte
 ### new
 
 ```ruby
-JS::WebSerial.new(JS::Object js_port) -> JS::WebSerial
+JS::WebSerial.new(JS::Object js_port) -> void
 ```
 ### request_port
 

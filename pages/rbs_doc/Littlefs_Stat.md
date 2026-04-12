@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Littlefs::Stat.new(String device, String path) -> instance
+Littlefs::Stat.new(String prefix, String path) -> void
 ```
 ## Instance methods
 ### birthtime
