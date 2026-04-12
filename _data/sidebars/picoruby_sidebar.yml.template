@@ -34,8 +34,12 @@ entries:
   - title: R2P2 & Workshop
     output: web, pdf
     folderitems:
-    - title: Setup and General Information
+    - title: Getting Started with R2P2
       url: /setup
+      output: web, pdf
+      type: homepage
+    - title: Tutorials
+      url: /r2p2-tutorials
       output: web, pdf
       type: homepage
     - title: Terminal Emulator

@@ -2,7 +2,7 @@
 keywords: documentation
 layout: page
 tags: [tips]
-title:  Setup and General Information
+title:  Getting Startea with R2P2
 sidebar: picoruby_sidebar
 permalink: setup
 folder: r2p2
