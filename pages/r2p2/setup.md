@@ -22,6 +22,8 @@ If your laptop is configured to prohibit writing to USB memory devices, likely d
 However, since MSC is only required for installing UF2, you can ask the instructor or other participants for help with just that step at the workshop venue.
 If you're tackling this on your own, you'll need another PC to complete the process.
 
+**Workshop Organizers**: You can set up a dedicated "Firmware Flashing Station" using [r2p2-installer](https://github.com/picoruby/r2p2-installer). This allows participants with restricted PCs to flash R2P2 firmware by simply connecting their Pico to a Raspberry Pi Zero.
+
 ## Install R2P2 into Raspi Pico
 
 ### Download
