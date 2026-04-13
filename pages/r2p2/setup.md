@@ -2,7 +2,7 @@
 keywords: documentation
 layout: page
 tags: [tips]
-title:  Getting Startea with R2P2
+title:  Getting Started with R2P2
 sidebar: picoruby_sidebar
 permalink: setup
 folder: r2p2
@@ -75,7 +75,8 @@ This script will:
 
 ### Install the UF2 File
 
-Regardless of which download method you used, you need to manually install the UF2 file to your Pi Pico:
+Regardless of which download method you used, you need to manually install the UF2 file to your Pi Pico.
+(Note: If you are at a workshop that provides a [Firmware Flashing Station](https://github.com/picoruby/r2p2-installer), this step happens automatically upon connection.)
 
 - Connect Pi Pico and PC while pressing the BOOTSEL button. Then you'll find *RPI-RP2* (for Raspi Pico) or *RP2350* (for Pico2) drive in file manager (File Explorer or Finder)
 
@@ -97,4 +98,10 @@ Regardless of which download method you used, you need to manually install the U
   - **Required**: Data communication capable (charging-only cables won't work)
 - Glasses: Workshop will be detailed work, so bring glasses if you are not confident in your eyesight
 - Tweezers: Not required, but for handling small components, they will be very helpful
+
+---
+
+## For Workshop Organizers
+
+If you are hosting a workshop and expect participants with restricted laptops (e.g., company-issued PCs), you can set up a dedicated "Firmware Flashing Station" using [r2p2-installer](https://github.com/picoruby/r2p2-installer). This allows participants to flash R2P2 firmware by simply connecting their Pico to a Raspberry Pi Zero, bypassing their own PC's security restrictions.
 
