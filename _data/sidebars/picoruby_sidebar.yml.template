@@ -73,3 +73,7 @@ entries:
       url: "/funicular-getting-started"
       output: web, pdf
       type: homepage
+    - title: Funicular on Rails
+      url: "/funicular-on-rails"
+      output: web, pdf
+      type: homepage

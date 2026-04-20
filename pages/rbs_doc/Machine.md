@@ -13,6 +13,11 @@ folder: rbs_doc
 ```ruby
 Machine.board_millis() -> Integer
 ```
+### bootsel_pressed?
+
+```ruby
+Machine.bootsel_pressed?() -> bool
+```
 ### busy_wait_ms
 
 ```ruby

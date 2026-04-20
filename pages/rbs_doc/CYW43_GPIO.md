@@ -7,6 +7,11 @@ sidebar: picoruby_sidebar
 permalink: CYW43_GPIO.html
 folder: rbs_doc
 ---
+## Type aliases
+### gpio_logic_t
+```ruby
+0 | 1
+```
 ## Singleton methods
 ### new
 
@@ -27,7 +32,7 @@ instance.low?() -> bool
 ### read
 
 ```ruby
-instance.read() -> GPIO::gpio_logic_t
+instance.read() -> gpio_logic_t
 ```
 ### write
 

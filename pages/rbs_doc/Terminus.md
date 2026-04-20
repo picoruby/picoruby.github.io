@@ -7,35 +7,30 @@ sidebar: picoruby_sidebar
 permalink: Terminus.html
 folder: rbs_doc
 ---
-## Type aliases
-### terminus_t
-```ruby
-[Integer, Integer,     Array[Integer], Array[Array[Integer]]]
-```
 ## Singleton methods
 ### _12x24
 
 ```ruby
-Terminus._12x24(String text) -> terminus_t
+Terminus._12x24(String text, ?Integer scale) -> bdffont_result_t
 ```
 ### _16x32
 
 ```ruby
-Terminus._16x32(String text) -> terminus_t
+Terminus._16x32(String text, ?Integer scale) -> bdffont_result_t
 ```
 ### _6x12
 
 ```ruby
-Terminus._6x12(String text) -> terminus_t
+Terminus._6x12(String text, ?Integer scale) -> bdffont_result_t
 ```
 ### _8x16
 
 ```ruby
-Terminus._8x16(String text) -> terminus_t
+Terminus._8x16(String text, ?Integer scale) -> bdffont_result_t
 ```
 ### draw
 
 ```ruby
-Terminus.draw(String name, String line, ?Integer scale) { (terminus_t) -> void } -> void
-Terminus.draw(String name, String line, ?Integer scale) -> terminus_t
+Terminus.draw(String name, String line, ?Integer scale) { (bdffont_result_t) -> void } -> void
+Terminus.draw(String name, String line, ?Integer scale) -> bdffont_result_t
 ```

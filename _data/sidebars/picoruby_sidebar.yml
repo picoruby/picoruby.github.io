@@ -69,6 +69,10 @@ entries:
       url: "/funicular-getting-started"
       output: web, pdf
       type: homepage
+    - title: Funicular on Rails
+      url: "/funicular-on-rails"
+      output: web, pdf
+      type: homepage
   - title: Builtin
     output: web pdf
     folderitems:
@@ -308,6 +312,18 @@ entries:
   - title: General
     output: web pdf
     folderitems:
+    - title: class ADC
+      url: "/ADC.html"
+      output: web pdf
+      type: homepage
+    - title: module BDFFont
+      url: "/BDFFont.html"
+      output: web pdf
+      type: homepage
+    - title: module BDFFont::Drawable
+      url: "/BDFFont_Drawable.html"
+      output: web pdf
+      type: homepage
     - title: class BLE
       url: "/BLE.html"
       output: web pdf
@@ -354,6 +370,14 @@ entries:
       type: homepage
     - title: module CRC
       url: "/CRC.html"
+      output: web pdf
+      type: homepage
+    - title: class CYW43
+      url: "/CYW43.html"
+      output: web pdf
+      type: homepage
+    - title: class CYW43::GPIO
+      url: "/CYW43_GPIO.html"
       output: web pdf
       type: homepage
     - title: module DFU
@@ -438,6 +462,10 @@ entries:
       type: homepage
     - title: class ENVClass
       url: "/ENVClass.html"
+      output: web pdf
+      type: homepage
+    - title: class ESP32
+      url: "/ESP32.html"
       output: web pdf
       type: homepage
     - title: class ESP32::WiFi
@@ -620,6 +648,10 @@ entries:
       url: "/HCSR04_WraparoundError.html"
       output: web pdf
       type: homepage
+    - title: class I2C
+      url: "/I2C.html"
+      output: web pdf
+      type: homepage
     - title: class IIRFilter
       url: "/IIRFilter.html"
       output: web pdf
@@ -708,6 +740,14 @@ entries:
       url: "/JWT_Decoder.html"
       output: web pdf
       type: homepage
+    - title: module KarmaticArcade
+      url: "/KarmaticArcade.html"
+      output: web pdf
+      type: homepage
+    - title: module KarmaticArcade::Drawable
+      url: "/KarmaticArcade_Drawable.html"
+      output: web pdf
+      type: homepage
     - title: module Kernel
       url: "/Kernel.html"
       output: web pdf
@@ -746,6 +786,14 @@ entries:
       type: homepage
     - title: class Logger
       url: "/Logger.html"
+      output: web pdf
+      type: homepage
+    - title: class MCP3208
+      url: "/MCP3208.html"
+      output: web pdf
+      type: homepage
+    - title: class MCP3424
+      url: "/MCP3424.html"
       output: web pdf
       type: homepage
     - title: class MML
@@ -1028,6 +1076,10 @@ entries:
       url: "/Object.html"
       output: web pdf
       type: homepage
+    - title: class PCF8523
+      url: "/PCF8523.html"
+      output: web pdf
+      type: homepage
     - title: class PIO::Assembler
       url: "/PIO_Assembler.html"
       output: web pdf
@@ -1062,6 +1114,10 @@ entries:
       type: homepage
     - title: class PSG::Keyboard
       url: "/PSG_Keyboard.html"
+      output: web pdf
+      type: homepage
+    - title: class PWM
+      url: "/PWM.html"
       output: web pdf
       type: homepage
     - title: class PackHelper
@@ -1172,8 +1228,16 @@ entries:
       url: "/RotateLogger.html"
       output: web pdf
       type: homepage
+    - title: class SDMMC
+      url: "/SDMMC.html"
+      output: web pdf
+      type: homepage
     - title: class SK6812
       url: "/SK6812.html"
+      output: web pdf
+      type: homepage
+    - title: class SPI
+      url: "/SPI.html"
       output: web pdf
       type: homepage
     - title: class SQLite3
@@ -1240,6 +1304,10 @@ entries:
       url: "/Shinonome.html"
       output: web pdf
       type: homepage
+    - title: module Shinonome::Drawable
+      url: "/Shinonome_Drawable.html"
+      output: web pdf
+      type: homepage
     - title: module Signal
       url: "/Signal.html"
       output: web pdf
@@ -1272,12 +1340,24 @@ entries:
       url: "/Terminus.html"
       output: web pdf
       type: homepage
+    - title: module Terminus::Drawable
+      url: "/Terminus_Drawable.html"
+      output: web pdf
+      type: homepage
     - title: class Time
       url: "/Time.html"
       output: web pdf
       type: homepage
     - title: class Time::TimeMethods
       url: "/Time_TimeMethods.html"
+      output: web pdf
+      type: homepage
+    - title: class UART
+      url: "/UART.html"
+      output: web pdf
+      type: homepage
+    - title: class UC8151
+      url: "/UC8151.html"
       output: web pdf
       type: homepage
     - title: class UDPSocket
@@ -1318,6 +1398,10 @@ entries:
       type: homepage
     - title: class VRAM
       url: "/VRAM.html"
+      output: web pdf
+      type: homepage
+    - title: module VRAM::Delegatable
+      url: "/VRAM_Delegatable.html"
       output: web pdf
       type: homepage
     - title: class Vim

@@ -16,7 +16,9 @@ folder: rbs_doc
 ### new
 
 ```ruby
-VRAM.new(w: Integer, h: Integer, cols: Integer, rows: Integer) -> VRAM
+VRAM.new(w: Integer, h: Integer, cols: Integer, rows: Integer,
+                 ?layout: :vertical | :horizontal, ?invert: bool,
+                 ?rotate: 0 | 90 | 180 | 270) -> VRAM
 ```
 ## Instance methods
 ### dirty_pages
