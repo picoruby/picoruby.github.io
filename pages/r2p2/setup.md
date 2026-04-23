@@ -69,7 +69,7 @@ This script will:
 
 #### Method 2: Manual Download
 
-- Download the latest *R2P2-PICORUBY-\*.uf2* from GitHub [https://github.com/picoruby/R2P2/releases/latest](https://github.com/picoruby/R2P2/releases/latest) (Of course, unzip or tar it)
+- Download the latest *R2P2-PICORUBY-\*.uf2* from GitHub [https://github.com/picoruby/picoruby/releases/latest](https://github.com/picoruby/picoruby/releases/latest) (Of course, unzip or tar it)
 
   ![*-PICO-*.ufs for Raspi Pico (works on Pico W but no wireless feature. *-PICO2_W-*.uf2 for Pico 2 W (works on Pico 2)](/images/download-r2p2.png)
 
