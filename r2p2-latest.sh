@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Fetch the latest release and extract .gz asset URLs
-urls=$(curl -s https://api.github.com/repos/picoruby/R2P2/releases/latest |
+urls=$(curl -s https://api.github.com/repos/picoruby/picoruby/releases/latest |
   grep '"browser_download_url"' |
   sed -E 's/.*"browser_download_url": "(.*)".*/\1/' |
   grep '\.gz$')

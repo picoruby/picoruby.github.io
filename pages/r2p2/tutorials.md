@@ -12,7 +12,7 @@ folder: r2p2
 
 #### 1-1 Getting start with R2P2
 
-- Download the latest `R2P2-*.uf2` from [the releases page of the repository](https://github.com/picoruby/R2P2/releases)
+- Download the latest `R2P2-*.uf2` from [the releases page of the repository](https://github.com/picoruby/picoruby/releases)
 - Drag and drop it into the RPI-RP2 drive
 - Open a proper port in your terminal emulator. See also [terminal-emulator](/terminal-emulator)
 
