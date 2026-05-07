@@ -1,0 +1,94 @@
+#editor,
+#highlight-content {
+	font-family: "Courier Prime", Courier, monospace;
+	font-size: 15px;
+	line-height: 1.5;
+	white-space: pre;
+	padding: 8px;
+	tab-size: 2;
+}
+
+#editor {
+	overflow: auto;
+	flex: 1;
+	width: 100%;
+	background: #1a1a1a;
+	color: #f8f8f2;
+	caret-color: #f8f8f2;
+	position: relative;
+	z-index: 1;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	margin: 0;
+	resize: none;
+	display: block;
+}
+
+#editor::selection {
+	background: rgba(100, 149, 237, 0.4);
+}
+
+#editor::placeholder {
+	color: #444;
+	font-style: italic;
+}
+
+#editor-wrapper {
+	position: relative;
+	flex: 0.6;
+	display: flex;
+	overflow: hidden;
+	background: #1a1a1a;
+	border-right: 1px solid #555;
+}
+
+#highlight-layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	overflow: visible;
+	pointer-events: none;
+	z-index: 0;
+}
+
+#highlight-content {
+	color: #d4d4d4;
+}
+
+.hl-keyword {
+	color: #c586c0;
+}
+.hl-builtin-literal,
+.hl-symbol,
+.hl-interpolation {
+	color: #569cd6;
+}
+.hl-constant {
+	color: #4ec9b0;
+}
+.hl-method {
+	color: #dcdcaa;
+}
+.hl-string {
+	color: #ce9178;
+}
+.hl-escape {
+	color: #d7ba7d;
+}
+.hl-regexp {
+	color: #d16969;
+}
+.hl-number {
+	color: #b5cea8;
+}
+.hl-comment {
+	color: #6a9955;
+}
+.hl-special-variable {
+	color: #9cdcfe;
+}
+.hl-default {
+	color: #d4d4d4;
+}

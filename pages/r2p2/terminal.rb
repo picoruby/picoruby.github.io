@@ -73,7 +73,11 @@ class App
   def set_editor_font(val)
     val = [[8, val].max, 24].min
     el('editor-font-size')[:value] = val
-    el('editor').style.fontSize = "#{val}px"
+
+    font_size = "#{val}px"
+    el('editor').style.fontSize = font_size
+    # Match the textarea font size so the highlight display stays aligned.
+    el('highlight-content').style.fontSize = font_size
   end
 
   def set_term_font(val)
@@ -278,12 +282,12 @@ class App
   end
 
   def bind_resizer
-    resizer          = el('resizer')
-    editor_container = el('editor-container')
-    editor_el        = el('editor')
-    dfu_log_el       = el('dfu-log')
-    body             = @doc.body
-    is_resizing      = false
+    resizer           = el('resizer')
+    editor_container  = el('editor-container')
+    editor_wrapper_el = el('editor-wrapper')
+    dfu_log_el        = el('dfu-log')
+    body              = @doc.body
+    is_resizing       = false
 
     resizer.addEventListener('mousedown') do
       is_resizing = true
@@ -293,14 +297,14 @@ class App
 
     @doc.addEventListener('mousemove') do |e|
       next unless is_resizing
-      rect        = editor_container.getBoundingClientRect()
-      new_left_x  = e.clientX.to_f - rect.left.to_f
-      max_x       = rect.width.to_f - 20.0
-      constrained = [100.0, [new_left_x, max_x].min].max
-      left_ratio  = constrained / rect.width.to_f
-      right_ratio = 1.0 - left_ratio
-      editor_el.style.flex  = left_ratio.to_s
-      dfu_log_el.style.flex = right_ratio.to_s
+      rect                         = editor_container.getBoundingClientRect()
+      new_left_x                   = e.clientX.to_f - rect.left.to_f
+      max_x                        = rect.width.to_f - 20.0
+      constrained                  = [100.0, [new_left_x, max_x].min].max
+      left_ratio                   = constrained / rect.width.to_f
+      right_ratio                  = 1.0 - left_ratio
+      editor_wrapper_el.style.flex = left_ratio.to_s
+      dfu_log_el.style.flex        = right_ratio.to_s
     end
 
     @doc.addEventListener('mouseup') do
@@ -319,6 +323,8 @@ class App
       reader = JS.global[:FileReader].new
       reader.addEventListener('load') do |e|
         el('editor')[:value] = e[:target][:result].to_s
+        # Dispatch an input event so EditorEventHandler can handle the update.
+        el('editor').dispatchEvent(JS.global[:Event].new('input'))
         el('local-file-path')[:textContent] = file[:name].to_s
         el('file-input')[:value] = ''
         update_dfu_buttons
@@ -513,6 +519,7 @@ class App
             local_crc = CRC.crc32(data)
             if local_crc == remote_crc
               el('editor')[:value] = data
+              el('editor').dispatchEvent(JS.global[:Event].new('input'))
               append_log("[+] Downloaded #{data.bytesize} bytes (CRC32 verified)")
               success = true
             else
@@ -520,6 +527,7 @@ class App
             end
           else
             el('editor')[:value] = data
+            el('editor').dispatchEvent(JS.global[:Event].new('input'))
             append_log("[+] Downloaded #{data.bytesize} bytes")
             success = true
           end
