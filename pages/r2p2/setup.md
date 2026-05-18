@@ -86,9 +86,7 @@ Regardless of which download method you used, you need to manually install the U
 
   ![](/images/drag-and-drop.png)
 
-- You'll find "R2P2" drive (sometimes naming the drive fails and it shows "USB Drive" or something like that. But it would be working anyway)
-
-  ![](/images/r2p2-drive.png)
+- After the UF2 file is copied, the Pico automatically reboots and the *RPI-RP2* (or *RP2350*) drive disappears from your file manager.
 
 ## For Workshop Participants: What to Bring on the Day
 
