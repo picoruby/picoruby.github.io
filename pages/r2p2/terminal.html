@@ -15,6 +15,7 @@ folder: r2p2
   <link rel="stylesheet" href="picoruby.wasm/test.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xterm/xterm@6.0.0/css/xterm.css">
   <link rel="stylesheet" href="pages/r2p2/r2p2-tools.css">
+  <link rel="stylesheet" href="pages/r2p2/editor/editor.css">
   <script src="pages/r2p2/version-selector.js"></script>
   <style>
     body { padding: 4px; }
@@ -22,7 +23,6 @@ folder: r2p2
     #dfu-section legend { font-weight: bold; font-size: 13px; color: #aaa; padding: 0 4px; }
     #path-input { width: 220px; }
     #editor-container { margin: 2px 0; }
-    #editor { font-size: 15px; }
     #dfu-log { font-size: 12px; padding: 4px; }
   </style>
 </head>
@@ -75,7 +75,12 @@ folder: r2p2
       <span id="local-file-path" style="font-family:monospace;font-size:12px;color:#666;"></span>
     </div>
     <div id="editor-container" class="editor-container">
-      <textarea id="editor" spellcheck="false" placeholder="# Type or download Ruby code here..."></textarea>
+      <div id="editor-wrapper">
+        <div id="highlight-layer">
+          <div id="highlight-content"></div>
+        </div>
+        <textarea id="editor" wrap="off" spellcheck="false" placeholder="# Type or download Ruby code here..."></textarea>
+      </div>
       <div id="resizer" class="col-resizer"></div>
       <div id="dfu-log" class="log-panel"></div>
     </div>
@@ -87,6 +92,12 @@ folder: r2p2
           <button id="editor-font-plus">+</button>
         </span>
       </label>
+      <label>Editor mode:
+        <span class="editor-mode-buttons">
+          <button id="editor-mode-plain" type="button" class="active" data-mode="plain">Plain</button>
+          <button id="editor-mode-ide" type="button" data-mode="ide">IDE</button>
+        </span>
+      </label>
     </div>
   </fieldset>
 
@@ -95,5 +106,12 @@ folder: r2p2
 
   <script type="text/ruby" src="pages/r2p2/terminal.rb"></script>
   <!-- wasm script is loaded dynamically by version-selector.js -->
+
+  <!-- Web Editor -->
+  <script type="text/ruby" src="pages/r2p2/editor/editor_mode.rb"></script>
+  <script type="text/ruby" src="pages/r2p2/editor/editor_event_handler.rb"></script>
+  <script type="module" src="pages/r2p2/editor/tokenizer/prismLoader.js"></script>
+  <script type="text/ruby" src="pages/r2p2/editor/tokenizer/tokenizer.rb"></script>
+  <script type="text/ruby" src="pages/r2p2/editor/highlight.rb"></script>
 </body>
 </html>

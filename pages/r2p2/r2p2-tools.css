@@ -133,6 +133,29 @@ html, body {
 .font-ctrl input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 
 /* ----------------------------------------------------------------
+ * Editor mode toggle buttons
+ * ---------------------------------------------------------------- */
+.editor-mode-buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.editor-mode-buttons button {
+  padding: 4px 6px;
+  font-size: 9px;
+  line-height: 1;
+  border-radius: 2px;
+  margin: 5px;
+}
+
+.editor-mode-buttons button.active {
+  background: #3a4a5a;
+  color: #fff;
+  border-color: #7ec8e3;
+}
+
+/* ----------------------------------------------------------------
  * Fieldset panel (used in terminal.html File Editor section)
  * ---------------------------------------------------------------- */
 fieldset.tool-panel {
@@ -191,23 +214,6 @@ fieldset.tool-panel legend {
   resize: vertical;
   overflow: hidden;
 }
-
-.editor-container textarea {
-  flex: 0.6;
-  font-family: 'Courier Prime', Courier, monospace;
-  font-size: 14px;
-  background: #1a1a1a;
-  color: #f8f8f2;
-  border: none;
-  border-right: 1px solid #555;
-  padding: 8px;
-  resize: none;
-  tab-size: 2;
-  display: block;
-  overflow-y: auto;
-}
-
-.editor-container textarea::placeholder { color: #444; font-style: italic; }
 
 /* ----------------------------------------------------------------
  * Horizontal col-resizer (drag handle between editor / log)
