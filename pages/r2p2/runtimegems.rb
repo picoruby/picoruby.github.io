@@ -7,6 +7,8 @@ INDEX_JSON_URL = 'https://raw.githubusercontent.com/picoruby/runtimegems/refs/he
 class App
   TX_CHUNK_SIZE   = 32
   TX_CHUNK_GAP_MS = 20
+  # Upload chunk size; PicoModem::CHUNK_SIZE (480) fails on some device builds.
+  UPLOAD_CHUNK_SIZE = 64
 
   attr_accessor :current_port
 
@@ -354,7 +356,10 @@ class App
   def upload_binary(data, path)
     success = false
     begin
-      picomodem_enter_mode
+      unless picomodem_enter_mode
+        append_log("[-] Could not enter PicoModem mode (no response from device)")
+        return false
+      end
       picomodem_send_frame(PicoModem::FILE_WRITE, [data.bytesize].pack("N") + path)
 
       frame = picomodem_recv_frame
@@ -375,7 +380,7 @@ class App
       offset = 0
       while offset < data.bytesize
         remain = data.bytesize - offset
-        size = remain < PicoModem::CHUNK_SIZE ? remain : PicoModem::CHUNK_SIZE
+        size = remain < UPLOAD_CHUNK_SIZE ? remain : UPLOAD_CHUNK_SIZE
         chunk = data.byteslice(offset, size)
         picomodem_send_frame(PicoModem::CHUNK, chunk)
 
@@ -608,14 +613,19 @@ class App
     JS::WebSerial.capture_start(jsp)
     current_port.write("\x02")
     current_port.drain.await
+    acked = false
     waited = 0
     while waited < PicoModem::TIMEOUT_MS
-      break if JS::WebSerial.capture_peek(jsp).to_s.include?("\x06")
+      if JS::WebSerial.capture_peek(jsp).to_s.include?("\x06")
+        acked = true
+        break
+      end
       sleep_ms 1
       waited += 1
     end
     JS::WebSerial.capture_stop(jsp)
     JS::WebSerial.binary_capture_start(jsp)
+    acked
   end
 
   def picomodem_exit_mode(send_abort = false)
