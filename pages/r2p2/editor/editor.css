@@ -57,6 +57,52 @@
 	color: #d4d4d4;
 }
 
+#line-numbers {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 100%;
+	overflow: hidden;
+	background: #1a1a1a;
+	pointer-events: none;
+	z-index: 5; /* Keep line numbers above the editor and highlight layer. */
+	display: none;
+}
+
+#editor-wrapper.show-line-numbers #line-numbers {
+	display: block;
+}
+
+#editor-wrapper.show-line-numbers #editor,
+#editor-wrapper.show-line-numbers #highlight-content {
+	padding-left: 55px;
+}
+
+#line-numbers-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	font-family: "Courier Prime", Courier, monospace;
+	font-size: 15px;
+	line-height: 1.5;
+	padding: 8px 6px 8px 0;
+	box-sizing: border-box;
+	text-align: right;
+	white-space: pre;
+	user-select: none;
+}
+
+.line-number {
+	color: #858585;
+	line-height: inherit;
+}
+
+.line-number.active {
+	color: #c6c6c6;
+}
+
 .hl-keyword {
 	color: #c586c0;
 }

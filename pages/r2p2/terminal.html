@@ -76,6 +76,9 @@ folder: r2p2
     </div>
     <div id="editor-container" class="editor-container">
       <div id="editor-wrapper">
+        <div id="line-numbers">
+          <div id="line-numbers-inner"></div>
+        </div>
         <div id="highlight-layer">
           <div id="highlight-content"></div>
         </div>
@@ -109,10 +112,11 @@ folder: r2p2
 
   <!-- Web Editor -->
   <script type="text/ruby" src="pages/r2p2/editor/editor_mode.rb"></script>
-  <script type="text/ruby" src="pages/r2p2/editor/editor_event_handler.rb"></script>
   <script type="module" src="pages/r2p2/editor/tokenizer/prismLoader.js"></script>
   <script type="text/ruby" src="pages/r2p2/editor/tokenizer/tokenizer.rb"></script>
   <script type="text/ruby" src="pages/r2p2/editor/highlight.rb"></script>
   <script type="text/ruby" src="pages/r2p2/editor/auto_indent.rb"></script>
+  <script type="text/ruby" src="pages/r2p2/editor/line_numbers.rb"></script>
+  <script type="text/ruby" src="pages/r2p2/editor/editor_event_handler.rb"></script>
 </body>
 </html>
