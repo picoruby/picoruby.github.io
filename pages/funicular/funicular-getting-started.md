@@ -4,8 +4,8 @@ layout: page
 tags: [funicular, SPA, Virtual DOM]
 title: Getting Started with Funicular
 sidebar: picoruby_sidebar
-permalink: funicular-getting-started
-folder: wasm
+permalink: funicular
+folder: funicular
 ---
 
 Funicular is a React-inspired SPA framework for PicoRuby.
@@ -310,6 +310,20 @@ Also, especially if your app code is big, loading `.mrb` file precompiled by pic
 
 ## Learn More
 
-For the full API reference, routing, server communication via ActionCable, and Rails integration, see the Funicular repository:
+Ready to use Funicular inside a Rails app? The **Funicular on Rails** series
+covers installation and the asset pipeline, then walks through each feature as a
+tutorial plus reference:
 
-[https://github.com/picoruby/funicular](https://github.com/picoruby/funicular)
+- [Funicular on Rails: Setup](/funicular-on-rails) — gem install, `funicular:install`, the asset pipeline
+- [Debugging](/funicular-on-rails-debugging)
+- [Components & State](/funicular-on-rails-components)
+- [Routing & Navigation](/funicular-on-rails-routing)
+- [Forms & Validation](/funicular-on-rails-forms)
+- [Data Fetching](/funicular-on-rails-data)
+- [Stores & Realtime](/funicular-on-rails-stores)
+- [SSR & Hydration](/funicular-on-rails-ssr)
+- [Testing](/funicular-on-rails-testing)
+- [Styling & Advanced](/funicular-on-rails-styling)
+- [Plugins](/funicular-on-rails-plugins)
+
+The source lives at [github.com/picoruby/funicular](https://github.com/picoruby/funicular).

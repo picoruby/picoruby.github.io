@@ -2,7 +2,7 @@
 keywords: documentation
 layout: page
 tags: [wasm, webassembly]
-title: Ruby on Browser
+title: PicoRuby on Browser
 sidebar: picoruby_sidebar
 permalink: wasm
 folder: wasm
@@ -11,11 +11,11 @@ folder: wasm
 PicoRuby also works on web browsers.
 Because of its portability, PicoRuby.wasm supports the language's full features while CRuby.wasm doesn't.
 
-| |CRuby.wasm (4.0)|PicoRuby.wasm (3.4)|
-|-|----------|-------------|
-|`Kernel#sleep`|❌|✅|
-|Multithreading|No `Thread` support|`Task` support|
-|Binary size (compressed)|17.2 MB (4.4 MB)|1.1 MB (470 KB)|
+|                        |CRuby.wasm 4.0 w/ stdlib |CRuby.wasm 4.0 w/o stdlib |PicoRuby.wasm 3.4 with Funicular|
+|------------------------|-------------------------|--------------------------|--------------------------------|
+|`Kernel#sleep`          |❌                       |❌                        |✅                              |
+|Multithreading          |No `Thread` support      |No `Thread` support       |`Task` support                  |
+|Binary size (compressed)|31.0 MB (8.6 MB)         |17.2 MB (4.4 MB)          |1.1 MB (470 KB)                 |
 
 ## PicoRuby.WASM
 
@@ -31,4 +31,4 @@ See the official documentation for more details: [https://github.com/picoruby/pi
 - Write client-side code in Ruby instead of JavaScript
 - Seamless Rails integration
 
-See the next page for more details: [Getting Started with Funicular](/funicular-getting-started)
+See the next page for more details: [Getting Started with Funicular](/funicular)
