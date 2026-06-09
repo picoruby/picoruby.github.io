@@ -8,6 +8,31 @@ permalink: Funicular_HTTP.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### cache_clear
+
+```ruby
+Funicular::HTTP.cache_clear() -> nil
+```
+### cache_init!
+
+```ruby
+Funicular::HTTP.cache_init!() -> IndexedDB::KVS
+```
+### cache_lookup
+
+```ruby
+Funicular::HTTP.cache_lookup(String url) -> untyped
+```
+### cache_purge
+
+```ruby
+Funicular::HTTP.cache_purge(String url) -> nil
+```
+### cache_write
+
+```ruby
+Funicular::HTTP.cache_write(String url, Hash[String, untyped] entry) -> nil
+```
 ### csrf_token
 
 ```ruby
@@ -16,25 +41,25 @@ Funicular::HTTP.csrf_token() -> String?
 ### delete
 
 ```ruby
-Funicular::HTTP.delete(String url) { (Response) -> void } -> void
+Funicular::HTTP.delete(String url, ?cache: Integer?) { (Response) -> void } -> void
 ```
 ### get
 
 ```ruby
-Funicular::HTTP.get(String url) { (Response) -> void } -> void
+Funicular::HTTP.get(String url, ?cache: Integer?) { (Response) -> void } -> void
 ```
 ### patch
 
 ```ruby
-Funicular::HTTP.patch(String url, ?Hash[untyped, untyped]? body) { (Response) -> void } -> void
+Funicular::HTTP.patch(String url, ?Hash[untyped, untyped]? body, ?cache: Integer?) { (Response) -> void } -> void
 ```
 ### post
 
 ```ruby
-Funicular::HTTP.post(String url, ?Hash[untyped, untyped]? body) { (Response) -> void } -> void
+Funicular::HTTP.post(String url, ?Hash[untyped, untyped]? body, ?cache: Integer?) { (Response) -> void } -> void
 ```
 ### put
 
 ```ruby
-Funicular::HTTP.put(String url, ?Hash[untyped, untyped]? body) { (Response) -> void } -> void
+Funicular::HTTP.put(String url, ?Hash[untyped, untyped]? body, ?cache: Integer?) { (Response) -> void } -> void
 ```

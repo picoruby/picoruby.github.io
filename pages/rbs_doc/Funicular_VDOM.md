@@ -40,5 +40,5 @@ Funicular::VDOM.patch(JS::Object element, Array[patch_t] patches) -> JS::Object
 ### render
 
 ```ruby
-Funicular::VDOM.render(VNode vnode, JS::Object container) -> void
+Funicular::VDOM.render(VNode vnode, JS::Element container) -> void
 ```

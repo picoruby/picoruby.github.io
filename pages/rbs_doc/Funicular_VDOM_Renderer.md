@@ -11,11 +11,11 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::VDOM::Renderer.new(?JS::Object? doc) -> void
+Funicular::VDOM::Renderer.new(?JS::Element? doc) -> void
 ```
 ## Instance methods
 ### render
 
 ```ruby
-instance.render(VDOM::VNode | VDOM::Text | nil vnode, ?JS::Object? parent) -> JS::Object
+instance.render(VDOM::VNode | VDOM::Text | nil vnode, ?JS::Element? parent) -> JS::Element
 ```

@@ -8,6 +8,16 @@ permalink: Machine.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### _stdin_getc
+
+```ruby
+Machine._stdin_getc() -> (String | nil)
+```
+### _stdin_gets
+
+```ruby
+Machine._stdin_gets() -> (String | nil)
+```
 ### board_millis
 
 ```ruby

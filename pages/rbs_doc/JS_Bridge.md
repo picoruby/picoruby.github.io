@@ -11,7 +11,7 @@ folder: rbs_doc
 ### array_to_js_array
 
 ```ruby
-JS::Bridge.array_to_js_array(Array[untyped] array) -> JS::Object
+JS::Bridge.array_to_js_array(::Array[untyped] array) -> JS::Object
 ```
 ### hash_to_js_object
 

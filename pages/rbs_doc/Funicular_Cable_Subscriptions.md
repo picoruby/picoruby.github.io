@@ -44,3 +44,8 @@ instance.notify_subscription_rejected(String identifier) -> void
 ```ruby
 instance.remove(Subscription subscription) -> void
 ```
+### resubscribe_all
+
+```ruby
+instance.resubscribe_all() -> void
+```

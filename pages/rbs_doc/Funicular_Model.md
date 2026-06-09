@@ -7,6 +7,8 @@ sidebar: picoruby_sidebar
 permalink: Funicular_Model.html
 folder: rbs_doc
 ---
+## Include
+[Validations](Validations.html)
 ## Singleton methods
 ### all
 
@@ -16,7 +18,7 @@ Funicular::Model.all(?Hash[untyped, untyped] params) ?{ (Array[Model]? instances
 ### create
 
 ```ruby
-Funicular::Model.create(Hash[untyped, untyped] attrs, ?model_class: singleton(Model)) ?{ (Model? instance, String? error) -> void } -> void
+Funicular::Model.create(Hash[untyped, untyped] attrs, ?model_class: singleton(Model)) ?{ (Model? instance, untyped error) -> void } -> void
 ```
 ### destroy
 
@@ -47,6 +49,16 @@ Funicular::Model.new(?Hash[untyped, untyped] attributes) -> void
 
 ```ruby
 Funicular::Model.load_schema(Hash[String, untyped] schema_data) -> void
+```
+### normalize_validation_options
+
+```ruby
+Funicular::Model.normalize_validation_options(Symbol | String kind, untyped opts) -> untyped
+```
+### register_schema_validations
+
+```ruby
+Funicular::Model.register_schema_validations(untyped validations) -> void
 ```
 ### schema
 

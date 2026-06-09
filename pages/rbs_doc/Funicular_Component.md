@@ -67,7 +67,7 @@ instance.audio(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
 ### bind_events
 
 ```ruby
-instance.bind_events(JS::Object dom_element, VDOM::VNode | VDOM::Text | nil vnode) -> void
+instance.bind_events(JS::Element dom_element, VDOM::VNode | VDOM::Text | nil vnode) -> void
 ```
 ### br
 
@@ -189,6 +189,11 @@ instance.header(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
 ```ruby
 instance.hr(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
 ```
+### hydrate
+
+```ruby
+instance.hydrate(JS::Element dom_element) -> void
+```
 ### img
 
 ```ruby
@@ -237,7 +242,7 @@ instance.method_missing(Symbol method, *untyped args) -> untyped
 ### mount
 
 ```ruby
-instance.mount(JS::Object container) -> void
+instance.mount(JS::Element container) -> void
 ```
 ### nav
 
@@ -293,6 +298,11 @@ instance.s() -> StyleAccessor
 
 ```ruby
 instance.section(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
+```
+### seed_state
+
+```ruby
+instance.seed_state(Hash[untyped, untyped]? state_hash) -> self
 ```
 ### select
 
@@ -390,7 +400,7 @@ instance.vdom -> VDOM::VNode | VDOM::Text | nil
 ```
 ### dom_element (accessor)
 ```ruby
-instance.dom_element -> JS::Object
+instance.dom_element -> JS::Element
 ```
 ### mounted (accessor)
 ```ruby
@@ -398,5 +408,5 @@ instance.mounted -> bool
 ```
 ### refs (reader)
 ```ruby
-instance.refs -> Hash[Symbol, JS::Object]
+instance.refs -> Hash[Symbol, JS::Element]
 ```

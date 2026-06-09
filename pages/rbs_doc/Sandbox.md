@@ -17,7 +17,7 @@ Sandbox.new(?String name) -> Sandbox
 ### compile
 
 ```ruby
-instance.compile(String script, ?remove_lv: bool) -> bool
+instance.compile(String script, ?remove_lv: bool, ?filename: String?) -> bool
 ```
 ### compile_from_memory
 

@@ -16,17 +16,17 @@ JS::WebSerial._close_port(JS::Object js_port) -> nil
 ### _close_port_promise
 
 ```ruby
-JS::WebSerial._close_port_promise(JS::Object js_port) -> JS::Object
+JS::WebSerial._close_port_promise(JS::Object js_port) -> JS::Promise
 ```
 ### _open_port
 
 ```ruby
-JS::WebSerial._open_port(JS::Object js_port, JS::Object options) -> JS::Object
+JS::WebSerial._open_port(JS::Object js_port, JS::Object options) -> JS::Promise
 ```
 ### _request_port
 
 ```ruby
-JS::WebSerial._request_port() -> JS::Object
+JS::WebSerial._request_port() -> JS::Promise
 ```
 ### _set_on_disconnect
 
@@ -92,8 +92,8 @@ JS::WebSerial.new(JS::Object js_port) -> void
 ### request_port
 
 ```ruby
-JS::WebSerial.request_port(?filters: Array[untyped]) -> JS::WebSerial?
-JS::WebSerial.request_port(?filters: Array[untyped]) { (JS::WebSerial?) -> void } -> JS::WebSerial?
+JS::WebSerial.request_port(?filters: ::Array[untyped]) -> JS::WebSerial?
+JS::WebSerial.request_port(?filters: ::Array[untyped]) { (JS::WebSerial?) -> void } -> JS::WebSerial?
 ```
 ### supported?
 
@@ -109,7 +109,7 @@ instance.close() -> nil
 ### drain
 
 ```ruby
-instance.drain() -> JS::Object
+instance.drain() -> JS::Promise
 ```
 ### on_disconnect
 
@@ -145,5 +145,5 @@ instance.write(String str) -> nil
 ### write_bytes
 
 ```ruby
-instance.write_bytes(String bytes, ?chunk_size: Integer) -> JS::Object
+instance.write_bytes(String bytes, ?chunk_size: Integer) -> JS::Promise
 ```
