@@ -76,12 +76,12 @@ entries:
       url: "/funicular"
       output: web, pdf
       type: homepage
-    - title: "Funicular on Rails: Setup"
-      url: "/funicular-on-rails"
+    - title: "Funicular on Rails: Quick Chat"
+      url: "/funicular-on-rails-quick-chat"
       output: web, pdf
       type: homepage
-    - title: Debugging
-      url: "/funicular-on-rails-debugging"
+    - title: "Setup"
+      url: "/funicular-on-rails-setup"
       output: web, pdf
       type: homepage
     - title: Components & State
@@ -106,6 +106,10 @@ entries:
       type: homepage
     - title: SSR & Hydration
       url: "/funicular-on-rails-ssr"
+      output: web, pdf
+      type: homepage
+    - title: Debugging
+      url: "/funicular-on-rails-debugging"
       output: web, pdf
       type: homepage
     - title: Testing

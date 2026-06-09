@@ -213,10 +213,18 @@ the picotest result to Minitest.
 ## In the demo
 
 [funicular-demo](https://github.com/hasumikin/funicular-demo) uses a local
-datepicker plugin:
+datepicker plugin and a local image uploader plugin:
 
 ```ruby
 group :funicular do
   gem "funicular-datepicker"
+  gem "funicular-image-uploader"
 end
 ```
+
+`funicular-image-uploader` demonstrates the recommended shape for upload
+plugins. The component handles browser-side file selection, preview, and
+FormData upload, while the Rails application owns persistence. The receiving
+controller can store bytes directly, attach to Active Storage, or forward the
+file to another service as long as it accepts the configured file field and
+returns JSON.

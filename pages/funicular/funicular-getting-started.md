@@ -306,24 +306,3 @@ Also, especially if your app code is big, loading `.mrb` file precompiled by pic
 <script type="application/x-mrb" src="precompiled_app.mrb"></script>
 <script src="https://cdn.jsdelivr.net/npm/@picoruby/wasm-wasi@3.4.4/dist/init.iife.js"></script>
 ```
----
-
-## Learn More
-
-Ready to use Funicular inside a Rails app? The **Funicular on Rails** series
-covers installation and the asset pipeline, then walks through each feature as a
-tutorial plus reference:
-
-- [Funicular on Rails: Setup](/funicular-on-rails) — gem install, `funicular:install`, the asset pipeline
-- [Debugging](/funicular-on-rails-debugging)
-- [Components & State](/funicular-on-rails-components)
-- [Routing & Navigation](/funicular-on-rails-routing)
-- [Forms & Validation](/funicular-on-rails-forms)
-- [Data Fetching](/funicular-on-rails-data)
-- [Stores & Realtime](/funicular-on-rails-stores)
-- [SSR & Hydration](/funicular-on-rails-ssr)
-- [Testing](/funicular-on-rails-testing)
-- [Styling & Advanced](/funicular-on-rails-styling)
-- [Plugins](/funicular-on-rails-plugins)
-
-The source lives at [github.com/picoruby/funicular](https://github.com/picoruby/funicular).

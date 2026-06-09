@@ -2,9 +2,9 @@
 keywords: documentation
 layout: page
 tags: [Rails, Funicular]
-title: "Funicular on Rails: Setup"
+title: "Setup"
 sidebar: picoruby_sidebar
-permalink: funicular-on-rails
+permalink: funicular-on-rails-setup
 folder: funicular
 ---
 
@@ -268,19 +268,6 @@ GET      /settings           SettingsComponent settings_path
 
 Total: 3 routes
 ```
-
-## Next steps
-
-- [Debugging](/funicular-on-rails-debugging) --- `Funicular.debug_color` and the Chrome DevTools extension
-- [Components & State](/funicular-on-rails-components)
-- [Routing & Navigation](/funicular-on-rails-routing)
-- [Forms & Validation](/funicular-on-rails-forms)
-- [Data Fetching: HTTP, Models & Suspense](/funicular-on-rails-data)
-- [Stores & Realtime](/funicular-on-rails-stores)
-- [SSR & Hydration](/funicular-on-rails-ssr)
-- [Testing](/funicular-on-rails-testing)
-- [Styling & Advanced](/funicular-on-rails-styling)
-- [Plugins](/funicular-on-rails-plugins)
 
 ## A complete example app
 
