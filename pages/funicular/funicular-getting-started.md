@@ -4,8 +4,8 @@ layout: page
 tags: [funicular, SPA, Virtual DOM]
 title: Getting Started with Funicular
 sidebar: picoruby_sidebar
-permalink: funicular-getting-started
-folder: wasm
+permalink: funicular
+folder: funicular
 ---
 
 Funicular is a React-inspired SPA framework for PicoRuby.
@@ -306,10 +306,3 @@ Also, especially if your app code is big, loading `.mrb` file precompiled by pic
 <script type="application/x-mrb" src="precompiled_app.mrb"></script>
 <script src="https://cdn.jsdelivr.net/npm/@picoruby/wasm-wasi@3.4.4/dist/init.iife.js"></script>
 ```
----
-
-## Learn More
-
-For the full API reference, routing, server communication via ActionCable, and Rails integration, see the Funicular repository:
-
-[https://github.com/picoruby/funicular](https://github.com/picoruby/funicular)

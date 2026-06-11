@@ -8,6 +8,16 @@ permalink: JS_Object.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### _close_event_queue
+
+```ruby
+JS::Object._close_event_queue(Integer callback_id) -> (Task::Queue | nil)
+```
+### _spawn_event_consumer
+
+```ruby
+JS::Object._spawn_event_consumer(Integer callback_id, Proc block) -> Integer
+```
 ### register_callback
 
 ```ruby
@@ -19,35 +29,10 @@ JS::Object.register_callback(String name) { (*untyped args) -> untyped } -> Inte
 JS::Object.removeEventListener(Integer callback_id) -> bool
 ```
 ## Instance methods
-### <
-
-```ruby
-instance.<(Integer | JS::Object other) -> bool
-```
-### <=
-
-```ruby
-instance.<=(Integer | JS::Object other) -> bool
-```
-### <=>
-
-```ruby
-instance.<=>(Integer | JS::Object other) -> Integer?
-```
 ### ==
 
 ```ruby
 instance.==(untyped other) -> bool
-```
-### >
-
-```ruby
-instance.>(Integer | JS::Object other) -> bool
-```
-### >=
-
-```ruby
-instance.>=(Integer | JS::Object other) -> bool
 ```
 ### URL
 
@@ -57,7 +42,7 @@ instance.URL() -> JS::Object
 ### []
 
 ```ruby
-instance.[](String | Symbol | Integer name) -> (JS::Object | nil)
+instance.[](String | Symbol | Integer name) -> (String | Integer | Float | bool | JS::Object | nil)
 ```
 ### []=
 
@@ -77,22 +62,12 @@ instance.add(*String class_names) -> bool
 ### addEventListener
 
 ```ruby
-instance.addEventListener(String event_type) { (JS::Object event) -> void } -> Integer
-```
-### appendChild
-
-```ruby
-instance.appendChild(JS::Object child) -> bool
-```
-### await
-
-```ruby
-instance.await() -> JS::Object?
+instance.addEventListener(String event_type) { (JS::Event event) -> void } -> Integer
 ```
 ### body
 
 ```ruby
-instance.body() -> JS::Object
+instance.body() -> JS::Element
 ```
 ### children
 
@@ -112,27 +87,17 @@ instance.clearTimeout(Integer callback_id) -> bool
 ### content
 
 ```ruby
-instance.content() -> JS::Object
-```
-### createElement
-
-```ruby
-instance.createElement(String tag_name) -> JS::Object
+instance.content() -> String
 ```
 ### createObjectURL
 
 ```ruby
-instance.createObjectURL(JS::Object blob) -> JS::Object
-```
-### createTextNode
-
-```ruby
-instance.createTextNode(String text) -> JS::Object
+instance.createObjectURL(JS::Object blob) -> String
 ```
 ### create_array
 
 ```ruby
-instance.create_array() -> JS::Object
+instance.create_array() -> JS::Array
 ```
 ### create_object
 
@@ -142,22 +107,17 @@ instance.create_object() -> JS::Object
 ### fetch
 
 ```ruby
-instance.fetch(String url, ?Hash[Symbol, untyped]? options) { (JS::Object response) -> void } -> void
+instance.fetch(String url, ?Hash[Symbol, untyped]? options) { (JS::Response response) -> void } -> void
 ```
 ### getAttribute
 
 ```ruby
-instance.getAttribute(String name) -> JS::Object?
-```
-### getElementById
-
-```ruby
-instance.getElementById(String id) -> JS::Object?
+instance.getAttribute(String name) -> String?
 ```
 ### getItem
 
 ```ruby
-instance.getItem(String key) -> JS::Object?
+instance.getItem(String key) -> String?
 ```
 ### highlightAll
 
@@ -172,22 +132,22 @@ instance.history() -> JS::Object
 ### hostname
 
 ```ruby
-instance.hostname() -> JS::Object
+instance.hostname() -> String
 ```
 ### href
 
 ```ruby
-instance.href() -> JS::Object
+instance.href() -> String
 ```
 ### innerHTML=
 
 ```ruby
 instance.innerHTML=(String html) -> String
 ```
-### insertBefore
+### inspect
 
 ```ruby
-instance.insertBefore(JS::Object new_child, ?JS::Object? ref_child) -> bool
+instance.inspect() -> String
 ```
 ### item
 
@@ -197,7 +157,7 @@ instance.item(String | Integer num) -> JS::Object?
 ### length
 
 ```ruby
-instance.length() -> JS::Object
+instance.length() -> Integer
 ```
 ### location
 
@@ -207,22 +167,22 @@ instance.location() -> JS::Object
 ### parentElement
 
 ```ruby
-instance.parentElement() -> JS::Object?
+instance.parentElement() -> JS::Element?
+```
+### parentNode
+
+```ruby
+instance.parentNode() -> JS::Element?
 ```
 ### pathname
 
 ```ruby
-instance.pathname() -> JS::Object
-```
-### preventDefault
-
-```ruby
-instance.preventDefault() -> nil
+instance.pathname() -> String
 ```
 ### push
 
 ```ruby
-instance.push(JS::Object item) -> JS::Object
+instance.push(untyped item) -> Integer
 ```
 ### pushState
 
@@ -232,7 +192,7 @@ instance.pushState(untyped data, String title, String url) -> void
 ### querySelector
 
 ```ruby
-instance.querySelector(String selector) -> JS::Object?
+instance.querySelector(String selector) -> JS::Element?
 ```
 ### querySelectorAll
 
@@ -249,35 +209,15 @@ instance.refcount() -> Integer
 ```ruby
 instance.remove(*String class_names) -> bool
 ```
-### removeAttribute
-
-```ruby
-instance.removeAttribute(String name) -> bool
-```
-### removeChild
-
-```ruby
-instance.removeChild(JS::Object child) -> bool
-```
 ### removeItem
 
 ```ruby
 instance.removeItem(String key) -> void
 ```
-### replaceChild
-
-```ruby
-instance.replaceChild(JS::Object new_child, JS::Object old_child) -> bool
-```
 ### replaceState
 
 ```ruby
 instance.replaceState(untyped data, String title, String url) -> void
-```
-### setAttribute
-
-```ruby
-instance.setAttribute(String name, String value) -> bool
 ```
 ### setItem
 
@@ -292,12 +232,7 @@ instance.setTimeout(Integer delay_ms) { () -> void } -> Integer
 ### status
 
 ```ruby
-instance.status() -> JS::Object
-```
-### stopPropagation
-
-```ruby
-instance.stopPropagation() -> nil
+instance.status() -> Integer
 ```
 ### style
 
@@ -307,32 +242,22 @@ instance.style() -> JS::Object
 ### tagName
 
 ```ruby
-instance.tagName() -> JS::Object
+instance.tagName() -> String
 ```
 ### target
 
 ```ruby
-instance.target() -> JS::Object
+instance.target() -> JS::Element
 ```
 ### textContent=
 
 ```ruby
 instance.textContent=(String text) -> String
 ```
-### then
-
-```ruby
-instance.then() { (JS::Object? result) -> void } -> JS::Object?
-```
 ### to_a
 
 ```ruby
-instance.to_a() -> Array[JS::Object]
-```
-### to_binary
-
-```ruby
-instance.to_binary() -> String
+instance.to_a() -> ::Array[untyped]
 ```
 ### to_f
 
@@ -349,8 +274,8 @@ instance.to_i() -> Integer
 ```ruby
 instance.to_s() -> String
 ```
-### type
+### typeof
 
 ```ruby
-instance.type() -> Symbol
+instance.typeof() -> Symbol
 ```

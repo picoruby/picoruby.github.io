@@ -61,16 +61,75 @@ entries:
   - title: PicoRuby.WASM
     output: web, pdf
     folderitems:
-    - title: Ruby on Browser
+    - title: PicoRuby on Browser
       url: "/wasm"
       output: web, pdf
       type: homepage
-    - title: Getting Started with Funicular
-      url: "/funicular-getting-started"
+    - title: PicoRuby.wasm BLE
+      url: "/wasm-ble"
       output: web, pdf
       type: homepage
-    - title: Funicular on Rails
-      url: "/funicular-on-rails"
+    - title: PicoRuby.wasm WebSocket
+      url: "/wasm-websocket"
+      output: web, pdf
+      type: homepage
+    - title: PicoRuby.wasm Web Serial
+      url: "/wasm-webserial"
+      output: web, pdf
+      type: homepage
+  - title: Funicular
+    output: web, pdf
+    folderitems:
+    - title: Getting Started with Funicular
+      url: "/funicular"
+      output: web, pdf
+      type: homepage
+    - title: 'Funicular on Rails: Quick Chat'
+      url: "/funicular-on-rails-quick-chat"
+      output: web, pdf
+      type: homepage
+    - title: Setup
+      url: "/funicular-on-rails-setup"
+      output: web, pdf
+      type: homepage
+    - title: Components & State
+      url: "/funicular-on-rails-components"
+      output: web, pdf
+      type: homepage
+    - title: Routing & Navigation
+      url: "/funicular-on-rails-routing"
+      output: web, pdf
+      type: homepage
+    - title: Forms & Validation
+      url: "/funicular-on-rails-forms"
+      output: web, pdf
+      type: homepage
+    - title: Data Fetching
+      url: "/funicular-on-rails-data"
+      output: web, pdf
+      type: homepage
+    - title: Stores & Realtime
+      url: "/funicular-on-rails-stores"
+      output: web, pdf
+      type: homepage
+    - title: SSR & Hydration
+      url: "/funicular-on-rails-ssr"
+      output: web, pdf
+      type: homepage
+    - title: Debugging
+      url: "/funicular-on-rails-debugging"
+      output: web, pdf
+      type: homepage
+    - title: Testing
+      url: "/funicular-on-rails-testing"
+      output: web, pdf
+      type: homepage
+    - title: Styling & Advanced
+      url: "/funicular-on-rails-styling"
+      output: web, pdf
+      type: homepage
+    - title: Plugins
+      url: "/funicular-on-rails-plugins"
       output: web, pdf
       type: homepage
   - title: Builtin
@@ -580,12 +639,96 @@ entries:
       url: "/Funicular_Model.html"
       output: web pdf
       type: homepage
+    - title: class Funicular::Model::Errors
+      url: "/Funicular_Model_Errors.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::Model::Validations
+      url: "/Funicular_Model_Validations.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Model::Validations::AbsenceValidator
+      url: "/Funicular_Model_Validations_AbsenceValidator.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Model::Validations::AcceptanceValidator
+      url: "/Funicular_Model_Validations_AcceptanceValidator.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::Model::Validations::ClassMethods
+      url: "/Funicular_Model_Validations_ClassMethods.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Model::Validations::ConfirmationValidator
+      url: "/Funicular_Model_Validations_ConfirmationValidator.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Model::Validations::EachValidator
+      url: "/Funicular_Model_Validations_EachValidator.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Model::Validations::ExclusionValidator
+      url: "/Funicular_Model_Validations_ExclusionValidator.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Model::Validations::FormatValidator
+      url: "/Funicular_Model_Validations_FormatValidator.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Model::Validations::InclusionValidator
+      url: "/Funicular_Model_Validations_InclusionValidator.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Model::Validations::LengthValidator
+      url: "/Funicular_Model_Validations_LengthValidator.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Model::Validations::NumericalityValidator
+      url: "/Funicular_Model_Validations_NumericalityValidator.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Model::Validations::PresenceValidator
+      url: "/Funicular_Model_Validations_PresenceValidator.html"
+      output: web pdf
+      type: homepage
     - title: module Funicular::RouteHelpers
       url: "/Funicular_RouteHelpers.html"
       output: web pdf
       type: homepage
     - title: class Funicular::Router
       url: "/Funicular_Router.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Store
+      url: "/Funicular_Store.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Store::Collection
+      url: "/Funicular_Store_Collection.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Store::Collection::Scope
+      url: "/Funicular_Store_Collection_Scope.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Store::Scope
+      url: "/Funicular_Store_Scope.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Store::Singleton
+      url: "/Funicular_Store_Singleton.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Store::Singleton::Scope
+      url: "/Funicular_Store_Singleton_Scope.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Store::SubscribesTo
+      url: "/Funicular_Store_SubscribesTo.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Store::Subscription
+      url: "/Funicular_Store_Subscription.html"
       output: web pdf
       type: homepage
     - title: class Funicular::StyleAccessor
@@ -614,6 +757,10 @@ entries:
       type: homepage
     - title: class Funicular::VDOM::Element
       url: "/Funicular_VDOM_Element.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::VDOM::HTMLSerializer
+      url: "/Funicular_VDOM_HTMLSerializer.html"
       output: web pdf
       type: homepage
     - title: class Funicular::VDOM::Patcher
@@ -664,8 +811,92 @@ entries:
       url: "/IRQ_IRQInstance.html"
       output: web pdf
       type: homepage
+    - title: module IndexedDB
+      url: "/IndexedDB.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::AwaitInBatchError
+      url: "/IndexedDB_AwaitInBatchError.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::Batch
+      url: "/IndexedDB_Batch.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::Batch::StoreView
+      url: "/IndexedDB_Batch_StoreView.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::BlockedError
+      url: "/IndexedDB_BlockedError.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::Database
+      url: "/IndexedDB_Database.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::Error
+      url: "/IndexedDB_Error.html"
+      output: web pdf
+      type: homepage
+    - title: module IndexedDB::Helper
+      url: "/IndexedDB_Helper.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::InMemoryBatch
+      url: "/IndexedDB_InMemoryBatch.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::InMemoryBatchView
+      url: "/IndexedDB_InMemoryBatchView.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::InMemoryDatabase
+      url: "/IndexedDB_InMemoryDatabase.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::InMemoryIndex
+      url: "/IndexedDB_InMemoryIndex.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::InMemoryStore
+      url: "/IndexedDB_InMemoryStore.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::Index
+      url: "/IndexedDB_Index.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::KVS
+      url: "/IndexedDB_KVS.html"
+      output: web pdf
+      type: homepage
+    - title: module IndexedDB::KeyRange
+      url: "/IndexedDB_KeyRange.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::NotSupportedError
+      url: "/IndexedDB_NotSupportedError.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::OpenError
+      url: "/IndexedDB_OpenError.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::SchemaError
+      url: "/IndexedDB_SchemaError.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::Store
+      url: "/IndexedDB_Store.html"
+      output: web pdf
+      type: homepage
     - title: module JS
       url: "/JS.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::Array
+      url: "/JS_Array.html"
       output: web pdf
       type: homepage
     - title: module JS::BLE
@@ -700,8 +931,28 @@ entries:
       url: "/JS_Bridge.html"
       output: web pdf
       type: homepage
+    - title: class JS::Element
+      url: "/JS_Element.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::Event
+      url: "/JS_Event.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::Function
+      url: "/JS_Function.html"
+      output: web pdf
+      type: homepage
     - title: class JS::Object
       url: "/JS_Object.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::Promise
+      url: "/JS_Promise.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::Response
+      url: "/JS_Response.html"
       output: web pdf
       type: homepage
     - title: class JS::WebSerial
@@ -1330,6 +1581,10 @@ entries:
       type: homepage
     - title: class Task
       url: "/Task.html"
+      output: web pdf
+      type: homepage
+    - title: class Task::Queue
+      url: "/Task_Queue.html"
       output: web pdf
       type: homepage
     - title: class Task::Stat

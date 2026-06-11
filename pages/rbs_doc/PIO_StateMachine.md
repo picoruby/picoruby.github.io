@@ -48,6 +48,16 @@ instance.drain_tx() -> void
 ```ruby
 instance.exec(Integer instruction) -> void
 ```
+### freq
+
+```ruby
+instance.freq() -> Integer
+```
+### freq=
+
+```ruby
+instance.freq=(Integer) -> Integer
+```
 ### get
 
 ```ruby

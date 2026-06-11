@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::Router.new(JS::Object container) -> void
+Funicular::Router.new(JS::Element? container) -> void
 ```
 ## Instance methods
 ### add_route
@@ -38,6 +38,11 @@ instance.delete(String path, to: singleton(Component), ?as: String?, ?constraint
 
 ```ruby
 instance.get(String path, to: singleton(Component), ?as: String?, ?constraints: route_constraints_t?) -> void
+```
+### match
+
+```ruby
+instance.match(String path) -> [singleton(Component)?, Hash[Symbol, untyped]]
 ```
 ### navigate
 
@@ -67,7 +72,7 @@ instance.set_default(String path) -> void
 ### start
 
 ```ruby
-instance.start() -> void
+instance.start(?hydrate: bool) -> void
 ```
 ### stop
 

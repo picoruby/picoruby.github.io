@@ -65,15 +65,74 @@ entries:
   - title: PicoRuby.WASM
     output: web, pdf
     folderitems:
-    - title: Ruby on Browser
+    - title: PicoRuby on Browser
       url: "/wasm"
       output: web, pdf
       type: homepage
-    - title: Getting Started with Funicular
-      url: "/funicular-getting-started"
+    - title: "PicoRuby.wasm BLE"
+      url: "/wasm-ble"
       output: web, pdf
       type: homepage
-    - title: Funicular on Rails
-      url: "/funicular-on-rails"
+    - title: "PicoRuby.wasm WebSocket"
+      url: "/wasm-websocket"
+      output: web, pdf
+      type: homepage
+    - title: "PicoRuby.wasm Web Serial"
+      url: "/wasm-webserial"
+      output: web, pdf
+      type: homepage
+  - title: Funicular
+    output: web, pdf
+    folderitems:
+    - title: Getting Started with Funicular
+      url: "/funicular"
+      output: web, pdf
+      type: homepage
+    - title: "Funicular on Rails: Quick Chat"
+      url: "/funicular-on-rails-quick-chat"
+      output: web, pdf
+      type: homepage
+    - title: "Setup"
+      url: "/funicular-on-rails-setup"
+      output: web, pdf
+      type: homepage
+    - title: Components & State
+      url: "/funicular-on-rails-components"
+      output: web, pdf
+      type: homepage
+    - title: Routing & Navigation
+      url: "/funicular-on-rails-routing"
+      output: web, pdf
+      type: homepage
+    - title: Forms & Validation
+      url: "/funicular-on-rails-forms"
+      output: web, pdf
+      type: homepage
+    - title: Data Fetching
+      url: "/funicular-on-rails-data"
+      output: web, pdf
+      type: homepage
+    - title: Stores & Realtime
+      url: "/funicular-on-rails-stores"
+      output: web, pdf
+      type: homepage
+    - title: SSR & Hydration
+      url: "/funicular-on-rails-ssr"
+      output: web, pdf
+      type: homepage
+    - title: Debugging
+      url: "/funicular-on-rails-debugging"
+      output: web, pdf
+      type: homepage
+    - title: Testing
+      url: "/funicular-on-rails-testing"
+      output: web, pdf
+      type: homepage
+    - title: Styling & Advanced
+      url: "/funicular-on-rails-styling"
+      output: web, pdf
+      type: homepage
+    - title: Plugins
+      url: "/funicular-on-rails-plugins"
       output: web, pdf
       type: homepage

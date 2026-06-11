@@ -11,7 +11,7 @@ folder: rbs_doc
 ### document
 
 ```ruby
-JS.document() -> JS::Object
+JS.document() -> JS::Element
 ```
 ### generic_callbacks
 

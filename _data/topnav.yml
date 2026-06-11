@@ -17,7 +17,9 @@ topnav_dropdowns:
         - title: R2P2
           external_url: https://github.com/picoruby/picoruby/tree/master/mrbgems/picoruby-r2p2
         - title: PicoRuby.WASM
-          external_url: https://www.npmjs.com/package/@picoruby/picorbc
+          external_url: https://www.npmjs.com/package/@picoruby/wasm-wasi
+        - title: Funicular
+          external_url: https://github.com/picoruby/funicular
         - title: PRK Firmware
           external_url: https://github.com/picoruby/prk_firmware
 
