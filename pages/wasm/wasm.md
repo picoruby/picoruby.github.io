@@ -9,13 +9,13 @@ folder: wasm
 ---
 
 PicoRuby also works on web browsers.
-Because of its portability, PicoRuby.wasm supports the language's full features while CRuby.wasm doesn't.
+What's noteworthy is its small size.
 
-|                        |CRuby.wasm 4.0 w/ stdlib |CRuby.wasm 4.0 w/o stdlib |PicoRuby.wasm 3.4 with Funicular|
-|------------------------|-------------------------|--------------------------|--------------------------------|
-|`Kernel#sleep`          |❌                       |❌                        |✅                              |
-|Multithreading          |No `Thread` support      |No `Thread` support       |`Task` support                  |
-|Binary size (compressed)|31.0 MB (8.6 MB)         |17.2 MB (4.4 MB)          |1.1 MB (470 KB)                 |
+|                        |CRuby.wasm 4.0 with stdlib |CRuby.wasm 4.0 without stdlib |PicoRuby.wasm 4.0 with Funicular|
+|------------------------|---------------------------|------------------------------|--------------------------------|
+|`Kernel#sleep`          |❌                         |❌                            |✅                              |
+|Multithreading          |No `Thread` support        |No `Thread` support           |`Task` support                  |
+|Binary size (compressed)|31.0 MB (8.6 MB)           |17.2 MB (4.4 MB)              |1.3 MB (530 KB)                 |
 
 ## PicoRuby.WASM
 
