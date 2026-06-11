@@ -69,6 +69,18 @@ entries:
       url: "/wasm"
       output: web, pdf
       type: homepage
+    - title: "PicoRuby.wasm BLE"
+      url: "/wasm-ble"
+      output: web, pdf
+      type: homepage
+    - title: "PicoRuby.wasm WebSocket"
+      url: "/wasm-websocket"
+      output: web, pdf
+      type: homepage
+    - title: "PicoRuby.wasm Web Serial"
+      url: "/wasm-webserial"
+      output: web, pdf
+      type: homepage
   - title: Funicular
     output: web, pdf
     folderitems:
