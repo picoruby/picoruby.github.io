@@ -161,11 +161,11 @@ module AutoIndent
       end
 
       def char_at(editor_text, index)
-        editor_text.charAt(index).to_s
+        editor_text[index].to_s
       end
 
       def slice_text(editor_text, start_index, end_index)
-        editor_text.slice(start_index, end_index).to_s
+        editor_text[start_index...end_index]
       end
 
       def newline_char?(character)
