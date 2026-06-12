@@ -78,6 +78,10 @@ class App
     el('editor').style.fontSize = font_size
     # Match the textarea font size so the highlight display stays aligned.
     el('highlight-content').style.fontSize = font_size
+    # Match the line-number font size so each line lines up with the editor rows.
+    el('line-numbers-inner').style.fontSize = font_size
+    el('editor').dispatchEvent(JS.global[:Event].new('refresh-highlight'))
+    el('editor').dispatchEvent(JS.global[:Event].new('sync-line-number-scroll'))
   end
 
   def set_term_font(val)
