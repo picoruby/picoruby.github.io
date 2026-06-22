@@ -442,20 +442,22 @@ class App
   # Text capture detects ACK while terminal.write renders the ^B normally.
   def picomodem_enter_mode
     jsp = js_port
-    JS::WebSerial.binary_capture_start(jsp)
+    JS::WebSerial.capture_start(jsp)
     current_port.write("\x02")
     current_port.drain.await
-    # Wait for ACK (0x06) in binary capture
+    # Wait for ACK (0x06) in text capture
     waited = 0
     while waited < PicoModem::TIMEOUT_MS
-      b = JS::WebSerial.binary_capture_read(jsp, 1)
-      if b && 0 < b.bytesize
-        next if b.getbyte(0) != 0x06
+      captured = JS::WebSerial.capture_peek(jsp).to_s
+      if captured.include?("\x06")
         break
       end
       sleep_ms 10
       waited += 10
     end
+    JS::WebSerial.capture_stop(jsp)
+    # Now start binary capture for PicoModem frames
+    JS::WebSerial.binary_capture_start(jsp)
   end
 
   # Exit PicoModem mode: optionally send ABORT, stop binary capture

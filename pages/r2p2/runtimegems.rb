@@ -611,8 +611,8 @@ class App
     waited = 0
     while waited < PicoModem::TIMEOUT_MS
       break if JS::WebSerial.capture_peek(jsp).to_s.include?("\x06")
-      sleep_ms 1
-      waited += 1
+      sleep_ms 10
+      waited += 10
     end
     JS::WebSerial.capture_stop(jsp)
     JS::WebSerial.binary_capture_start(jsp)
