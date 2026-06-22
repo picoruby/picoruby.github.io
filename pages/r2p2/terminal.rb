@@ -452,8 +452,8 @@ class App
       if captured.include?("\x06")
         break
       end
-      sleep_ms 1
-      waited += 1
+      sleep_ms 10
+      waited += 10
     end
     JS::WebSerial.capture_stop(jsp)
     # Now start binary capture for PicoModem frames
