@@ -113,13 +113,12 @@ class App
   end
 
   def update_dfu_buttons
-    has_path    = !el('path-input')[:value].to_s.strip.empty?
-    has_content = !el('editor')[:value].to_s.strip.empty?
-    set_dfu_buttons_enabled(connected? && has_path, has_content)
+    has_path = !el('path-input')[:value].to_s.strip.empty?
+    set_dfu_buttons_enabled(connected? && has_path)
   end
 
-  def set_dfu_buttons_enabled(enabled, has_content = true)
-    if enabled && has_content
+  def set_dfu_buttons_enabled(enabled)
+    if enabled
       el('upload-btn').removeAttribute('disabled')
     else
       el('upload-btn').setAttribute('disabled', 'true')
@@ -226,20 +225,20 @@ class App
     bind_font_controls
     bind_resizer
     bind_file_selector
-    el('path-input').addEventListener('input') { update_dfu_buttons }
-    el('editor').addEventListener('input') { update_dfu_buttons }
+    el('path-input').addEventListener('change') { update_dfu_buttons }
 
     # Mode radio buttons
-    el('mode-plain').addEventListener('change') { el('download-btn').removeAttribute('disabled') }
+    el('mode-plain').addEventListener('change') { update_dfu_buttons }
     el('mode-compile').addEventListener('change') do
-      el('download-btn').setAttribute('disabled', 'true')
       force_mrb_extension
+      update_dfu_buttons
     end
 
     # Force .mrb extension on blur when compile mode
     el('path-input').addEventListener('blur') do
       next unless compile_mode?
       force_mrb_extension
+      update_dfu_buttons
     end
 
     if JS::WebSerial.supported?
@@ -291,31 +290,43 @@ class App
     editor_wrapper_el = el('editor-wrapper')
     dfu_log_el        = el('dfu-log')
     body              = @doc.body
-    is_resizing       = false
+    move_callback_id  = nil
+    up_callback_id    = nil
 
     resizer.addEventListener('mousedown') do
-      is_resizing = true
+      if move_callback_id
+        JS::Object.removeEventListener(move_callback_id)
+        move_callback_id = nil
+      end
+      if up_callback_id
+        JS::Object.removeEventListener(up_callback_id)
+        up_callback_id = nil
+      end
       body.style.userSelect = 'none'
       body.style.cursor = 'col-resize'
-    end
 
-    @doc.addEventListener('mousemove') do |e|
-      next unless is_resizing
-      rect                         = editor_container.getBoundingClientRect()
-      new_left_x                   = e.clientX.to_f - rect.left.to_f
-      max_x                        = rect.width.to_f - 20.0
-      constrained                  = [100.0, [new_left_x, max_x].min].max
-      left_ratio                   = constrained / rect.width.to_f
-      right_ratio                  = 1.0 - left_ratio
-      editor_wrapper_el.style.flex = left_ratio.to_s
-      dfu_log_el.style.flex        = right_ratio.to_s
-    end
+      move_callback_id = @doc.addEventListener('mousemove') do |e|
+        rect                         = editor_container.getBoundingClientRect()
+        new_left_x                   = e.clientX.to_f - rect.left.to_f
+        max_x                        = rect.width.to_f - 20.0
+        constrained                  = [100.0, [new_left_x, max_x].min].max
+        left_ratio                   = constrained / rect.width.to_f
+        right_ratio                  = 1.0 - left_ratio
+        editor_wrapper_el.style.flex = left_ratio.to_s
+        dfu_log_el.style.flex        = right_ratio.to_s
+      end
 
-    @doc.addEventListener('mouseup') do
-      if is_resizing
-        is_resizing = false
+      up_callback_id = @doc.addEventListener('mouseup') do
         body.style.userSelect = ''
         body.style.cursor = ''
+        if move_callback_id
+          JS::Object.removeEventListener(move_callback_id)
+          move_callback_id = nil
+        end
+        if up_callback_id
+          JS::Object.removeEventListener(up_callback_id)
+          up_callback_id = nil
+        end
       end
     end
   end
@@ -557,8 +568,6 @@ class App
       append_log("[-] Upload already running")
       return
     end
-    @picomodem_uploading = true
-    set_dfu_buttons_enabled(false)
 
     unless connected?
       append_log("[-] Not connected")
@@ -588,6 +597,9 @@ class App
       end
       append_log("[+] Compiled: #{code.bytesize} bytes")
     end
+
+    @picomodem_uploading = true
+    set_dfu_buttons_enabled(false)
 
     append_log("[*] Upload: #{path} (#{code.bytesize} bytes)")
     success = false
