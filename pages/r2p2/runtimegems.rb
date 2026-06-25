@@ -605,17 +605,21 @@ class App
 
   def picomodem_enter_mode
     jsp = js_port
-    JS::WebSerial.capture_start(jsp)
+    JS::WebSerial.binary_capture_start(jsp)
     current_port.write("\x02")
     current_port.drain.await
     waited = 0
     while waited < PicoModem::TIMEOUT_MS
-      break if JS::WebSerial.capture_peek(jsp).to_s.include?("\x06")
+      b = JS::WebSerial.binary_capture_read(jsp, 1)
+      if b && 0 < b.bytesize
+        return if b.getbyte(0) == 0x06
+        next
+      end
       sleep_ms 10
       waited += 10
     end
-    JS::WebSerial.capture_stop(jsp)
-    JS::WebSerial.binary_capture_start(jsp)
+    JS::WebSerial.binary_capture_stop(jsp) rescue nil
+    raise "Timeout waiting for PicoModem ACK"
   end
 
   def picomodem_exit_mode(send_abort = false)

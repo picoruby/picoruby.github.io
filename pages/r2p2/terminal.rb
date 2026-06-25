@@ -437,27 +437,24 @@ class App
     [cmd, payload]
   end
 
-  # Enter PicoModem mode: send STX, wait for ACK, then start binary capture.
-  # The device prints "\n^B" (displayed on terminal) then sends ACK (0x06).
-  # Text capture detects ACK while terminal.write renders the ^B normally.
+  # Enter PicoModem mode: send STX and wait for ACK in raw byte capture.
   def picomodem_enter_mode
     jsp = js_port
-    JS::WebSerial.capture_start(jsp)
+    JS::WebSerial.binary_capture_start(jsp)
     current_port.write("\x02")
     current_port.drain.await
-    # Wait for ACK (0x06) in text capture
     waited = 0
     while waited < PicoModem::TIMEOUT_MS
-      captured = JS::WebSerial.capture_peek(jsp).to_s
-      if captured.include?("\x06")
-        break
+      b = JS::WebSerial.binary_capture_read(jsp, 1)
+      if b && 0 < b.bytesize
+        return if b.getbyte(0) == 0x06
+        next
       end
       sleep_ms 10
       waited += 10
     end
-    JS::WebSerial.capture_stop(jsp)
-    # Now start binary capture for PicoModem frames
-    JS::WebSerial.binary_capture_start(jsp)
+    JS::WebSerial.binary_capture_stop(jsp) rescue nil
+    raise "Timeout waiting for PicoModem ACK"
   end
 
   # Exit PicoModem mode: optionally send ABORT, stop binary capture
