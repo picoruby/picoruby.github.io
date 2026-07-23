@@ -174,7 +174,7 @@ The ActionCable subscription is also created from client-side Ruby:
 ```ruby
 @consumer = Funicular::Cable.create_consumer("/cable")
 @subscription = @consumer.subscriptions.create(channel: "FunicularChatChannel") do |message|
-  patch(messages: state.messages + [message])
+  patch(messages: state[:messages] + [message])
 end
 ```
 

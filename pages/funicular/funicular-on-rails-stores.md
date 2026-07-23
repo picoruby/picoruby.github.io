@@ -28,12 +28,12 @@ class ChatComponent < Funicular::Component
   def component_mounted
     @consumer = Funicular::Cable.create_consumer("/cable")
     @subscription = @consumer.subscriptions.create(channel: "ChatChannel", room: "lobby") do |data|
-      patch(messages: state.messages + [data]) if data
+      patch(messages: state[:messages] + [data]) if data
     end
   end
 
   def handle_send
-    @subscription.perform("speak", message: state.input)  # calls ChatChannel#speak
+    @subscription.perform("speak", message: state[:input])  # calls ChatChannel#speak
     patch(input: "")
   end
 

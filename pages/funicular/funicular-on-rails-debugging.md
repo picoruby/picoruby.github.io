@@ -92,7 +92,7 @@ Add `binding.irb` anywhere in your Funicular code to pause there:
 ```ruby
 def handle_submit(data)
   binding.irb   # execution pauses here
-  Comment.create(post_id: state.post["id"], body: data["body"]) { |c, e| ... }
+  Comment.create(post_id: state[:post]["id"], body: data["body"]) { |c, e| ... }
 end
 ```
 

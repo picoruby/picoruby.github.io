@@ -111,8 +111,8 @@ class Game < Funicular::Component
   end
 
   def handle_play(i)
-    history = state.history
-    current_move = state.current_move
+    history = state[:history]
+    current_move = state[:current_move]
     current_squares = history[current_move].dup
 
     current_squares[i] = (current_move % 2 == 0) ? 'X' : 'O'
@@ -131,8 +131,8 @@ class Game < Funicular::Component
   end
 
   def render
-    history = state.history
-    current_move = state.current_move
+    history = state[:history]
+    current_move = state[:current_move]
     x_is_next = (current_move % 2 == 0)
     current_squares = history[current_move]
 
@@ -175,7 +175,7 @@ Funicular is **bundled into PicoRuby.wasm by default** — no extra installation
 Add a single `<script>` tag at the end of your `<body>` to load the runtime:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@picoruby/wasm-wasi@3.4.4/dist/init.iife.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@picoruby/wasm-wasi@4.0.2/dist/init.iife.js"></script>
 ```
 
 This script processes any `<script type="text/ruby">` blocks on the page and executes them with PicoRuby inside WebAssembly.
@@ -184,7 +184,9 @@ Because Funicular is part of the standard PicoRuby.wasm build, `Funicular::Compo
 ### 1. Components
 
 Every UI piece is a class that inherits `Funicular::Component`.
-The `render` method describes what the component should display, using a Ruby DSL for HTML elements.
+The `render` method (no arguments) describes what the component should
+display. Inside it, HTML elements and Funicular helpers are ordinary method
+calls on the component itself.
 
 ```ruby
 class Square < Funicular::Component
@@ -196,8 +198,10 @@ class Square < Funicular::Component
 end
 ```
 
-HTML tags like `div`, `button`, `ol`, `li` are available as methods.
-Passing a block to them sets their children.
+HTML tags like `div`, `button`, `ol`, `li` are methods every component has.
+Passing a block to them sets their children. Elements outside the built-in
+list (and custom elements) are written as `tag(:main, ...)` --- or promoted
+to barewords by defining a one-line method, since a tag is just a method.
 
 ### 2. Props
 
@@ -216,7 +220,7 @@ props[:on_click]
 
 State is internal, mutable data owned by a component.
 Initialize it by defining `initialize_state`, which returns a Hash.
-Read it via `state.key` (dot notation).
+Read it via `state[:key]` or `state.fetch(:key)`.
 
 ```ruby
 def initialize_state
@@ -227,8 +231,8 @@ def initialize_state
 end
 
 # Reading state:
-state.history
-state.current_move
+state[:history]
+state[:current_move]
 ```
 
 ### 4. Updating State with `patch`
@@ -284,7 +288,7 @@ Call `Funicular.start` with the root component class and the ID of the container
 <script type="text/ruby">
   # Write the Ruby code
 </script>
-<script src="https://cdn.jsdelivr.net/npm/@picoruby/wasm-wasi@3.4.4/dist/init.iife.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@picoruby/wasm-wasi@4.0.2/dist/init.iife.js"></script>
 ```
 
 The `<script type="text/ruby">` block is picked up and executed by the PicoRuby WASM runtime loaded by `init.iife.js`.
@@ -297,12 +301,12 @@ Instead of writing Ruby code between `<script>`, you can load `.rb` files from r
 
 ```html
 <script type="text/ruby" src="app.rb"></script>
-<script src="https://cdn.jsdelivr.net/npm/@picoruby/wasm-wasi@3.4.4/dist/init.iife.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@picoruby/wasm-wasi@4.0.2/dist/init.iife.js"></script>
 ```
 
 Also, especially if your app code is big, loading `.mrb` file precompiled by picorbc is preferable:
 
 ```html
 <script type="application/x-mrb" src="precompiled_app.mrb"></script>
-<script src="https://cdn.jsdelivr.net/npm/@picoruby/wasm-wasi@3.4.4/dist/init.iife.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@picoruby/wasm-wasi@4.0.2/dist/init.iife.js"></script>
 ```

@@ -14,7 +14,7 @@ Forms live in `app/funicular/components/`; models in `app/funicular/models/` (se
 
 ## Tutorial: a signup form
 
-`form_for(:user, ...)` binds to `state.user` and yields a builder. Field helpers mirror Rails:
+`form_for(:user, ...)` binds to `state[:user]` and yields a builder. Field helpers mirror Rails:
 
 ```ruby
 # app/funicular/components/signup_component.rb
@@ -52,9 +52,9 @@ end
 
 Three things happen for free:
 
-- **Two-way binding.** Field values track `state.user`; typing updates the model.
-- **No `preventDefault`.** `form_for` already cancels the native submit; your `on_submit` handler receives the form data hash (here, `state.user`).
-- **Inline errors.** When `state.errors` has a key matching a field, `form_for` renders the message under that field and adds an error class to the input. So `patch(errors: ...)` is all you need to show errors.
+- **Two-way binding.** Field values track `state[:user]`; typing updates the model.
+- **No `preventDefault`.** `form_for` already cancels the native submit; your `on_submit` handler receives the form data hash (here, `state[:user]`).
+- **Inline errors.** When `state[:errors]` has a key matching a field, `form_for` renders the message under that field and adds an error class to the input. So `patch(errors: ...)` is all you need to show errors.
 
 ## Validating in the browser
 
@@ -142,7 +142,7 @@ f.select(:role, [["Administrator", "admin"], ["Editor", "editor"]])  # [label, v
 f.file_field(:avatar, accept: "image/*")
 f.label(:username)                 # auto "Username"
 f.label(:email) { "Email Address" } # custom text
-f.submit("Save", disabled: state.is_submitting)
+f.submit("Save", disabled: state[:is_submitting])
 ```
 
 Boolean attributes (`autofocus`, `disabled`, `checked`, `readonly`, `required`, `multiple`) accept `true`/`false`.
@@ -173,7 +173,7 @@ end
 
 # per form
 form_for(:user, on_submit: :handle_submit,
-         error_class: "error-text", field_error_class: "error-border") do |f|
+           error_class: "error-text", field_error_class: "error-border") do |f|
   ...
 end
 ```
@@ -188,7 +188,7 @@ def handle_submit(form_data)
   User.create(form_data) { |_user, errors| patch(is_submitting: false, errors: errors || {}) }
 end
 
-f.submit(state.is_submitting ? "Submitting..." : "Submit", disabled: state.is_submitting)
+f.submit(state[:is_submitting] ? "Submitting..." : "Submit", disabled: state[:is_submitting])
 ```
 
 File fields integrate with `Funicular::FileUpload`; see

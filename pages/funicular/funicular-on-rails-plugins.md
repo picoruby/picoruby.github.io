@@ -35,9 +35,9 @@ That means application code can use plugin constants directly:
 class SettingsComponent < Funicular::Component
   def render
     component Funicular::Plugins::DatePicker::Component,
-              name: "birthday",
-              value: state.birthday,
-              on_change: ->(value) { patch(birthday: value) }
+                name: "birthday",
+                value: state[:birthday],
+                on_change: ->(value) { patch(birthday: value) }
   end
 end
 ```

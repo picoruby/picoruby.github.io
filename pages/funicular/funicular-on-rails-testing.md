@@ -122,9 +122,9 @@ end
 ```ruby
 component = mount CounterComponent
 
-assert_equal 0, component.state.count
+assert_equal 0, component.state[:count]
 click "button"
-assert_equal 1, component.state.count
+assert_equal 1, component.state[:count]
 ```
 
 ## DOM helpers

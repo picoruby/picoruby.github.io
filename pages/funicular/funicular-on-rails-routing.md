@@ -34,22 +34,20 @@ class PostComponent < Funicular::Component
   end
 
   def render
-    div { h1 { state.post ? state.post.title : "Loading #{props[:id]}..." } }
+    div { h1 { state[:post] ? state[:post].title : "Loading #{props[:id]}..." } }
   end
 end
 ```
 
-Link between routes with `link_to ..., navigate: true`. Include `Funicular::RouteHelpers` to use the generated path helpers:
+Link between routes with `link_to ..., navigate: true`. Generated path helpers are available through `routes`:
 
 ```ruby
 class PostListComponent < Funicular::Component
-  include Funicular::RouteHelpers
-
   def render
     ul do
-      state.posts.each do |post|
+      state[:posts].each do |post|
         li do
-          link_to post_path(post), navigate: true do
+          link_to routes.post_path(post), navigate: true do
             span { post.title }
           end
         end
@@ -59,7 +57,7 @@ class PostListComponent < Funicular::Component
 end
 ```
 
-`post_path(post)` accepts anything responding to `#id`, so `post_path(post)` and `post_path(post.id)` are equivalent.
+`routes.post_path(post)` accepts anything responding to `#id`, so `routes.post_path(post)` and `routes.post_path(post.id)` are equivalent.
 
 ## Reference
 
@@ -88,14 +86,12 @@ Constraints use `Regexp#match?`, backed by JavaScript's `RegExp` engine in PicoR
 
 ### Path helpers
 
-`as:` generates `<name>_path`. Include `Funicular::RouteHelpers` where you use them:
+`as:` generates `<name>_path` on the current runtime's route helper object:
 
 ```ruby
-include Funicular::RouteHelpers
-
-user_path(123)        # => "/users/123"
-edit_post_path(post)  # => "/posts/456/edit"  (post responds to #id)
-settings_path         # => "/settings"
+routes.user_path(123)        # => "/users/123"
+routes.edit_post_path(post)  # => "/posts/456/edit"  (post responds to #id)
+routes.settings_path         # => "/settings"
 ```
 
 ### Programmatic navigation
@@ -113,8 +109,8 @@ Use this after an async action, e.g. navigate once a login resolves.
 
 | Intent      | Call                                   | Renders   | Effect                          |
 |-------------|----------------------------------------|-----------|---------------------------------|
-| Navigation  | `link_to path, navigate: true`         | `<a href>`| SPA transition via History API  |
-| Server action | `link_to path, method: :delete`      | `<div>`   | HTTP request via Fetch API      |
+| Navigation  | `link_to path, navigate: true`       | `<a href>`| SPA transition via History API  |
+| Server action | `link_to path, method: :delete`    | `<div>`   | HTTP request via Fetch API      |
 
 Navigation links are real anchors, so right-click / open-in-new-tab / copy-link work. Action links are intentionally not anchors --- they perform an HTTP request (`:get/:post/:put/:patch/:delete`) and are the semantically correct element for a server operation. CSRF tokens are attached automatically to non-GET requests (ensure `csrf_meta_tags` is in your layout).
 
@@ -125,7 +121,7 @@ def handle_link_response(response, path, method)
   if response.error?
     patch(error: response.error_message)
   elsif method == :delete
-    patch(messages: state.messages.reject { |m| m.id == response.data[:id] })
+    patch(messages: state[:messages].reject { |m| m.id == response.data[:id] })
   end
 end
 ```
@@ -140,8 +136,10 @@ styles do
 end
 
 def render
+  dashboard_path = routes.dashboard_path
+
   link_to dashboard_path, navigate: true,
-          class: s.nav_link(Funicular.router.current_path == dashboard_path) do
+            class: styles.nav_link(Funicular.router.current_path == dashboard_path) do
     span { "Dashboard" }
   end
 end

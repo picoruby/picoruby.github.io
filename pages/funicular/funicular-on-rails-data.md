@@ -48,7 +48,7 @@ class PostListComponent < Funicular::Component
 
   def render
     ul do
-      (state.posts || []).each { |post| li { post.title } }
+      (state[:posts] || []).each { |post| li { post.title } }
     end
   end
 end
@@ -83,18 +83,22 @@ class PostComponent < Funicular::Component
 
   def render
     suspense(
+      :post,
       fallback: -> { div(class: "spinner") { "Loading..." } },
       error: ->(e) {
-        div { span { "Failed: #{e}" }; button(onclick: -> { reload_suspense(:post) }) { "Retry" } }
+        div do
+          span { "Failed: #{e}" }
+          button(onclick: -> { reload_suspense(:post) }) { "Retry" }
+        end
       }
-    ) do
-      h1 { post.title }   # the resolved value is available as a method
+    ) do |res|
+      h1 { res[:post].title }
     end
   end
 end
 ```
 
-The resolved data is exposed as a method named after the source (`post`). Declare several `use_suspense` sources and the `suspense` block waits for all of them. Use Suspense for **initial data loading**, not for user actions --- for a button click, just call the model and `patch` the result.
+The content block receives a resources accessor (`res[:post]`); resolved data is also reachable anywhere in the component as `resources[:post]`. The `fallback:` and `error:` procs run in your own component, so they use bareword tags like the rest of `render`. Use Suspense for **initial data loading**, not for user actions --- for a button click, just call the model and `patch` the result.
 
 ## Reference
 

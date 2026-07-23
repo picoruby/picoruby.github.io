@@ -12,7 +12,7 @@ This page collects the rest of the toolkit: a **CSS-in-Ruby** DSL for scoped, se
 
 ## Styling: the `styles` DSL
 
-Define named styles in a `styles` block at the top of a component, then reference them through the `s` helper in `render`:
+Define named styles in a `styles` block at the top of a component --- each bareword line declares one style --- then reference them as methods on `styles` in `render`:
 
 ```ruby
 class LoginComponent < Funicular::Component
@@ -23,23 +23,26 @@ class LoginComponent < Funicular::Component
   end
 
   def render
-    div(class: s.container) do
-      div(class: s.card) do
-        h1(class: s.title) { "Welcome" }
+    div(class: styles.container) do
+      div(class: styles.card) do
+        h1(class: styles.title) { "Welcome" }
       end
     end
   end
 end
 ```
 
-The class strings are just CSS class names, so the DSL pairs naturally with Tailwind. The benefit is **scoping and semantics**: `s.card` reads better than a long utility string repeated across render methods, and styles change in one place.
+The class strings are just CSS class names, so the DSL pairs naturally with Tailwind. The benefit is **scoping and semantics**: `styles.card` reads better than a long utility string repeated across render methods, and styles change in one place.
+
+Any name works as a style name --- including names like `display` or `hash` that would collide with Ruby's own methods in a naive implementation --- and resolves identically in the browser and during server-side rendering. Referencing an undeclared style raises immediately (`styles.tyop` is a `NoMethodError` listing the declared names), so typos surface at development time instead of shipping as a missing class.
 
 ### Conditional, variant, and combined styles
 
 ```ruby
 styles do
-  # base + conditional: s.channel_item(true) appends the active classes
-  channel_item base: "p-4 hover:bg-gray-700 cursor-pointer", active: "bg-gray-700 border-l-4 border-blue-500"
+  # base + conditional: styles.channel_item(true) appends the active classes
+  channel_item base: "p-4 hover:bg-gray-700 cursor-pointer",
+               active: "bg-gray-700 border-l-4 border-blue-500"
 
   # variants: pick one by name
   button base: "px-4 py-2 rounded font-semibold",
@@ -47,17 +50,27 @@ styles do
 end
 
 def render
-  div(class: s.channel_item(state.current_id == 1)) { "General" }
-  button(class: s.button(:primary)) { "Submit" }
-  button(class: s.button(props[:variant] || :primary)) { props[:label] }
+  div(class: styles.channel_item(state[:current_id] == 1)) { "General" }
+  button(class: styles.button(:primary)) { "Submit" }
+  button(class: styles.button(props[:variant] || :primary)) { props[:label] }
 end
 ```
 
-Combine styles (and raw strings) with the `|` operator, which drops `nil`s --- ideal for conditional classes:
+The index form `styles[:button, :primary]` is equivalent to `styles.button(:primary)`; use whichever reads better. Combine styles (and raw strings) with the `|` operator, which drops `nil`s --- ideal for conditional classes:
 
 ```ruby
-div(class: s.card | (state.highlighted ? "ring-2 ring-blue-500" : nil)) { ... }
+div(class: styles.card | (state[:highlighted] ? "ring-2 ring-blue-500" : nil)) { ... }
 ```
+
+One rule inside the `styles` block: every bareword is a *declaration*, so you cannot call helper methods there. For computed values, use the explicit form, which receives the builder:
+
+```ruby
+styles do |css|
+  css.define :brand, "text-[#{BRAND_COLOR}]"
+end
+```
+
+(Passing a non-String value to a declaration raises with a hint, so an accidental helper call fails loudly rather than defining a phantom style.)
 
 Share styles across components by including a module that calls `styles` in its `included` hook. Prefer semantic names, grouped by purpose, over generic ones.
 
@@ -67,11 +80,11 @@ Share styles across components by including a module that calls `styles` in its 
 
 ```ruby
 component(Funicular::ErrorBoundary,
-  fallback: ->(error) {
-    div(class: "p-4 bg-red-50 border border-red-300") do
-      h3 { "Something went wrong" }
-      p  { error.message }
-      button(onclick: -> { Funicular.router.navigate('/') }) { "Go Home" }
+  fallback: ->(view, error) {
+    view.div(class: "p-4 bg-red-50 border border-red-300") do
+      view.h3 { "Something went wrong" }
+      view.p  { error.message }
+      view.button(onclick: -> { Funicular.router.navigate('/') }) { "Go Home" }
     end
   },
   on_error: ->(error, info) {
@@ -82,6 +95,8 @@ component(Funicular::ErrorBoundary,
   component(RiskyComponent)
 end
 ```
+
+Note that the `fallback` proc builds its elements through an explicit `view` argument instead of barewords. This is the one deliberate exception in the DSL: the proc is written in *your* component but runs during the *boundary's* render, so bareword tags would target the wrong component (and raise `RenderContextError`). Any proc handed to another component for rendering follows this rule; procs your own component consumes --- suspense fallbacks, for example --- stay bareword.
 
 `fallback` receives the error; `on_error` receives `(error, info)` for logging or reporting. With no `fallback`, a default styled error message is shown. Give users a recovery action (retry, go home) in the fallback.
 
@@ -109,7 +124,7 @@ end
 ```ruby
 def handle_delete(id)
   remove_via("message-#{id}", "opacity-100 max-h-screen", "opacity-0 max-h-0", duration: 500) do
-    patch(messages: state.messages.reject { |m| m["id"] == id })
+    patch(messages: state[:messages].reject { |m| m["id"] == id })
   end
 end
 ```

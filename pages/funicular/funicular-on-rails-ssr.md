@@ -34,13 +34,13 @@ class BlogIndexComponent < Funicular::Component
   end
 
   def component_mounted
-    return unless state.posts.empty?       # server already provided them?
+    return unless state[:posts].empty?       # server already provided them?
     Post.all { |posts, _| patch(posts: posts.map { |p| post_to_h(p) }) }
   end
 
   def render
     ul do
-      state.posts.each do |post|
+      state[:posts].each do |post|
         li(key: post["id"]) { post["title"] }   # note: string keys
       end
     end
@@ -87,17 +87,17 @@ In the view, drop the rendered HTML into the `#app` container and embed the stat
 
 Server and client must build the same VDOM, so the data `render` reads must look the same in both places:
 
-- **Use string keys for injected nested data.** Top-level state keys are symbolized (so `state.posts` works), but nested hashes are read with string keys (`post["id"]`). The client parses injected state via `JSON.parse`, which always yields string keys --- so build string-keyed hashes on the server (`{ "id" => p.id }`), not symbol-keyed ones.
+- **Use string keys for injected nested data.** Top-level state keys are symbolized and read explicitly (for example, `state[:posts]`), but nested hashes are read with string keys (`post["id"]`). The client parses injected state via `JSON.parse`, which always yields string keys --- so build string-keyed hashes on the server (`{ "id" => p.id }`), not symbol-keyed ones.
 - **Normalize client-fetched models to that same shape.** On the client-only fetch path, convert `Model` instances into the same string-keyed hashes the server injects (the `post_to_h` helper above).
 - **Render deterministically.** Avoid `Time.now`, randomness, or anything that differs between server and client inside `render`.
 
 ### Login-gated and interactive markup
 
-Because the controller knows who is signed in, inject that into state and branch on it --- the same markup then renders on both sides with no mismatch. `form_for` and the rest of the DSL render on the server and hydrate into working forms:
+Because the controller knows who is signed in, inject that into state and branch on it --- the same markup then renders on both sides with no mismatch. `form_for` and the rest of the `render` DSL render on the server and hydrate into working forms:
 
 ```ruby
 def render
-  if state.current_user
+  if state[:current_user]
     form_for(:comment, on_submit: :handle_submit) do |f|
       f.textarea :body
       f.submit "Post comment"
