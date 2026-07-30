@@ -15,6 +15,11 @@ Two related capabilities live here because they are so often used together:
 
 A chat feature is the canonical example: messages arrive over Cable, and a Store caches them so a returning user sees history instantly.
 
+> **Note**: for structured client-side data, the
+> [Local Database (SQLite)](/funicular-on-rails-local-database) supersedes
+> the Store layer. Store remains available and unchanged, but no new
+> features will build on it; new code should prefer models and `watch`.
+
 ## Tutorial: realtime with Cable
 
 Create a consumer pointed at your Rails cable endpoint, subscribe to a channel, and handle incoming messages by patching state. Clean up on unmount:

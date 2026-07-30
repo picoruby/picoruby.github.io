@@ -16,6 +16,8 @@ Funicular gives you three layers for talking to your Rails backend, from high to
 
 All calls are **callback-based** (not Promises): you pass a block that runs when the response is ready.
 
+There is also a fourth, optional layer: an in-browser SQLite database that mirrors fetched rows locally and lets you query them synchronously with `Post.local.where(...)`. See [Local Database (SQLite)](/funicular-on-rails-local-database).
+
 ## Tutorial: a model-backed list and detail
 
 Define a model and tell it which schema endpoint describes it. Schemas load once at startup, before the app mounts:

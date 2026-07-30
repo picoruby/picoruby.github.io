@@ -112,6 +112,10 @@ entries:
       url: "/funicular-on-rails-data"
       output: web, pdf
       type: homepage
+    - title: Local Database (SQLite)
+      url: "/funicular-on-rails-local-database"
+      output: web, pdf
+      type: homepage
     - title: Stores & Realtime
       url: "/funicular-on-rails-stores"
       output: web, pdf
