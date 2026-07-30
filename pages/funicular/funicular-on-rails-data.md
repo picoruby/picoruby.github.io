@@ -14,7 +14,12 @@ Funicular gives you three layers for talking to your Rails backend, from high to
 2. **`Funicular::HTTP`** --- a low-level client for anything that is not plain CRUD.
 3. **Suspense** --- a declarative way to render loading and error states while data arrives.
 
-All calls are **callback-based** (not Promises): you pass a block that runs when the response is ready.
+All calls are **callback-based** (not Promises): you pass a block that runs when the response is ready. Every model callback has one uniform shape, `(result, error)`: on success `result` is the payload (`all` yields the model array, `find`/`create` the instance, `update` the updated instance, `destroy` yields `true`) and `error` is `nil`; on failure `result` is `nil`. Fire-and-forget (no block) is legal.
+
+> **Breaking change in Funicular 0.5.0**: `update` and `destroy` used to
+> yield `(true/false, data_or_error)`. Callsites that read the first
+> argument as a boolean must be updated to the uniform `(result, error)`
+> shape above.
 
 There is also a fourth, optional layer: an in-browser SQLite database that mirrors fetched rows locally and lets you query them synchronously with `Post.local.where(...)`. See [Local Database (SQLite)](/funicular-on-rails-local-database).
 
@@ -66,8 +71,8 @@ Post.create(title: "Hello", body: "...") do |post, errors|
   errors ? patch(errors: errors) : patch(post: post)
 end
 
-post.update(title: "Edited") { |updated, errors| ... }
-post.destroy { |_response, error| patch(post: nil) unless error }
+post.update(title: "Edited") { |updated, errors| ... }  # updated = the refreshed instance
+post.destroy { |_ok, error| patch(post: nil) unless error }
 ```
 
 ## Suspense for loading states
@@ -112,7 +117,8 @@ Post.all(category: "tech", limit: 10) { |posts, error| ... }   # query params
 Post.find(id)                     { |post, error| ... }
 Post.create(attrs)                { |post, errors| ... }
 post.update(attrs)                { |post, errors| ... }
-post.destroy                      { |response, error| ... }
+post.destroy                      { |ok, error| ... }    # ok = true on success
+post.reload                       { |post, error| ... }
 ```
 
 `create`/`update` run client-side validations first and skip the request when the model is invalid (see [Forms & Validation](/funicular-on-rails-forms)). Override the default RESTful paths with a class `endpoint`:

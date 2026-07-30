@@ -72,13 +72,13 @@ end
 `Model.create` and `Model#update` validate first and behave like `ActiveRecord#save`: when the instance is invalid they **skip the HTTP request** and hand the errors to your callback, so the form shows them with no network trip:
 
 ```ruby
-user.update(display_name: name) do |success, result|
-  if success
-    # saved
-  elsif result.respond_to?(:messages)
-    patch(errors: result.messages)            # client-side validation errors
+user.update(display_name: name) do |updated, error|
+  if updated
+    # saved --- updated is the instance, refreshed from the server response
+  elsif error.respond_to?(:messages)
+    patch(errors: error.messages)             # client-side validation errors
   else
-    patch(message: "Error: #{result}")        # server error (e.g. 422)
+    patch(message: "Error: #{error}")         # server error (e.g. 422)
   end
 end
 ```
