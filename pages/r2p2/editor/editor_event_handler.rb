@@ -30,7 +30,7 @@ module EditorEventHandler
         editor.dispatchEvent(JS.global[:Event].new('refresh-active-line-number'))
       end
 
-      keydown_callback_id = on editor, 'keydown' do |ev|
+      keydown_callback_id = on editor, 'keydown', sync: true do |ev|
         next unless ev[:key].to_s == 'Enter'
 
         ev.preventDefault
@@ -80,9 +80,16 @@ module EditorEventHandler
     editor.dispatchEvent(JS.global[:Event].new('sync-line-number-scroll'))
   end
 
-  def self.on(target, event_name, &block)
-    target.addEventListener(event_name, &block)
+  def self.on(target, event_name, sync: false, &block)
+    target.addEventListener(event_name, sync:, &block)
   end
 end
 
-EditorEventHandler.init
+# To prevent editor initialization failures from affecting other features on /terminal, report the error and continue execution.
+begin
+  EditorEventHandler.init
+rescue StandardError => e
+  p 'Failed to initialize EditorEventHandler'
+  p e
+  nil
+end
