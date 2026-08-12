@@ -159,6 +159,43 @@ def component_mounted
 end
 ```
 
+### Navigation guard (unsaved changes)
+
+Override `navigation_guard` in a component to ask for confirmation before the user leaves it. Return a message to prompt with, or `nil` to allow leaving freely:
+
+```ruby
+class PostEditComponent < Funicular::Component
+  def navigation_guard
+    @dirty ? "Unsaved changes will be lost. Leave this page?" : nil
+  end
+
+  def handle_input(_event)
+    @dirty = true   # an ivar on purpose: typing should not trigger a re-render
+  end
+
+  def render
+    div do
+      textarea(ref: :body, oninput: :handle_input)
+    end
+  end
+end
+```
+
+The router consults the guard on every way out of the component:
+
+| Leave path | Mechanism |
+|------------|-----------|
+| `link_to navigate: true` / `router.navigate` | `window.confirm` before the History API is touched |
+| Browser back / forward | `window.confirm`; when the user stays, the history entry is restored |
+| Reload / tab close / external link | The browser's native dialog, via a synchronous `beforeunload` listener |
+
+Notes:
+
+- The guard must not suspend (no `HTTP` calls, no `await`): the `beforeunload` path runs it on the synchronous JS event dispatch stack. Reading component state is the intended use.
+- Server-side rendering never blocks; the guard is skipped on the server.
+- Tests (or apps wanting a custom modal instead of `window.confirm`) can replace the dialog with `Funicular.confirm_handler = ->(message) { ... }` returning `true` to leave and `false` to stay. Set it back to `nil` to restore `window.confirm`.
+- Remember to clear your dirty flag after a successful save so the guard stands down.
+
 ### Mirroring Rails routes
 
 Because the helper names match, it is convenient to mirror your Rails routes on the client so the same `*_path` helpers read the same on both sides:
