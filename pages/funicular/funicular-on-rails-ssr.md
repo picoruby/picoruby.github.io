@@ -118,6 +118,36 @@ The SSR markup lives inside `#app`, so page-level SEO tags are plain Rails: set 
 
 Before hydrating, Funicular checks that the root tag of the freshly built VDOM matches the server-rendered element. If they disagree (nondeterministic render, stale state), it logs a warning in development, then recovers by rendering a fresh DOM subtree and swapping it in --- the page stays usable; only first-paint reuse is lost for that subtree.
 
+## Embedding a component in a plain ERB page
+
+Not every page wants to be a SPA. A checkout flow, say, may stay plain
+ERB so it works without JavaScript end to end --- but it still wants
+the same site header as the SPA pages. `Funicular::SSR.render_component`
+renders **one component** to static HTML with no route lookup, so the
+header markup has a single source of truth:
+
+```erb
+<%= raw Funicular::SSR.render_component("StorefrontNavComponent",
+                                        props: { active: "cart" }) %>
+```
+
+Three things to know:
+
+- **The component is named by a string**, not a constant. Host apps keep
+  `app/funicular` out of Rails autoloading, so the constant only exists
+  after Funicular's own `boot!` --- which `render_component` triggers ---
+  and a bare constant in your view would raise `NameError` first.
+- **The output is static.** Handlers are not bound and nothing hydrates:
+  links work, `onclick` and friends do not. If the page needs
+  interactivity, it is a routed component and belongs to `SSR.render`.
+- `props:` and `state:` seed the component the same way as everywhere
+  else, so a header can highlight the active section or show the
+  signed-in user.
+
+The motivating case was an EC site whose cart and checkout pages are
+non-JS ERB forms by design, yet render the very same storefront header
+component the SPA pages mount.
+
 ## Current limitations (v1)
 
 - A single state payload is serialized, for the **top routed component**. Child components derive data from props or fetch on mount.
