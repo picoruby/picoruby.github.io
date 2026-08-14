@@ -266,14 +266,16 @@ class App
   end
 
   # Extract spec.require_name value from mrbgem.rake source.
-  # Falls back to parsing the gem name (picoruby-foo -> foo).
+  # Falls back to stripping the "picoruby-" prefix from the gem name
+  # (picoruby-foo -> foo, picoruby-ble-hid -> ble-hid). Note: a \w+
+  # match would truncate hyphenated names (picoruby-ble-hid -> "ble")
+  # and shadow the built-in ble gem on the device.
   def parse_require_name(rake_source, gem_name)
     rake_source.each_line do |line|
       m = line.match(/spec\.require_name\s*=?\s*['"]([^'"]+)['"]/)
       return m[1] if m
     end
-    m = gem_name.match(/^picoruby-(\w+)/)
-    m ? m[1] : gem_name
+    gem_name.sub(/^picoruby-/, '')
   end
 
   # List .rb files directly under mrblib/ via GitHub Contents API.
