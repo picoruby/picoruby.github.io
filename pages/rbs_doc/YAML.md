@@ -16,10 +16,10 @@ YAML.dump(Object) -> String
 ### load
 
 ```ruby
-YAML.load(String) -> Object
+YAML.load(String) -> untyped
 ```
 ### load_file
 
 ```ruby
-YAML.load_file(String) -> Object
+YAML.load_file(String) -> untyped
 ```

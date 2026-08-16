@@ -52,7 +52,8 @@ instance.delete(String | Symbol key) -> nil
 ### each
 
 ```ruby
-instance.each() ?{ ([untyped, untyped]) -> void } -> (Enumerator[[untyped, untyped], void] | void)
+instance.each() -> Enumerator[[untyped, untyped], untyped]
+instance.each() { ([untyped, untyped]) -> void } -> untyped
 ```
 ### empty?
 

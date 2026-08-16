@@ -14,6 +14,11 @@ folder: rbs_doc
 Shell::Job.new(*String params) -> void
 ```
 ## Instance methods
+### close
+
+```ruby
+instance.close() -> void
+```
 ### exec
 
 ```ruby

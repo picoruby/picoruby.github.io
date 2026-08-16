@@ -19,18 +19,18 @@ Funicular::Component::StateAccessor.new(Hash[Symbol, untyped] state_hash) -> voi
 ```ruby
 instance.[](Symbol key) -> untyped
 ```
-### errors
+### fetch
 
 ```ruby
-instance.errors() -> Hash[Symbol, String]
+instance.fetch(Symbol key, ?untyped default) -> untyped
 ```
-### method_missing
+### key?
 
 ```ruby
-instance.method_missing(Symbol method, *untyped args) -> untyped
+instance.key?(Symbol key) -> bool
 ```
-### respond_to_missing?
+### to_h
 
 ```ruby
-instance.respond_to_missing?(Symbol method, ?bool include_private) -> bool
+instance.to_h() -> Hash[Symbol, untyped]
 ```

@@ -13,3 +13,8 @@ folder: rbs_doc
 ```ruby
 GC.interval_ratio=(Integer) -> Integer
 ```
+### scheduler_driven=
+
+```ruby
+GC.scheduler_driven=(bool) -> bool
+```

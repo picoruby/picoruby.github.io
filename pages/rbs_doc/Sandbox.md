@@ -14,6 +14,11 @@ folder: rbs_doc
 Sandbox.new(?String name) -> Sandbox
 ```
 ## Instance methods
+### close
+
+```ruby
+instance.close() -> nil
+```
 ### compile
 
 ```ruby

@@ -7,16 +7,38 @@ sidebar: picoruby_sidebar
 permalink: Funicular_Component.html
 folder: rbs_doc
 ---
+## Include
+[Tags](Tags.html)
 ## Type aliases
 ### suspense_definition
 ```ruby
 { loader: untyped, on_resolve: untyped, min_delay: Integer? }
 ```
 ## Singleton methods
+### allow_dsl_override
+
+```ruby
+Funicular::Component.allow_dsl_override(*Symbol names) -> void
+```
+### dsl_overrides
+
+```ruby
+Funicular::Component.dsl_overrides() -> Array[Symbol]
+```
 ### new
 
 ```ruby
 Funicular::Component.new(?Hash[Symbol, untyped] props) -> void
+```
+### method_added
+
+```ruby
+Funicular::Component.method_added(Symbol name) -> void
+```
+### style_accessor_class
+
+```ruby
+Funicular::Component.style_accessor_class() -> singleton(StyleAccessor)
 ```
 ### styles
 
@@ -38,61 +60,71 @@ Funicular::Component.suspense_definitions() -> Hash[Symbol, suspense_definition]
 ```ruby
 Funicular::Component.use_suspense(Symbol name, untyped loader, ?on_resolve: untyped, ?min_delay: Integer) -> void
 ```
-## Instance methods
-### a
+### validate_dsl_conflicts!
 
 ```ruby
-instance.a(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
+Funicular::Component.validate_dsl_conflicts!() -> void
+```
+## Instance methods
+### __view__
+
+```ruby
+instance.__view__() -> ViewContext
+```
+### add_child_from_view
+
+```ruby
+instance.add_child_from_view(untyped child) -> void
 ```
 ### add_via
 
 ```ruby
 instance.add_via(String element_id, String from, String to, ?duration: Integer) ?{ () -> void } -> void
 ```
-### article
-
-```ruby
-instance.article(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### aside
-
-```ruby
-instance.aside(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### audio
-
-```ruby
-instance.audio(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
 ### bind_events
 
 ```ruby
 instance.bind_events(JS::Element dom_element, VDOM::VNode | VDOM::Text | nil vnode) -> void
 ```
-### br
+### build_button_to
 
 ```ruby
-instance.br(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
+instance.build_button_to(ViewContext h, String path, ?method: Symbol, **untyped options) ?{ () -> untyped } -> VDOM::Element
+```
+### build_form_for
+
+```ruby
+instance.build_form_for(ViewContext h, Symbol model_key, ?Hash[Symbol, untyped] options) { (FormBuilder) -> void } -> VDOM::Element
+```
+### build_link_to
+
+```ruby
+instance.build_link_to(ViewContext h, String path, **untyped options) ?{ () -> untyped } -> VDOM::Element
 ```
 ### build_vdom
 
 ```ruby
 instance.build_vdom() -> (VDOM::VNode | VDOM::Text | nil)
 ```
-### button
+### button_to
 
 ```ruby
-instance.button(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
+instance.button_to(String path, ?method: Symbol, **untyped options) ?{ -> untyped } -> VDOM::Element
 ```
-### canvas
+### cleanup_watches
 
 ```ruby
-instance.canvas(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
+instance.cleanup_watches() -> nil
+```
+### collect_refs
+
+```ruby
+instance.collect_refs(JS::Element dom_element, VDOM::VNode | VDOM::Text | nil vnode, ?Hash[Symbol, JS::Element] refs_map) -> Hash[Symbol, JS::Element]
 ```
 ### component
 
 ```ruby
-instance.component(Class component_class, ?Hash[Symbol, untyped] props) ?{ () -> untyped } -> VDOM::Component
+instance.component(singleton(Component) component_class, ?Hash[Symbol, untyped] props) ?{ () -> untyped } -> VDOM::Component
 ```
 ### component_mounted
 
@@ -129,100 +161,30 @@ instance.component_will_unmount() -> void
 ```ruby
 instance.component_will_update() -> void
 ```
-### div
+### evaluate_watch
 
 ```ruby
-instance.div(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### footer
-
-```ruby
-instance.footer(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### form
-
-```ruby
-instance.form(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
+instance.evaluate_watch(Symbol key, untyped block) -> nil
 ```
 ### form_for
 
 ```ruby
 instance.form_for(Symbol model_key, ?Hash[Symbol, untyped] options) { (FormBuilder) -> void } -> VDOM::Element
 ```
-### h1
-
-```ruby
-instance.h1(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### h2
-
-```ruby
-instance.h2(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### h3
-
-```ruby
-instance.h3(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### h4
-
-```ruby
-instance.h4(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### h5
-
-```ruby
-instance.h5(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### h6
-
-```ruby
-instance.h6(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### header
-
-```ruby
-instance.header(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### hr
-
-```ruby
-instance.hr(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
 ### hydrate
 
 ```ruby
 instance.hydrate(JS::Element dom_element) -> void
-```
-### img
-
-```ruby
-instance.img(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
 ```
 ### initialize_state
 
 ```ruby
 instance.initialize_state() -> Hash[Symbol, untyped]
 ```
-### input
-
-```ruby
-instance.input(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### label
-
-```ruby
-instance.label(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### li
-
-```ruby
-instance.li(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
 ### link_to
 
 ```ruby
-instance.link_to(String path, ?method: Symbol, ?navigate: bool, **untyped options) { -> untyped } -> VDOM::Element
+instance.link_to(String path, **untyped options) ?{ -> untyped } -> VDOM::Element
 ```
 ### load_single_suspense
 
@@ -234,35 +196,20 @@ instance.load_single_suspense(Symbol name, ?suspense_definition? definition) -> 
 ```ruby
 instance.load_suspense_data() -> void
 ```
-### method_missing
-
-```ruby
-instance.method_missing(Symbol method, *untyped args) -> untyped
-```
 ### mount
 
 ```ruby
 instance.mount(JS::Element container) -> void
 ```
-### nav
+### navigation_guard
 
 ```ruby
-instance.nav(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
+instance.navigation_guard() -> String?
 ```
-### ol
+### normalize_vnode_for_view
 
 ```ruby
-instance.ol(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### option
-
-```ruby
-instance.option(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### p
-
-```ruby
-instance.p(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
+instance.normalize_vnode_for_view(untyped value) -> (VDOM::Element | VDOM::Text | VDOM::Component | nil)
 ```
 ### patch
 
@@ -284,45 +231,45 @@ instance.remove_via(String element_id, String from, String to, ?duration: Intege
 ```ruby
 instance.render() -> (VDOM::VNode | String | Integer | Float | Array[untyped] | nil)
 ```
-### respond_to_missing?
+### render_suspense
 
 ```ruby
-instance.respond_to_missing?(Symbol method, ?bool include_private) -> bool
+instance.render_suspense(Symbol name, fallback: untyped, ?error: untyped) { (ResourceAccessor) -> untyped } -> untyped
 ```
-### s
+### report_handler_error
 
 ```ruby
-instance.s() -> StyleAccessor
+instance.report_handler_error(String event_name, String handler, StandardError error) -> void
 ```
-### section
+### resources
 
 ```ruby
-instance.section(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
+instance.resources() -> ResourceAccessor
+```
+### routes
+
+```ruby
+instance.routes() -> untyped
 ```
 ### seed_state
 
 ```ruby
 instance.seed_state(Hash[untyped, untyped]? state_hash) -> self
 ```
-### select
-
-```ruby
-instance.select(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### span
-
-```ruby
-instance.span(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
 ### state
 
 ```ruby
 instance.state() -> StateAccessor
 ```
+### styles
+
+```ruby
+instance.styles() -> StyleAccessor
+```
 ### suspense
 
 ```ruby
-instance.suspense(fallback: ^() -> void, ?error: ^(untyped) -> void) { () -> void } -> void
+instance.suspense(Symbol name, fallback: untyped, ?error: untyped) { (ResourceAccessor) -> untyped } -> untyped
 ```
 ### suspense_error
 
@@ -339,55 +286,15 @@ instance.suspense_error?(Symbol name) -> bool
 ```ruby
 instance.suspense_loading?(*Symbol names) -> bool
 ```
-### table
-
-```ruby
-instance.table(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### tbody
-
-```ruby
-instance.tbody(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### td
-
-```ruby
-instance.td(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### textarea
-
-```ruby
-instance.textarea(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### th
-
-```ruby
-instance.th(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### thead
-
-```ruby
-instance.thead(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### tr
-
-```ruby
-instance.tr(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
-### ul
-
-```ruby
-instance.ul(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
-```
 ### unmount
 
 ```ruby
 instance.unmount() -> void
 ```
-### video
+### watch
 
 ```ruby
-instance.video(?Hash[Symbol, untyped] props) ?{ -> untyped } -> VDOM::Element
+instance.watch(Symbol key) { () -> untyped } -> nil
 ```
 ## Attr accessors
 ### props (accessor)
@@ -405,6 +312,18 @@ instance.dom_element -> JS::Element
 ### mounted (accessor)
 ```ruby
 instance.mounted -> bool
+```
+### runtime (accessor)
+```ruby
+instance.runtime -> Runtime
+```
+### children (accessor)
+```ruby
+instance.children -> Array[VDOM::child_t]
+```
+### current_children (accessor)
+```ruby
+instance.current_children -> Array[VDOM::child_t]?
 ```
 ### refs (reader)
 ```ruby

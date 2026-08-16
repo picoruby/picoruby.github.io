@@ -11,7 +11,7 @@ folder: rbs_doc
 ### open_with_upgrade
 
 ```ruby
-IndexedDB::Helper.open_with_upgrade(String name, Integer version, Integer callback_id) -> untyped
+IndexedDB::Helper.open_with_upgrade(String name, Integer version, Integer callback_id, Integer blocked_timeout_ms) -> untyped
 ```
 ### request_to_promise
 

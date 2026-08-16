@@ -17,7 +17,8 @@ IndexedDB::InMemoryIndex.new(InMemoryStore store, String name) -> void
 ### each
 
 ```ruby
-instance.each() ?{ ([untyped, untyped]) -> void } -> (Enumerator[[untyped, untyped], void] | void)
+instance.each() -> Enumerator[[untyped, untyped], untyped]
+instance.each() { ([untyped, untyped]) -> void } -> untyped
 ```
 ### get
 

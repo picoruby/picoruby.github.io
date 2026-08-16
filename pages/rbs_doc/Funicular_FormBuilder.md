@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::FormBuilder.new(Component component, Symbol model_key, ?Hash[Symbol, untyped] options) -> void
+Funicular::FormBuilder.new(Component component, ViewContext view_context, Symbol model_key, ?Hash[Symbol, untyped] options) -> void
 ```
 ## Instance methods
 ### checkbox
@@ -68,6 +68,10 @@ instance.textarea(Symbol field_name, ?Hash[Symbol, untyped] options) -> VDOM::El
 ### component (reader)
 ```ruby
 instance.component -> Component
+```
+### view_context (reader)
+```ruby
+instance.view_context -> ViewContext
 ```
 ### model_key (reader)
 ```ruby

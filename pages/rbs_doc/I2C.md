@@ -17,7 +17,7 @@ Integer|String|Array[Integer]
 
 ```ruby
 I2C.new(
-    unit: Symbol|nil,
+    ?unit: Symbol|nil,
     ?frequency: Integer,
     ?sda_pin: Integer,
     ?scl_pin: Integer,

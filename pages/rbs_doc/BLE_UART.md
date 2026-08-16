@@ -50,6 +50,16 @@ instance.gets_nonblock() -> (String | nil)
 ```ruby
 instance.heartbeat_callback() -> void
 ```
+### on_connect
+
+```ruby
+instance.on_connect() ?{ () -> void } -> void
+```
+### on_disconnect
+
+```ruby
+instance.on_disconnect() ?{ () -> void } -> void
+```
 ### packet_callback
 
 ```ruby

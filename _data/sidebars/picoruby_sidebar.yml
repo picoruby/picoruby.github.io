@@ -368,10 +368,6 @@ entries:
       url: "/UART.html"
       output: web pdf
       type: homepage
-    - title: class UART::RxBuffer
-      url: "/UART_RxBuffer.html"
-      output: web pdf
-      type: homepage
   - title: General
     output: web pdf
     folderitems:
@@ -567,10 +563,6 @@ entries:
       url: "/FAT_File.html"
       output: web pdf
       type: homepage
-    - title: class FAT::Stat
-      url: "/FAT_Stat.html"
-      output: web pdf
-      type: homepage
     - title: class FAT::VFSMethods
       url: "/FAT_VFSMethods.html"
       output: web pdf
@@ -607,12 +599,80 @@ entries:
       url: "/Funicular_Component.html"
       output: web pdf
       type: homepage
+    - title: class Funicular::Component::ResourceAccessor
+      url: "/Funicular_Component_ResourceAccessor.html"
+      output: web pdf
+      type: homepage
     - title: class Funicular::Component::StateAccessor
       url: "/Funicular_Component_StateAccessor.html"
       output: web pdf
       type: homepage
+    - title: module Funicular::DB
+      url: "/Funicular_DB.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::DB::Codec
+      url: "/Funicular_DB_Codec.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::DB::Config
+      url: "/Funicular_DB_Config.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::DB::ConfigError
+      url: "/Funicular_DB_ConfigError.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::DB::Error
+      url: "/Funicular_DB_Error.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::DB::GuardedDatabase
+      url: "/Funicular_DB_GuardedDatabase.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::DB::GuardedResultSet
+      url: "/Funicular_DB_GuardedResultSet.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::DB::GuardedStatement
+      url: "/Funicular_DB_GuardedStatement.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::DB::NoTableError
+      url: "/Funicular_DB_NoTableError.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::DB::ReadOnlyTabError
+      url: "/Funicular_DB_ReadOnlyTabError.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::DB::ReplicaWriteError
+      url: "/Funicular_DB_ReplicaWriteError.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::DB::SchemaTooNewError
+      url: "/Funicular_DB_SchemaTooNewError.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::DB::TableBuilder
+      url: "/Funicular_DB_TableBuilder.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::DB::UnavailableError
+      url: "/Funicular_DB_UnavailableError.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::DSLCollisionError
+      url: "/Funicular_DSLCollisionError.html"
+      output: web pdf
+      type: homepage
     - title: module Funicular::Debug
       url: "/Funicular_Debug.html"
+      output: web pdf
+      type: homepage
+    - title: module Funicular::EmptyRoutes
+      url: "/Funicular_EmptyRoutes.html"
       output: web pdf
       type: homepage
     - title: class Funicular::EnvironmentInquirer
@@ -695,12 +755,24 @@ entries:
       url: "/Funicular_Model_Validations_PresenceValidator.html"
       output: web pdf
       type: homepage
-    - title: module Funicular::RouteHelpers
-      url: "/Funicular_RouteHelpers.html"
+    - title: class Funicular::RecordNotFound
+      url: "/Funicular_RecordNotFound.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Relation
+      url: "/Funicular_Relation.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::RenderContextError
+      url: "/Funicular_RenderContextError.html"
       output: web pdf
       type: homepage
     - title: class Funicular::Router
       url: "/Funicular_Router.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Runtime
+      url: "/Funicular_Runtime.html"
       output: web pdf
       type: homepage
     - title: class Funicular::Store
@@ -747,6 +819,10 @@ entries:
       url: "/Funicular_StyleValue.html"
       output: web pdf
       type: homepage
+    - title: module Funicular::Tags
+      url: "/Funicular_Tags.html"
+      output: web pdf
+      type: homepage
     - title: module Funicular::VDOM
       url: "/Funicular_VDOM.html"
       output: web pdf
@@ -783,6 +859,10 @@ entries:
       url: "/Funicular_VDOM_VNode.html"
       output: web pdf
       type: homepage
+    - title: class Funicular::ViewContext
+      url: "/Funicular_ViewContext.html"
+      output: web pdf
+      type: homepage
     - title: module GC
       url: "/GC.html"
       output: web pdf
@@ -815,8 +895,16 @@ entries:
       url: "/IRQ_IRQInstance.html"
       output: web pdf
       type: homepage
+    - title: module IRQ::SOURCE
+      url: "/IRQ_SOURCE.html"
+      output: web pdf
+      type: homepage
     - title: module IndexedDB
       url: "/IndexedDB.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::AbortError
+      url: "/IndexedDB_AbortError.html"
       output: web pdf
       type: homepage
     - title: class IndexedDB::AwaitInBatchError
@@ -871,6 +959,10 @@ entries:
       url: "/IndexedDB_Index.html"
       output: web pdf
       type: homepage
+    - title: class IndexedDB::InvalidStateError
+      url: "/IndexedDB_InvalidStateError.html"
+      output: web pdf
+      type: homepage
     - title: class IndexedDB::KVS
       url: "/IndexedDB_KVS.html"
       output: web pdf
@@ -887,12 +979,28 @@ entries:
       url: "/IndexedDB_OpenError.html"
       output: web pdf
       type: homepage
+    - title: class IndexedDB::QuotaExceededError
+      url: "/IndexedDB_QuotaExceededError.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::RequestError
+      url: "/IndexedDB_RequestError.html"
+      output: web pdf
+      type: homepage
     - title: class IndexedDB::SchemaError
       url: "/IndexedDB_SchemaError.html"
       output: web pdf
       type: homepage
+    - title: class IndexedDB::SecurityError
+      url: "/IndexedDB_SecurityError.html"
+      output: web pdf
+      type: homepage
     - title: class IndexedDB::Store
       url: "/IndexedDB_Store.html"
+      output: web pdf
+      type: homepage
+    - title: class IndexedDB::VersionError
+      url: "/IndexedDB_VersionError.html"
       output: web pdf
       type: homepage
     - title: module JS
@@ -957,6 +1065,26 @@ entries:
       type: homepage
     - title: class JS::Response
       url: "/JS_Response.html"
+      output: web pdf
+      type: homepage
+    - title: module JS::WebAudio
+      url: "/JS_WebAudio.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::WebAudio::Channel
+      url: "/JS_WebAudio_Channel.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::WebAudio::Synth
+      url: "/JS_WebAudio_Synth.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::WebAudio::Voice
+      url: "/JS_WebAudio_Voice.html"
+      output: web pdf
+      type: homepage
+    - title: class JS::WebAudio::WebSerialMIDIInput
+      url: "/JS_WebAudio_WebSerialMIDIInput.html"
       output: web pdf
       type: homepage
     - title: class JS::WebSerial
@@ -1043,6 +1171,14 @@ entries:
       url: "/Logger.html"
       output: web pdf
       type: homepage
+    - title: class LooperCLIOptions
+      url: "/LooperCLIOptions.html"
+      output: web pdf
+      type: homepage
+    - title: class LooperConsole
+      url: "/LooperConsole.html"
+      output: web pdf
+      type: homepage
     - title: class MCP3208
       url: "/MCP3208.html"
       output: web pdf
@@ -1051,8 +1187,80 @@ entries:
       url: "/MCP3424.html"
       output: web pdf
       type: homepage
-    - title: class MML
-      url: "/MML.html"
+    - title: module MIDIBASE
+      url: "/MIDIBASE.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::Clock
+      url: "/MIDIBASE_Clock.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::Looper
+      url: "/MIDIBASE_Looper.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::Looper::EventBuffer
+      url: "/MIDIBASE_Looper_EventBuffer.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::Looper::InputPump
+      url: "/MIDIBASE_Looper_InputPump.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::Looper::Part
+      url: "/MIDIBASE_Looper_Part.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::Looper::Recorder
+      url: "/MIDIBASE_Looper_Recorder.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::Looper::Track
+      url: "/MIDIBASE_Looper_Track.html"
+      output: web pdf
+      type: homepage
+    - title: module MIDIBASE::MML
+      url: "/MIDIBASE_MML.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::MML::InternalClock
+      url: "/MIDIBASE_MML_InternalClock.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::MML::MIDIClock
+      url: "/MIDIBASE_MML_MIDIClock.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::MML::Parser
+      url: "/MIDIBASE_MML_Parser.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::MML::Player
+      url: "/MIDIBASE_MML_Player.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::MML::Sequence
+      url: "/MIDIBASE_MML_Sequence.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::Parser
+      url: "/MIDIBASE_Parser.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::Router
+      url: "/MIDIBASE_Router.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::Router::Emitter
+      url: "/MIDIBASE_Router_Emitter.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::Session
+      url: "/MIDIBASE_Session.html"
+      output: web pdf
+      type: homepage
+    - title: class MIDIBASE::VoiceAllocator
+      url: "/MIDIBASE_VoiceAllocator.html"
       output: web pdf
       type: homepage
     - title: module Machine
@@ -1107,12 +1315,12 @@ entries:
       url: "/MbedTLS_PKey_RSA.html"
       output: web pdf
       type: homepage
-    - title: module Net
-      url: "/Net.html"
+    - title: class MedianFilter
+      url: "/MedianFilter.html"
       output: web pdf
       type: homepage
-    - title: class Net::DNS
-      url: "/Net_DNS.html"
+    - title: module Net
+      url: "/Net.html"
       output: web pdf
       type: homepage
     - title: class Net::Delete
@@ -1141,14 +1349,6 @@ entries:
       type: homepage
     - title: class Net::HTTPBadResponse
       url: "/Net_HTTPBadResponse.html"
-      output: web pdf
-      type: homepage
-    - title: class Net::HTTPClient
-      url: "/Net_HTTPClient.html"
-      output: web pdf
-      type: homepage
-    - title: class Net::HTTPClientBase
-      url: "/Net_HTTPClientBase.html"
       output: web pdf
       type: homepage
     - title: class Net::HTTPClientError
@@ -1219,10 +1419,6 @@ entries:
       url: "/Net_HTTPResponse.html"
       output: web pdf
       type: homepage
-    - title: class Net::HTTPSClient
-      url: "/Net_HTTPSClient.html"
-      output: web pdf
-      type: homepage
     - title: class Net::HTTPSeeOther
       url: "/Net_HTTPSeeOther.html"
       output: web pdf
@@ -1249,10 +1445,6 @@ entries:
       type: homepage
     - title: class Net::HTTPUnknownResponse
       url: "/Net_HTTPUnknownResponse.html"
-      output: web pdf
-      type: homepage
-    - title: class Net::HTTPUtil
-      url: "/Net_HTTPUtil.html"
       output: web pdf
       type: homepage
     - title: class Net::Head
@@ -1291,14 +1483,6 @@ entries:
       url: "/Net_Put.html"
       output: web pdf
       type: homepage
-    - title: class Net::TCPClient
-      url: "/Net_TCPClient.html"
-      output: web pdf
-      type: homepage
-    - title: class Net::UDPClient
-      url: "/Net_UDPClient.html"
-      output: web pdf
-      type: homepage
     - title: module Net::WebSocket
       url: "/Net_WebSocket.html"
       output: web pdf
@@ -1327,6 +1511,10 @@ entries:
       url: "/Network_WiFi.html"
       output: web pdf
       type: homepage
+    - title: class Network::WiFi::Auth
+      url: "/Network_WiFi_Auth.html"
+      output: web pdf
+      type: homepage
     - title: class Object
       url: "/Object.html"
       output: web pdf
@@ -1351,14 +1539,6 @@ entries:
       url: "/PNGBIT.html"
       output: web pdf
       type: homepage
-    - title: module PRS
-      url: "/PRS.html"
-      output: web pdf
-      type: homepage
-    - title: class PRS::Compiler
-      url: "/PRS_Compiler.html"
-      output: web pdf
-      type: homepage
     - title: module PSG
       url: "/PSG.html"
       output: web pdf
@@ -1367,8 +1547,20 @@ entries:
       url: "/PSG_Driver.html"
       output: web pdf
       type: homepage
-    - title: class PSG::Keyboard
-      url: "/PSG_Keyboard.html"
+    - title: class PSG::MIDIController
+      url: "/PSG_MIDIController.html"
+      output: web pdf
+      type: homepage
+    - title: module PSG::PRS
+      url: "/PSG_PRS.html"
+      output: web pdf
+      type: homepage
+    - title: class PSG::PRS::Compiler
+      url: "/PSG_PRS_Compiler.html"
+      output: web pdf
+      type: homepage
+    - title: class PSG::Synth
+      url: "/PSG_Synth.html"
       output: web pdf
       type: homepage
     - title: class PWM
@@ -1397,6 +1589,18 @@ entries:
       type: homepage
     - title: class PicoModemStringReader
       url: "/PicoModemStringReader.html"
+      output: web pdf
+      type: homepage
+    - title: class PicoOptionParser
+      url: "/PicoOptionParser.html"
+      output: web pdf
+      type: homepage
+    - title: class PicoOptionParser::Option
+      url: "/PicoOptionParser_Option.html"
+      output: web pdf
+      type: homepage
+    - title: class PicoOptionParser::Result
+      url: "/PicoOptionParser_Result.html"
       output: web pdf
       type: homepage
     - title: class PicoRubyVM
@@ -1499,8 +1703,40 @@ entries:
       url: "/SQLite3.html"
       output: web pdf
       type: homepage
+    - title: class SQLite3::Backup
+      url: "/SQLite3_Backup.html"
+      output: web pdf
+      type: homepage
+    - title: class SQLite3::BusyException
+      url: "/SQLite3_BusyException.html"
+      output: web pdf
+      type: homepage
+    - title: class SQLite3::ConstraintException
+      url: "/SQLite3_ConstraintException.html"
+      output: web pdf
+      type: homepage
+    - title: class SQLite3::CorruptException
+      url: "/SQLite3_CorruptException.html"
+      output: web pdf
+      type: homepage
     - title: class SQLite3::Database
       url: "/SQLite3_Database.html"
+      output: web pdf
+      type: homepage
+    - title: class SQLite3::FullException
+      url: "/SQLite3_FullException.html"
+      output: web pdf
+      type: homepage
+    - title: class SQLite3::IOException
+      url: "/SQLite3_IOException.html"
+      output: web pdf
+      type: homepage
+    - title: module SQLite3::Pragmas
+      url: "/SQLite3_Pragmas.html"
+      output: web pdf
+      type: homepage
+    - title: class SQLite3::ReadOnlyException
+      url: "/SQLite3_ReadOnlyException.html"
       output: web pdf
       type: homepage
     - title: class SQLite3::ResultSet
@@ -1567,6 +1803,10 @@ entries:
       url: "/Signal.html"
       output: web pdf
       type: homepage
+    - title: class SocketDNSResolver
+      url: "/SocketDNSResolver.html"
+      output: web pdf
+      type: homepage
     - title: class SocketError
       url: "/SocketError.html"
       output: web pdf
@@ -1585,6 +1825,10 @@ entries:
       type: homepage
     - title: class Task
       url: "/Task.html"
+      output: web pdf
+      type: homepage
+    - title: class Task::Error
+      url: "/Task_Error.html"
       output: web pdf
       type: homepage
     - title: class Task::Queue
@@ -1615,6 +1859,10 @@ entries:
       url: "/UART.html"
       output: web pdf
       type: homepage
+    - title: class UART::MIDI
+      url: "/UART_MIDI.html"
+      output: web pdf
+      type: homepage
     - title: class UC8151
       url: "/UC8151.html"
       output: web pdf
@@ -1633,6 +1881,14 @@ entries:
       type: homepage
     - title: module USB
       url: "/USB.html"
+      output: web pdf
+      type: homepage
+    - title: module USB::CDC
+      url: "/USB_CDC.html"
+      output: web pdf
+      type: homepage
+    - title: class USB::CDC::MIDIOutput
+      url: "/USB_CDC_MIDIOutput.html"
       output: web pdf
       type: homepage
     - title: class USB::HID

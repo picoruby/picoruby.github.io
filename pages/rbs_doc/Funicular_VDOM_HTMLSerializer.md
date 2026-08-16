@@ -8,10 +8,15 @@ permalink: Funicular_VDOM_HTMLSerializer.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### new
+
+```ruby
+Funicular::VDOM::HTMLSerializer.new(?Runtime? runtime) -> void
+```
 ### serialize
 
 ```ruby
-Funicular::VDOM::HTMLSerializer.serialize(VNode? vnode) -> String
+Funicular::VDOM::HTMLSerializer.serialize(VNode? vnode, ?Runtime? runtime) -> String
 ```
 ## Instance methods
 ### escape_attr

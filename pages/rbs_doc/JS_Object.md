@@ -13,6 +13,11 @@ folder: rbs_doc
 ```ruby
 JS::Object._close_event_queue(Integer callback_id) -> (Task::Queue | nil)
 ```
+### _dispatch_sync
+
+```ruby
+JS::Object._dispatch_sync(Integer callback_id, JS::Event event, bool once) -> void
+```
 ### _spawn_event_consumer
 
 ```ruby
@@ -54,6 +59,11 @@ instance.[]=(String | Symbol name, untyped value) -> untyped
 ```ruby
 instance._js_remove_event_listener_wrapper(Integer callback_id) -> bool
 ```
+### _removeEventListener
+
+```ruby
+instance._removeEventListener(Integer callback_id) -> bool
+```
 ### add
 
 ```ruby
@@ -62,7 +72,7 @@ instance.add(*String class_names) -> bool
 ### addEventListener
 
 ```ruby
-instance.addEventListener(String event_type) { (JS::Event event) -> void } -> Integer
+instance.addEventListener(String event_type, ?sync: bool, ?capture: bool, ?once: bool, ?passive: bool?) { (JS::Event event) -> void } -> Integer
 ```
 ### body
 
@@ -83,6 +93,11 @@ instance.classList() -> JS::Object
 
 ```ruby
 instance.clearTimeout(Integer callback_id) -> bool
+```
+### confirm
+
+```ruby
+instance.confirm(String message) -> bool
 ```
 ### content
 
@@ -149,10 +164,25 @@ instance.innerHTML=(String html) -> String
 ```ruby
 instance.inspect() -> String
 ```
+### instance_of?
+
+```ruby
+instance.instance_of?(Class klass) -> bool
+```
+### is_a?
+
+```ruby
+instance.is_a?(Module klass) -> bool
+```
 ### item
 
 ```ruby
 instance.item(String | Integer num) -> JS::Object?
+```
+### kind_of?
+
+```ruby
+instance.kind_of?(Module klass) -> bool
 ```
 ### length
 
@@ -163,6 +193,16 @@ instance.length() -> Integer
 
 ```ruby
 instance.location() -> JS::Object
+```
+### new
+
+```ruby
+instance.new(*untyped args) -> JS::Object
+```
+### nil?
+
+```ruby
+instance.nil?() -> false
 ```
 ### parentElement
 
@@ -218,6 +258,11 @@ instance.removeItem(String key) -> void
 
 ```ruby
 instance.replaceState(untyped data, String title, String url) -> void
+```
+### respond_to?
+
+```ruby
+instance.respond_to?(Symbol | String name, ?bool include_private) -> bool
 ```
 ### setItem
 

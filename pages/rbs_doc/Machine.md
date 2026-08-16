@@ -43,11 +43,6 @@ Machine.check_signal() -> void
 ```ruby
 Machine.debug_puts(String str) -> nil
 ```
-### deep_sleep
-
-```ruby
-Machine.deep_sleep(Integer gpio_pin, bool edge, bool high) -> 0
-```
 ### delay_ms
 
 ```ruby
@@ -56,7 +51,7 @@ Machine.delay_ms(Integer ms) -> Integer
 ### exit
 
 ```ruby
-Machine.exit(?Integer status) -> void
+Machine.exit(?Integer status) -> bot
 ```
 ### get_hwclock
 
@@ -67,6 +62,11 @@ Machine.get_hwclock() -> [Integer, Integer]
 
 ```ruby
 Machine.mcu_name() -> String
+```
+### poll_signal
+
+```ruby
+Machine.poll_signal() -> Symbol?
 ```
 ### pop_signal_self_manage
 
@@ -101,7 +101,7 @@ Machine.signal_self_manage() -> void
 ### sleep
 
 ```ruby
-Machine.sleep(Integer | Float sec) -> Integer
+Machine.sleep(deep: bool, source: _SleepGpioSource | :timer, **untyped opt) -> void
 ```
 ### tud_mounted?
 

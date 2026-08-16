@@ -15,17 +15,3 @@ folder: rbs_doc
 Integer|String|Symbol
 ```
 
-## header_t
-```rbs
-Hash[String, String | nil]
-```
-
-## httpreturn
-```rbs
-{
-  status: Integer,
-  headers: header_t,
-  body: String
-}
-```
-

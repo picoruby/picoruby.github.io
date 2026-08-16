@@ -14,6 +14,11 @@ folder: rbs_doc
 Funicular::StyleValue.new(String | untyped value) -> void
 ```
 ## Instance methods
+### +
+
+```ruby
+instance.+(StyleValue | String other) -> StyleValue
+```
 ### to_s
 
 ```ruby

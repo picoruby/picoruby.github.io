@@ -8,6 +8,21 @@ permalink: Funicular.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### __boot_for_start
+
+```ruby
+Funicular.__boot_for_start() -> bool
+```
+### __request_schema
+
+```ruby
+Funicular.__request_schema(untyped model_class, String schema_name, Array[untyped] errors, Proc settle) -> nil
+```
+### __settle_boot_barrier
+
+```ruby
+Funicular.__settle_boot_barrier(Array[untyped] errors) ?{ () -> void } -> nil
+```
 ### configure_debug
 
 ```ruby
@@ -17,6 +32,16 @@ Funicular.configure_debug() ?{ (self) -> void } -> void
 
 ```ruby
 Funicular.configure_forms() ?{ (Hash[Symbol, String]) -> void } -> void
+```
+### confirm
+
+```ruby
+Funicular.confirm(String message) -> bool
+```
+### confirm_handler=
+
+```ruby
+Funicular.confirm_handler=((^(String) -> boolish)? handler) -> (^(String) -> boolish)?
 ```
 ### env
 

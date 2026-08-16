@@ -17,7 +17,7 @@ JS::BLE::GATT::Characteristic.new(JS::Object js_char) -> void
 ### on_change
 
 ```ruby
-instance.on_change() { (String data) -> void } -> void
+instance.on_change() { (String data) -> void } -> Integer
 ```
 ### read
 

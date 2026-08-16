@@ -55,11 +55,6 @@ folder: rbs_doc
 BLE.new(role_t role, ?(String|nil) profile_data) -> void
 ```
 ## Instance methods
-### _init
-
-```ruby
-instance._init(String | nil) -> void
-```
 ### advertise
 
 ```ruby
@@ -154,16 +149,6 @@ instance.packet_callback(String) -> void
 
 ```ruby
 instance.peripheral_advertise(String | nil) -> 0
-```
-### pop_heartbeat
-
-```ruby
-instance.pop_heartbeat() -> bool
-```
-### pop_packet
-
-```ruby
-instance.pop_packet() -> (String | nil)
 ```
 ### pop_write_value
 

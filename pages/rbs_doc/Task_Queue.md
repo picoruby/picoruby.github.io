@@ -42,7 +42,7 @@ instance.num_waiting() -> Integer
 ### pop
 
 ```ruby
-instance.pop(?bool non_block) -> untyped
+instance.pop(?bool non_block, ?timeout_ms: Integer?) -> untyped
 ```
 ### push
 

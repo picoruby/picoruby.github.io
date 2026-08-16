@@ -16,6 +16,11 @@ TCPSocket.gethostbyname(String host) -> [String, Array[String], Integer, String]
 ### new
 
 ```ruby
+TCPSocket.new(String host, Integer port) -> void
+```
+### new
+
+```ruby
 TCPSocket.new(String host, Integer port) -> TCPSocket
 ```
 ### open

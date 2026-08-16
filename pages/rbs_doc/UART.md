@@ -7,6 +7,8 @@ sidebar: picoruby_sidebar
 permalink: UART.html
 folder: rbs_doc
 ---
+## Include
+[IRQ](IRQ.html)
 ## Type aliases
 ### unit_t
 ```ruby
@@ -17,7 +19,7 @@ Symbol|String
 
 ```ruby
 UART.new(
-    unit: unit_t,
+    ?unit: unit_t?,
     ?txd_pin: Integer,
     ?rxd_pin: Integer,
     ?baudrate: Integer,
@@ -51,20 +53,45 @@ instance.clear_rx_buffer() -> self
 ```ruby
 instance.clear_tx_buffer() -> self
 ```
+### event_source_id
+
+```ruby
+instance.event_source_id() -> Integer
+```
 ### flush
 
 ```ruby
 instance.flush() -> self
+```
+### getbyte
+
+```ruby
+instance.getbyte() -> (Integer | nil)
 ```
 ### gets
 
 ```ruby
 instance.gets() -> String?
 ```
+### inject_rx
+
+```ruby
+instance.inject_rx(String bytes) -> Integer
+```
+### last_read_timestamp_us
+
+```ruby
+instance.last_read_timestamp_us() -> Integer?
+```
 ### line_ending=
 
 ```ruby
 instance.line_ending=(("\n"|"\r\n"|"\r") line_ending) -> void
+```
+### putc
+
+```ruby
+instance.putc((Integer | String) ch) -> (Integer | String)
 ```
 ### puts
 
@@ -80,6 +107,11 @@ instance.read(?Integer len) -> (String | nil)
 
 ```ruby
 instance.readpartial(Integer maxlen) -> String
+```
+### rx_overflow_count
+
+```ruby
+instance.rx_overflow_count() -> Integer
 ```
 ### set_flow_control
 
@@ -103,6 +135,11 @@ instance.setmode(
     ?rts_pin: Integer?,
     ?cts_pin: Integer?
   ) -> self
+```
+### ungetbyte
+
+```ruby
+instance.ungetbyte(Integer byte) -> nil
 ```
 ### write
 

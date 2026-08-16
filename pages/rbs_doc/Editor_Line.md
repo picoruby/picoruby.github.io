@@ -49,3 +49,8 @@ instance.save_history-> Integer
 ```ruby
 instance.start() { (self, Editor::Buffer, Integer) -> void }  -> void
 ```
+## Attr accessors
+### idle_handler (accessor)
+```ruby
+instance.idle_handler -> (^() -> void)?
+```

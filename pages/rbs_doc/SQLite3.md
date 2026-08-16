@@ -12,14 +12,7 @@ folder: rbs_doc
 ```ruby
 String | Integer | Float | nil | bool
 ```
-## Singleton methods
-### time_methods=
-
+### sqlite3_bind_t
 ```ruby
-SQLite3.time_methods=(Time::TimeMethods) -> Time::TimeMethods
-```
-### vfs_methods=
-
-```ruby
-SQLite3.vfs_methods=(VFS::methods_t) -> VFS::methods_t
+sqlite3_var_t | Hash[Symbol, sqlite3_var_t]
 ```

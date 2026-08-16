@@ -25,7 +25,7 @@ Integer|String|Array[Integer]
 
 ```ruby
 SPI.new(
-    unit: Symbol | String,
+    ?unit: Symbol | String | nil,
     ?frequency: Integer,
     ?sck_pin: Integer,
     ?cipo_pin: Integer,

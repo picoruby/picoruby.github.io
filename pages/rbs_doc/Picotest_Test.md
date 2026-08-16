@@ -64,6 +64,11 @@ instance.assert_true(bool result) -> void
 ```ruby
 instance.clear_doubles() -> void
 ```
+### femtoruby?
+
+```ruby
+instance.femtoruby?() -> bool
+```
 ### list_tests
 
 ```ruby
@@ -94,6 +99,11 @@ instance.mruby?() -> bool
 ```ruby
 instance.mrubyc?() -> bool
 ```
+### picoruby?
+
+```ruby
+instance.picoruby?() -> bool
+```
 ### report_exception
 
 ```ruby
@@ -103,6 +113,11 @@ instance.report_exception(untyped data) -> void
 
 ```ruby
 instance.report_skip(untyped data) -> void
+```
+### ruby_command
+
+```ruby
+instance.ruby_command() -> String
 ```
 ### run_script
 
@@ -133,4 +148,9 @@ instance.stub_any_instance_of(Class klass) -> Picotest::Double
 
 ```ruby
 instance.teardown() -> void
+```
+### wasm?
+
+```ruby
+instance.wasm?() -> bool
 ```

@@ -57,5 +57,5 @@ instance.to_a() -> Array[Array[sqlite3_var_t]]
 ### types
 
 ```ruby
-instance.types() -> Array[String]
+instance.types() -> Array[String?]
 ```

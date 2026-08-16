@@ -47,7 +47,8 @@ instance.delete_index(String index_name) -> nil
 ### each
 
 ```ruby
-instance.each(?untyped? range, ?direction: Symbol) ?{ ([untyped, untyped]) -> void } -> (Enumerator[[untyped, untyped], void] | void)
+instance.each(?untyped? range, ?direction: Symbol) -> Enumerator[[untyped, untyped], untyped]
+instance.each(?untyped? range, ?direction: Symbol) { ([untyped, untyped]) -> void } -> untyped
 ```
 ### get
 

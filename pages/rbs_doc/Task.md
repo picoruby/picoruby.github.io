@@ -43,6 +43,11 @@ Task.pass() -> nil
 ```ruby
 Task.pp_status() -> void
 ```
+### run
+
+```ruby
+Task.run() -> bool
+```
 ### stat
 
 ```ruby
@@ -54,6 +59,11 @@ Task.stat() -> Task::Stat
 Task.tick() -> Integer
 ```
 ## Instance methods
+### close
+
+```ruby
+instance.close() -> nil
+```
 ### join
 
 ```ruby

@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::VDOM::Component.new(untyped component_class, ?Hash[Symbol, untyped] props) -> void
+Funicular::VDOM::Component.new(untyped component_class, ?Hash[Symbol, untyped] props, ?Array[child_t] children) -> void
 ```
 ## Instance methods
 ### ==
@@ -28,7 +28,15 @@ instance.component_class -> untyped
 ```ruby
 instance.props -> Hash[Symbol, untyped]
 ```
+### children (reader)
+```ruby
+instance.children -> Array[child_t]
+```
 ### instance (accessor)
 ```ruby
 instance.instance -> untyped
+```
+### runtime (accessor)
+```ruby
+instance.runtime -> Runtime?
 ```

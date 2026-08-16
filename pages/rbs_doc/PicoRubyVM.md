@@ -10,7 +10,7 @@ folder: rbs_doc
 ## Type aliases
 ### alloc_stat_t
 ```ruby
-{total: Integer, used: Integer, free: Integer, frag: Integer}
+{total: Integer, used: Integer, free: Integer, max_free: Integer, frag: Integer}
 ```
 ### alloc_prof_t
 ```ruby

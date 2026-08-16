@@ -11,7 +11,7 @@ folder: rbs_doc
 ### encode_www_form
 
 ```ruby
-URI.encode_www_form(Hash[untyped, untyped] params) -> String
+URI.encode_www_form(Hash[untyped, untyped] | Array[Array[untyped]] params) -> String
 ```
 ### encode_www_form_component
 

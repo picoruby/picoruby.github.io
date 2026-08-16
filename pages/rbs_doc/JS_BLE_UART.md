@@ -16,7 +16,8 @@ JS::BLE::UART.new(
         ?tx_uuid: String,
         ?rx_uuid: String,
         ?name: String,
-        ?name_prefix: String
+        ?name_prefix: String,
+        ?filter_by_service: bool
       ) -> void
 ```
 ## Instance methods
@@ -45,6 +46,16 @@ instance.connected?() -> bool
 ```ruby
 instance.gets(?timeout: Integer?) -> String?
 ```
+### on_connect
+
+```ruby
+instance.on_connect() ?{ () -> void } -> void
+```
+### on_disconnect
+
+```ruby
+instance.on_disconnect() ?{ () -> void } -> void
+```
 ### puts
 
 ```ruby
@@ -59,6 +70,11 @@ instance.read(Integer nbytes, ?timeout: Integer?) -> String?
 
 ```ruby
 instance.read_nonblock(Integer nbytes) -> String?
+```
+### reconnect
+
+```ruby
+instance.reconnect() -> self
 ```
 ### write
 

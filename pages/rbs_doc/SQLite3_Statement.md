@@ -27,7 +27,7 @@ instance.bind_param(Integer|Symbol|String key, sqlite3_var_t var) -> self
 ### bind_params
 
 ```ruby
-instance.bind_params(*(sqlite3_var_t | Hash[Symbol, sqlite3_var_t]) bind_vars) -> Array[sqlite3_var_t | Hash[Symbol, sqlite3_var_t]]
+instance.bind_params(*sqlite3_bind_t bind_vars) -> Array[sqlite3_bind_t]
 ```
 ### close
 
@@ -47,7 +47,7 @@ instance.column_count-> Integer
 ### column_decltype
 
 ```ruby
-instance.column_decltype(Integer index) -> String
+instance.column_decltype(Integer index) -> String?
 ```
 ### column_name
 
@@ -67,8 +67,8 @@ instance.done?-> bool
 ### execute
 
 ```ruby
-instance.execute(*sqlite3_var_t bind_vars) -> SQLite3::ResultSet
-instance.execute(*sqlite3_var_t bind_vars) { (SQLite3::ResultSet) -> nil } -> nil
+instance.execute(*sqlite3_bind_t bind_vars) -> SQLite3::ResultSet
+instance.execute(*sqlite3_bind_t bind_vars) { (SQLite3::ResultSet) -> nil } -> nil
 ```
 ### get_metadata
 
@@ -79,6 +79,11 @@ instance.get_metadata-> void
 
 ```ruby
 instance.must_be_open!-> nil
+```
+### readonly?
+
+```ruby
+instance.readonly?-> bool
 ```
 ### reset!
 
@@ -93,5 +98,5 @@ instance.step-> (Array[sqlite3_var_t] | nil)
 ### types
 
 ```ruby
-instance.types-> Array[String]
+instance.types-> Array[String?]
 ```
