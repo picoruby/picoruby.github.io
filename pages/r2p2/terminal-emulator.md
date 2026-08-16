@@ -12,7 +12,8 @@ This page explains how to set up a serial terminal emulator to operate R2P2 from
 
 ## Recommended: Use the R2P2 Web Terminal
 
-**If you are using R2P2 3.4 or later, you can use the [R2P2 Web Terminal](https://picoruby.org/terminal) directly from your browser — no installation required.**
+**If you are using R2P2 4.0 or later, you can use the [R2P2 Web Terminal](https://picoruby.org/terminal) directly from your browser — no installation required.**
+R2P2 3.x and earlier are not supported by the Web Terminal.
 
 The R2P2 Web Terminal is the easiest way to get started and is recommended for most users, especially beginners.
 There is no need to install a separate serial terminal emulator.

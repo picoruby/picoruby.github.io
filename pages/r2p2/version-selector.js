@@ -3,7 +3,8 @@
   'use strict';
 
   /* Maintain this list manually when new versions are released. */
-  var VERSIONS = ['head', 'latest', '3.4.5'];
+  /* Only 4.0 or later is supported; 3.x is not. */
+  var VERSIONS = ['head', 'latest', '4.0.3', '4.0.2', '4.0.1', '4.0.0'];
 
   var NPM_PACKAGE = '@picoruby/wasm-wasi';
   var CDN_BASE    = 'https://cdn.jsdelivr.net/npm/';
@@ -12,6 +13,13 @@
   function getRequestedVersion() {
     var params = new URLSearchParams(window.location.search);
     return params.get('picoruby_version') || 'latest';
+  }
+
+  function isSupportedVersion(v) {
+    if (v === 'head' || v === 'latest') return true;
+    /* Strict format check; also keeps URL-supplied values safe for innerHTML. */
+    var m = /^(\d+)\.\d+\.\d+(-[0-9A-Za-z.]+)?$/.exec(v);
+    return !!m && 4 <= parseInt(m[1], 10);
   }
 
   function buildSelectHTML(requested) {
@@ -70,12 +78,21 @@
     if (!bar) return;
 
     var requested = getRequestedVersion();
+    var unsupportedNote = '';
+    if (!isSupportedVersion(requested)) {
+      unsupportedNote =
+        '<span style="font-size:12px;color:#c00;margin-left:4px;">' +
+        'The requested version is not supported (4.0 or later required); using Latest.' +
+        '</span>';
+      requested = 'latest';
+    }
 
     bar.className = 'controls';
     bar.innerHTML =
       '<label>Select closest version number to your R2P2: <select id="picoruby-version-select">' +
       buildSelectHTML(requested) +
       '</select></label>' +
+      unsupportedNote +
       '<span id="ruby-description"' +
       ' style="font-family:monospace;font-size:12px;color:#888;margin-left:4px;">' +
       '</span>';

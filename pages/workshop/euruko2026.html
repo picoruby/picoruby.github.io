@@ -1,0 +1,117 @@
+---
+layout: none
+keywords: workshop
+tags: [workshop]
+title: BLE Theremin - PicoRuby Workshop (Euruko 2026)
+sidebar: picoruby_sidebar
+permalink: euruko2026
+folder: workshop
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BLE Theremin - PicoRuby Workshop (Euruko 2026)</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #050b13;
+      --panel: #0b1725;
+      --line: #1d354b;
+      --ink: #e5f3ff;
+      --muted: #7e9bb3;
+      --accent: #5eead4;
+      --warn: #fb7185;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 20% 0, #10283d 0, var(--bg) 42%);
+      color: var(--ink);
+      font: 15px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+      min-height: 100vh;
+    }
+    button, select, input { font: inherit; }
+    button {
+      border: 1px solid #31516c;
+      border-radius: 8px;
+      padding: .65rem .9rem;
+      background: #10253a;
+      color: var(--ink);
+      cursor: pointer;
+    }
+    button:hover:not([disabled]), .primary { border-color: var(--accent); box-shadow: 0 0 18px #5eead42a; }
+    button[disabled] { opacity: .45; cursor: default; }
+    select {
+      background: #10253a;
+      color: var(--ink);
+      border: 1px solid #31516c;
+      border-radius: 6px;
+      padding: 6px;
+    }
+    input[type=range] { accent-color: var(--accent); }
+    .shell { width: min(880px, 94vw); margin: 0 auto; padding: 28px 0 48px; }
+    .eyebrow { color: var(--accent); letter-spacing: .15em; margin: 0 0 4px; }
+    h1 {
+      margin: 0 0 6px;
+      font: 700 clamp(2rem, 6vw, 3.4rem)/1 system-ui, sans-serif;
+      letter-spacing: -.04em;
+    }
+    .lede { color: var(--muted); margin: 0 0 18px; }
+    .status-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
+    .status { border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; }
+    .status.on { border-color: var(--accent); color: var(--accent); }
+    .error { color: var(--warn); }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+    .panel {
+      border: 1px solid var(--line);
+      background: #08131fdd;
+      border-radius: 12px;
+      padding: 18px;
+      margin: 14px 0;
+      box-shadow: 0 16px 50px #0007;
+    }
+    .readout { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+    .freq { font: 700 clamp(2.4rem, 8vw, 4.6rem)/1 system-ui, sans-serif; color: var(--accent); }
+    .freq-unit { font: 700 1.3rem system-ui, sans-serif; color: var(--muted); }
+    .note-label { font: 700 1.6rem system-ui, sans-serif; }
+    .distance { color: var(--muted); }
+    .meter {
+      height: 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 14px;
+      background: #0a1420;
+    }
+    .meter-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #14532d, var(--accent));
+      transition: width .12s linear;
+    }
+    .controls { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+    .controls label { display: flex; align-items: center; gap: 8px; color: var(--muted); }
+    .log {
+      font-size: 13px;
+      white-space: pre-wrap;
+      color: #5dbb8a;
+      background: #06101a;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      min-height: 90px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .hint { color: var(--muted); font-size: 13px; }
+    .hint code { background: #10253a; padding: 1px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <main id="app"></main>
+  <script type="text/ruby" src="pages/workshop/euruko2026.rb"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@picoruby/wasm-wasi@head/dist/init.iife.js"></script>
+</body>
+</html>
