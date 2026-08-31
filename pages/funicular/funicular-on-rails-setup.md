@@ -50,7 +50,7 @@ bundle install
 bin/rails funicular:install
 ```
 
-This runs three sub-tasks.
+This runs four sub-tasks.
 
 ### `funicular:install:wasm`
 
@@ -73,15 +73,22 @@ These files come straight from the gem's vendored copy. Add `public/picoruby/` t
 
 ### `funicular:install:debug_assets`
 
-Copies the development component highlighter and an initializer template:
+Copies the development component highlighter:
 
 ```
 app/assets/javascripts/funicular_debug.js
 app/assets/stylesheets/funicular_debug.css
+```
+
+### `funicular:install:initializer`
+
+Copies an initializer template:
+
+```
 config/initializers/funicular.rb
 ```
 
-The generated `config/initializers/funicular.rb` is where you configure which runtime build `picoruby_include_tag` serves, and where you set options such as `Funicular.debug_color` (see [Debugging](/funicular-on-rails-debugging)).
+The generated `config/initializers/funicular.rb` is where you configure which runtime build `picoruby_include_tag` serves, and where you set options such as `Funicular.debug_color` (see [Debugging](/funicular-on-rails-debugging)). Once the file exists it belongs to your application: re-running the installer never overwrites it.
 
 ### `funicular:install:test`
 
