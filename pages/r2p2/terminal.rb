@@ -344,6 +344,10 @@ class App
         el('file-input')[:value] = ''
         update_dfu_buttons
       end
+      reader.addEventListener('error') do
+        append_log("[-] Text file error: #{reader[:error].to_s}")
+        el('file-input')[:value] = ''
+      end
       reader.readAsText(file)
     end
   end
