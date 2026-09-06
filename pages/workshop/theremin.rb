@@ -17,10 +17,6 @@
 class ThereminApp < Funicular::Component
   NOTE_NAMES = %w[C C# D D# E F F# G G# A A# B]
 
-  # The device chooser only lists devices whose BLE name starts with this.
-  # Keep the prefix when you personalize BLE_NAME on your Pico!
-  DEVICE_NAME_PREFIX = "Theremin"
-
   # Only used to scale the pitch meter display; the actual pitch range
   # is decided by the device.
   METER_MIN_FREQ = 523.0  # C5
@@ -137,9 +133,10 @@ class ThereminApp < Funicular::Component
     enable_audio unless @ctx
     push_log("[*] Opening BLE device chooser...")
     begin
-      # With a recent PicoRuby.wasm the chooser is also filtered by the
-      # NUS service UUID, so only BLE-UART devices show up at all.
-      @uart = JS::BLE::UART.new(name_prefix: DEVICE_NAME_PREFIX)
+      # The chooser is filtered by the NUS service UUID (the default of
+      # JS::BLE::UART.new), so only BLE-UART devices show up. Device
+      # names are free-form; participants pick their own YOUR_NAME.
+      @uart = JS::BLE::UART.new
       name = @uart.device.name.to_s
       name = "(unnamed)" if name.empty?
       if @uart.respond_to?(:on_disconnect)
