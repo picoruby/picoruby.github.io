@@ -154,6 +154,7 @@ component the SPA pages mount.
 - Server-side data is injected as plain hashes; the `Model` layer is not used to fetch on the server.
 - Suspense renders its resolved/empty branch on the server (no timers).
 - The mismatch check compares only each component's root element tag; the full-render fallback covers the common root-level case.
+- A route inside a `router.layout` block renders **without its layouts** on the server. The client does not hydrate into a layout: it logs a message, discards the server markup, and renders the page fresh, so the server-seeded state is not applied. Keep server-rendered pages outside layout blocks if the first paint matters. See [Layouts](/funicular-on-rails-routing#layouts).
 
 ## In the demo
 

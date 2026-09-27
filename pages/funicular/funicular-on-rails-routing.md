@@ -94,6 +94,60 @@ routes.edit_post_path(post)  # => "/posts/456/edit"  (post responds to #id)
 routes.settings_path         # => "/settings"
 ```
 
+### Layouts
+
+Wrap routes in `router.layout(Component) { ... }` to share a frame between pages. A layout is a normal component. It renders the current page where it calls `outlet`. Layout blocks nest, and a route outside every block has no layout:
+
+```ruby
+# app/funicular/initializer.rb
+Funicular.start(container: 'app') do |router|
+  router.layout(AppLayout) do
+    router.get('/posts',     to: PostListComponent, as: 'posts')
+    router.get('/posts/:id', to: PostComponent,     as: 'post')
+
+    router.layout(AdminLayout) do
+      router.get('/admin/users', to: AdminUsersComponent, as: 'admin_users')
+    end
+  end
+
+  router.get('/login', to: LoginComponent, as: 'login')   # no layout
+  router.set_default('/posts')
+end
+```
+
+```ruby
+class AppLayout < Funicular::Component
+  def render
+    div do
+      header do
+        link_to routes.posts_path, navigate: true do
+          span { "Posts" }
+        end
+      end
+      main { outlet }
+    end
+  end
+end
+```
+
+`outlet` renders the next layout in the chain, or the matched page when the chain ends. The page receives its URL parameters as props, exactly as it does without a layout. `/admin/users` renders `AppLayout`, then `AdminLayout` at its outlet, then `AdminUsersComponent` at the inner outlet.
+
+How the router treats the mounted layouts on navigation:
+
+| Navigation | Effect |
+|------------|--------|
+| Between routes under the same outermost layout | The router re-renders the mounted layout in place. The layout keeps its state, and the differ patches only the parts that changed. |
+| To a route under a different outermost layout | The router unmounts the whole chain and mounts the new one. |
+| To a route outside every layout block | The router unmounts the chain and mounts the page alone. |
+
+Notes:
+
+- Layouts need Funicular 0.5.2 or later.
+- `outlet` returns `nil` when the component is not in the current layout chain, so a layout renders nothing at that spot elsewhere.
+- Navigation guards (see below) and the `beforeunload` listener consult the page, not the layout.
+- A page under a layout can redirect from `component_mounted` in the usual way. The router remounts the chain when the redirect arrives during a layout re-render.
+- Server-side rendering renders the page without its layouts, and the client does not hydrate into a layout. See [SSR & Hydration](/funicular-on-rails-ssr#current-limitations-v1).
+
 ### Programmatic navigation
 
 ```ruby
@@ -193,6 +247,7 @@ Notes:
 
 - The guard must not suspend (no `HTTP` calls, no `await`): the `beforeunload` path runs it on the synchronous JS event dispatch stack. Reading component state is the intended use.
 - Server-side rendering never blocks; the guard is skipped on the server.
+- A page inside a `router.layout` block is guarded the same way. The router asks the page, not the layout.
 - Tests (or apps wanting a custom modal instead of `window.confirm`) can replace the dialog with `Funicular.confirm_handler = ->(message) { ... }` returning `true` to leave and `false` to stay. Set it back to `nil` to restore `window.confirm`.
 - Remember to clear your dirty flag after a successful save so the guard stands down.
 
@@ -206,4 +261,4 @@ router.get('/posts/:post_id/comments/:comment_id', to: CommentComponent, as: 'co
 
 ## In the demo
 
-[funicular-demo](https://github.com/hasumikin/funicular-demo) defines its routes in [`app/funicular/initializer.rb`](https://github.com/hasumikin/funicular-demo/blob/master/app/funicular/initializer.rb) (including a numeric `constraints` on the chat channel id), and its components navigate with `link_to` — for example the channel list in [`chat_components/channel_list_component.rb`](https://github.com/hasumikin/funicular-demo/blob/master/app/funicular/components/chat_components/channel_list_component.rb).
+[funicular-demo](https://github.com/hasumikin/funicular-demo) defines its routes in [`app/funicular/initializer.rb`](https://github.com/hasumikin/funicular-demo/blob/master/app/funicular/initializer.rb) (including a numeric `constraints` on the chat channel id), and its components navigate with `link_to` — for example the channel list in [`chat_components/channel_list_component.rb`](https://github.com/hasumikin/funicular-demo/blob/master/app/funicular/components/chat_components/channel_list_component.rb). The chat and settings routes sit inside a `router.layout` block, and [`app_layout_component.rb`](https://github.com/hasumikin/funicular-demo/blob/master/app/funicular/components/app_layout_component.rb) renders the shared top bar with the page at `outlet`.
