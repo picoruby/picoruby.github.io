@@ -22,6 +22,11 @@ Element | Text | Component | String | Array[Element | Text | Component | String]
 ```ruby
 Funicular::VDOM.blocked_attribute?(untyped name, untyped value) -> bool
 ```
+### child_nodes
+
+```ruby
+Funicular::VDOM.child_nodes(untyped element) -> Array[untyped]
+```
 ### create_element
 
 ```ruby
@@ -51,6 +56,11 @@ Funicular::VDOM.patch(JS::Object element, Array[patch_t] patches) -> JS::Object
 
 ```ruby
 Funicular::VDOM.render(VNode vnode, JS::Element container) -> void
+```
+### text
+
+```ruby
+Funicular::VDOM.text(untyped child) -> String?
 ```
 ### unsafe_url?
 

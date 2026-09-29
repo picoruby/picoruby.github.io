@@ -143,6 +143,10 @@ entries:
       url: "/Object.html"
       output: web pdf
       type: homepage
+    - title: class Regexp
+      url: "/Regexp.html"
+      output: web pdf
+      type: homepage
   - title: Error
     output: web pdf
     folderitems:
@@ -701,6 +705,10 @@ entries:
       type: homepage
     - title: class Funicular::Model
       url: "/Funicular_Model.html"
+      output: web pdf
+      type: homepage
+    - title: class Funicular::Model::EndpointError
+      url: "/Funicular_Model_EndpointError.html"
       output: web pdf
       type: homepage
     - title: class Funicular::Model::Errors

@@ -8,6 +8,11 @@ permalink: Funicular_Model_Errors.html
 folder: rbs_doc
 ---
 ## Singleton methods
+### from_hash
+
+```ruby
+Funicular::Model::Errors.from_hash(Hash[untyped, untyped] hash) -> Errors
+```
 ### new
 
 ```ruby
@@ -58,4 +63,9 @@ instance.humanize(Symbol | String attribute) -> String
 
 ```ruby
 instance.messages() -> Hash[Symbol, Array[String]]
+```
+### to_s
+
+```ruby
+instance.to_s() -> String
 ```

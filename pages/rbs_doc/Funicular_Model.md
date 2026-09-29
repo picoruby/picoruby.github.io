@@ -35,10 +35,75 @@ Funicular::Model.__associations() -> Hash[Symbol, Hash[Symbol, untyped]]
 ```ruby
 Funicular::Model.__camelize(String name) -> String
 ```
+### __delete_record
+
+```ruby
+Funicular::Model.__delete_record(String path, untyped id) ?{ (bool? success, untyped error) -> void } -> untyped
+```
+### __endpoint
+
+```ruby
+Funicular::Model.__endpoint(String name) -> Hash[String, String]
+```
+### __expand_path
+
+```ruby
+Funicular::Model.__expand_path(String path, Hash[untyped, untyped]? source, untyped identifier, String context) -> [String, Array[String]]
+```
+### __fetch_collection
+
+```ruby
+Funicular::Model.__fetch_collection(String path, bool conditional) ?{ (Array[Model]? instances, untyped error) -> void } -> untyped
+```
+### __fetch_record
+
+```ruby
+Funicular::Model.__fetch_record(String path, singleton(Model) klass, bool conditional) ?{ (Model? instance, untyped error) -> void } -> untyped
+```
+### __forget_http_cache_entry
+
+```ruby
+Funicular::Model.__forget_http_cache_entry(String path) -> void
+```
+### __http_cache_db
+
+```ruby
+Funicular::Model.__http_cache_db() -> untyped
+```
+### __http_cache_entry
+
+```ruby
+Funicular::Model.__http_cache_entry(String path) -> Hash[String, untyped]?
+```
+### __instances_from_replica
+
+```ruby
+Funicular::Model.__instances_from_replica(Array[untyped] ids) -> Array[Model]?
+```
+### __log_not_modified
+
+```ruby
+Funicular::Model.__log_not_modified(String path) -> void
+```
+### __path_segment
+
+```ruby
+Funicular::Model.__path_segment(untyped value) -> String
+```
+### __path_value
+
+```ruby
+Funicular::Model.__path_value(Hash[untyped, untyped]? source, String name) -> untyped
+```
 ### __pluralize
 
 ```ruby
 Funicular::Model.__pluralize(String name) -> String
+```
+### __query_params
+
+```ruby
+Funicular::Model.__query_params(Hash[untyped, untyped]? params, Array[String] consumed) -> Hash[untyped, untyped]
 ```
 ### __register_association
 
@@ -65,10 +130,20 @@ Funicular::Model.__reject_association_options(Symbol kind, Symbol | String name,
 ```ruby
 Funicular::Model.__resolve_association_constant(Symbol key, String class_name) -> untyped
 ```
+### __server_errors
+
+```ruby
+Funicular::Model.__server_errors(HTTP::Response response) -> Errors?
+```
 ### __singularize
 
 ```ruby
 Funicular::Model.__singularize(String name) -> String
+```
+### __store_http_cache_entry
+
+```ruby
+Funicular::Model.__store_http_cache_entry(String path, HTTP::Response response, Array[untyped] ids) -> void
 ```
 ### __unresolvable_association
 
@@ -90,10 +165,15 @@ Funicular::Model.__write_through_upsert(untyped attrs) -> void
 ```ruby
 Funicular::Model.__write_through_upsert_all(untyped rows) -> void
 ```
+### absorb
+
+```ruby
+Funicular::Model.absorb(Array[untyped]? rows) -> nil
+```
 ### all
 
 ```ruby
-Funicular::Model.all(?Hash[untyped, untyped] params) ?{ (Array[Model]? instances, untyped error) -> void } -> untyped
+Funicular::Model.all(?Hash[untyped, untyped] params, ?endpoint_name: String) ?{ (Array[Model]? instances, untyped error) -> void } -> untyped
 ```
 ### belongs_to
 
@@ -148,7 +228,7 @@ Funicular::Model.derive_table_name() -> String
 ### destroy
 
 ```ruby
-Funicular::Model.destroy(?untyped id) ?{ (bool? success, untyped error) -> void } -> untyped
+Funicular::Model.destroy(?untyped id, **untyped path_params) ?{ (bool? success, untyped error) -> void } -> untyped
 ```
 ### endpoints
 
@@ -173,7 +253,7 @@ Funicular::Model.exists?() -> bool
 ### find
 
 ```ruby
-Funicular::Model.find(?untyped id, ?endpoint_name: String, ?model_class: singleton(Model)) ?{ (Model? instance, untyped error) -> void } -> untyped
+Funicular::Model.find(?untyped id, ?endpoint_name: String, ?model_class: singleton(Model), **untyped path_params) ?{ (Model? instance, untyped error) -> void } -> untyped
 ```
 ### find_by
 
@@ -375,6 +455,11 @@ instance.__local_insert() -> Model
 
 ```ruby
 instance.__local_update(Hash[untyped, untyped]? attrs) -> bool
+```
+### __path_source
+
+```ruby
+instance.__path_source() -> Hash[String, untyped]
 ```
 ### __set_local_baseline
 

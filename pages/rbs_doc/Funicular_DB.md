@@ -188,6 +188,16 @@ Funicular::DB.config() -> Config
 ```ruby
 Funicular::DB.configure() { () -> void } -> nil
 ```
+### delete_meta
+
+```ruby
+Funicular::DB.delete_meta(untyped db, String key) -> nil
+```
+### delete_meta_prefix
+
+```ruby
+Funicular::DB.delete_meta_prefix(untyped db, String prefix) -> nil
+```
 ### durability
 
 ```ruby

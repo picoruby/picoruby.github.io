@@ -287,6 +287,47 @@ The framework applies the server's **response** (not your request) to the
 replica, so the local copy reflects what the server actually stored ---
 defaults, callbacks, and normalizations included.
 
+A row writes only the attributes it carries. A resource usually has more
+than one representation (an index summary without the body, a show detail
+without the excerpt), and each one merges into the single replica row
+instead of blanking the columns it omits. An attribute the server sends as
+`null` is written as NULL.
+
+A server-side validation failure (`render json: { errors: record.errors },
+status: :unprocessable_content`) lands on the record's `errors` and is
+yielded as a `Funicular::Model::Errors`, like a client-side one. See
+[Forms & Validation](/funicular-on-rails-forms#server-side-validation-errors).
+
+### Conditional GET: the replica as an HTTP cache
+
+A manual fetch revalidates rather than re-downloads. A replica model
+remembers the `ETag` of every GET it made (in the replica database, so per
+user namespace and gone with `wipe`) and sends `If-None-Match` next time.
+A `304 Not Modified` is answered from the replica rows the previous
+response listed: no write, no change event, no re-render. In development
+the console shows `[Funicular::HTTP] GET /posts 304 -> replica`.
+
+Rails serves the 304 with no controller code (`Rack::ETag` and
+`Rack::ConditionalGet`). Add `stale?` to skip the query and the rendering
+too:
+
+```ruby
+def index
+  posts = Post.published
+  render json: posts.map { |p| post_json(p) } if stale?(posts)
+end
+
+def show
+  post = Post.find(params[:id])
+  render json: post_json(post) if stale?(post)
+end
+```
+
+A response with `Cache-Control: no-store` is never remembered. Ephemeral
+models and apps without the local database keep the unconditional GET.
+When a representation depends on who is asking, add `etag { current_user&.id }`
+to the controller so two users never share an ETag.
+
 > **Breaking change vs Funicular <= 0.4**: every REST callback is now
 > uniformly `(result, error)`. `update` and `destroy` used to yield
 > `(true/false, data_or_error)`; callsites reading the first argument as a
@@ -408,6 +449,13 @@ because silently rendering an empty list would defeat SSR and hide the bug.
 Components rendered through SSR read their data from state seeded by the
 controller (see [SSR & Hydration](/funicular-on-rails-ssr));
 `watch`-driven components belong on client-rendered routes.
+
+A hydrated page can still hand its seeded rows to the replica.
+`Comment.absorb(state[:comments])` in `component_mounted` applies them as a
+fetched collection would (one transaction, one change event), so a `watch`
+or `on_change` started right after reads the server-rendered rows instead
+of an empty table. The rows must carry the attributes the replica columns
+expect (`id` included). `absorb` is a no-op without a replica.
 
 ## Configuration reference
 

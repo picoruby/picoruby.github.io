@@ -21,7 +21,7 @@ Funicular::HTTP.delete(String url) { (Response) -> void } -> void
 ### get
 
 ```ruby
-Funicular::HTTP.get(String url) { (Response) -> void } -> void
+Funicular::HTTP.get(String url, ?headers: Hash[String, String]?) { (Response) -> void } -> void
 ```
 ### patch
 

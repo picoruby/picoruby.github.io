@@ -19,6 +19,11 @@ Funicular::Router.new(JS::Element? container) -> void
 ```ruby
 instance.add_route(String path, singleton(Component) component_class, ?as: String?, ?constraints: route_constraints_t?) -> void
 ```
+### current_component
+
+```ruby
+instance.current_component() -> Component?
+```
 ### current_location_path
 
 ```ruby
@@ -33,6 +38,11 @@ instance.delete(String path, to: singleton(Component), ?as: String?, ?constraint
 
 ```ruby
 instance.get(String path, to: singleton(Component), ?as: String?, ?constraints: route_constraints_t?) -> void
+```
+### layout
+
+```ruby
+instance.layout(singleton(Component) component_class) { () -> void } -> void
 ```
 ### leave_allowed?
 
@@ -84,9 +94,13 @@ instance.stop() -> void
 ```ruby
 instance.routes -> Array[route_definition_t]
 ```
-### current_component (reader)
+### current_route (reader)
 ```ruby
-instance.current_component -> Component?
+instance.current_route -> [singleton(Component), Hash[Symbol, untyped]]?
+```
+### current_layouts (reader)
+```ruby
+instance.current_layouts -> Array[singleton(Component)]
 ```
 ### current_path (reader)
 ```ruby

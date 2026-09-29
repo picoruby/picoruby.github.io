@@ -14,6 +14,11 @@ folder: rbs_doc
 Funicular::Model::Validations.included(untyped base) -> void
 ```
 ## Instance methods
+### __replace_errors
+
+```ruby
+instance.__replace_errors(Errors errors) -> void
+```
 ### errors
 
 ```ruby

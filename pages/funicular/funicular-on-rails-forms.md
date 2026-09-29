@@ -76,14 +76,29 @@ user.update(display_name: name) do |updated, error|
   if updated
     # saved --- updated is the instance, refreshed from the server response
   elsif error.respond_to?(:messages)
-    patch(errors: error.messages)             # client-side validation errors
+    patch(errors: error.messages)             # validation errors, client- or server-side
   else
-    patch(message: "Error: #{error}")         # server error (e.g. 422)
+    patch(message: "Error: #{error}")         # any other failure (a String)
   end
 end
 ```
 
 The server still validates and may return 422 --- client validation is an additive pre-flight layer, not a replacement.
+
+### Server-side validation errors
+
+Render a failed save the Rails way:
+
+```ruby
+# app/controllers/comments_controller.rb
+if comment.save
+  render json: comment_json(comment), status: :created
+else
+  render json: { errors: comment.errors }, status: :unprocessable_content
+end
+```
+
+`ActiveModel::Errors#as_json` gives `{ "body" => ["can't be blank"] }`. The client turns that body into a `Funicular::Model::Errors`, puts it on the record (`comment.errors`), and yields it as the callback's `error`. A server-side failure then reads exactly like a client-side one: `error.messages` feeds `form_for`, `error[:body]` and `error.full_messages` work, and `error.to_s` joins the full messages for the plain-message branch above. A rule the client cannot run (a custom validator, say) still shows inline this way. Any other failure body still arrives as a String.
 
 ### Reusing ActiveRecord validations
 
@@ -99,14 +114,13 @@ class Api::SchemaController < ApplicationController
         "display_name" => { type: "string", readonly: false },
         "username"     => { type: "string", readonly: true }
       },
-      endpoints: { "update" => { method: "PATCH", path: "/users/:id" } },
       except: { username: [:format] }
     )
   end
 end
 ```
 
-The exposure is an allowlist: validations are derived only for attributes you declare, and `except:` suppresses specific kinds. Rules that cannot run in the browser are skipped automatically --- `uniqueness` (database-only), custom validators, and conditional/context validators (`if:`, `unless:`, `on:`).
+The endpoints derive from the routes to `users` (see [Endpoints](/funicular-on-rails-data#endpoints)). The exposure is an allowlist: validations are derived only for attributes you declare, and `except:` suppresses specific kinds. Rules that cannot run in the browser are skipped automatically --- `uniqueness` (database-only), custom validators, and conditional/context validators (`if:`, `unless:`, `on:`).
 Client-declared and schema-derived validators merge; if both define the same kind for an attribute, the client declaration wins.
 
 Load schemas at startup before mounting the app:

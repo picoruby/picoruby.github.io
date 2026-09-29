@@ -42,7 +42,29 @@ Funicular.load_schemas({ Post => "post" }) do
 end
 ```
 
-The schema endpoint (e.g. `GET /api/schema/post`) returns the attribute list (and optionally derived validations --- see [Forms & Validation](/funicular-on-rails-forms)).
+The schema endpoint (e.g. `GET /api/schema/post`) returns the attribute list, the endpoint table, and optionally derived validations (see [Forms & Validation](/funicular-on-rails-forms)). On the Rails side, `Funicular::Schema.build` writes it for you. You declare the attributes; the endpoints derive from `config/routes.rb`:
+
+```ruby
+# config/routes.rb
+resources :posts, only: [:index, :show]
+
+# app/controllers/api/schema_controller.rb
+class Api::SchemaController < ApplicationController
+  def post
+    render json: Funicular::Schema.build(
+      Post,
+      attributes: {
+        "id"    => { type: "integer", readonly: true },
+        "title" => { type: "string",  readonly: true },
+        "body"  => { type: "string",  readonly: true }
+      }
+    )
+  end
+end
+```
+
+`resources :posts` gives `posts#index` and `posts#show`, so the client `Post` gets `all` and `find`. This is the same convention ActiveRecord uses for tables: the class name picks the resource, and the routes say what it can do. See [Endpoints](#endpoints) below for the rules and the escape hatches.
+
 Now fetch records with an ActiveRecord-like API:
 
 ```ruby
@@ -121,17 +143,43 @@ post.destroy                      { |ok, error| ... }    # ok = true on success
 post.reload                       { |post, error| ... }
 ```
 
-`create`/`update` run client-side validations first and skip the request when the model is invalid (see [Forms & Validation](/funicular-on-rails-forms)). Override the default RESTful paths with a class `endpoint`:
+`create`/`update` run client-side validations first and skip the request when the model is invalid (see [Forms & Validation](/funicular-on-rails-forms)).
+
+The `error` a callback receives is a String for most failures. When the server renders `{ errors: record.errors }` with status 422, it is a `Funicular::Model::Errors` instead, and the same object is on `record.errors`. `error.to_s` joins the full messages, so `"#{error}"` works for both. See [Forms & Validation](/funicular-on-rails-forms#server-side-validation-errors).
+
+### Endpoints
+
+The schema's endpoint table maps a name to a method and a path. `Funicular::Schema.build` derives it from the routes to the model's controller (`Post` -> `posts`, `Admin::Post` -> `admin/posts`):
+
+| Rails action | Endpoint name | Client call |
+|---|---|---|
+| `index` | `all` | `Post.all { }` |
+| `show` | `find` | `Post.find(id) { }` |
+| `create` | `create` | `Post.create(attrs) { }` |
+| `update` | `update` | `post.update(attrs) { }` |
+| `destroy` | `destroy` | `post.destroy { }` |
+| any other action | the action name | `Post.find(id, endpoint_name: "avatar") { }` |
+
+Where two routes lead to the same action, the first one in `routes.rb` wins. A missing endpoint raises `Funicular::Model::EndpointError`; the message lists the endpoints the schema has.
+
+**Nested routes.** A path placeholder fills from the call. `Comment.all(post_id: 3)` requests `/posts/3/comments` and sends the other params as the query string. `Comment.create(post_id: 3, body: "...")` posts there. `Comment.find(7, post_id: 3)` and `Comment.destroy(7, post_id: 3)` take the parent as a keyword. The instance methods fill the path from the record's attributes. One unfilled placeholder takes the id, whatever the route calls it, so `resources :pages, param: :slug` works with `Page.find("hello")`. A placeholder that stays empty raises `ArgumentError` instead of sending a literal `:post_id`.
+
+**Beyond the five.** `all(endpoint_name: "published")` and `create(attrs, endpoint_name: "publish")` reach collection and member routes, like `find(endpoint_name:)`.
+
+**Escape hatches.** Every keyword of `Schema.build` steps around the convention:
 
 ```ruby
-class User < Funicular::Model
-  def self.endpoint
-    { "path" => "/api/v2/users", "find" => "/api/v2/users/:id",
-      "create" => "/api/v2/users", "update" => "/api/v2/users/:id",
-      "destroy" => "/api/v2/users/:id" }
-  end
-end
+Funicular::Schema.build(Post, attributes: { ... },
+  controller: "api/posts",                             # another controller
+  endpoints: {
+    "current" => "sessions#show",                      # alias a route
+    "create"  => { method: "POST", path: "/login" },   # by hand
+    "destroy" => nil                                   # hide a derived one
+  },
+  routes: false)                                       # no derivation at all
 ```
+
+`model_class` may be `nil` for a schema with no ActiveModel class behind it (a session, say). Pass `controller:` then. A hand-written JSON schema without `Schema.build` keeps working unchanged. Routes of a mounted engine do not derive; write them by hand.
 
 ### `Funicular::HTTP`
 
@@ -166,6 +214,8 @@ Funicular::HTTP.cache_clear                 # invalidate everything
 ```
 
 Invalidation is explicit: a POST/PATCH/DELETE does **not** auto-purge related GET entries --- invalidate affected URLs yourself when you mutate data. Falls back to in-memory storage when IndexedDB is unavailable.
+
+Models do not use this cache. With the local database enabled, a replica model revalidates with `ETag` and `If-None-Match` and serves a `304` from its replica. See [Conditional GET](/funicular-on-rails-local-database#conditional-get-the-replica-as-an-http-cache).
 
 ### Suspense API
 
@@ -203,6 +253,8 @@ end
 - [`blog_index_component.rb`](https://github.com/hasumikin/funicular-demo/blob/master/app/funicular/components/blog_index_component.rb)
   loads posts with `Post.all`.
 - [`blog_post_component.rb`](https://github.com/hasumikin/funicular-demo/blob/master/app/funicular/components/blog_post_component.rb)
-  uses `Post.find` and `Comment.create`.
+  uses `Post.find`, `Comment.all(post_id:)` on a nested route, and `Comment.create`.
+- [`schema_controller.rb`](https://github.com/hasumikin/funicular-demo/blob/master/app/controllers/api/schema_controller.rb)
+  writes no endpoints; they derive from `routes.rb`, with one alias for the session.
 - [`settings_component.rb`](https://github.com/hasumikin/funicular-demo/blob/master/app/funicular/components/settings_component.rb)
   drives a form with `use_suspense` and `on_resolve` (plus `min_delay`).

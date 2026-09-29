@@ -11,7 +11,7 @@ folder: rbs_doc
 ### new
 
 ```ruby
-Funicular::HTTP::Response.new(Integer status, untyped data) -> void
+Funicular::HTTP::Response.new(Integer status, untyped data, ?String? etag, ?String? cache_control) -> void
 ```
 ## Instance methods
 ### error?
@@ -23,6 +23,16 @@ instance.error?() -> bool
 
 ```ruby
 instance.error_message() -> String?
+```
+### no_store?
+
+```ruby
+instance.no_store?() -> bool
+```
+### not_modified?
+
+```ruby
+instance.not_modified?() -> bool
 ```
 ## Attr accessors
 ### data (reader)
@@ -36,4 +46,8 @@ instance.status -> Integer
 ### ok (reader)
 ```ruby
 instance.ok -> bool
+```
+### etag (reader)
+```ruby
+instance.etag -> String?
 ```

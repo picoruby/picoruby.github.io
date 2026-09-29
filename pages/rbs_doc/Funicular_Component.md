@@ -211,6 +211,11 @@ instance.navigation_guard() -> String?
 ```ruby
 instance.normalize_vnode_for_view(untyped value) -> (VDOM::Element | VDOM::Text | VDOM::Component | nil)
 ```
+### outlet
+
+```ruby
+instance.outlet() -> VDOM::Component?
+```
 ### patch
 
 ```ruby
@@ -290,6 +295,11 @@ instance.suspense_loading?(*Symbol names) -> bool
 
 ```ruby
 instance.unmount() -> void
+```
+### updating?
+
+```ruby
+instance.updating?() -> bool
 ```
 ### watch
 

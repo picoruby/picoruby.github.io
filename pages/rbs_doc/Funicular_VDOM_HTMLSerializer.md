@@ -37,7 +37,7 @@ instance.render(VNode? vnode) -> String
 ### render_children
 
 ```ruby
-instance.render_children(Array[child_t] children) -> String
+instance.render_children(Array[child_t] children, bool marks) -> String
 ```
 ### render_component
 

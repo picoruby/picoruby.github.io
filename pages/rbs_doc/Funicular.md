@@ -120,5 +120,5 @@ Hash[Symbol, Regexp]
 ```
 ### route_definition_t
 ```ruby
-{ method: Symbol, path: String, component: singleton(Component), name: String?, pattern_segments: Array[String], constraints: route_constraints_t }
+{ method: Symbol, path: String, component: singleton(Component), name: String?, pattern_segments: Array[String], constraints: route_constraints_t, layouts: Array[singleton(Component)] }
 ```
