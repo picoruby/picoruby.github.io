@@ -13,6 +13,47 @@ folder: rbs_doc
 ```ruby
 instance.prettyprint() -> nil
 ```
+## Instance methods (picoruby-regexp)
+### __charlen_at
+
+```ruby
+instance.__charlen_at(String str, Integer byte_pos) -> Integer
+```
+### __regexp_for
+
+```ruby
+instance.__regexp_for(untyped pattern) -> Regexp
+```
+### __scan
+
+```ruby
+instance.__scan(Regexp re) -> Array[untyped]
+```
+### __split
+
+```ruby
+instance.__split(Regexp re, Integer limit) -> Array[String]
+```
+### __split_str
+
+```ruby
+instance.__split_str(*untyped args) -> Array[String]
+```
+### __sub
+
+```ruby
+instance.__sub(Regexp re, String replacement, bool global) -> String?
+```
+### __sub_common
+
+```ruby
+instance.__sub_common(untyped pattern, Array[untyped] args, Proc? block, bool global) -> String?
+```
+### __sub_each
+
+```ruby
+instance.__sub_each(Regexp re, bool global) { (String matched) -> String } -> String?
+```
 ## Instance methods
 ### bit_clear
 

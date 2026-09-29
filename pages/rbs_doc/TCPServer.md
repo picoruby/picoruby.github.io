@@ -34,3 +34,8 @@ instance.accept_nonblock() -> (TCPSocket | nil)
 ```ruby
 instance.close() -> nil
 ```
+### closed?
+
+```ruby
+instance.closed?() -> bool
+```

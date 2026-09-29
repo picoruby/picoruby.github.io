@@ -13,6 +13,11 @@ folder: rbs_doc
 ```ruby
 ESP32::WiFi.connect_timeout(String ssid, String password, Integer auth, ?Integer timeout) -> bool
 ```
+### dhcp_supplied?
+
+```ruby
+ESP32::WiFi.dhcp_supplied?() -> bool
+```
 ### disconnect
 
 ```ruby
@@ -32,6 +37,21 @@ ESP32::WiFi.init(?String country, ?force: bool) -> bool
 
 ```ruby
 ESP32::WiFi.initialized?() -> bool
+```
+### ipv4_address
+
+```ruby
+ESP32::WiFi.ipv4_address() -> (String | nil)
+```
+### ipv4_gateway
+
+```ruby
+ESP32::WiFi.ipv4_gateway() -> (String | nil)
+```
+### ipv4_netmask
+
+```ruby
+ESP32::WiFi.ipv4_netmask() -> (String | nil)
 ```
 ### link_connected?
 

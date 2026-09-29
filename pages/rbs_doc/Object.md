@@ -74,7 +74,7 @@ instance.methods() -> Array[Symbol]
 ### respond_to?
 
 ```ruby
-instance.respond_to?(Symbol | String name) -> bool
+instance.respond_to?(Symbol | String name, ?bool include_all) -> bool
 ```
 ### send
 

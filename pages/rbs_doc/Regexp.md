@@ -7,6 +7,12 @@ sidebar: picoruby_sidebar
 permalink: Regexp.html
 folder: rbs_doc
 ---
+## Instance methods (picoruby-regexp)
+### __bmatch
+
+```ruby
+instance.__bmatch(String str, Integer byte_pos) -> MatchData?
+```
 ## Instance methods
 ### free
 

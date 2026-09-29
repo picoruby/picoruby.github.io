@@ -304,6 +304,11 @@ instance.textContent=(String text) -> String
 ```ruby
 instance.to_a() -> ::Array[untyped]
 ```
+### to_binary
+
+```ruby
+instance.to_binary() -> String
+```
 ### to_f
 
 ```ruby
