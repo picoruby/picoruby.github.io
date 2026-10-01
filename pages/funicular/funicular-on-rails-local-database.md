@@ -95,8 +95,8 @@ response, stops writing, and reloads (override with
 ```ruby
 # app/funicular/models/post.rb
 class Post < Funicular::Model
-  belongs_to :user
-  has_many :comments
+  # Nothing to declare: attributes, endpoints, and associations
+  # (post.user, post.comments) come from the server schema.
 end
 
 # app/funicular/models/draft.rb
@@ -170,18 +170,86 @@ declared with `table_name "people"`.
 ### Associations
 
 ```ruby
-class Post < Funicular::Model
-  belongs_to :user       # post.user     -> User.local.find_by(id: post.user_id)
-  has_many   :comments   # post.comments -> Comment.local.where(post_id: post.id), chainable
-end
+post.user       # -> User.local.find_by(id: post.user_id)
+post.comments   # -> Comment.local.where(post_id: post.id), chainable
 ```
 
 Associations are local-query sugar over the `<name>_id` convention and
 always read locally --- an instance you are holding already came out of the
-local database, so its neighborhood reads locally too. `class_name:` and
-`foreign_key:` are supported; `through:`, eager loading, and polymorphic
-associations are not (v1). The classic N+1 concern barely applies: each
-"+1" is a microsecond query against local memory.
+local database, so its neighborhood reads locally too. The classic N+1
+concern barely applies: each "+1" is a microsecond query against local
+memory.
+
+#### Derived from the server
+
+You rarely declare them. `Funicular::Schema.build` reads the ActiveRecord
+reflections of the model and sends every `belongs_to` whose foreign key is
+one of the attributes you expose. The client defines the readers from it:
+
+```ruby
+# Rails: class Comment < ApplicationRecord; belongs_to :post; end
+# Schema: the attributes include "post_id"
+
+class Comment < Funicular::Model; end   # comment.post is defined
+class Post < Funicular::Model; end      # post.comments is defined too
+```
+
+The rules:
+
+- A `belongs_to` derives when its foreign key is an exposed attribute. The
+  key is public already, so the schema reveals only the class it points at.
+- The inverse `has_many` derives on the target when the foreign key follows
+  the convention (`post_id` -> `Post`). Its name is the child's table name
+  (`comments`). A key like `author_id` -> `User` derives no inverse.
+- Both ends must be replica models that the client carries. The match is by
+  class name: Rails `Post` finds the client class `Post`. A `storage :local`
+  or `storage :ephemeral` model never takes part.
+- A derived association always yields. A hand-written declaration wins. So
+  does an attribute or a method of the same name, public or private.
+- An entry of the model's own schema outranks an inverse derived from
+  another model. The order in which the schemas arrive does not matter.
+- A polymorphic `belongs_to` and a composite foreign key do not derive.
+- An app without the local database derives nothing.
+
+In development, the console says why an association did not derive:
+
+```
+[Funicular] Comment: association :author not derived (the client carries no model User)
+```
+
+On the Rails side, the `associations:` keyword of `Schema.build` is the
+escape hatch:
+
+```ruby
+Funicular::Schema.build(Comment, attributes: { ... },
+  associations: {
+    "author"  => nil,                                   # hide a derived one
+    "replies" => { kind: "has_many", class_name: "Comment",
+                   foreign_key: "parent_id" }           # by hand
+  })
+
+Funicular::Schema.build(Comment, attributes: { ... }, associations: false)   # none
+```
+
+#### Declared in the class
+
+Declare an association yourself when the names differ from these defaults
+(a client `Article` for the Rails `Post`, say), or on a `storage :local`
+model:
+
+```ruby
+class Draft < Funicular::Model
+  belongs_to :post
+  has_many :attachments, class_name: "DraftFile", foreign_key: :draft_id
+end
+```
+
+`class_name:` and `foreign_key:` are supported; `through:`, eager loading,
+and polymorphic associations are not (v1).
+
+A client test that stubs a schema by hand gets only the associations that
+the stub lists under `"associations"`. Keep the entry in the stub, or
+declare the association in the class.
 
 ### `storage :local do ... end` --- table shape and evolution
 
