@@ -10,6 +10,11 @@ folder: rbs_doc
 ## Include
 [Validations](Validations.html)
 ## Singleton methods
+### __apply_schema_associations
+
+```ruby
+Funicular::Model.__apply_schema_associations(untyped associations) -> nil
+```
 ### __assert_association_name_free
 
 ```ruby
@@ -19,6 +24,11 @@ Funicular::Model.__assert_association_name_free(Symbol key) -> nil
 
 ```ruby
 Funicular::Model.__assert_no_association_conflict(Array[String] names) -> nil
+```
+### __association_skipped
+
+```ruby
+Funicular::Model.__association_skipped(Symbol key, String reason) -> nil
 ```
 ### __association_target
 
@@ -35,10 +45,20 @@ Funicular::Model.__associations() -> Hash[Symbol, Hash[Symbol, untyped]]
 ```ruby
 Funicular::Model.__camelize(String name) -> String
 ```
+### __carried_model
+
+```ruby
+Funicular::Model.__carried_model(String class_name) -> untyped
+```
 ### __delete_record
 
 ```ruby
 Funicular::Model.__delete_record(String path, untyped id) ?{ (bool? success, untyped error) -> void } -> untyped
+```
+### __derive_association
+
+```ruby
+Funicular::Model.__derive_association(Symbol kind, Symbol key, untyped target, String foreign_key, Symbol origin) -> nil
 ```
 ### __endpoint
 

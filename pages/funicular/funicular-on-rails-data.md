@@ -181,6 +181,8 @@ Funicular::Schema.build(Post, attributes: { ... },
 
 `model_class` may be `nil` for a schema with no ActiveModel class behind it (a session, say). Pass `controller:` then. A hand-written JSON schema without `Schema.build` keeps working unchanged. Routes of a mounted engine do not derive; write them by hand.
 
+**Associations travel too.** With the local database enabled, `Schema.build` also sends each `belongs_to` whose foreign key is an exposed attribute, and the client defines `comment.post` and `post.comments` from it. The client classes stay empty. See [Associations](/funicular-on-rails-local-database#associations).
+
 ### `Funicular::HTTP`
 
 For non-CRUD calls. CSRF tokens are attached automatically to non-GET requests
