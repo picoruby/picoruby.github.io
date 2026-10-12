@@ -12,12 +12,19 @@ class App
     @doc = JS.document
     @current_port = nil
     @auto_reconnect = false
+    @binary_file_data = nil
+    @binary_file_name = nil
+    @text_file_name = nil
     setup_terminal
     unless JS::WebSerial.supported?
       el('not-supported').style.display = 'block'
       el('connect-btn')[:disabled] = true
     end
     bind_events
+    unless binary_upload_supported?
+      el('mode-binary')[:disabled] = true
+      el('mode-binary-label')[:title] = 'Binary upload requires a newer PicoRuby version'
+    end
     append_log("[*] Ready. Connect a serial port to use the file editor.")
   end
 
@@ -95,6 +102,58 @@ class App
     el('mode-compile')[:checked] == true
   end
 
+  def binary_mode?
+    el('mode-binary')[:checked] == true
+  end
+
+  def plain_mode?
+    el('mode-plain')[:checked] == true
+  end
+
+  def binary_payload_ready?
+    !@binary_file_data.nil? && 0 < @binary_file_data.bytesize
+  end
+
+  # JS::Object#to_binary exists only in newer picoruby.wasm builds; older
+  # versions selectable in the version bar defined it on JS::Response only.
+  # respond_to? checks the real method table (method_missing forwarding to
+  # JS does not count), so it detects the API reliably.
+  def binary_upload_supported?
+    return @binary_upload_supported unless @binary_upload_supported.nil?
+    @binary_upload_supported = begin
+      JS.global.respond_to?(:to_binary) == true
+    rescue
+      false
+    end
+  end
+
+  def update_upload_mode
+    editor = el('editor')
+    file_label = el('file-label')
+    local_file_path = el('local-file-path')
+    if binary_mode?
+      editor[:readOnly] = true
+      # Dim the whole wrapper: line numbers and the IDE-mode highlight layer
+      # are separate elements, so dimming only the textarea looks uneven.
+      el('editor-wrapper').style.opacity = '0.45'
+      editor[:placeholder] = 'Select a local binary file to upload without text conversion.'
+      file_label[:textContent] = 'Open binary file'
+      if @binary_file_name
+        local_file_path[:textContent] = "#{@binary_file_name} (#{@binary_file_data.bytesize} bytes)"
+      else
+        local_file_path[:textContent] = ''
+      end
+    else
+      editor[:readOnly] = false
+      el('editor-wrapper').style.opacity = '1'
+      editor[:placeholder] = '# Type or download Ruby code here...'
+      file_label[:textContent] = 'Open local file'
+      local_file_path[:textContent] = @text_file_name.to_s
+    end
+    el('file-input')[:value] = ''
+    update_dfu_buttons
+  end
+
   def force_mrb_extension
     path_el = el('path-input')
     path = path_el[:value].to_s.strip
@@ -114,7 +173,8 @@ class App
 
   def update_dfu_buttons
     has_path = !el('path-input')[:value].to_s.strip.empty?
-    set_dfu_buttons_enabled(connected? && has_path)
+    has_payload = binary_mode? ? binary_payload_ready? : true
+    set_dfu_buttons_enabled(connected? && has_path && has_payload)
   end
 
   def set_dfu_buttons_enabled(enabled)
@@ -123,7 +183,7 @@ class App
     else
       el('upload-btn').setAttribute('disabled', 'true')
     end
-    if enabled && !compile_mode?
+    if enabled && plain_mode?
       el('download-btn').removeAttribute('disabled')
     else
       el('download-btn').setAttribute('disabled', 'true')
@@ -228,11 +288,12 @@ class App
     el('path-input').addEventListener('change') { update_dfu_buttons }
 
     # Mode radio buttons
-    el('mode-plain').addEventListener('change') { update_dfu_buttons }
+    el('mode-plain').addEventListener('change') { update_upload_mode }
     el('mode-compile').addEventListener('change') do
       force_mrb_extension
-      update_dfu_buttons
+      update_upload_mode
     end
+    el('mode-binary').addEventListener('change') { update_upload_mode }
 
     # Force .mrb extension on blur when compile mode
     el('path-input').addEventListener('blur') do
@@ -335,12 +396,35 @@ class App
     el('file-input').addEventListener('change') do
       file = el('file-input')[:files][0]
       next unless file
+      if binary_mode?
+        begin
+          @binary_file_data = file.to_binary
+          @binary_file_name = file[:name].to_s
+          append_log("[+] Binary file loaded: #{@binary_file_name} (#{@binary_file_data.bytesize} bytes)")
+          # Default the destination to the selected filename; still editable
+          path_el = el('path-input')
+          new_path = "/home/#{@binary_file_name}"
+          unless path_el[:value].to_s == new_path
+            path_el[:value] = new_path
+            append_log("[*] Path set: #{new_path}")
+          end
+        rescue => err
+          @binary_file_data = nil
+          @binary_file_name = nil
+          append_log("[-] Binary file error: #{error_text(err)}")
+        ensure
+          el('file-input')[:value] = ''
+          update_upload_mode
+        end
+        next
+      end
       reader = JS.global[:FileReader].new
       reader.addEventListener('load') do |e|
         el('editor')[:value] = e[:target][:result].to_s
         # Dispatch an input event so EditorEventHandler can handle the update.
         el('editor').dispatchEvent(JS.global[:Event].new('input'))
-        el('local-file-path')[:textContent] = file[:name].to_s
+        @text_file_name = file[:name].to_s
+        el('local-file-path')[:textContent] = @text_file_name
         el('file-input')[:value] = ''
         update_dfu_buttons
       end
@@ -578,10 +662,22 @@ class App
       return
     end
 
-    code = el('editor')[:value].to_s
-    if code.strip.empty?
-      append_log("[-] Editor is empty")
-      return
+    if binary_mode?
+      code = @binary_file_data
+      unless code
+        append_log("[-] No binary file selected")
+        return
+      end
+      unless 0 < code.bytesize
+        append_log("[-] Binary file is empty")
+        return
+      end
+    else
+      code = el('editor')[:value].to_s
+      if code.strip.empty?
+        append_log("[-] Editor is empty")
+        return
+      end
     end
 
     path = current_path
